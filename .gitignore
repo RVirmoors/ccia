@@ -4,3 +4,4 @@ _site
 .DS\_Store
 config.codekit
 Gemfile.lock
+feed.xml
