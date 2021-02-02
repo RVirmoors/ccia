@@ -3,8 +3,8 @@ title:            Creative Coding for Interactive Art
 tagline:          
 description:      Class notes & resources for my courses @ ITPMA/UNATC.
 # comment url & baseurl for local deploy
-url:              https://rvirmoors.github.io
-baseurl:          /
+#url:              https://rvirmoors.github.io
+#baseurl:          /
 
 simple_search: http://google.com/search
 markdown: kramdown

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-# gem 'jekyll' # uncomment for local deploy
-gem "github-pages", group: :jekyll_plugins # comment for local deploy
+gem 'jekyll' # uncomment for local deploy
+#gem "github-pages", group: :jekyll_plugins # comment for local deploy
 
 gem 'rouge'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
