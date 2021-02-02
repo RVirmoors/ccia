@@ -1,10 +1,13 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+// @import "{{ site.theme }}";
+
+@import url("../../css/tufte.scss");
 
 @import url("../fonts/mono.css");
 @import url("../fonts/sans.css");
+@import url("../fonts/et-book.css");
 
 .markdown-body {
   max-width: 800px;
