@@ -33,17 +33,17 @@ h4,
 h5,
 blockquote {
   font-family: "IBM Plex Sans", sans-serif;
+  font-feature-settings: "aalt" /* or ss02 ? */
 }
 
-body {
+/* body {
   font-family: "IBM Plex Sans", sans-serif;
-  font-feature-settings: "aalt" /* or ss02 ? */
- }
+ } */
 
 
-.markdown-body {
+/* .markdown-body {
   font-family: "IBM Plex Sans", sans-serif;
- }
+ } */
 
 tt,
 code {
