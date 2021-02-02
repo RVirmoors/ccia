@@ -2,9 +2,25 @@
 
 Currently in the process of transition from google slides.
 
-```
-code test. modern g?
-```
+## 1. Fundamentals
+
+### 1.1 Processing & p5js
+
+1.1.1 Introduction
+1.1.2 Basics
+1.1.3 Algorithms
+1.1.4 Loops
+1.1.5 Functions
+1.1.6 Objects
+1.1.7 Arrays
+
+### 1.2 Extension
+
+1.2.1 Visualization
+1.2.2 Node.js and APIs
+1.2.3 OSC and HCI
+1.2.4 Particle systems and advanced OOP
+
 
 | Unity |  |
 | -------- | -------- | 
