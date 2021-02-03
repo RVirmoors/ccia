@@ -14,8 +14,8 @@ Currently in the process of transition from google slides.
 
 | **Processing & p5js** | | | **Extensions** | |                        | **Python** | |            
 | :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | 
-| Intro to CCIA     |  |    | Visualization     |  |                    | Practical Python  |  [slides](/slides/01-12-practical-python) | 
-| Basics     | |            | Node.js and APIs     |  |                 | More Python       |  [slides](/slides/01-13-more-python) |
+| Intro to CCIA     |  |    | Visualization     |  |                    | Practical Python  |  [slides](slides/01-12-practical-python) | 
+| Basics     | |            | Node.js and APIs     |  |                 | More Python       |  [slides](slides/01-13-more-python) |
 | Algorithms     | |        | OSC and HCI     |  |
 | Loops     | |             | Advanced OOP     |  |
 | Functions     | |
@@ -29,7 +29,7 @@ Currently in the process of transition from google slides.
 
 | **Max & Pure Data** | |               | **Unity** | |     
 | :-------- | -------- |---             | :-------- | -------- | 
-| Intro to Max & Pd    |  |             | [[From p5/Java to Unity/C#]]     |  [slides](/slides/02-02-p5-to-unity) |
+| Intro to Max & Pd    |  |             | [[From p5/Java to Unity/C#]]     |  [slides](slides/02-02-p5-to-unity) |
 | [[Control]]   |  |                    | [[OSC and APIs in Unity]]     |  |  
 | [[Generation & sequencing]]   |  |    | [[Sound in Unity]]     |  |  
 | [[OSC and Node in Max]]    |  |       | [[Procedural audio basics]]     |  |  
