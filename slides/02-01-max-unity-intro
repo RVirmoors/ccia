@@ -1,12 +1,12 @@
 ---
 layout: presentation
-title: p5/Java to Unity/C#
+title: Intro to Max & Pd and Unity
 ---
 
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 2: p5/Java to Unity/C#]
+.subtitle[Week 1: Intro to Max & Pd and Unity]
 <br/><br/><br/><br/><br/><br/>
 .date[Feb 2021] 
 <br/><br/><br/>
@@ -21,10 +21,8 @@ name: toc
 class: left
 # ★ Table of Contents ★     
       
-1. [Unity and p5](#introduction)
-2. [Scripts in Unity](#scripts)
-3. [Example from scratch](#example)
-4. [Assignment](#end)
+1. [Semester overview](#introduction)
+2. [Assignment](#end)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -34,7 +32,7 @@ layout: true  .toc[[★](#toc)]
 ---
 name: introduction  
 class: left
-# Unity and p5 ...and p5js
+# Semester overview
 
 This is a bare template.
 
