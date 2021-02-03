@@ -31,7 +31,7 @@ Currently in a process of transition from google slides & assorted notebooks.
 
 | **Max & Pure Data** | |               | **Unity** | |     
 | :-------- | -------- |---             | :-------- | -------- | 
-| Intro to Max & Pd    |  |             | [[From p5/Java to Unity/C#]]     |  [slides](slides/02-02-p5-to-unity) |
+| Intro to Max & Pd    | [slides](slides/02-01-max-unity-intro) |             | [[From p5/Java to Unity/C#]]     |  [slides](slides/02-02-p5-to-unity) |
 | [[Control]]   |  |                    | [[OSC and APIs in Unity]]     |  |  
 | [[Generation & sequencing]]   |  |    | [[Sound in Unity]]     |  |  
 | [[OSC and Node in Max]]    |  |       | [[Procedural audio basics]]     |  |  
