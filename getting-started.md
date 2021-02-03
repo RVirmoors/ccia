@@ -8,7 +8,7 @@ Let's go through this to set up your repo:
 
 - [ ] if you are new with VsCode, see how to [[get-started-with-vscode]] and how to [[use-keyboard-shortcuts-for-editing]]
 
-- [ ] you can navigate the links between your notes by `cmd+click` (or `ctrl+click` on Windows) on a wiki link. You can go back with `ctrl+-`. Here, go to your [[inbox]]
+- [ ] you can navigate the links between your notes by `ctrl+click` (or `ctrl+click` on Windows) on a wiki link. You can go back with `ctrl+-`. Here, go to your [[inbox]]
 
 - [ ] to see how your notes are connected, execute the `Foam: Show Graph` command. See [[graph-visualization]].
 
@@ -16,7 +16,7 @@ Let's go through this to set up your repo:
 
 - [ ] Foam supports [[spell-checking]].
 
-- [ ] You can also paste images in your Foam, just press `cmd+alt+v` to create the image file and link to it from your note. See [[paste-images-from-clipboard]].
+- [ ] You can also paste images in your Foam, just press `ctrl+alt+v` to create the image file and link to it from your note. See [[paste-images-from-clipboard]].
 
 - [ ] You can use Foam for your daily notes, or journaling. Execute now the `Foam: Open Daily Note` command to create a new file in your `journal` folder. See [[daily-notes]].
 
@@ -24,7 +24,7 @@ Let's go through this to set up your repo:
 
 - [ ] The section at the end of this file contains wikilink definitions, which enable navigation of your notes from GitHub's web UI, and in general to make `[[wikilinks]]` understood by any markdown parser. See [[link-reference-definitions]].
 
-- [ ] To explore all the Foam settings, press `cmd+,`, then `Extensions > Foam`
+- [ ] To explore all the Foam settings, press `ctrl+,`, then `Extensions > Foam`
 
 - [ ] Living within VsCode, Foam can be customized in many ways! Look at the [Foam Recipes](https://foambubble.github.io/foam/recipes/recipes) for ideas!
 

@@ -21,8 +21,9 @@ name: toc
 class: left
 # ★ Table of Contents ★     
       
-1. [Advanced language features](#advanced)
-1. [Creating scripts](#scripts)
+- [★ Table of Contents ★](#-table-of-contents-)
+- [Advanced language features](#advanced-language-features)
+- [Creating scripts](#creating-scripts)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         

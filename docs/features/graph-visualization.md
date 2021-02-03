@@ -8,7 +8,7 @@ To see the graph execute the `Foam: Show Graph` command.
 With the graph you can:
 - highlight a node by hovering on it, to quickly see how it's connected to the rest of your notes
 - select one or more (by keeping `shift` pressed while selecting) nodes by clicking on them, to better understand the structure of your notes
-- navigate to a note by clicking on it while pressing `ctrl` or `cmd`
+- navigate to a note by clicking on it while pressing `ctrl` or `ctrl`
 - automatically center the graph on the currently edited note, to immediately see it's connections
 
 ## Custom Graph Styles
