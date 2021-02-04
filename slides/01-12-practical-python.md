@@ -19,12 +19,12 @@ Author: Grigore Burloiu, UNATC
 ---
 name: toc
 class: left
-# ★ Table of Contents ★    
+# ★ Table of Contents ★    <!-- omit in toc -->
       
-1. [Installing Python](#installing)
-2. [Three ways to access Python](#three)
-3. [Python language specifics](#lang)
-4. [Working with libraries (modules)](#modules)
+1. [Installing Python](#installing-python)
+2. [Three ways to access Python](#three-ways-to-access-python)
+3. [Python language specifics](#python-language-specifics)
+4. [Working with libraries (modules)](#working-with-libraries-modules)
 5. [Links](#links)
 
 ???
@@ -48,7 +48,7 @@ much different from the p5 / p5js you've used already.
 layout: true  .toc[[★](#toc)]
         
 ---
-name: installing  
+name: installing-python  
 class: left
 # Installing Python
 check your version:
@@ -84,7 +84,7 @@ You can follow the link to download a current version for your system.
 
 ---
 
-name: three  
+name: three-ways-to-access-python  
 class: left
 # Three ways to access Python
 
@@ -156,7 +156,7 @@ This paradigm comes closest to the idea of *live coding*. You can execute code l
 
 ---
 
-name: lang
+name: python-language-specifics
 class: left
 # Python language specifics
 
@@ -176,7 +176,7 @@ modules
 
 ---
 
-name: modules
+name: working-with-libraries-modules
 class: left
 # Working with libraries (modules)
 

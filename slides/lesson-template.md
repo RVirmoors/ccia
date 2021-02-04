@@ -19,10 +19,10 @@ Author: Grigore Burloiu, UNATC
 ---
 name: toc
 class: left
-# ★ Table of Contents ★     
+# ★ Table of Contents ★      <!-- omit in toc -->
       
 1. [Introduction](#introduction)
-1. [Conclusions](#end)
+2. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -40,6 +40,6 @@ Test link to [practical-python](../practical-python).
 
 ---
 
-name: end       
+name: assignment       
 class: left
 #  Assignment

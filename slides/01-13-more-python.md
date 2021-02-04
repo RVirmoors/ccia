@@ -19,11 +19,10 @@ Author: Grigore Burloiu, UNATC
 ---
 name: toc
 class: left
-# ★ Table of Contents ★     
+# ★ Table of Contents ★     <!-- omit in toc -->
       
-- [★ Table of Contents ★](#-table-of-contents-)
-- [Advanced language features](#advanced-language-features)
-- [Creating scripts](#creating-scripts)
+1. [Advanced language features](#advanced-language-features)
+2. [Creating scripts](#creating-scripts)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -31,7 +30,7 @@ class: left
 layout: true  .toc[[★]( #toc)]
         
 ---
-name: advanced  
+name: advanced-language-features  
 class: left
 #  Advanced language features
 
@@ -43,7 +42,7 @@ classes & OOP
 
 ---
 
-name: scripts       
+name: creating-scripts       
 class: left
 #  Creating scripts
 prep: virtual environment
