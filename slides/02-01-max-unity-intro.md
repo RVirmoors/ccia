@@ -64,24 +64,31 @@ A. practical project
 - topic: week 9
 
 B. research project
-- review paper
+- *review* paper
   - 3-6 pages w/ bibliography (10+ items)
 - annotated bibliography
   - 60+ publications (papers, chapters, books …), out of which:
   - 6 items: 1-2 summary paragraphs (context+what is interesting to you), NOT taken from the abstract
-- see [resources](../resources#scientific)
-
----
-
-## 
-
+- see [resources](../resources#academic)
 
 ---
 name: interactive-programming  
 class: left
 # Interactive programming
 
-bla
+[@wikipedia](https://en.wikipedia.org/wiki/Interactive_programming)
+
+| | visual | free | Linux |
+|-|--------|------|-------|
+|Max|✅|❌|❌|
+|Pure Data|✅|✅|✅|
+|TouchDesigner|✅|❌|❌|
+|Supercollider|❌|✅|✅|
+|Unity*|❌|❌|✅|
+
+--
+
+*not really interactive
 
 ---
 name: max--pd  
