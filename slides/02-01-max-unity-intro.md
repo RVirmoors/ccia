@@ -78,6 +78,10 @@ class: left
 
 [@wikipedia](https://en.wikipedia.org/wiki/Interactive_programming)
 
+data **flow**
+
+program **state**
+
 | | visual | free | Linux |
 |-|--------|------|-------|
 |Max|✅|❌|❌|
@@ -88,7 +92,7 @@ class: left
 
 --
 
-*not really interactive
+*not actually interactive
 
 ---
 name: max--pd  
