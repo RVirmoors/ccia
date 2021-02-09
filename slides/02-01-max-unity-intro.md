@@ -99,7 +99,54 @@ name: max--pd
 class: left
 # Max & Pd
 
-bla
+[Max](//cycling74.com/products/max/): created by [Miller Puckette](//msp.ucsd.edu/) in the 80s at IRCAM
+
+90s: M.S.P. → [Pure Data](//puredata.info/)
+
+1997: MSP / Max Signal Processing
+
+2003: Jitter
+
+2011: [Max](https://cycling74.com/products/maxforlive) [for](https://maxforlive.com/) [Live](https://www.ableton.com/en/live/max-for-live/)
+
+[also](https://cycling74.com/products/extendmax): C/C++, Gen, JavaScript + Node for Max, many *external* [packages](https://cycling74.com/packages/)
+
+meanwhile: 
+- Pd-Extended → [Purr Data](https://agraef.github.io/purr-data-intro/)
+
+- [libpd](https://github.com/libpd/libpd) : [Raspberry Pi](https://puredata.info/docs/raspberry-pi), [Unity](https://github.com/LibPdIntegration/LibPdIntegration) etc
+
+---
+
+## Max
+
+commercial software / Cycling ‘74
+
+runs on Win & OSX
+
+documentation : *Help > Reference*
+
+[hundreds of objects](https://docs.cycling74.com/max8/vignettes/thesaurus)
+
+dataflow programming / real-time prototyping / interaction design
+
+**js**, **node**, java, c/c++...
+
+---
+
+## Pure Data
+
+open source / copyrighted but free
+
+runs on Win, OSX, Linux
+
+[documentation](http://msp.ucsd.edu/Pd_documentation/index.htm) : *Help > HTML manual*
+
+[hundreds of objects](https://puredata.info/docs/faq/listofobjects)
+
+dataflow programming / real-time prototyping / interaction design
+
+**libpd**, [js](https://github.com/mganss/pdjs), c/c++...
 
 ---
 

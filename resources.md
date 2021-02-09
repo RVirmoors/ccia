@@ -1,10 +1,12 @@
 ---
 layout: default
 ---
-### Contents <!-- omit in toc -->
+### Categories <!-- omit in toc -->
 1. [Academic](#academic)
 2. [Max](#max)
+3. [Unity](#unity)
    
+
 
 # Academic
 
@@ -24,7 +26,13 @@ layout: default
 ## Journals
 
 - [Journal of New Music Research](//www.tandfonline.com/loi/nnmr20)
-
 - [Computer Music Journal](//www.mitpressjournals.org/cmj)
 
 # Max
+
+
+# Unity
+- [Documentation](https://docs.unity3d.com/)
+- [Unity Learn](https://learn.unity.com/)
+- [Create with Code](https://learn.unity.com/course/create-with-code) introductory course
+- [Unity C# Survival Guide](https://learn.unity.com/course/unity-c-survival-guide)
