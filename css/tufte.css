@@ -376,8 +376,7 @@ ul, ol {
 figure, figure img.maincolumn {
   max-width: 55%;
   -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  margin-bottom: 3em; }
+  -webkit-margin-end: 0; }
 
 figcaption {
   float: right;
