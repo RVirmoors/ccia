@@ -13,11 +13,11 @@
 
   <link rel="stylesheet" type="text/css" href="css/tufte.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/print.css" media="print"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="/cciacss/print.css" media="print"> -->
 
-  <!--<link rel="canonical" href="http://localhost:4000/intro-to-max--pd-and-unity.html">-->
+  <!--<link rel="canonical" href="http://localhost:4000/ccia/intro-to-max--pd-and-unity.html">-->
 
-    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="http://localhost:4000/feed.xml" /> -->
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="http://localhost:4000/ccia/feed.xml" /> -->
 </head>
 
   <body>
@@ -104,7 +104,7 @@ while in Processing et al, the program flow is determined by the specified seque
 
 <p>Here’s how you might add two numbers together:</p>
 
-<figure><img src="/attachments/max-pd-purr.png" /><figcaption class="maincolumn-figure">Patcher UI comparison.<br />Left: Max. Middle: Pd.<br />Right: <a href="https://agraef.github.io/purr-data-intro/">Purr Data</a>, a community-driven, extended fork of Pd&#8211;including a modernised frontend.</figcaption></figure>
+<figure><img src="/ccia/attachments/max-pd-purr.png" /><figcaption class="maincolumn-figure">Patcher UI comparison.<br />Left: Max. Middle: Pd.<br />Right: <a href="https://agraef.github.io/purr-data-intro/">Purr Data</a>, a community-driven, extended fork of Pd&#8211;including a modernised frontend.</figcaption></figure>
 <p>The Max interface (left) has probably the best look and feel, but the usage of the <code class="language-plaintext highlighter-rouge">[+]</code> object is the exact same: at least for core components, the transition from Max to Pd and vice versa is trivial.</p>
 
 <h2 id="unity">Unity</h2>
@@ -113,7 +113,7 @@ while in Processing et al, the program flow is determined by the specified seque
 
 <p>Now, Unity exposes C# as its scripting API language. This means you write code in C# (an imperative language just like Java et al), and then the corresponding architecture is compiled in the back-end for you before the app is able to run. So far this sounds more like the workflow in Processing, than the interpreted graphical tools we described above.</p>
 
-<p><label for="unity-editor" class="margin-toggle">⊕</label><input type="checkbox" id="unity-editor" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/" /><br />The Unity editor in play mode. Users are able to change parameter values and test their impact on the interaction dynamics in real time.</span>
+<p><label for="unity-editor" class="margin-toggle">⊕</label><input type="checkbox" id="unity-editor" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/ccia/" /><br />The Unity editor in play mode. Users are able to change parameter values and test their impact on the interaction dynamics in real time.</span>
 The degree of development interactivity in Unity is brought by the ability to alter program parameters while it is running. This tightens the build-test loop, letting you iterate through various changes much faster. As you progress, you might find yourself speeding up development even more by creating your own <a href="https://docs.unity3d.com/Manual/editor-CustomEditors.html">custom editors</a>, integrated into the Unity UI in edit and/or play mode.</p>
 
 <p>Unity comes with a great <a href="https://learn.unity.com/">learning platform</a> and <a href="https://docs.unity3d.com/">documentation</a>. See the <a href="resources#unity">resources</a> page for some links to lessons and tutorials. What we will look at are mostly ways to extend/apply Unity that aren’t yet covered in the official learning materials.</p>
