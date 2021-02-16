@@ -5,7 +5,7 @@ description:      Class notes & resources for my courses @ ITPMA/UNATC.
 # comment url & baseurl for local deploy
 # see workflow @ https://tiefenauer.github.io/blog/gh-pages-plugins/
 #url:              https://rvirmoors.github.io
-#baseurl:          /
+baseurl:          /ccia
 
 simple_search: http://google.com/search
 markdown: kramdown

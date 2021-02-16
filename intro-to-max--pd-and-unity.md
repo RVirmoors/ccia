@@ -67,7 +67,7 @@ Primarily a game engine, Unity is today a significant tool in the digital arts, 
 
 Now, Unity exposes C# as its scripting API language. This means you write code in C# (an imperative language just like Java et al), and then the corresponding architecture is compiled in the back-end for you before the app is able to run. So far this sounds more like the workflow in Processing, than the interpreted graphical tools we described above.
 
-{% marginfigure 'unity-editor' '' 'The Unity editor in play mode. Users are able to change parameter values and test their impact on the interaction dynamics in real time.' %}
+{% marginfigure 'unity' 'attachments/unity-editor-play.png' 'The Unity editor in play mode. Users are able to change parameter values and test their impact on the interaction dynamics in real time.' %}
 The degree of development interactivity in Unity is brought by the ability to alter program parameters while it is running. This tightens the build-test loop, letting you iterate through various changes much faster. As you progress, you might find yourself speeding up development even more by creating your own [custom editors](https://docs.unity3d.com/Manual/editor-CustomEditors.html), integrated into the Unity UI in edit and/or play mode.
 
 Unity comes with a great [learning platform](https://learn.unity.com/) and [documentation](https://docs.unity3d.com/). See the [resources](resources#unity) page for some links to lessons and tutorials. What we will look at are mostly ways to extend/apply Unity that aren't yet covered in the official learning materials.
