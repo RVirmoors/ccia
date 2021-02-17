@@ -128,6 +128,8 @@ documentation : *Help > Reference*
 
 [hundreds of objects](https://docs.cycling74.com/max8/vignettes/thesaurus)
 
+learning by practice → 💡 → intuition
+
 dataflow programming / real-time prototyping / interaction design
 
 **js**, **node**, java, c/c++...
@@ -144,9 +146,18 @@ runs on Win, OSX, Linux
 
 [hundreds of objects](https://puredata.info/docs/faq/listofobjects)
 
+learning by practice → 💡 → intuition
+
 dataflow programming / real-time prototyping / interaction design
 
 **libpd**, [js](https://github.com/mganss/pdjs), c/c++...
+
+---
+
+class: center
+## UI comparison
+
+<img style="width:100%"  src="../attachments/max-pd-purr.png">
 
 ---
 
@@ -154,7 +165,19 @@ name: unity
 class: left
 #  Unity
 
-bl
+commercial software / Unity Technologies
+
+runs on Win & OSX, compiles to Linux & many more
+
+[documentation](https://docs.unity3d.com/Manual/index.html) : *Help > Reference*
+
+[C# API](https://docs.unity3d.com/Manual/ScriptingImportantClasses.html)
+
+learning by googling & rtfm
+
+imperative programming / iterative prototyping / experience design
+
+[plug-ins](https://docs.unity3d.com/Manual/Plugins.html)
 
 ---
 
@@ -170,7 +193,12 @@ name: assignment
 class: left
 #  Assignment
 
-bl
+[Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg?)
+
+and/or
+
+[Create with Code](https://learn.unity.com/course/create-with-code)
+
 
 See more [resources](../resources).
 

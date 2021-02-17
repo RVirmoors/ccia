@@ -34,5 +34,4 @@ layout: default
 # Unity
 - [Documentation](https://docs.unity3d.com/)
 - [Unity Learn](https://learn.unity.com/)
-- [Create with Code](https://learn.unity.com/course/create-with-code) introductory course
 - [Unity C# Survival Guide](https://learn.unity.com/course/unity-c-survival-guide)

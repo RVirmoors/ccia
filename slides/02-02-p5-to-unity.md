@@ -93,6 +93,13 @@ move camera to 10 -5
 
 ---
 
+class: center
+## Play mode
+
+<img style="width:100%"  src="../attachments/unity-editor-play.png">
+
+---
+
 ## Unity-fying our code
 
 https://docs.unity3d.com/ScriptReference/Vector2.Lerp.html
