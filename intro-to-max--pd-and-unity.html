@@ -30,6 +30,8 @@
     <article class="group">
       <h1 id="intro-to-max--pd-and-unity---">Intro to Max &amp; Pd and Unity   <!-- omit in toc --></h1>
 
+<p>We look at dataflow languages and game engines: how to approach them and what they’re good for.</p>
+
 <ol>
   <li><a href="#interactive-programming">Interactive programming</a></li>
   <li><a href="#max--pd">Max &amp; Pd</a></li>
@@ -40,8 +42,7 @@
 
 <p>The <a href="https://en.wikipedia.org/wiki/Interactive_programming">Wikipedia</a> article provides a good working definition for interactive programming: “the procedure of writing parts of a program <em>while it is already active</em>.”<label for="live_coding" class="margin-toggle sidenote-number"></label><input type="checkbox" id="live_coding" class="margin-toggle" /><span class="sidenote">Not to be confused with <em>live coding</em>, which is a subset of interactive programming where on-the-fly coding is itself a focal point in a performative act. We discuss the topic more in depth in a [<a href="live-coding">later course</a>]. </span></p>
 
-<p>The implications will become obvious in time, but it is important to note them from the start: learning a visual, dataflow language such as Max, Pure Data, or TouchDesigner,<label for="TD" class="margin-toggle sidenote-number"></label><input type="checkbox" id="TD" class="margin-toggle" /><span class="sidenote">My experience with TD so far is too limited for me to be able to teach it, but it must be mentioned as a powerful, well-supported tool, especially for interactive visuals. </span>
- (and to an extent a game engine such as Unity), is <em>not</em> just an continuation of the traditional programming path which we covered in the previous module. This may boil down to the representation of two aspects: program <em>state</em> and data <em>flow</em>.</p>
+<p>The implications will become obvious in time, but it is important to note them from the start: learning a visual, dataflow language such as Max, Pure Data, or TouchDesigner (and to an extent a game engine such as Unity), is <em>not</em> just an continuation of the traditional programming path which we covered in the previous module. This may boil down to the representation of two aspects: program <em>state</em> and data <em>flow</em>.</p>
 
 <p>The <strong>state</strong> of a program represents everything it “knows”<label for="program_state" class="margin-toggle sidenote-number"></label><input type="checkbox" id="program_state" class="margin-toggle" /><span class="sidenote">This includes variable values and execution trace. </span>
  at a certain point in time. In traditional, imperative programming languages, the program state is explicitly determined by the sequence of operations specified in the code.</p>
@@ -94,13 +95,15 @@ while in Processing et al, the program flow is determined by the specified seque
 
 <h2 id="max--pd">Max &amp; Pd</h2>
 
-<p><span class="newthought">History.</span> <a href="//cycling74.com/products/max/">Max</a> was created by <a href="//msp.ucsd.edu/">Miller Puckette</a> in the 80s at IRCAM, to facilitate the composition and programming of complex digital synthesizers via an interactive and modular interface.<label for="bg" class="margin-toggle sidenote-number"></label><input type="checkbox" id="bg" class="margin-toggle" /><span class="sidenote">More information on Puckette`s history and motivation for Max and Pure Data can be heard in an excellent interview on the <a href="">Art+Music+Technology podcast</a>. </span> In the 90s he spun off <a href="//puredata.info/">Pure Data</a> as a free, open-source, and relatively lightweight alternative to Max, which continued to be developed by David Zicarelli’s new company, <a href="//cycling74.com/">Cycling ‘74</a>.</p>
+<p><a href="//cycling74.com/products/max/">Max</a> was created by <a href="//msp.ucsd.edu/">Miller Puckette</a> in the 80s at IRCAM, to facilitate the composition and programming of complex digital synthesizers via an interactive and modular interface.<label for="bg" class="margin-toggle sidenote-number"></label><input type="checkbox" id="bg" class="margin-toggle" /><span class="sidenote">More information on Puckette`s history and motivation for Max and Pure Data can be heard in an excellent interview on the <a href="">Art+Music+Technology podcast</a>. </span> In the 90s he spun off <a href="//puredata.info/">Pure Data</a> as a free, open-source, and relatively lightweight alternative to Max, which continued to be developed by David Zicarelli’s new company, <a href="//cycling74.com/">Cycling ‘74</a>.</p>
 
 <p>The mid-90s brought real-time signal processing capabilities to consumer computers, which were incorporated into both Max (which became known as <em>Max/MSP</em>) and Pure Data. In 2003, Cycling ‘74 released <em>Jitter</em>, which added matrix manipulation for video and 3D graphics to Max. Another milestone was <em>Max for Live</em> and the subsequent merger of Cycling ‘74 with Ableton in the 2010s. This, as well as <a href="https://cycling74.com/products/extendmax">other integrations</a> such as JavaScript, Node for Max, and a vast array of external <a href="https://cycling74.com/packages">contributions</a>, has maintained Max as a main choice for real-time creative computing for decades now.</p>
 
 <p>Meanwhile, Pd has also continued to evolve as a community-based project, mirroring many of Max’s capabilities and (often via <a href="https://github.com/libpd/libpd">libpd</a>) being embedded into pretty much any platform that will support it, including <a href="https://puredata.info/docs/raspberry-pi">Raspberry Pi</a>, <a href="https://github.com/LibPdIntegration/LibPdIntegration">Unity</a>, and even <a href="http://msp.ucsd.edu/software.html">Max</a> itself.</p>
 
-<p><span class="newthought">Basics.</span>  Max and Pd both deal with <em>data</em> of different types (symbols, numbers, audio buffers, matrices etc) flowing through <em>objects</em>,<label for="thesaurus" class="margin-toggle sidenote-number"></label><input type="checkbox" id="thesaurus" class="margin-toggle" /><span class="sidenote">Hundreds of objects come built in, and can be supplemented by external packages. The Max documentation has several ways of presenting them; an underused one is the <a href="https://docs.cycling74.com/max8/vignettes/thesaurus">object thesaurus</a>. </span> which have accompanying <em>help patches</em>. These are small programs demonstrating the functionality and common use cases of a certain object, and can be taken apart and reused.</p>
+<p>**</p>
+
+<p>Max and Pd both deal with <em>data</em> of different types (symbols, numbers, audio buffers, matrices etc) flowing through <em>objects</em>,<label for="thesaurus" class="margin-toggle sidenote-number"></label><input type="checkbox" id="thesaurus" class="margin-toggle" /><span class="sidenote">Hundreds of objects come built in, and can be supplemented by external packages. The Max documentation has several ways of presenting them; an underused one is the <a href="https://docs.cycling74.com/max8/vignettes/thesaurus">object thesaurus</a>. </span> which have accompanying <em>help patches</em>. These are small programs demonstrating the functionality and common use cases of a certain object, and can be taken apart and reused.</p>
 
 <p>Here’s how you might add two numbers together:</p>
 
