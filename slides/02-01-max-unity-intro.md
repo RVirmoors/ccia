@@ -25,8 +25,7 @@ class: left
 2. [Interactive programming](#interactive-programming)
 3. [Max & Pd](#max--pd)
 4. [Unity](#unity)
-5. [Examples](#examples)
-6. [Assignment](#assignment)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -87,6 +86,7 @@ program **state**
 |Max|✅|❌|❌|
 |Pure Data|✅|✅|✅|
 |TouchDesigner|✅|❌|❌|
+|vvvv|✅|✅|❌|
 |Supercollider|❌|✅|✅|
 |Unity*|❌|❌|✅|
 
@@ -179,13 +179,9 @@ imperative programming / iterative prototyping / experience design
 
 [plug-ins](https://docs.unity3d.com/Manual/Plugins.html)
 
----
+--
 
-name: examples       
-class: left
-#  Examples
-
-bl
+FOSS alternative: [Godot](https://godotengine.org/features)
 
 ---
 
@@ -193,7 +189,7 @@ name: assignment
 class: left
 #  Assignment
 
-[Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg?)
+[Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg)
 
 and/or
 
