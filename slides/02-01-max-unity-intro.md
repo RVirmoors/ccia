@@ -81,6 +81,8 @@ data **flow**
 
 program **state**
 
+--
+
 | | visual | free | Linux |
 |-|--------|------|-------|
 |Max|✅|❌|❌|

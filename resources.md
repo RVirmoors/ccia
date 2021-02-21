@@ -10,7 +10,7 @@ layout: default
    
 # Getting started
 
-
+- [Learn to code](https://www.gdquest.com/tutorial/getting-started/learn-to/code/) tutorial. Game engine-based, but the principles apply to any creative coding.
 
 # Academic
 
