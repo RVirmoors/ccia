@@ -40,8 +40,8 @@ To sum up, we might compare imperative and dataflow languages as follows:
 | | imperative | dataflow |
 | | (Java, JS, Python, C#) | (Max, Pd, TD) |
 | --- | :---: | :---: |
-| state | explicit | implicit |
-| flow | implicit | explicit |
+| state | primary | secondary |
+| flow | secondary | primary |
 
 In Max et al, the state is hidden from the user,{% sidenote 'peek' 'You can of course peek at the values at any point in the graph.'%}
 while in Processing et al, the program flow is determined by the specified sequence of operations and their in-out dependencies.{% sidenote 'trace' 'The flow of data can be made explicit by running a debug trace.'%}

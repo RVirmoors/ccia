@@ -100,6 +100,18 @@ class: center
 
 ---
 
+class: center
+## WebGL build
+
+<iframe src="https://rvirmoors.github.io/webgl/p5-unity/" width="600" height="406"></iframe>
+
+- [hosting on github.io](https://medium.com/@aboutin/host-unity-games-on-github-pages-for-free-2ed6b4d9c324)
+- [large files on github](https://docs.github.com/en/github/managing-large-files/versioning-large-files)
+- [hosting on itch.io](https://itch.io/docs/creators/html5)
+
+
+---
+
 ## Unity-fying our code
 
 https://docs.unity3d.com/ScriptReference/Vector2.Lerp.html
