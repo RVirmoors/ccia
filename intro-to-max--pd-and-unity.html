@@ -28,15 +28,11 @@
 	</nav>
 </header>
     <article class="group">
-      <h1 id="intro-to-max--pd-and-unity---">Intro to Max &amp; Pd and Unity   <!-- omit in toc --></h1>
+      <h1 id="intro-to-max--pd-and-unity">Intro to Max &amp; Pd and Unity<!-- omit in toc --></h1>
 
-<p>We look at dataflow languages and game engines: how to approach them and what they’re good for.</p>
+<p>A first look at dataflow languages and game engines: how to approach them and what their strengths are.</p>
 
-<ol>
-  <li><a href="#interactive-programming">Interactive programming</a></li>
-  <li><a href="#max--pd">Max &amp; Pd</a></li>
-  <li><a href="#unity">Unity</a></li>
-</ol>
+<p><a href="#interactive-programming">Interactive programming</a> . <a href="#max--pd">Max &amp; Pd</a> . <a href="#unity">Unity</a></p>
 
 <h2 id="interactive-programming">Interactive programming</h2>
 
@@ -73,24 +69,24 @@ which can be represented as a graph.</p>
     <tr>
       <th> </th>
       <th style="text-align: center">(Java, JS, Python, C#)</th>
-      <th style="text-align: center">(Max, Pd, TD)</th>
+      <th style="text-align: center">(Max, Pd, TD, vvvv)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>state</td>
-      <td style="text-align: center">explicit</td>
-      <td style="text-align: center">implicit</td>
+      <td style="text-align: center">primary</td>
+      <td style="text-align: center">secondary</td>
     </tr>
     <tr>
       <td>flow</td>
-      <td style="text-align: center">implicit</td>
-      <td style="text-align: center">explicit</td>
+      <td style="text-align: center">secondary</td>
+      <td style="text-align: center">primary</td>
     </tr>
   </tbody>
 </table>
 
-<p>In Max et al, the state is hidden from the user,<label for="peek" class="margin-toggle sidenote-number"></label><input type="checkbox" id="peek" class="margin-toggle" /><span class="sidenote">You can of course peek at the values at any point in the graph. </span>
+<p>In Max et al, the state is subordinated to the flow of data,<label for="peek" class="margin-toggle sidenote-number"></label><input type="checkbox" id="peek" class="margin-toggle" /><span class="sidenote">You can of course peek at current values at any point in the graph. </span>
 while in Processing et al, the program flow is determined by the specified sequence of operations and their in-out dependencies.<label for="trace" class="margin-toggle sidenote-number"></label><input type="checkbox" id="trace" class="margin-toggle" /><span class="sidenote">The flow of data can be made explicit by running a debug trace. </span></p>
 
 <h2 id="max--pd">Max &amp; Pd</h2>
@@ -112,7 +108,7 @@ while in Processing et al, the program flow is determined by the specified seque
 
 <h2 id="unity">Unity</h2>
 
-<p>Primarily a game engine, Unity is today a significant tool in the digital arts, mainly due to its state-of-the-art 3D graphics and scripting features, and to its adoption of technologies such as current VR, AR, mobile and web platforms. Meanwhile, it’s just as potent for basic 2D interactive apps, which is how we’ll begin our approach, transitioning [<a href="from-processing-to-unity.md" title="From Processing to Unity ">from Processing to Unity</a>].</p>
+<p>Primarily a game engine, Unity is today a significant tool in the digital arts, mainly due to its state-of-the-art 3D graphics and scripting features, and to its adoption of technologies such as current VR, AR, mobile and web platforms. Meanwhile, it’s just as potent for basic 2D interactive apps, which is how we’ll begin our approach, transitioning [<a href="from-processing-to-unity.md" title="From Processing to Unity">from Processing to Unity</a>].</p>
 
 <p>Now, Unity exposes C# as its scripting API language. This means you write code in C# (an imperative language just like Java et al), and then the corresponding architecture is compiled in the back-end for you before the app is able to run. So far this sounds more like the workflow in Processing, than the interpreted graphical tools we described above.</p>
 
