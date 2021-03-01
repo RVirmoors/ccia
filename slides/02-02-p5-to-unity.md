@@ -4,11 +4,11 @@ title: From Processing to Unity
 ---
 
 class: center, middle
-.title[Creative Coding and Software Design 2]
+.title[Creative Coding and Software Design / Game Development 2]
 <br/><br/>
 .subtitle[Week 2: From Processing to Unity]
 <br/><br/><br/><br/><br/><br/>
-.date[Feb 2021] 
+.date[Mar 2021] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -24,7 +24,8 @@ class: left
 1. [Setting up](#setting-up)
 2. [C# and Java](#c-and-java)
 3. [Mini-game from scratch](#mini-game-from-scratch)
-4. [Assignment](#assignment)
+4. [Sharing your project](#sharing-your-project)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -38,7 +39,7 @@ name: setting-up
 
 [Get Unity](https://unity3d.com/get-unity/download)
 
-Visual Studio
+[Visual Studio](https://docs.unity3d.com/Manual/ScriptingSettingUp.html)
 
 - [Community](https://visualstudio.microsoft.com/vs/unity-tools/)
   - [officially recommended IDE](https://youtu.be/KH0nqTpOVuM)
@@ -78,21 +79,6 @@ name: mini-game-from-scratch
 
 ---
 
-## GameObjects and Sprites
-
-create gameobjects
-create sprites
-place in screen
-
----
-
-## Camera
-
-move camera to 10 -5
-.ViewportToWorldPoint(new Vector3(1, 1, camera.nearClipPlane));
-
----
-
 class: center
 ## Play mode
 
@@ -100,24 +86,57 @@ class: center
 
 ---
 
-class: center
-## WebGL build
+## Unity-fying our code
 
-<iframe src="https://rvirmoors.github.io/webgl/p5-unity/" width="600" height="406"></iframe>
+https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html
 
-- [hosting on github.io](https://medium.com/@aboutin/host-unity-games-on-github-pages-for-free-2ed6b4d9c324)
-- [large files on github](https://docs.github.com/en/github/managing-large-files/versioning-large-files)
-- [hosting on itch.io](https://itch.io/docs/creators/html5)
+https://docs.unity3d.com/Manual/CollidersOverview.html
 
 
 ---
 
-## Unity-fying our code
+class: center
+name: webgl-build
+## WebGL build
 
-https://docs.unity3d.com/ScriptReference/Vector2.Lerp.html
-https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html
+<iframe src="https://rvirmoors.github.io/webgl/p5-unity/" width="600" height="406"></iframe>
 
-https://docs.unity3d.com/Manual/CollidersOverview.html
+- [hosting on github.io](https://medium.com/@aboutin/host-unity-games-on-github-pages-for-free-2ed6b4d9c324) 
+  - embed: <100 mb per file // dl: <1GB per file, with [LFS](https://git-lfs.github.com/)
+- [hosting on itch.io](https://itch.io/docs/creators/html5) 
+  - embed: <200MB per file, <500MB total // dl: <1GB per file*
+
+---
+name: sharing-your-project
+# Sharing your project
+
+right-click on Scene > *Export Package...*
+
+- → myProject.unitypackage
+
+upload to classroom, google drive, etc
+
+---
+
+## Version control
+
+.left-column[
+  [GitHub Desktop](https://desktop.github.com/)
+
+- [GitHub for Unity](https://unity.github.com/)
+
+- [How to Git with Unity](https://thoughtbot.com/blog/how-to-git-with-unity)
+
+- [my first Unity repo](https://github.com/RVirmoors/Unity)
+
+THE BIG FIVE
+- clone, pull, add, commit, push
+
+more git+Github [resources](../resources#git-and-github)
+]
+
+
+.right-column[<img style="width:100%"  src="../attachments/git-in-case-of-fire.png">]
 
 ---
 

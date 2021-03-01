@@ -3,14 +3,27 @@ layout: default
 ---
 ### Categories <!-- omit in toc -->
 1. [Getting started](#getting-started)
-2. [Academic](#academic)
-3. [Max](#max)
-4. [Unity](#unity)
-5. [Machine learning](#machine-learning)
+2. [Useful tools](#useful-tools)
+3. [Academic](#academic)
+4. [Max](#max)
+5. [Unity](#unity)
+6. [Machine learning](#machine-learning)
    
 # Getting started
 
 - [Learn to code](https://www.gdquest.com/tutorial/getting-started/learn-to/code/) tutorial. Game engine-based, but the principles apply to any creative coding.
+
+# Useful tools
+
+## Git and GitHub
+
+- [Getting started with GitHub](https://docs.github.com/en/github/getting-started-with-github)
+- [Git: Ignoring files](https://docs.github.com/en/github/using-git/ignoring-files)
+- [Documenting your projects on GitHub](https://guides.github.com/features/wikis/) using wikis
+- [Working with GitHub Pages](https://docs.github.com/en/github/working-with-github-pages) to publish your sites
+- [Git cheat sheet](https://training.github.com/downloads/github-git-cheat-sheet/) (basic @ GitHub)
+- [Git cheat sheet](https://ndpsoftware.com/git-cheatsheet.html) (pro @ NDP)
+- [Git documentation](https://git-scm.com/doc)
 
 # Academic
 
