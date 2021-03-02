@@ -113,9 +113,9 @@ Since the viewport’s (1, 1) position points to a corner, translating it to the
     <span class="n">Debug</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="n">halfHeight</span> <span class="p">+</span> <span class="s">" "</span> <span class="p">+</span> <span class="n">halfWidth</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>You can now run the game and check the console to find out your viewport dimensions. Notice that if you resize the viewport frame and restart the game, the reported size will also change. What values do you expect to receive if you pass <code class="language-plaintext highlighter-rouge">ViewportToWorldPoint(new Vector(0, 0, ...</code> instead of (1, 1)?</p>
+<p>You can now run the game and check the console to find out your viewport dimensions. Notice that if you resize the viewport frame and restart the game, the reported size will also change. <em>What values do you expect to see if you pass <code class="language-plaintext highlighter-rouge">ViewportToWorldPoint(new Vector(0, 0, ...</code> instead of (1, 1)?</em></p>
 
-<p><span class="newthought">Going back to the p5.js app,</span>  <code class="language-plaintext highlighter-rouge">setup()</code> deals with initial positions.</p>
+<p><span class="newthought">Going back to the p5.js app,</span>  <code class="language-plaintext highlighter-rouge">setup()</code> deals with initial positions—and so will our <code class="language-plaintext highlighter-rouge">Start()</code>.</p>
 
 <p><code class="language-plaintext highlighter-rouge">player</code> and <code class="language-plaintext highlighter-rouge">apple</code> now need to refer to the <code class="language-plaintext highlighter-rouge">GameObject</code>s in our scene.</p>
 
@@ -162,11 +162,17 @@ Since the viewport’s (1, 1) position points to a corner, translating it to the
       <td><code class="language-plaintext highlighter-rouge">Vector2.Distance</code></td>
     </tr>
     <tr>
+      <td><a href="https://p5js.org/reference/#/p5/mag"><code class="language-plaintext highlighter-rouge">mag</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Vector2.magnitude</code></td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">+=</code></td>
       <td><code class="language-plaintext highlighter-rouge">Transform.Translate</code></td>
     </tr>
   </tbody>
 </table>
+
+<p><em>Can you tell the difference between class members starting with capital letters (e.g. <code class="language-plaintext highlighter-rouge">Distance</code>) and those starting with small letters (e.g. <code class="language-plaintext highlighter-rouge">magnitude</code>)?</em></p>
 
 <div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
 <span class="p">{</span>
@@ -190,7 +196,7 @@ Since the viewport’s (1, 1) position points to a corner, translating it to the
 
 <p>Obviously, the actual drawing of the sprites, refreshing of the canvas between frames, etc are done implicitly by Unity in the back-end.</p>
 
-<p>Notice that we’ve used the same 3 lines of code to reposition the apple to a random point. Having the exact same code twice is a no-no: I leave it up to you to turn these three lines into a helper function.</p>
+<p><em>Notice that we’ve re-used the same 3 lines of code to reposition the apple to a random point. Having the exact same code twice is a no-no: I leave it up to you to turn these three lines into a helper function.</em></p>
 
 <p>You can now test the project, and play around with different values for <code class="language-plaintext highlighter-rouge">step</code> until you get the right feel.</p>
 
