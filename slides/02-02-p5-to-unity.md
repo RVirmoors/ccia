@@ -88,10 +88,13 @@ class: center
 
 ## Unity-fying our code
 
-https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html
+http://codesaying.com/understanding-screen-point-world-point-and-viewport-point-in-unity3d/
 
 https://docs.unity3d.com/Manual/CollidersOverview.html
 
+https://learn.unity.com/tutorial/world-interactions-blocking-movement
+
+https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html
 
 ---
 
@@ -109,6 +112,14 @@ name: webgl-build
 ---
 name: sharing-your-project
 # Sharing your project
+
+standard export
+
+version control
+
+---
+
+## Exporting
 
 right-click on Scene > *Export Package...*
 
@@ -148,3 +159,5 @@ Refactor the project using:
 - GameObject-connected scripts
 - Colliders 
 - as many Unity-specific helpers as you find useful
+
+Share your work as text / video / .unitypackage
