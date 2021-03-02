@@ -89,9 +89,9 @@ void Start()
     Debug.Log(halfHeight + " " + halfWidth);
 ```
 
-You can now run the game and check the console to find out your viewport dimensions. Notice that if you resize the viewport frame and restart the game, the reported size will also change. What values do you expect to receive if you pass `ViewportToWorldPoint(new Vector(0, 0, ...` instead of (1, 1)?
+You can now run the game and check the console to find out your viewport dimensions. Notice that if you resize the viewport frame and restart the game, the reported size will also change. *What values do you expect to see if you pass `ViewportToWorldPoint(new Vector(0, 0, ...` instead of (1, 1)?*
 
-{% newthought 'Going back to the p5.js app,' %} `setup()` deals with initial positions.
+{% newthought 'Going back to the p5.js app,' %} `setup()` deals with initial positions---and so will our `Start()`.
 
 `player` and `apple` now need to refer to the `GameObject`s in our scene. 
 
@@ -126,7 +126,10 @@ Then, in the `Update()` function, we use `ScreenToWorldPoint` to interpret the m
 | ---------- | -------- |
 | `mouseIsPressed` | `Input.GetMouseButton` |
 | `dist` | `Vector2.Distance` |
+| [`mag`](https://p5js.org/reference/#/p5/mag) | `Vector2.magnitude` |
 | `+=` | `Transform.Translate` |
+
+*Can you tell the difference between class members starting with capital letters (e.g. `Distance`) and those starting with small letters (e.g. `magnitude`)?*
 
 ```cs
 void Update()
@@ -151,7 +154,7 @@ void Update()
 
 Obviously, the actual drawing of the sprites, refreshing of the canvas between frames, etc are done implicitly by Unity in the back-end.
 
-Notice that we've used the same 3 lines of code to reposition the apple to a random point. Having the exact same code twice is a no-no: I leave it up to you to turn these three lines into a helper function.
+*Notice that we've re-used the same 3 lines of code to reposition the apple to a random point. Having the exact same code twice is a no-no: I leave it up to you to turn these three lines into a helper function.*
 
 You can now test the project, and play around with different values for `step` until you get the right feel.
 
