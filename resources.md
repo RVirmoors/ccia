@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-### Categories <!-- omit in toc -->
+### Categories<!-- omit in toc -->
 1. [Getting started](#getting-started)
 2. [Useful tools](#useful-tools)
 3. [Academic](#academic)
-4. [Max](#max)
-5. [Unity](#unity)
-6. [Machine learning](#machine-learning)
+4. [Processing](#processing)
+5. [Max](#max)
+6. [Unity](#unity)
+7. [Machine learning](#machine-learning)
    
 # Getting started
 
@@ -28,6 +29,7 @@ layout: default
 # Academic
 
 - [Google Scholar](http://scholar.google.com) to look up topics, authors, titles etc.
+- [Semantic Scholar](https://www.semanticscholar.org/), (superior?) alternative to Google Scholar
 - [Bibliographic research: basic rules](http://blogs.ub-filosofie.ro/jalobeanu-graduate/?p=37) by Dana Jalobeanu (RO)
 - [Dissertation writing resources](https://www.notion.so/Dissertation-Writing-039082ced5e848aba4a410a952d7f933) @ ITPMA
 
@@ -42,6 +44,10 @@ layout: default
 
 - [Journal of New Music Research](//www.tandfonline.com/loi/nnmr20)
 - [Computer Music Journal](//www.mitpressjournals.org/cmj)
+
+# Processing
+
+- [Processing forums](//discourse.processing.org/)
 
 # Max
 

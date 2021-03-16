@@ -160,4 +160,4 @@ Refactor the project using:
 - Colliders 
 - as many Unity-specific helpers as you find useful
 
-Share your work as text / video / .unitypackage
+Share your work as github URL / text / video / .unitypackage
