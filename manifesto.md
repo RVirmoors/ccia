@@ -6,6 +6,8 @@ layout: default
 
 Work in progress: a list of randomly assembled thoughts about what this material is about, how I teach it and how I recommend you approach it.
 
+(most of it is also things I tell myself on a regular basis...)
+
 1. [The good stuff comes after.](#the-good-stuff-comes-after)
 2. [You're here to have fun.](#youre-here-to-have-fun)
 3. [Look for alternative perspectives.](#look-for-alternative-perspectives)

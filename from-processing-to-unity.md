@@ -154,7 +154,7 @@ void Update()
 
 Obviously, the actual drawing of the sprites, refreshing of the canvas between frames, etc are done implicitly by Unity in the back-end.
 
-*Notice that we've re-used the same 3 lines of code to reposition the apple to a random point. Having the exact same code twice is a no-no: I leave it up to you to turn these three lines into a helper function.*
+*Notice that we've re-used the same 3 lines of code to reposition the apple to a random point. Having the exact same code twice is a no-no:*{% sidenote 'cleancode' 'However, obsessing about clean code can also be unproductive. The purpose of code is to help you get things done. [Clean code is not a goal.](https://overreacted.io/goodbye-clean-code/)'%} *I leave it up to you to turn these three lines into a helper function.*
 
 You can now test the project, and play around with different values for `step` until you get the right feel.
 
