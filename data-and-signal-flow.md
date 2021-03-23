@@ -16,7 +16,7 @@ I'll be mentioning hotkeys as we go, so we can get around faster. See [this slid
 
 ## Anatomy of objects
 
-Max/Pd works by generating and transmitting data from one *object* to another. An object has *inlets* (on top) and *outlets* (on the bottom), and contains and processes data.{% sidenote 'obj' 'Max/Pd objects are written [in](https://github.com/Cycling74/max-sdk) [C](https://github.com/pure-data/externals-howto) (or [C++](https://github.com/Cycling74/min-devkit)), so you can think of them as containers for small programs performing algorithms on data, which is what they are.'%} The data flows downstream, from outlets to inlets, via *patch cords* connecting objects.
+Max/Pd works by generating and transmitting data from one *object* to another. An object has *inlets* (on top) and *outlets* (on the bottom), and stores and processes data.{% sidenote 'obj' 'Max/Pd objects are written [in](https://github.com/Cycling74/max-sdk) [C](https://github.com/pure-data/externals-howto) (or [C++](https://github.com/Cycling74/min-devkit)), so you can think of them as containers for small programs performing algorithms on data, which is what they are.'%} The data flows downstream via *patch cords* connecting objects.
 
 As an example, press **N** and type in ```+```, then hit Enter. The [+ ] object adds two numbers together:
 
@@ -25,7 +25,7 @@ As an example, press **N** and type in ```+```, then hit Enter. The [+ ] object 
 {% marginfigure 'lock' 'attachments/max-lock.png' 'The lock button is found on the bottom-left of the patcher window. Click it to toggle in and out of *edit mode*.' %}
 Connect number boxes (key **I**) to the inlets and outlets and now you can see it in action. But first, you need to *lock* the program, or *patch*. Hit the lock icon, or **Ctrl+click** anywhere on the canvas.
 
-{% newthought 'Every object has a help patch' %}, which you access by (with the patch unlocked) **Alt+click**ing on the object. Whenever you're in doubt, or looking for inspiration or related info, check out these help patches. Understanding them is the best way to learn Max. And just like any patch, you can unlock them and copy-paste anything you find useful into your project.
+{% newthought 'Every object has a help patch' %}, which you access (with the patch unlocked) by **Alt+click**ing on the object. Whenever you're in doubt, or looking for inspiration or related info, check out these help patches. Understanding them is the best way to learn Max. And just like any patch, you can unlock them and copy-paste anything you find useful into your project.
 
 There are two types of inlets: <span style="color:lightcoral">hot</span> and <span style="color:cornflowerblue">cold</span>. Cold inlets <span style="color:cornflowerblue">set the internal state</span> of an object, while hot inlets both set the state, **and** <span style="color:lightcoral">trigger an operation</span> (usually resulting in an output down the object's outlet).
 
