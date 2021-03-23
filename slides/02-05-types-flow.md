@@ -164,7 +164,7 @@ G. [Sonification](#ex7)
 name: ex1
 class: center
 ## example patch
-![](../attachments/signal-to-matrix.png)
+![](../attachments/jitter-pixel-done.gif)
 
 ---
 name: ex2
