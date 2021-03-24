@@ -1,12 +1,12 @@
 ---
 layout: presentation
-title: Data and Signal Flow
+title: Data and signal flow
 ---
 
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 5: Data and Signal Flow]
+.subtitle[Week 5: Data and signal flow]
 <br/><br/><br/><br/><br/><br/>
 .date[Mar 2021] 
 <br/><br/><br/>

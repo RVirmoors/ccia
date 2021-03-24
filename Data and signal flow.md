@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Data and Signal Flow<!-- omit in toc -->
+# Data and signal flow<!-- omit in toc -->
 
 We introduce the fundamentals of Max/Pd and apply them in a basic example.
 
