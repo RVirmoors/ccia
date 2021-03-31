@@ -6,15 +6,26 @@ layout: full-width
 2. [Useful tools](#useful-tools)
 3. [Academic](#academic)
 4. [Processing](#processing)
-5. [Max](#max)
+5. [Max/Pd](#maxpd)
 6. [Unity](#unity)
 7. [Machine learning](#machine-learning)
+8. [Misc](#misc)
    
 # Getting started
 
 [Learn to code](https://www.gdquest.com/tutorial/getting-started/learn-to/code/) tutorial. Game engine-based, but the principles apply to any creative coding.
 
+[Practical Python](https://github.com/dabeaz-course/practical-python) course by David Beazley
+
 # Useful tools
+
+## Editors
+
+[VS Code](https://code.visualstudio.com/) by ms. Quick & powerful; my main editor these days.
+
+[Sublime Text](https://www.sublimetext.com/) - my previous go-to editor. Great swiss army knife for code and text.
+
+[Atom](https://atom.io/) by github
 
 ## Git and GitHub
 
@@ -49,7 +60,9 @@ layout: full-width
 
 - [Processing forums](//discourse.processing.org/)
 
-# Max
+# Max/Pd
+
+## Max
 
 [20 Objects](http://www.darwingrosse.com/20Objects/) course for learning Max, one "bellwether" object at a time
 
@@ -61,6 +74,8 @@ layout: full-width
 
 [Delicious Max Tutorials](https://www.youtube.com/playlist?list=PLD45EDA6F67827497), my favourite Youtube playlist of Max tutorials. Not for absolute beginners; check it out once you've absorbed the basics.
 
+[Amazing Max Stuff](https://www.youtube.com/channel/UCvDUaH2fbXP_Yc5Lc9UXfqA) Youtube channel: good Jitter resource.
+
 MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structuring-interactive-software-for-digital-arts-i), [Generative Art and Computational Creativity](https://www.kadenze.com/programs/generative-art-and-computational-creativity)
 
 ## Pd
@@ -70,6 +85,8 @@ MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structu
 [Classes](http://msp.ucsd.edu/syllabi/index.htm) (w/ video) taught by MSP at UCSD
 
 [Programming Electronic Music in Pd](http://pd-tutorial.com/english/) tutorial book
+
+[Unofficial Manual](https://archive.flossmanuals.net/pure-data/) @ FLOSS
 
 [Music patches](http://www.martin-brinkmann.de/pd-patches.html) by Martin Brinkmann
 
@@ -99,3 +116,7 @@ MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structu
 ## Datasets
 
 - [Internet Archive Book Images](https://www.flickr.com/photos/internetarchivebookimages) @ flickr
+
+# Misc 
+
+- [vvvv](https://vvvv.org/), a(nother) visual, node-based environment. Mostly used [for visuals](https://vvvv.org/propaganda).

@@ -96,6 +96,8 @@ https://learn.unity.com/tutorial/world-interactions-blocking-movement
 
 https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html
 
+[Update() vs FixedUpdate()](https://forum.unity.com/threads/rubys-adventure-2d-beginner-official-thread.661837/page-6#post-5477628)
+
 ---
 
 class: center
@@ -105,7 +107,7 @@ name: webgl-build
 <iframe src="https://rvirmoors.github.io/webgl/p5-unity/" width="600" height="406"></iframe>
 
 - [hosting on github.io](https://medium.com/@aboutin/host-unity-games-on-github-pages-for-free-2ed6b4d9c324) 
-  - embed: <100 mb per file // dl: <1GB per file, with [LFS](https://git-lfs.github.com/)
+  - embed: <100 mb per file // dl: <1GB per file, with [LFS](https://git-lfs.github.com/) ([just github.com](https://github.com/git-lfs/git-lfs/issues/3498))
 - [hosting on itch.io](https://itch.io/docs/creators/html5) 
   - embed: <200MB per file, <500MB total // dl: <1GB per file*
 
