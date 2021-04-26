@@ -46,6 +46,10 @@ layout: full-width
 
 [Official OSC website](http://opensoundcontrol.org/)
 
+[What is OSC?](https://thewizardofosc.com/more-on-osc/) @ TWO, a powerful OSC sequencer and control system.
+
+Useful Max packages: CNMAT, [odot](https://github.com/CNMAT/CNMAT-odot), [modosc](https://github.com/motiondescriptors/modosc) (mocap)
+
 Apps for sending device sensor data: [Syntien](https://apps.apple.com/us/app/syntien/id1203153534) (iOS), [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en) (Android), [Sensors2OSC](https://f-droid.org/en/packages/org.sensors2.osc/) (Android)
 
 Other apps: [TouchOSC](https://hexler.net/software/touchosc), [VideOSC](https://play.google.com/store/apps/details?id=net.videosc), [MobMuPlat](https://play.google.com/store/apps/details?id=com.iglesiaintermedia.mobmuplat) (w/ Pd) etc.
@@ -144,4 +148,4 @@ MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structu
 
 [tixy.land](https://tixy.land/) by [Martin Kleppe](https://twitter.com/aemkei/status/1323399877611708416): when all you need is (t)ime, (i)teration, and the (x,y) plane.
 
-[React](https://reactjs.org/), if p5.js is no longer enough and you want to make "real" interactive sites / apps.
+[React](https://reactjs.org/), if you want to make the jump from p5.js to interactive sites / apps "for grownups".

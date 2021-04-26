@@ -77,7 +77,7 @@ Which leads us to this...
 
 ## Exercise: audio-pixel visualiser
 
-{% marginfigure 'jitpix' 'attachments/jitter-pixel.gif' 'Pixel visualisation of a sine wave. The left pixel brightness is mapped to the [positive half-cycle](https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/waveforms-tim1.gif), and the right pixel to the negative half-cycle.' %}
+{% marginfigure 'jitpix' 'attachments/jitter-pixel3.gif' 'Pixel visualisation of a sine wave. The left pixel brightness is mapped to the [positive half-cycle](https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/waveforms-tim1.gif), and the right pixel to the negative half-cycle.' %}
 We've already seen how the [scope~] object allows us to see the amplitude of a sinewave (or any signal) over time. Another, perhaps more dynamic way to display the same information, would be to map its instantaneous value to the brightness of a pixel: see the right-hand animation for an example.
 
 You can recreate this effect using the objects below:{% sidenote 'rule' 'A general rule for working in Max/Pd: there is always more than one way to get something done. You might try replacing the [number~] with [snapshot~].'%}

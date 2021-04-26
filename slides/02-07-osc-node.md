@@ -6,7 +6,7 @@ title: OSC and Node in Max
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 7: OSC and Node in Max]
+.subtitle[Week 9: OSC and Node in Max]
 <br/><br/><br/><br/><br/><br/>
 .date[Apr 2021]
 <br/><br/><br/>
@@ -23,9 +23,8 @@ class: left
 
 1. [Review: OSC, Node.js](#review-osc-nodejs)
 2. [Sensors to Max](#sensors-to-max)
-3. [Basic example: sonic loop](#basic-example-sonic-loop)
-4. [Node for Max](#node-for-max)
-5. [Assignment](#assignment)
+3. [Node for Max](#node-for-max)
+4. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -84,7 +83,7 @@ timing & scheduling: [OSC-timetag], [OSC-schedule]
 
 ---
 name: basic-example-sonic-loop
-# Basic example: sonic loop
+## Basic example: sonic loop
 
 .left-column[
 https://en.wikipedia.org/wiki/Network_topology 

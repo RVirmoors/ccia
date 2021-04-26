@@ -1,0 +1,288 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
+# GNU Make 4.3
+# Built for Windows32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Apr 19 12:18:46 2021
+
+# Variables
+
+# environment
+PYENV = C:\Users\rv\.pyenv\pyenv-win\
+# environment
+USERPROFILE = C:\Users\rv
+# environment
+ProgramW6432 = C:\Program Files
+# environment
+LOCALAPPDATA = C:\Users\rv\AppData\Local
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-c67bb374-7cec-417f-adc9-4062460d4399-sock
+# environment
+VSCODE_CWD = C:\Users\rv\AppData\Local\Programs\Microsoft VS Code
+# environment
+PROCESSOR_LEVEL = 6
+# default
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10372_ZMXFIYMLHBIKRSXD
+# environment
+CommonProgramFiles = C:\Program Files (x86)\Common Files
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# default
+.LOADED := 
+# environment
+TMP = C:\Users\rv\AppData\Local\Temp
+# default
+.INCLUDE_DIRS = .
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# environment
+ChocolateyInstall = C:\ProgramData\chocolatey
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := c:/Users/rv/Documents/ccia
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+PSModulePath = C:\Program Files (x86)\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\PowerShell
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# makefile
+MAKEFILE_LIST := 
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 10372
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# environment
+ProgramFiles(x86) = C:\Program Files (x86)
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# environment
+OneDrive = C:\Users\rv\OneDrive
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := Windows32
+# default
+SHELL := sh.exe
+# environment
+windir = C:\WINDOWS
+# environment
+HOMEPATH = \Users\rv
+# default
+MAKECMDGOALS := all
+# environment
+RUBYOPT = -Eutf-8
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Pandoc\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Git LFS;C:\Ruby27-x64\bin;C:\Users\rv\.pyenv\pyenv-win\bin;C:\Users\rv\.pyenv\pyenv-win\shims;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Pandoc\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\rv\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\rv\AppData\Local\Programs\Python\Python38\;C:\Users\rv\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\rv\AppData\Local\Programs\Python\Python38-32\;C:\Users\rv\AppData\Local\Microsoft\WindowsApps;C:\Users\rv\AppData\Local\GitHubDesktop\bin;C:\Users\rv\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\rv\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\rv\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\rv\AppData\Local\Microsoft\WindowsApps;C:\Users\rv\.dotnet\tools;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;
+# environment
+COMPUTERNAME = RVIRMOORS
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+LOGONSERVER = \\RVIRMOORS
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = rv
+# automatic
+?F = $(notdir $?)
+# environment
+ChocolateyLastPathUpdate = 132288569494099162
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = RVIRMOORS
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+GIT_LFS_PATH = C:\Program Files\Git LFS
+# environment
+OS = Windows_NT
+# environment
+SystemRoot = C:\WINDOWS
+# environment
+__COMPAT_LAYER = DetectorsAppHealth
+# makefile
+.DEFAULT_GOAL := 
+# environment
+ProgramFiles = C:\Program Files (x86)
+# environment
+SystemDrive = C:
+# default
+MAKE_VERSION := 4.3
+# environment
+USERDOMAIN_ROAMINGPROFILE = RVIRMOORS
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+PUBLIC = C:\Users\Public
+# environment
+ProgramData = C:\ProgramData
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = C:\Users\rv\AppData\Roaming\Code\CachedData\3c4e3df9e89829dce27b7b5c24508306b151f30d
+# environment
+APPDATA = C:\Users\rv\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+GTK_BASEPATH = C:\Program Files (x86)\GtkSharp\2.12\
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+DriverData = C:\Windows\System32\Drivers\DriverData
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+CommonProgramW6432 = C:\Program Files\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\rv\AppData\Local\Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\0786492483a3be3101ef813462e494b4-1.55.2-main-sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+# environment
+PROCESSOR_REVISION = 8e0a
+# environment
+PYENV_HOME = C:\Users\rv\.pyenv\pyenv-win\
+# environment
+ComSpec = C:\WINDOWS\system32\cmd.exe
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+# variable set hash-table stats:
+# Load=98/1024=10%, Rehash=0, Collisions=5/122=4%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key c:/Users/rv/Documents/ccia, mtime 1618228226): 38 files, no impossibilities.
+
+# 38 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been upda 
+ted.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile.mak:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/16=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 45 / storage = 560 B / avg = 12 B
+# current buf: size = 8174 B / used = 560 B / count = 45 / avg = 12 B
+
+# strcache performance: lookups = 48 / hit rate = 6%
+# hash-table stats:
+# Load=45/8192=1%, Rehash=0, Collisions=0/48=0%
+# Finished Make data base on Mon Apr 19 12:18:46 2021
+
+ 

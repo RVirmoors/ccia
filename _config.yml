@@ -7,6 +7,9 @@ description:      Class notes & resources for my courses @ ITPMA/UNATC.
 #url:              https://rvirmoors.github.io
 baseurl:          /ccia
 
+data:
+  options:
+    mathjax: true
 simple_search: http://google.com/search
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
