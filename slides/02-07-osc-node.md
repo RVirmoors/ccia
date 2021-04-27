@@ -6,7 +6,7 @@ title: OSC and Node in Max
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 9: OSC and Node in Max]
+.subtitle[Week 7: OSC and Node in Max]
 <br/><br/><br/><br/><br/><br/>
 .date[Apr 2021]
 <br/><br/><br/>
