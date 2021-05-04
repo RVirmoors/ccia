@@ -37,6 +37,7 @@ Work-in-progress, transitioning from google slides & assorted notebooks. What's 
 | [[Data and signal flow]]   | [slides](slides/02-05-types-flow) |                    | Personal project    | [slides](slides/02-03-personal-project.md) |  
 | [[Control]]   | [slides](slides/02-06-control) |                    | [[OSC in Unity]]    |  |  
 | [[OSC and Node in Max]] | [slides](slides/02-07-osc-node.md)  |    | Procedural audio in Unity | [slides](slides/02-10-unity-pd.md)  |  
+| Signal analysis  | [slides](slides/02-11-signal-analysis.md) |       |  |  |  
 | Generation & sequencing  |  |       |  |  |  
 | Jitter & TouchDesigner basics    |  |   
 

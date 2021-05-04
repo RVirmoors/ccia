@@ -13,10 +13,19 @@ layout: full-width
    
 # Getting started
 
+## Coding
+
 [Learn to code](https://www.gdquest.com/tutorial/getting-started/learn-to/code/) tutorial. Game engine-based, but the principles apply to any creative coding.
 
 [Practical Python](https://github.com/dabeaz-course/practical-python) course by David Beazley.
 
+## Signals
+
+[Seeing circles, sines and signals](https://jackschaedler.github.io/circles-sines-signals/) by Jack Schaedler, a visual introduction to digital signal processing.
+
+[Learning resources](https://learn.flucoma.org/) @ FluCoMa, geared towards sound anaylsis, decomposition, recombination.
+
+## Work
 
 [Plagiarism](https://www.anu.edu.au/students/academic-skills/academic-integrity/plagiarism) -- know what it is, and how to avoid it. Whenever in doubt, ask your prof.
 
