@@ -270,4 +270,7 @@ class: left
 # Links
 
 https://jakevdp.github.io/WhirlwindTourOfPython/
+
+https://ryxcommar.com/2019/10/24/how-i-learned-python/
+
 https://ml4a.github.io/classes/itp-F18/terminal-velocity/

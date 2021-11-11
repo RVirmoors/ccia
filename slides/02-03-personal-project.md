@@ -24,7 +24,8 @@ class: left
 1. [Personal project labs](#personal-project-labs)
 2. [Example design](#example-design)
 3. [Interaction](#interaction)
-4. [Assignment](#assignment)
+4. [Mapping out the project](#mapping-out-the-project)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -54,7 +55,7 @@ class: center
 <img style="width:90%"  src="../attachments/sketch-unity.png">
 
 ---
-
+name: interaction
 # Interaction
 
 move left-right
@@ -65,6 +66,45 @@ constrain
 jump
 
 fire attackWave / projectile
+
+---
+name: mapping-out-the-project
+# Mapping out the project
+
+Useful tools:
+- [Network Diagrams](https://graphicalnetworks.com/blog-logical-vs-physical-network-diagrams/) (logical / physical)
+- [Flowcharts](https://www.visual-paradigm.com/tutorials/flowchart-tutorial/) (logical steps)
+- [UML](https://medium.com/kidstronics/unity-point-click-adventuregame-09-a71fe94dd402) (OOP code)
+<br/><br/>
+- *(in order of necessity)*\*
+
+--
+
+Design paradigms:
+- bottom-up
+    - solving problems / building abstractions. experimentation. iterative growth.
+- top-down
+    - establishing structure. setting dependencies
+
+
+---
+class: center
+## Example modular hierarchy
+main > fx-module > fx-input
+<img style="width:90%"  src="https://raw.githubusercontent.com/RVirmoors/fred-arditti/master/readme/overview.PNG">
+
+- https://github.com/RVirmoors/fred-arditti
+
+---
+class: center
+## Example modular hierarchy
+main > fx-module > fx-input
+<img style="width:90%"  src="../attachments/fred-modules.png">
+
+- abstractions
+- encapsulation
+- signal & message routing
+
 
 ---
 

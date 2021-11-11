@@ -1,23 +1,23 @@
 ---
 layout: full-width
 ---
-### Categories<!-- omit in toc -->
-1. [Getting started](#getting-started)
-2. [Useful tools](#useful-tools)
-3. [Research](#research)
-4. [Processing](#processing)
-5. [Max/Pd](#maxpd)
-6. [Unity](#unity)
-7. [Machine learning](#machine-learning)
-8. [Misc](#misc)
+[Getting started](#getting-started) . [Useful tools](#useful-tools) . [Research](#research) . [Processing](#processing) . [Max/Pd](#maxpd) . [Unity](#unity) . [Machine learning](#machine-learning) . [Misc](#misc)
    
 # Getting started
+
+[Coding](#coding) . [Interactive arts](#interactive-arts) . [Signals](#signals) . [Work](#work)
 
 ## Coding
 
 [Learn to code](https://www.gdquest.com/tutorial/getting-started/learn-to/code/) tutorial. Game engine-based, but the principles apply to any creative coding.
 
 [Practical Python](https://github.com/dabeaz-course/practical-python) course by David Beazley.
+
+## Interactive arts
+
+[Learning Music](https://learningmusic.ableton.com/) interactive tutorial @ Ableton
+
+[An Introduction to Creative Artificial Intelligence for Music](https://kivanctatar.com/An-Introduction-to-Creative-Artificial-Intelligence-for-Music) by Kıvanç Tatar, a quick tour of the world of (musical) metacreation.
 
 ## Signals
 
@@ -33,20 +33,24 @@ layout: full-width
 
 # Useful tools
 
+[Editors](#editors) . [Git and Github](#git-and-github) . [OSC](#opensoundcontrol)
+
+Flowcharts! Any interactive project needs at least one, even if it's just in your head. Here's one [tutorial](https://www.visual-paradigm.com/tutorials/flowchart-tutorial/). There are about [a](https://creately.com/diagram-type/flowchart) [million](https://www.visme.co/flowchart-maker/) [online](https://online.visual-paradigm.com/diagrams/features/flowchart-tool/) [flowcharting](https://app.diagrams.net/) [tools](https://www.lucidchart.com/pages/) out there.
+
 ## Editors
 
 [VS Code](https://code.visualstudio.com/) by ms. Quick & powerful; my main editor these days.
 
 [Sublime Text](https://www.sublimetext.com/) - my previous go-to editor. Great swiss army knife for code and text.
 
-[Atom](https://atom.io/) by github
+[Atom](https://atom.io/) by github.
 
 ## Git and GitHub
 
 - [Getting started with GitHub](https://docs.github.com/en/github/getting-started-with-github)
 - [Git: Ignoring files](https://docs.github.com/en/github/using-git/ignoring-files)
-- [Documenting your projects on GitHub](https://guides.github.com/features/wikis/) using wikis
-- [Working with GitHub Pages](https://docs.github.com/en/github/working-with-github-pages) to publish your sites
+- [Documenting your projects on GitHub](https://guides.github.com/features/wikis/) using wikis.
+- [Working with GitHub Pages](https://docs.github.com/en/github/working-with-github-pages) to publish your sites.
 - [Git cheat sheet](https://training.github.com/downloads/github-git-cheat-sheet/) (basic @ GitHub)
 - [Git cheat sheet](https://ndpsoftware.com/git-cheatsheet.html) (pro @ NDP)
 - [Git documentation](https://git-scm.com/doc)
@@ -57,20 +61,24 @@ layout: full-width
 
 [What is OSC?](https://thewizardofosc.com/more-on-osc/) @ TWO, a powerful OSC sequencer and control system.
 
-Useful Max packages: CNMAT, [odot](https://github.com/CNMAT/CNMAT-odot), [modosc](https://github.com/motiondescriptors/modosc) (mocap)
+Useful Max packages: CNMAT, [odot](https://github.com/CNMAT/CNMAT-odot), [modosc](https://github.com/motiondescriptors/modosc) (mocap).
 
-Apps for sending device sensor data: [Syntien](https://apps.apple.com/us/app/syntien/id1203153534) (iOS), [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en) (Android), [Sensors2OSC](https://f-droid.org/en/packages/org.sensors2.osc/) (Android)
+Sequencing apps: [IanniX](https://www.iannix.org/en/), [Open Stage Control](https://openstagecontrol.ammd.net/), [TWO](https://controlmedia.art/)
 
-Other apps: [TouchOSC](https://hexler.net/software/touchosc), [VideOSC](https://play.google.com/store/apps/details?id=net.videosc), [MobMuPlat](https://play.google.com/store/apps/details?id=com.iglesiaintermedia.mobmuplat) (w/ Pd) etc.
+Apps for sending device sensor data: [Syntien](https://apps.apple.com/us/app/syntien/id1203153534) (iOS), [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en) (Android), [Sensors2OSC](https://f-droid.org/en/packages/org.sensors2.osc/) (Android).
 
-Other telematic tools: [JackTrip](https://ccrma.stanford.edu/software/jacktrip/) (audio), [RTP-MIDI](https://en.wikipedia.org/wiki/RTP-MIDI), [Web MIDI](https://www.midi.org/17-the-mma/99-web-midi)
+Other mobile apps: [TouchOSC](https://hexler.net/software/touchosc), [VideOSC](https://play.google.com/store/apps/details?id=net.videosc), [MobMuPlat](https://play.google.com/store/apps/details?id=com.iglesiaintermedia.mobmuplat) (w/ Pd) etc.
+
+Other telematic tools: [Jamulus](https://jamulus.io/wiki/Getting-Started) & [JackTrip](https://ccrma.stanford.edu/software/jacktrip/) (audio), [RTP-MIDI](https://en.wikipedia.org/wiki/RTP-MIDI), [Web MIDI](https://www.midi.org/17-the-mma/99-web-midi).
 
 # Research
 
+[Conferences](#conferences) . [Journals](#journals)
+
 - [Google Scholar](http://scholar.google.com) to look up topics, authors, titles etc.
-- [Semantic Scholar](https://www.semanticscholar.org/), (superior?) alternative to Google Scholar
-- [Bibliographic research: basic rules](http://blogs.ub-filosofie.ro/jalobeanu-graduate/?p=37) by Dana Jalobeanu (RO)
-- [Dissertation writing resources](https://www.notion.so/Dissertation-Writing-039082ced5e848aba4a410a952d7f933) @ ITPMA
+- [Semantic Scholar](https://www.semanticscholar.org/), (superior?) alternative to Google Scholar.
+- [Bibliographic research: basic rules](http://blogs.ub-filosofie.ro/jalobeanu-graduate/?p=37) by Dana Jalobeanu (RO).
+- [Dissertation writing resources](https://www.notion.so/Dissertation-Writing-039082ced5e848aba4a410a952d7f933) @ ITPMA.
 
 ## Conferences
 
@@ -78,11 +86,14 @@ Other telematic tools: [JackTrip](https://ccrma.stanford.edu/software/jacktrip/)
 - [AI Music Creativity](//aimusiccreativity.org/)
 - [Sound and Music Computing](//zenodo.org/communities/smc) 
 - [International Computer Music Conference](//quod.lib.umich.edu/i/icmc/)
+- [International Conference for Live Coding](https://iclc.toplap.org/)
+- [more](http://www.smcnetwork.org/conferences.html) [conferences](http://conferences.smcnetwork.org/) 
 
 ## Journals
 
 - [Journal of New Music Research](//www.tandfonline.com/loi/nnmr20)
 - [Computer Music Journal](//www.mitpressjournals.org/cmj)
+- [Organised Sound](https://www.cambridge.org/core/journals/organised-sound)
 
 # Processing
 
@@ -90,11 +101,19 @@ Other telematic tools: [JackTrip](https://ccrma.stanford.edu/software/jacktrip/)
 
 [Mozilla tutorials](https://developer.mozilla.org/en-US/docs/Web/Tutorials) for getting started with the web, HTML, CSS, JavaScript -- useful for p5.js beginners and intermediates alike.
 
-[dwitter](https://www.dwitter.net/): p5.js in 140 characters or less
+[dwitter](https://www.dwitter.net/): p5.js in 140 characters or less.
+
+[Generative algorithms](https://github.com/v3ga/Processing) collection by Julien Gachadoat.
 
 # Max/Pd
 
+[Max](#max) . [Pure data](#pd) . [Related communities](#related-communities)
+
 ## Max
+
+[Learning](#learning) . [Externals](#externals)
+
+### Learning
 
 [20 Objects](http://www.darwingrosse.com/20Objects/) course for learning Max, one "bellwether" object at a time
 
@@ -108,9 +127,21 @@ Other telematic tools: [JackTrip](https://ccrma.stanford.edu/software/jacktrip/)
 
 [Amazing Max Stuff](https://www.youtube.com/channel/UCvDUaH2fbXP_Yc5Lc9UXfqA) Youtube channel: good Jitter resource.
 
+[Node for Max](https://cycling74.com/articles/node-for-max-intro-%E2%80%93-let%E2%80%99s-get-started) intro @ Cycling '74.
+
 MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structuring-interactive-software-for-digital-arts-i), [Generative Art and Computational Creativity](https://www.kadenze.com/programs/generative-art-and-computational-creativity)
 
-[Node for Max](https://cycling74.com/articles/node-for-max-intro-%E2%80%93-let%E2%80%99s-get-started) intro @ Cycling '74.
+### Externals
+
+interactive sequencing: Max for Live, [OSC sequencer apps](#opensoundcontrol)
+
+interactive synthesis: [MuBu](https://forum.ircam.fr/projects/detail/mubu/)
+
+reactive programming: [Antescofo](https://forum.ircam.fr/projects/detail/antescofo/)
+
+spatialisation: [Spat](https://forum.ircam.fr/projects/detail/spat/), [ICST Ambisonics](https://ambisonics.ch/)
+
+See also: machine learning Max [tools](#tools)
 
 ## Pd
 
@@ -130,6 +161,7 @@ MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structu
 - [Pure Data](https://forum.pdpatchrepo.info/) forums
 - [lines](https://llllllll.co/) - focus on DYI/boutique instruments
 - [NIME](https://forum.nime.org/) - academic/research
+- https://toplap.org / [forum](https://forum.toplap.org/) / [TidalCycles forum](https://club.tidalcycles.org/)
 
 [FluCoMa](https://discourse.flucoma.org/) - the Fluid Corpus Manipulation toolbox for Max, Pd and SuperCollider
 
@@ -143,18 +175,59 @@ MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structu
 
 # Machine learning
 
+[Courses](#courses) . [Tools](#tools) . [Datasets](#datasets)
 
 - [Machine Learning for Musicians and Artists](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-iv) MOOC
 - [Dive into Deep Learning](https://d2l.ai/) book
+
+## Courses
+
+classic: bottom-up
+- [A. Ng's machine learning MOOC](https://www.coursera.org/learn/machine-learning)
+
+maker: top-down
+
+[R. Fiebrink’s MOOC](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/) / [mimic](https://mimicproject.com/guides/kadenze) for interactive machine learning in music and art
+
+[fast.ai](https://course.fast.ai/) / [fastbook](https://github.com/fastai/fastbook) for deep learning
+
+[Gene Kogan](https://ml4a.net/) [+](https://www.youtube.com/playlist?list=PLaN6Cxwpu9UKR2mPc39bZEJoyAoCwRw_q), [Yining Shi](https://github.com/yining1023/machine-learning-for-the-web), [Derrick Schultz and Lia Coleman](https://www.youtube.com/channel/UCaZuPdmZ380SFUMKHVsv_AA), [Jordi Pons](http://www.jordipons.me/apps/teaching-materials/), [Daniel Shiffman](https://www.youtube.com/c/TheCodingTrain) for deep learning in digital arts
+
+[HuggingFace](https://huggingface.co/course) for text generation / NLP with deep learning
+
+## Tools
+
+[Wekinator](http://www.wekinator.org/) for interactive ML (see also [Sound Control](http://soundcontrolsoftware.com/) and [InteractML](https://interactml.com/), also by Rebecca Fiebrink et al)
+- [ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/) for interactive ML in [Max](#max) 
+
+[FluCoMa](https://www.flucoma.org/) and [MASOM](https://github.com/ktatar/MASOM) for unsupervised learning in Max
+
+[MuBu for Max](https://forum.ircam.fr/projects/detail/mubu/) also does interactive ML among other things
+
+[fastai](https://docs.fast.ai/) / [PyTorch](https://pytorch.org/) for coding your own deep learning models
+
+[ml5](https://ml5js.org/) / [Tensorflow.js](https://teachablemachine.withgoogle.com/) for working with deep learning online
+  
+[Runway](https://runwayml.com/) offers a code-less (interactive) deep learning experience
+
+[Google](https://github.com/dvschultz/ml-art-colabs) [Colab](https://ljvmiranda921.github.io/notebook/2021/08/11/vqgan-list/)
 
 ## Datasets
 
 - [Internet Archive Book Images](https://www.flickr.com/photos/internetarchivebookimages) @ flickr
 
-# Misc 
+# Misc
+
+Live coding environments: [Supercollider](https://supercollider.github.io/), [Sonic Pi](https://sonic-pi.net/), [TidalCycles](https://tidalcycles.org/), [Hydra](https://hydra.ojack.xyz/) …
+
+[bitsy](https://make.bitsy.org/), a very basic, minimalist game making tool by Adam Le Doux. See a quick tutorial by [Claire Morwood](https://www.shimmerwitch.space/bitsyTutorial.html). Many extensions and clones exist -- see [bipsi](https://kool.tools/bipsi/).
+
+[Constraint Systems](https://constraint.systems/) by Grant Custer: *alternative interfaces for creating and editing images and text*.
 
 [vvvv](https://vvvv.org/), a(nother) visual, node-based environment. Mostly used [for visuals](https://vvvv.org/propaganda).
 
 [tixy.land](https://tixy.land/) by [Martin Kleppe](https://twitter.com/aemkei/status/1323399877611708416): when all you need is (t)ime, (i)teration, and the (x,y) plane.
 
-[React](https://reactjs.org/), if you want to make the jump from p5.js to interactive sites / apps "for grownups".
+[mmm](https://build.mmm.page/): visual drag&drop webpage maker
+
+[Awesome Creative Coding](https://github.com/terkelg/awesome-creative-coding): more creative coding resources "primarily for beginners/intermediates"
