@@ -19,9 +19,9 @@ Work-in-progress, transitioning from google slides & assorted notebooks. What's 
 | Intro to CC for IA  |  | [slides](slides/01-01-cc-intro.md)  | Visualization     |  |                    | Practical Python  |  [slides](slides/01-12-practical-python) | 
 | Basics     | | [slides](slides/01-02-basics.md) | Sound     |  |                 | More Python       |  [slides](slides/01-13-more-python) |
 | Finite State Machines | | [slides](slides/01-03-fsm.md)   | Node.js and APIs     |  |
-| Loops     | | [slides](slides/01-04-loops.md)          | Physical computing     |  |
+| Loops     | | [slides](slides/01-04-loops.md)          | Physical computing     |  | [slides](slides/01-07-osc.md)
 | Arrays     | | [slides](slides/01-05-arrays.md)        | Advanced OOP     |  |
-| Functions     | |
+| Functions     | | [slides](slides/01-06-functions.md)
 | Objects     | |
 
 ## Real-time systems
@@ -37,7 +37,7 @@ Work-in-progress, transitioning from google slides & assorted notebooks. What's 
 | [[OSC and Node in Max]] | [slides](slides/02-07-osc-node.md)  |    | Procedural audio in Unity | [slides](slides/02-10-unity-pd.md)  |  
 | Signal analysis  | [slides](slides/02-11-signal-analysis.md) |       |  |  |  
 | Generative processes  | [slides](slides/02-12-generative.md) |       |  |  |  
-| Jitter & TouchDesigner basics    |  |   
+| TouchDesigner basics    |  |   
 
 ## Machine learning
 
@@ -47,8 +47,8 @@ Work-in-progress, transitioning from google slides & assorted notebooks. What's 
 | **Wekinator** | | | **Code** | | | **Deep learning** | |            
 | :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | 
 | Intro to ML for IA |  | [slides](slides/03-01-ml-intro.md) | ml5.js: transfer learning |  | [slides](slides/03-05-transfer.md)  | Unsupervised learning. VAEs  | | 
-| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | | GAN&co: datasets & training  | | 
-| Regression. Neural nets  |  | [slides](slides/03-03-regression.md) | PyTorch and fast.ai     |  | | GAN&co: interactive inference  | | 
+| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | | GANs: datasets & training  | | [slides](slides/03-08-gan-train.md) 
+| Regression. Neural nets  |  | [slides](slides/03-03-regression.md) | PyTorch and fast.ai     |  | | [[GANs: interactive inference]]  | | 
 | Temporal modelling  | | [slides](slides/03-04-temporal.md)  | PyTorch: training and editing networks     |  | | RNN&co: text  | | 
 |   |  |  |      |  | | RNN&co: music  | | 
 

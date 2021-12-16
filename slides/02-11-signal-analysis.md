@@ -106,7 +106,7 @@ name: tools
 
 external packages
 
-see also [resources](../resources#signals)
+see also [resources](../resources#signals) and [discussion forums](https://cycling74.com/forums/how-to-mix-eul-quater-maths-and-motion-sensors)
 
 ---
 

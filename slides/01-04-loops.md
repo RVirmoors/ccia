@@ -114,6 +114,8 @@ keyboard status: `keyPressed, key, keyCode`
 
 keyboard events: `keyPressed(), keyReleased()` [et](https://processing.org/reference/#input-keyboard) [al](https://processing.org/examples/keyboard.html) [...](https://processing.org/examples/keyboardfunctions.html)
 
+- [Text and type](https://creative-coding.decontextualize.com/text-and-type/) p5js tutorial / Allison Parish
+
 ---
 name: colour
 # Colour

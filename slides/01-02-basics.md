@@ -39,6 +39,7 @@ class: center
 [Universal Paperclips](http://www.decisionproblem.com/paperclips/)
 
 [(original version)](https://web.archive.org/web/20171009230721/http://www.decisionproblem.com/paperclips/index2.html)
+- [article about the game](https://if50.substack.com/p/2017-universal-paperclips) / Aaron A. Reed
 
 ---
 class: center

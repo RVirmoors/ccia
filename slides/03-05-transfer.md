@@ -24,7 +24,7 @@ class: left
 1. [Building knowledge](#building-knowledge)
 2. [Deep Convolutional NNs](#deep-convolutional-nns)
 3. [Transfer learning](#transfer-learning)
-4. [More online ML](#more-online-ml)
+4. [Links - ml5.js](#links---ml5js)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -97,10 +97,43 @@ recap [neural networks](../slides/03-03-regression#artificial-neural-networks)
 name: transfer-learning
 # Transfer learning
 
-https://ml4a.github.io/guides/ConvnetOSC/
+use a (trained) deep net as a feature extractor →
 
+> → into a smaller (untrained) output net
+
+[CNN-based guide](http://ml4a.github.io/guides/ConvnetOSC/) @ ml4a
+
+[ml5.js example](https://editor.p5js.org/AndreasRef/sketches/BJkaHBMYm)
+
+--
+
+transferring knowledge
+- from dataset to dataset 
+- from task to task
 
 ---
-# More online ML
+## Video guides - ml5.js
 
-https://youtu.be/8HEgeAbYphA
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/eeO-rWYFuG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/kRpZ5OqUY6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/KTNqXwkLuM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+name: links---ml5js
+# Links - ml5.js
+
+built on [tensorflow.js](https://www.tensorflow.org/js)
+
+[Machine Learning for the Web](https://github.com/yining1023/machine-learning-for-the-web) course / Yining Shi
+
+[feature extractor](https://learn.ml5js.org/#/reference/feature-extractor) ml5.js documentation
+
+examples
+- [feature extractor classification](https://editor.p5js.org/ml5/sketches/FeatureExtractor_Image_Classification)
+- [KNN classification](https://editor.p5js.org/ml5/sketches/KNNClassification_Video)
+
+more online ML
+- [ml5.js train a neural network](https://youtu.be/8HEgeAbYphA)
+
+more transfer learning
+- [fastai course](https://course.fast.ai/videos/?lesson=2)

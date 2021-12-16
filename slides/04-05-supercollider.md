@@ -166,6 +166,17 @@ more
 - http://sc3howto.blogspot.com/2006/04/fast-pbind-based-introduction-for.html
 - https://schemawound.com/2012/12/03/helping-until-it-hurts/
 
+---
+## Collaborative live coding
+
+Troop
+- https://github.com/Qirky/Troop
+- https://github.com/Qirky/Troop-Hub
+
+Flok
+- https://awesomeopensource.com/project/munshkr/flok
+- https://github.com/munshkr/FlokQuark
+
 
 ---
 name: assignment

@@ -39,7 +39,7 @@ name: review-osc-nodejs
 
 <img style="width:60%"  src="../attachments/osc-protocol.png">
 
-see [Sem 1 slides](https://docs.google.com/presentation/d/1ucgTnqj6zCoh-N_9cWOzHEqOd_foK3-EXSzQM8CN7rw/edit#slide=id.g4c218bab54_0_7)
+see [Sem 1 slides](../slides/01-07-osc#communication)
 
 
 ---
@@ -78,7 +78,7 @@ timing & scheduling: [OSC-timetag], [OSC-schedule]
     
     <img style="width:80%"  src="../attachments/cnmat-osc.png">
 
-- see also: [odot](https://github.com/CNMAT/CNMAT-odot)
+- see also: [odot](https://github.com/CNMAT/CNMAT-odot), [collab-hub](https://www.collab-hub.io/)
 - *...or just use [OSC-route]*]
 
 ---

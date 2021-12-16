@@ -8,32 +8,44 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Apr 19 12:18:46 2021
+# Make data base, printed on Fri Dec 10 09:57:47 2021
 
 # Variables
 
 # environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+SYSTEMDRIVE = C:
+# environment
 PYENV = C:\Users\rv\.pyenv\pyenv-win\
+# environment
+LC_ALL = C
+# environment
+_MSYS2_BASH = C:\tools\msys64\usr\bin\bash.exe
 # environment
 USERPROFILE = C:\Users\rv
 # environment
-ProgramW6432 = C:\Program Files
-# environment
 LOCALAPPDATA = C:\Users\rv\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-c67bb374-7cec-417f-adc9-4062460d4399-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-469c6ce1-264f-4bb0-bbb5-f9f2033b85cb-sock
 # environment
 VSCODE_CWD = C:\Users\rv\AppData\Local\Programs\Microsoft VS Code
 # environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
 PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Program Files (x86)\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\PowerShell
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10372_ZMXFIYMLHBIKRSXD
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13396_HDURZGHSEHDTUVVM
 # environment
-CommonProgramFiles = C:\Program Files (x86)\Common Files
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -46,6 +58,10 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\rv\AppData\Roaming\Code\CachedData\ccbaa2d27e38e5afa3e5c21c1c7bef4657064247
+# environment
+LANG = C
 # default
 .LOADED := 
 # environment
@@ -54,10 +70,10 @@ TMP = C:\Users\rv\AppData\Local\Temp
 .INCLUDE_DIRS = .
 # environment
 PROCESSOR_ARCHITEW6432 = AMD64
-# environment
-ChocolateyInstall = C:\ProgramData\chocolatey
 # makefile
 MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\rv\OneDrive
 # makefile
 CURDIR := c:/Users/rv/Documents/ccia
 # environment
@@ -67,11 +83,13 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
 MFLAGS = -pqrR
 # default
 .SHELLFLAGS := -c
 # environment
-PSModulePath = C:\Program Files (x86)\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\PowerShell
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # automatic
 +D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
 # makefile
@@ -81,25 +99,21 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 10372
+VSCODE_PID = 13396
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
-# environment
-ProgramFiles(x86) = C:\Program Files (x86)
 # automatic
 *F = $(notdir $*)
 # automatic
 <D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
 # environment
-OneDrive = C:\Users\rv\OneDrive
-# environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := Windows32
+# environment
+PROGRAMDATA = C:\ProgramData
 # default
 SHELL := sh.exe
-# environment
-windir = C:\WINDOWS
 # environment
 HOMEPATH = \Users\rv
 # default
@@ -107,11 +121,17 @@ MAKECMDGOALS := all
 # environment
 RUBYOPT = -Eutf-8
 # environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Pandoc\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Git LFS;C:\Ruby27-x64\bin;C:\Users\rv\.pyenv\pyenv-win\bin;C:\Users\rv\.pyenv\pyenv-win\shims;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Pandoc\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\rv\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\rv\AppData\Local\Programs\Python\Python38\;C:\Users\rv\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\rv\AppData\Local\Programs\Python\Python38-32\;C:\Users\rv\AppData\Local\Microsoft\WindowsApps;C:\Users\rv\AppData\Local\GitHubDesktop\bin;C:\Users\rv\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\rv\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\rv\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\rv\AppData\Local\Microsoft\WindowsApps;C:\Users\rv\.dotnet\tools;C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin;
+PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Pandoc\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files\CMake\bin;C:\Program Files\dotnet\;C:\Program Files\Git LFS;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Program Files\Git\cmd;C:\Ruby27-x64\bin;C:\Users\rv\.pyenv\pyenv-win\bin;C:\Users\rv\.pyenv\pyenv-win\shims;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Pandoc\;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\rv\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\rv\AppData\Local\Programs\Python\Python38-32\;C:\Users\rv\AppData\Local\Microsoft\WindowsApps;C:\Users\rv\AppData\Local\GitHubDesktop\bin;C:\Users\rv\AppD
 # environment
 COMPUTERNAME = RVIRMOORS
 # default
@@ -119,19 +139,23 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
+_MSYS2_PREFIX = x86_64
 # environment
 PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132817933205331062
 # environment
 LOGONSERVER = \\RVIRMOORS
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
 USERNAME = rv
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # automatic
 ?F = $(notdir $?)
 # environment
-ChocolateyLastPathUpdate = 132288569494099162
+PROGRAMW6432 = C:\Program Files
 # environment
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW
 # automatic
@@ -146,28 +170,18 @@ GNUMAKEFLAGS :=
 GIT_LFS_PATH = C:\Program Files\Git LFS
 # environment
 OS = Windows_NT
-# environment
-SystemRoot = C:\WINDOWS
-# environment
-__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := 
-# environment
-ProgramFiles = C:\Program Files (x86)
-# environment
-SystemDrive = C:
 # default
 MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
 # environment
 USERDOMAIN_ROAMINGPROFILE = RVIRMOORS
 # environment
 NUMBER_OF_PROCESSORS = 8
 # environment
 PUBLIC = C:\Users\Public
-# environment
-ProgramData = C:\ProgramData
-# environment
-VSCODE_NODE_CACHED_DATA_DIR = C:\Users\rv\AppData\Roaming\Code\CachedData\3c4e3df9e89829dce27b7b5c24508306b151f30d
 # environment
 APPDATA = C:\Users\rv\AppData\Roaming
 # environment
@@ -177,17 +191,15 @@ GTK_BASEPATH = C:\Program Files (x86)\GtkSharp\2.12\
 # environment
 PROCESSOR_ARCHITECTURE = x86
 # environment
-DriverData = C:\Windows\System32\Drivers\DriverData
-# environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
-CommonProgramW6432 = C:\Program Files\Common Files
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\rv\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\0786492483a3be3101ef813462e494b4-1.55.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\0786492483a3be3101ef813462e494b4-1.62.3-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -205,11 +217,11 @@ PROCESSOR_REVISION = 8e0a
 # environment
 PYENV_HOME = C:\Users\rv\.pyenv\pyenv-win\
 # environment
-ComSpec = C:\WINDOWS\system32\cmd.exe
+CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=98/1024=10%, Rehash=0, Collisions=5/122=4%
+# Load=104/1024=10%, Rehash=0, Collisions=9/128=7%
 
 # Pattern-specific Variable Values
 
@@ -217,9 +229,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/rv/Documents/ccia, mtime 1618228226): 38 files, no impossibilities.
+# . (key c:/Users/rv/Documents/ccia, mtime 1636653389): 40 files, no impossibilities.
 
-# 38 files, no impossibilities in 1 directories.
+# 40 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -238,8 +250,7 @@ Makefile:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
-#  File has not been upda 
-ted.
+#  File has not been updated.
 
 # Not a target:
 all:
@@ -277,12 +288,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 45 / storage = 560 B / avg = 12 B
-# current buf: size = 8174 B / used = 560 B / count = 45 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 47 / storage = 596 B / avg = 12 B
+# current buf: size = 8174 B / used = 596 B / count = 47 / avg = 12 B
 
-# strcache performance: lookups = 48 / hit rate = 6%
+# strcache performance: lookups = 50 / hit rate = 6%
 # hash-table stats:
-# Load=45/8192=1%, Rehash=0, Collisions=0/48=0%
-# Finished Make data base on Mon Apr 19 12:18:46 2021
+# Load=47/8192=1%, Rehash=0, Collisions=0/50=0%
+# Finished Make data base on Fri Dec 10 09:57:47 2021
 
  

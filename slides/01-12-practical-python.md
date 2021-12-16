@@ -22,7 +22,7 @@ class: left
 # ★ Table of Contents ★    <!-- omit in toc -->
       
 1. [Installing Python](#installing-python)
-2. [Three ways to access Python](#three-ways-to-access-python)
+2. [Four ways to access Python](#four-ways-to-access-python)
 3. [Python language specifics](#python-language-specifics)
 4. [Working with libraries (modules)](#working-with-libraries-modules)
 5. [Links](#links)
@@ -84,13 +84,14 @@ You can follow the link to download a current version for your system.
 
 ---
 
-name: three-ways-to-access-python  
+name: four-ways-to-access-python  
 class: left
-# Three ways to access Python
+# Four ways to access Python
 
-1. From the **command line**
-2. In an **editor** / IDE
-3. In Jupyter **notebooks**
+1. from the **command line**
+2. in an **editor** / IDE
+3. in Jupyter **notebooks**
+4. inside **TouchDesigner**
 
 ---
 
@@ -143,16 +144,42 @@ This paradigm comes closest to the idea of *live coding*. You can execute code l
 
 ---
 
+## TouchDesigner
+
+[Official TD: Python](https://docs.derivative.ca/Category:Python)
+- [custom python install](https://docs.derivative.ca/Category:Python#Installing_Custom_Python_Packages): Edit > Preferences > "Add External Python to Search Path". 
+- [tutorial](https://docs.derivative.ca/index.php?title=Introduction_to_Python_Tutorial) & [tips](https://docs.derivative.ca/Python_Tips)
+- package manager in TD is still [work in progress](https://forum.derivative.ca/t/rfe-integrate-poetry-package-manager-with-td/168073)
+
+[TD PIP](https://derivative.ca/community-post/asset/td-pip/63077) external component, for installing packages into your project folder
+
+--
+
+.left-column[
+[Matthew Ragan](https://matthewragan.com/teaching-resources/touchdesigner/) resources
+- [keyboard shortcuts](https://matthewragan.com/teaching-resources/touchdesigner/touchdesigner-keyboard-shortcuts/)
+- [python in TD](https://matthewragan.com/teaching-resources/touchdesigner/python-in-touchdesigner/) / [github](https://github.com/raganmd/TD-Examples/tree/master/ragan/python_in_touchdesigner)
+- [common operations](https://matthewragan.com/teaching-resources/touchdesigner/touchdesigner-common-operations-cheat-sheet/) cheat sheet
+- [python external libraries](https://github.com/mir-lab/touchdesigner-summit-2019-external-python) 2019 workshop
+]
+
+.right-column[
+<iframe src="https://www.youtube.com/embed/XqCnm0LN0mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+
+---
+
 ### Rules of thumb
 
-<iframe src="https://www.youtube.com/embed/7jiPeIFXb6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/7jiPeIFXb6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 -   use IDEs to **develop** and **test** your code (several files, modules, dependencies...)
 -   use NOTEBOOKS to get results (Colab GPU) and to **communicate** them.
 
 ...however:
 
-<iframe src="https://www.youtube.com/embed/9Q6sLbz37gk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/9Q6sLbz37gk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 

@@ -32,3 +32,7 @@ name: links
 # Links
 
 https://cycling74.com/tutorials/my-favorite-object-jit%C2%B7gl%C2%B7pix
+
+https://derivative.ca/UserGuide/Learning_TouchDesigner
+https://docs.derivative.ca/Operator
+https://derivative.ca/community-post/asset/td-completes-me-simple-auto-completion-engine-touch-designer

@@ -5,13 +5,23 @@ layout: full-width
    
 # Getting started
 
-[Coding](#coding) . [Interactive arts](#interactive-arts) . [Signals](#signals) . [Work](#work)
+[Coding](#coding) . [Graphics](#graphics) . [Interactive arts](#interactive-arts) . [Signals](#signals) . [Work](#work)
 
 ## Coding
 
 [Learn to code](https://www.gdquest.com/tutorial/getting-started/learn-to/code/) tutorial. Game engine-based, but the principles apply to any creative coding.
 
+[Books and videos](https://shiffman.net/) by the indefatigable Daniel Shiffman, an essential resource.
+
+Creative coding intros, using JavaScript, p5 etc: [Allison Parrish](https://creative-coding.decontextualize.com/), [Daniel Shiffman](https://shiffman.net/a2z/), [Jared Donovan](https://awarua.github.io/creative-coding/tutorials/tut13/index.html)
+
 [Practical Python](https://github.com/dabeaz-course/practical-python) course by David Beazley.
+
+[Collision Detection](http://www.jeffreythompson.org/collision-detection/) introductory book by Jeff Thompson, with Processing implementations. See also the resulting [p5.js library](https://github.com/bmoren/p5.collide2D).
+
+## Graphics
+
+[Programming Design Systems](https://programmingdesignsystems.com/) book by Rune Madsen, on the foundations of code-based graphic design.
 
 ## Interactive arts
 
@@ -129,6 +139,8 @@ Other telematic tools: [Jamulus](https://jamulus.io/wiki/Getting-Started) & [Jac
 
 [Node for Max](https://cycling74.com/articles/node-for-max-intro-%E2%80%93-let%E2%80%99s-get-started) intro @ Cycling '74.
 
+[gen~ for Beginners](https://cycling74.com/tutorials/gen~-for-beginners-part-1-a-place-to-start): a place to start @ Cycling '74.
+
 MOOCs: [Programming Max](https://www.kadenze.com/courses/programming-max-structuring-interactive-software-for-digital-arts-i), [Generative Art and Computational Creativity](https://www.kadenze.com/programs/generative-art-and-computational-creativity)
 
 ### Externals
@@ -191,7 +203,7 @@ maker: top-down
 
 [fast.ai](https://course.fast.ai/) / [fastbook](https://github.com/fastai/fastbook) for deep learning
 
-[Gene Kogan](https://ml4a.net/) [+](https://www.youtube.com/playlist?list=PLaN6Cxwpu9UKR2mPc39bZEJoyAoCwRw_q), [Yining Shi](https://github.com/yining1023/machine-learning-for-the-web), [Derrick Schultz and Lia Coleman](https://www.youtube.com/channel/UCaZuPdmZ380SFUMKHVsv_AA), [Jordi Pons](http://www.jordipons.me/apps/teaching-materials/), [Daniel Shiffman](https://www.youtube.com/c/TheCodingTrain) for deep learning in digital arts
+[Gene Kogan](https://ml4a.net/) [+](https://www.youtube.com/playlist?list=PLaN6Cxwpu9UKR2mPc39bZEJoyAoCwRw_q), [Yining Shi](https://github.com/yining1023/machine-learning-for-the-web), [Derrick Schultz and Lia Coleman](https://www.youtube.com/channel/UCaZuPdmZ380SFUMKHVsv_AA), [Scott Hawley](https://github.com/drscotthawley/DLAIE), [Jordi Pons](http://www.jordipons.me/apps/teaching-materials/), [Daniel Shiffman](https://www.youtube.com/c/TheCodingTrain) for ML / deep learning in digital arts
 
 [HuggingFace](https://huggingface.co/course) for text generation / NLP with deep learning
 
