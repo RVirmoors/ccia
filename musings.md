@@ -12,7 +12,7 @@ A sporadic list of thoughts on what this material is about and how you might app
 
 # Ignorance and equality.
 
-{% newthought 'I discovered the book' %} *The Ignorant Schoolmaster* by Jacques Rancière thanks to [the GSSB podcast](https://rangedtouch.com/2021/10/27/40-ranciere-the-ignorant-schoolmaster/), which is a great intro to the work. It presents a radical outlook on teaching that threw me into a bit of an existential crisis. The thesis might be summed up thus: *all human intelligence is equal, and everyone learns in one (universal) way, which is the same as how children learn their first language.*
+{% newthought 'I discovered the book' %} *The Ignorant Schoolmaster* by Jacques Rancière thanks to [the GSSB podcast](https://rangedtouch.com/2021/10/27/40-ranciere-the-ignorant-schoolmaster/), which is a great intro to the work. It contains a radical outlook on teaching that threw me into a bit of an existential crisis. The thesis might be summed up thus: *all human intelligence is equal, and everyone learns in one (universal) way, which is the same as how children learn their first language.*
 
 Two implications are: anyone can learn without a teacher's explanations,{% sidenote 'conditions' '(as long as necessary material conditions are met, and the subject *wants* to learn)' %} and learning is socially enabled. The teacher's role (and, by extension, the classroom, school, etc) then remains (1) to enforce that *yes, you can* learn the thing, and (2) to place you in a community of intellectual peers that fosters learning.
 
@@ -31,7 +31,7 @@ Yes, I am conflicted about leaving too many breadcrumbs, as if you weren't able 
 
 # The good stuff comes after.
 
-{% newthought 'We don’t start here' %} by creating great work--that's for you to take the time and make on your own. My job is to show you the tools and help you build an intuition of what they can do and where they may take you.
+{% newthought 'We don’t start here' %} by creating amazing work--that's for you to take the time and make on your own. My job is to show you the tools and help you build an intuition of what they can do and where they may take you.
 
 There's a great course (which someday I'll find the time to complete) called Drawabox which sets a [50% rule](https://drawabox.com/lesson/0/2/50percent): half the time you complete dry technical exercises, and the other half you create. This idea seems very healthy to me: you acquire new skills easier when you can just focus on the process and not worry about the artistic value of the result. But then you need to keep the creative force alive that made you want to get into this field, which means going off on your own and spending time building stuff.
 
