@@ -28,7 +28,7 @@ jobs:
           ssh_private_key: ''        # It's your SSH private key (SSH approach)
           repository: ''             # Default is current repository
           branch: 'master'            # Default is gh-pages for github provider
-          jekyll_src: './'           # Default is root directory
+          jekyll_src: './_site'           # Default is root directory
           jekyll_cfg: ''  # Default is _config.yml
           jekyll_baseurl: 'ccia'         # Default is according to _config.yml
           bundler_ver: '>=0'         # Default is latest bundler version
