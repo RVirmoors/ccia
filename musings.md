@@ -12,7 +12,7 @@ A sporadic list of thoughts on what this material is about and how you might app
 
 # Ignorance and equality.
 
-{% newthought 'I discovered the book' %} *The Ignorant Schoolmaster* by Jacques Rancière thanks to [the GSSB podcast](https://rangedtouch.com/2021/10/27/40-ranciere-the-ignorant-schoolmaster/), which is a great intro to the work. It presents a radical outlook on teaching that threw me into a bit of an existential crisis. The thesis might be summed up thus: *all human intelligence is equal, and everyone learns in one (universal) way, which is the same as how children learn their first language.*
+{% newthought 'I discovered the book' %} *The Ignorant Schoolmaster* by Jacques Rancière thanks to [the GSSB podcast](https://rangedtouch.com/2021/10/27/40-ranciere-the-ignorant-schoolmaster/), which is a great intro to the work. It contains a radical outlook on teaching that threw me into a bit of an existential crisis. The thesis might be summed up thus: *all human intelligence is equal, and everyone learns in one (universal) way, which is the same as how children learn their first language.*
 
 Two implications are: anyone can learn without a teacher's explanations,{% sidenote 'conditions' '(as long as necessary material conditions are met, and the subject *wants* to learn)' %} and learning is socially enabled. The teacher's role (and, by extension, the classroom, school, etc) then remains (1) to enforce that *yes, you can* learn the thing, and (2) to place you in a community of intellectual peers that fosters learning.
 
