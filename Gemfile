@@ -19,3 +19,4 @@ group :jekyll_plugins do
 # kramdown v2 ships without the gfm parser by default. If you're using
 # kramdown v1, comment out this line.
 gem "kramdown-parser-gfm"
+gem "webrick", "~> 1.8"
