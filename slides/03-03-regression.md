@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Week 3: Regression. Neural networks]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2021] 
+.date[Oct 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -47,7 +47,7 @@ input ~ *data*, output ~ *label*
 
 → input+output ~ *labelled data*
 
-<img style="width:50%"  src="../attachments/ml-pipeline.png">
+<img style="width:75%"  src="../attachments/ml-pipeline.png">
 
 ---
 ## sup.ML tasks
@@ -248,7 +248,7 @@ minimise $\epsilon$ through *gradient descent*
 
 --
 
-use **random datapoints** = *stochastic* gradient descent (SGD)
+use **random subset of datapoints** = *stochastic* gradient descent (SGD)
 - instead of entire dataset at each step
 
 ---
@@ -297,6 +297,10 @@ class: center
 
 more layers capture more complexity
 
+--
+
+- but [how much nonlinearity do you really need?](https://discourse.flucoma.org/t/video-for-my-students-about-mlp-and-autoencoder/888/5)
+
 ---
 class: center
 ## Weights
@@ -312,6 +316,10 @@ class: center
 <img style="width:100%"  src="../attachments/ann-activations.png">
 
 [demo: forward pass](https://ml4a.github.io/demos/simple_forward_pass/)
+
+--
+
+what is the latent space of a FF neural net?
 
 ---
 ## Basic ANN architecture design
@@ -358,3 +366,5 @@ class: center
 <img style="width:100%"  src="../attachments/mlstar-m4l.gif">
 
 ml.star Max package
+
+[similar example](https://f003.backblazeb2.com/file/learnassets/examples/teaching-material/regressor-process.pdf) [using](https://learn.flucoma.org/examples/regressor-video-demo.maxpat) FluCoMa

@@ -6,9 +6,9 @@ title: SuperCollider basics
 class: center, middle
 .title[Interactive Music Systems]
 <br/><br/>
-.subtitle[Week 5: SuperCollider basics]
+.subtitle[SuperCollider basics]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2021] 
+.date[Nov 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -24,7 +24,8 @@ class: left
 1. [Live coding](#live-coding)
 2. [What is SC?](#what-is-sc)
 3. [Objects and messages](#objects-and-messages)
-4. [Assignment](#assignment)
+4. [Other live coding environments](#other-live-coding-environments)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -40,6 +41,8 @@ name: live-coding
 ]
 
 [list of live coding languages](https://docs.google.com/spreadsheets/d/1zrC97i1DT_5B1-XG3RhZAnTTpBLQHfbeLimceKcikeY/edit?usp=sharing)
+
+[Live Coding: A User's Manual](https://livecodingbook.toplap.org/) book
 
 [toplap](https://toplap.org/) site
 
@@ -167,6 +170,17 @@ more
 - https://schemawound.com/2012/12/03/helping-until-it-hurts/
 
 ---
+name: other-live-coding-environments
+# Other live coding environments
+
+[Hydra](https://hydra.ojack.xyz/)
+- [tutorial](https://www.nadyaprimak.com/blog/creativity/hydra-tutorial-live-coding-visuals/) by N Primak
+
+[Sonic Pi](https://sonic-pi.net/) 
+
+[TidalCycles](https://tidalcycles.org/)
+
+---
 ## Collaborative live coding
 
 Troop
@@ -177,17 +191,15 @@ Flok
 - https://awesomeopensource.com/project/munshkr/flok
 - https://github.com/munshkr/FlokQuark
 
-
 ---
 name: assignment
 # Assignment
 
-5-min sound portrait: live coding
+create & play with a live coding sketch in SC / Sonic Pi / Hydra
 
-AND
+submit a video of a 3-5min performance
+- can start from existing code (yours or taken - credit the source)
+- could be a snippet from a longer session
+- add/edit actual commands "on the fly", not just change numbers :)
 
-find some SC code and modify + document it
-
-what next? 
-  - [Sonic Pi](https://sonic-pi.net/) 
-  - [TidalCycles](https://tidalcycles.org/)
+<iframe width="100%" height="275" src="https://www.youtube.com/embed/tyxRISUDcmA" title="Sonic Pi Live Coding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

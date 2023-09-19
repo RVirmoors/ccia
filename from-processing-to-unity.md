@@ -11,13 +11,11 @@ We start from basic principles, introducing Unity concepts as we need them in a 
 
 ## Mini-game from scratch
 
-This session isn't an introduction to making 2D games in Unity. For that, you should first follow a lesson such as [Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg). The point here is to make a bridge from the open world of Processing to the game-specific model of Unity, and maybe learn more about both sides in the process.
+This session isn't an introduction to making 2D games in Unity. For that, you should first follow a lesson such as [Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg). In fact, since we bypass many helpers particular to Unity, this workflow is not generally recommended. Our plan here is to make a bridge from the open world of Processing to the game-specific model of Unity, and learn more about both sides in the process.
 
-We begin from last semester's basic circle-and-square game:
+We begin from last semester's basic [circle-and-square game](https://openprocessing.org/sketch/998046):
 
 <iframe src="https://openprocessing.org/sketch/998046/embed/" width="800" height="400"></iframe>
-
-You may shift-click "Edit on OpenProcessing" to see the p5.js code in a new browser window.
 
 {% newthought 'Before we get to' %} writing code in Unity, we need to set the stage. Start a new 2D project and set the scene view as follows:
 
@@ -68,7 +66,7 @@ Again, we need an object in the scene to *contain* the script asset. Technically
 
 ```Scene: Create Empty > "GameController"```
 
-Finally, drop ```Main``` script onto ```GameController```'s inspector, and open it in your IDE.
+Finally, drop the ```Main``` script onto ```GameController```'s inspector, and open it in your code editor.
 
 {% newthought 'The code structure' %} should look familiar to you by now: instead of p5.js's `setup()` and `draw()` we now have `Start()` and `Update()`. As mentioned above, the main adjustment we'll have to make will be camera-related. This is due to Processing dealing directly with screen coordinates, and Unity distinguishing between *viewport* (or screen) and *world* coordinates. To this end we shall use two methods{% sidenote 'methods' 'Remember: methods are *functions*. Their defining characteristic, in OOP, is that they belong to a *class*, and so can be applied to objects of that class.'%} of Unity's `Camera` class: [ViewportToWorldPoint](https://docs.unity3d.com/ScriptReference/Camera.ViewportToWorldPoint.html) and [ScreenToWorldPoint](https://docs.unity3d.com/ScriptReference/Camera.ScreenToWorldPoint.html).
 
@@ -89,7 +87,7 @@ void Start()
     Debug.Log(halfHeight + " " + halfWidth);
 ```
 
-You can now run the game and check the console to find out your viewport dimensions. Notice that if you resize the viewport frame and restart the game, the reported size will also change. *What values do you expect to see if you pass `ViewportToWorldPoint(new Vector(0, 0, ...` instead of (1, 1)?*
+You can now run the game and check the console to find out your viewport dimensions. Notice that if you resize the viewport frame and restart the game, the reported size will also change. *What values do you expect to see if you pass `ViewportToWorldPoint(new Vector(0, 0, ...` instead of `(1, 1, ...`?*
 
 {% newthought 'Going back to the p5.js app,' %} `setup()` deals with initial positions---and so will our `Start()`.
 
@@ -140,7 +138,7 @@ void Update()
     float dist = Vector2.Distance(dest, player.transform.position);
     Vector2 move = (step * (dest - (Vector2)player.transform.position) / dist);
     if (move.magnitude < dist) {
-        player.transform.Translate((Vector3)move);
+        player.transform.Translate(move);
     }        
     // if player is close to apple:
     float pToA = Vector2.Distance(player.transform.position, apple.transform.position);
@@ -154,12 +152,12 @@ void Update()
 
 Obviously, the actual drawing of the sprites, refreshing of the canvas between frames, etc are done implicitly by Unity in the back-end.
 
-*Notice that we've re-used the same 3 lines of code to reposition the apple to a random point. Having the exact same code twice is a no-no:*{% sidenote 'cleancode' 'However, obsessing about clean code can also be unproductive. The purpose of code is to help you get things done. [Clean code is not a goal.](https://overreacted.io/goodbye-clean-code/)'%} *I leave it up to you to turn these three lines into a helper function.*
+*Notice that we've re-used the same 3 lines of code to reposition the apple to a random point. Writing the exact same code twice should give you pause:*{% sidenote 'cleancode' 'However, obsessing about clean code can also be unproductive. The purpose of code is to help you get things done. [Clean code is not a goal.](https://overreacted.io/goodbye-clean-code/)'%} *maybe you can turn these three lines into a helper function.*
 
 You can now test the project, and play around with different values for `step` until you get the right feel.
 
 ## Unity-fying our project
 
-Our game now already leverages some of Unity's abilities. But there are many we haven't yet touched--from methods that make our life easier, to larger features such as the physics engine. Can you think of some? Hint: check out the [script reference](https://docs.unity3d.com/ScriptReference/Vector2.html), or review [Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg).
+Our game now already leverages some of Unity's abilities. But there are many we haven't yet touched--from methods that make our life easier, to larger features such as the collision/physics engine. Can you think of some? Maybe start from the [script reference](https://docs.unity3d.com/ScriptReference/Vector2.html), or review [Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg).
 
-
+Before you start working, plan ahead and consider if you want to incrementally refactor the project to be more Unity-compliant, or if you'd find it easier to remake it from scratch. Sometimes, especially in the early stages, stopping to recreate the project from the ground up can be a refreshing practice.

@@ -6,9 +6,9 @@ title: Functions
 class: center, middle
 .title[Creative Coding and Software Design 1]
 <br/><br/>
-.subtitle[Week 6: Functions]
+.subtitle[Functions]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2021] 
+.date[Dec 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -45,6 +45,10 @@ an elegant program
   - *E W Dijkstra, 2000. Denken als Discipline*
 
 <iframe width="100%" height="250px" src="https://www.youtube.com/embed/RCCigccBzIU?start=1050" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+--
+
+- [counterpoint](https://youtu.be/7YpFGkG-u1w?t=1367)
 
 
 --

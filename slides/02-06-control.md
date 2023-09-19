@@ -6,9 +6,9 @@ title: Control
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 6: Control]
+.subtitle[Week 7: Control]
 <br/><br/><br/><br/><br/><br/>
-.date[Mar 2021] 
+.date[Apr 2022]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 

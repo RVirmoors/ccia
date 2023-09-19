@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Intro to Max & Pd and Unity<!-- omit in toc -->
+# Intro to real-time systems<!-- omit in toc -->
 
 A first look at dataflow languages and game engines: how to approach them and what their strengths are.
 
@@ -41,8 +41,7 @@ To sum up, we might compare imperative and dataflow languages as follows:
 | flow | secondary | primary |
 
 In Max et al, the state is subordinated to the flow of data,{% sidenote 'peek' 'You can of course peek at current values at any point in the graph.'%}
-while in Processing et al, the program flow is determined by the specified sequence of operations and their in-out dependencies.{% sidenote 'trace' 'The flow of data can be made explicit by running a debug trace.'%}
-
+while in Processing et al, the program flow is determined by the specified sequence of operations and their in-out dependencies.{% sidenote 'trace' 'The flow of data can be followed by running a debug trace.'%}
 
 ## Max & Pd
 
@@ -50,29 +49,27 @@ while in Processing et al, the program flow is determined by the specified seque
 
 The mid-90s brought real-time signal processing capabilities to consumer computers, which were incorporated into both Max (which became known as *Max/MSP*) and Pure Data. In 2003, Cycling '74 released *Jitter*, which added matrix manipulation for video and 3D graphics to Max. Another milestone was *Max for Live* and the subsequent merger of Cycling '74 with Ableton in the 2010s. This, as well as [other integrations](https://cycling74.com/products/extendmax) such as JavaScript, Node for Max, and a vast array of external [contributions](https://cycling74.com/packages), has maintained Max as a main choice for real-time creative computing for decades now.
 
-Meanwhile, Pd has also continued to evolve as a community-based project, mirroring many of Max's capabilities and (often via [libpd](https://github.com/libpd/libpd)) being embedded into pretty much any platform that will support it, including [Raspberry Pi](https://puredata.info/docs/raspberry-pi), [Unity](https://github.com/LibPdIntegration/LibPdIntegration), and even [Max](http://msp.ucsd.edu/software.html) itself.
+Meanwhile, Pd has also continued to evolve as a community-based project, mirroring many of Max's capabilities and being embedded (via [libpd](https://github.com/libpd/libpd)) into pretty much any platform that will support it, including [Raspberry Pi](https://puredata.info/docs/raspberry-pi), [Unity](https://github.com/LibPdIntegration/LibPdIntegration), and even [Max](http://msp.ucsd.edu/software.html) itself.
 
-**
-
-Max and Pd both deal with *data* of different types (symbols, numbers, audio buffers, matrices etc) flowing through *objects*,{% sidenote 'thesaurus' 'Hundreds of objects come built in, and can be supplemented by external packages. The Max documentation has several ways of presenting them; an underused one is the [object thesaurus](https://docs.cycling74.com/max8/vignettes/thesaurus).'%} which have accompanying *help patches*. These are small programs demonstrating the functionality and common use cases of a certain object, and can be taken apart and reused.
+{% newthought 'Max and Pd both' %} deal with *data* of different types (symbols, numbers, audio buffers, matrices etc) flowing through *objects*,{% sidenote 'thesaurus' 'Hundreds of objects come built in, and can be supplemented by external packages. The Max documentation has several ways of presenting them; an underused one is the [object thesaurus](https://docs.cycling74.com/max8/vignettes/thesaurus).'%} which have accompanying *help patches*. These are small programs demonstrating the functionality and common use cases of a certain object, and can be taken apart and reused.
 
 Here's how you might add two numbers together:
 
-{% maincolumn 'attachments/max-pd-purr.png' 'Patcher UI comparison.<br/>Left: Max. Middle: Pd.<br/>Right: [Purr Data](https://agraef.github.io/purr-data-intro/), a community-driven, extended fork of Pd--including a modernised frontend.' %}
+{% maincolumn 'attachments/max-pd-purr.png' 'Patcher UI comparison.<br/>Left: Max. Middle: Pd vanilla.<br/>Right: [Purr Data](https://agraef.github.io/purr-data-intro/), a community-driven, extended fork of Pd which includes a modernised frontend.' %}
 The Max interface (left) has probably the best look and feel, but the usage of the `[+]` object is the exact same: at least for core components, the transition from Max to Pd and vice versa is trivial.
 
 ## Unity
 
 Primarily a game engine, Unity is today a significant tool in the digital arts, mainly due to its state-of-the-art 3D graphics and scripting features, and to its adoption of technologies such as current VR, AR, mobile and web platforms. Meanwhile, it's just as potent for basic 2D interactive apps, which is how we'll begin our approach, transitioning [[from Processing to Unity]].
 
-Now, Unity exposes C# as its scripting API language. This means you write code in C# (an imperative language just like Java et al), and then the corresponding architecture is compiled in the back-end for you before the app is able to run. So far this sounds more like the workflow in Processing, than the interpreted graphical tools we described above.
+Unity exposes C# as its scripting API language. This means you write code in C# (an imperative language just like Java et al), and then the corresponding architecture is compiled in the back-end for you before the app is able to run. So far this sounds more like the workflow in Processing, than the interpreted graphical tools we described above.
 
 {% marginfigure 'unity' 'attachments/unity-editor-play.png' 'The Unity editor in play mode. Users are able to change parameter values and test their impact on the interaction dynamics in real time.' %}
 Interactive development in Unity is enabled through altering program parameters during runtime. This tightens the build-test loop, letting you iterate through various changes much faster. As you progress, you might find yourself speeding up development even more by creating your own [custom editors](https://docs.unity3d.com/Manual/editor-CustomEditors.html), integrated into the Unity UI in edit and/or play mode.
 
 Unity comes with an extensive [learning platform](https://learn.unity.com/) and [documentation](https://docs.unity3d.com/). See the [resources](resources#unity) page for more links to lessons and tutorials.
 
-Last but not least, as with Max, there exist free / open-source alternatives to the big industry players, Unity and Unreal Engine. I encourage you to check out [Godot](https://godotengine.org/features), a community-powered game engine which also has the ability to deploy to web, mobile and XR.
+As with Max, there are free / open-source alternatives to the big industry players, Unity and Unreal Engine. I encourage you to check out [Godot](https://godotengine.org/features), a free and open source game engine which also has the ability to deploy to web, mobile and XR. Or, if you liked [[P5](slides/01-01-cc-intro.md)] and are looking for an integrated platform to make small games and prototypes, you can't go wrong with [[PICO-8](first-steps-in-pico-8.md)].
 
 
 [//begin]: # "Autogenerated link references for markdown compatibility"

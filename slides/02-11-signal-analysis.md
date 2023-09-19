@@ -6,9 +6,9 @@ title: Signal analysis
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 11: Signal analysis]
+.subtitle[Signal analysis]
 <br/><br/><br/><br/><br/><br/>
-.date[May 2021]
+.date[Apr 2023]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -21,7 +21,7 @@ name: toc
 class: left
 # ★ Table of Contents ★     <!-- omit in toc -->
 
-1. [Review: Max &co](#review-max-co)
+1. [Review: Max objects](#review-max-objects)
 2. [Signals](#signals)
 3. [Tools](#tools)
 4. [Assignment](#assignment)
@@ -32,8 +32,8 @@ class: left
 layout: true  .toc[[★](#toc)]
         
 ---
-name: review-max-co
-# Review: Max &co
+name: review-max-objects
+# Review: Max objects
 
 trigger, scale, slide, cycle~, avg~ ...
 
@@ -110,7 +110,7 @@ see also [resources](../resources#signals) and [discussion forums](https://cycli
 
 ---
 
-## Objects
+## Useful objects
 
 sig~ ↔ snapshot~
 
@@ -123,13 +123,15 @@ function + line~, curve~
 
 ---
 
-## Packages
+## Useful packages
 
-CNMAT Externals / [sinusoids~]
+CNMAT externals
 
 jasch objects
 
 zsa.descriptors
+
+[odot](https://github.com/CNMAT/CNMAT-odot)
 
 [MuBu](https://forum.ircam.fr/projects/detail/mubu/) / [pipo~]
 

@@ -1,15 +1,17 @@
 ---
 layout: full-width
 ---
-[Getting started](#getting-started) . [Useful tools](#useful-tools) . [Research](#research) . [Processing](#processing) . [Max/Pd](#maxpd) . [Unity](#unity) . [Machine learning](#machine-learning) . [Misc](#misc)
+[Getting started](#getting-started) . [Useful tools](#useful-tools) . [Research](#research) . [Processing](#processing) . [Max/Pd](#maxpd) . [Machine learning](#machine-learning) . [Misc](#misc)
    
 # Getting started
 
-[Coding](#coding) . [Graphics](#graphics) . [Interactive arts](#interactive-arts) . [Signals](#signals) . [Work](#work)
+[Coding](#coding) . [Graphics](#graphics) . [Audio](#audio) . [Signals](#signals) . [Student work](#student-work)
 
 ## Coding
 
 [Learn to code](https://www.gdquest.com/tutorial/getting-started/learn-to/code/) tutorial. Game engine-based, but the principles apply to any creative coding.
+
+For a more systematic intro to programming, try the [CS50 online course](https://pll.harvard.edu/course/cs50-introduction-computer-science) from Harvard, or the [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) book.
 
 [Books and videos](https://shiffman.net/) by the indefatigable Daniel Shiffman, an essential resource.
 
@@ -17,13 +19,17 @@ Creative coding intros, using JavaScript, p5 etc: [Allison Parrish](https://crea
 
 [Practical Python](https://github.com/dabeaz-course/practical-python) course by David Beazley.
 
+[Preparation Course for Python](https://github.com/meinardmueller/PCP) by Meinard Müller et al. A solid introduction to programming via Python, notebooks, and towards numbers and [[signals](#signals)].
+
 [Collision Detection](http://www.jeffreythompson.org/collision-detection/) introductory book by Jeff Thompson, with Processing implementations. See also the resulting [p5.js library](https://github.com/bmoren/p5.collide2D).
 
 ## Graphics
 
 [Programming Design Systems](https://programmingdesignsystems.com/) book by Rune Madsen, on the foundations of code-based graphic design.
 
-## Interactive arts
+## Audio
+
+[Free Audio Resources](https://www.freeaudioresource.com/), game-oriented but generally useful
 
 [Learning Music](https://learningmusic.ableton.com/) interactive tutorial @ Ableton
 
@@ -35,7 +41,7 @@ Creative coding intros, using JavaScript, p5 etc: [Allison Parrish](https://crea
 
 [Learning resources](https://learn.flucoma.org/) @ FluCoMa, geared towards sound anaylsis, decomposition, recombination.
 
-## Work
+## Student work
 
 [Plagiarism](https://www.anu.edu.au/students/academic-skills/academic-integrity/plagiarism) -- know what it is, and how to avoid it. Whenever in doubt, ask your prof.
 
@@ -73,7 +79,7 @@ Flowcharts! Any interactive project needs at least one, even if it's just in you
 
 Useful Max packages: CNMAT, [odot](https://github.com/CNMAT/CNMAT-odot), [modosc](https://github.com/motiondescriptors/modosc) (mocap).
 
-Sequencing apps: [IanniX](https://www.iannix.org/en/), [Open Stage Control](https://openstagecontrol.ammd.net/), [TWO](https://controlmedia.art/)
+Sequencing apps: [ossia score](https://ossia.io/), [IanniX](https://www.iannix.org/en/), [Open Stage Control](https://openstagecontrol.ammd.net/), [TWO](https://controlmedia.art/)
 
 Apps for sending device sensor data: [Syntien](https://apps.apple.com/us/app/syntien/id1203153534) (iOS), [oscHook](https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&hl=en) (Android), [Sensors2OSC](https://f-droid.org/en/packages/org.sensors2.osc/) (Android).
 
@@ -119,17 +125,21 @@ Other telematic tools: [Jamulus](https://jamulus.io/wiki/Getting-Started) & [Jac
 
 [Max](#max) . [Pure data](#pd) . [Related communities](#related-communities)
 
+Sound / synth design: [Puckette book (Pd)](http://msp.ucsd.edu/techniques/latest/book.pdf) and [Max ports](https://github.com/georgeNikmus/The-Theory-and-Technique-of-Electronic-Music-Max-Patches); [Farnell book (Pd)](https://www.amazon.com/Designing-Sound-Press-Andy-Farnell/dp/0262014416) and [Max ports](https://github.com/unriginal/Designing-Sound-Max-Patches)
+
+[Computer music classes](http://www.ringbuffer.org/teaching/computer-music-basics/) by Henrik von Coler, a great supplement to this site.
+
 ## Max
 
 [Learning](#learning) . [Externals](#externals)
 
 ### Learning
 
-[20 Objects](http://www.darwingrosse.com/20Objects/) course for learning Max, one "bellwether" object at a time
+[20 Objects](http://www.darwingrosse.com/20Objects/) course for learning Max, one "bellwether" object at a time.
 
-[Practical starting guide](https://drive.google.com/file/d/0B97y8ubkbDHwVVZKaFFTMjMxb0E/view) to Max/MSP/Jitter
+[Practical starting guide](https://drive.google.com/file/d/0B97y8ubkbDHwVVZKaFFTMjMxb0E/view) to Max/MSP/Jitter.
 
-[Computer Music Programming](https://dobrian.github.io/cmp/index.html) website and [course](https://music.arts.uci.edu/dobrian/w18/music215A/examples/) by Christopher Dobrian, who is responsible for some of the very first Max tutorials
+[Computer Music Programming](https://dobrian.github.io/cmp/index.html) website and [course](https://music.arts.uci.edu/dobrian/w18/music215A/examples/) by Christopher Dobrian, who is responsible for some of the very first Max tutorials.
 
 [Max for the Visual Arts](https://github.com/imi/Max-for-the-Visual-Arts) package (also available through the Package Manager)
 
@@ -157,15 +167,17 @@ See also: machine learning Max [tools](#tools)
 
 ## Pd
 
-[Tutorial playlist](https://www.youtube.com/playlist?list=PL12DC9A161D8DC5DC) by Dr. Rafael Hernandez aka cheetomoskeeto
+[Tutorial playlist](https://www.youtube.com/playlist?list=PL12DC9A161D8DC5DC) by Dr. Rafael Hernandez aka cheetomoskeeto.
 
-[Classes](http://msp.ucsd.edu/syllabi/index.htm) (w/ video) taught by MSP at UCSD
+[Classes](http://msp.ucsd.edu/syllabi/index.htm) (w/ video) taught by MSP at UCSD.
 
-[Programming Electronic Music in Pd](http://pd-tutorial.com/english/) tutorial book
+[Programming Electronic Music in Pd](http://pd-tutorial.com/english/) tutorial book.
 
-[Unofficial Manual](https://archive.flossmanuals.net/pure-data/) @ FLOSS
+[Unofficial Manual](https://archive.flossmanuals.net/pure-data/) @ FLOSS.
 
-[Music patches](http://www.martin-brinkmann.de/pd-patches.html) by Martin Brinkmann
+[Live Electronics Tutorial](https://github.com/porres/Live-Electronics-Tutorial) using Pd and the ELSE library by Alexandre Porres.
+
+[Music patches](http://www.martin-brinkmann.de/pd-patches.html) by Martin Brinkmann.
 
 ## Related communities
 
@@ -180,66 +192,66 @@ See also: machine learning Max [tools](#tools)
 - [Art+Music+Technology](http://artmusictech.libsyn.com/) podcast
 
 
-# Unity
-- [Documentation](https://docs.unity3d.com/)
-- [Unity Learn](https://learn.unity.com/)
-- [Unity C# Survival Guide](https://learn.unity.com/course/unity-c-survival-guide)
-
 # Machine learning
 
 [Courses](#courses) . [Tools](#tools) . [Datasets](#datasets)
 
-- [Machine Learning for Musicians and Artists](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-iv) MOOC
-- [Dive into Deep Learning](https://d2l.ai/) book
-
 ## Courses
 
-classic: bottom-up
-- [A. Ng's machine learning MOOC](https://www.coursera.org/learn/machine-learning)
+[R. Fiebrink’s MOOC](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/) / [mimic](https://mimicproject.com/guides/kadenze) for interactive machine learning in music and art.
 
-maker: top-down
+- [Creative Machine Learning](https://github.com/acids-ircam/creative_ml) (Philippe Esling)
+- [Deep Learning & AI Ethics](https://github.com/drscotthawley/DLAIE) (Scott Hawley)
+- [Deep neural networks for music](http://www.jordipons.me/apps/teaching-materials/) (Jordi Pons)
 
-[R. Fiebrink’s MOOC](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/) / [mimic](https://mimicproject.com/guides/kadenze) for interactive machine learning in music and art
+[Gene Kogan](https://ml4a.net/) [+](https://www.youtube.com/playlist?list=PLaN6Cxwpu9UKR2mPc39bZEJoyAoCwRw_q), [Yining Shi](https://github.com/yining1023/machine-learning-for-the-web), [Derrick Schultz and Lia Coleman](https://www.youtube.com/channel/UCaZuPdmZ380SFUMKHVsv_AA), [Daniel Shiffman](https://www.youtube.com/c/TheCodingTrain) for ML / deep learning in digital arts.
 
-[fast.ai](https://course.fast.ai/) / [fastbook](https://github.com/fastai/fastbook) for deep learning
+[HuggingFace](https://huggingface.co/course) for text generation / NLP with deep learning.
 
-[Gene Kogan](https://ml4a.net/) [+](https://www.youtube.com/playlist?list=PLaN6Cxwpu9UKR2mPc39bZEJoyAoCwRw_q), [Yining Shi](https://github.com/yining1023/machine-learning-for-the-web), [Derrick Schultz and Lia Coleman](https://www.youtube.com/channel/UCaZuPdmZ380SFUMKHVsv_AA), [Scott Hawley](https://github.com/drscotthawley/DLAIE), [Jordi Pons](http://www.jordipons.me/apps/teaching-materials/), [Daniel Shiffman](https://www.youtube.com/c/TheCodingTrain) for ML / deep learning in digital arts
+[MIT 6.S192: Deep Learning for Art, Aesthetics, and Creativity](https://ali-design.github.io/deepcreativity/) intro / general course.
 
-[HuggingFace](https://huggingface.co/course) for text generation / NLP with deep learning
+[fast.ai](https://course.fast.ai/) / [fastbook](https://github.com/fastai/fastbook) (Jeremy Howard) for deep learning. Related: the [Dive into Deep Learning](https://d2l.ai/) book.
+
+[A. Ng's machine learning MOOC](https://www.coursera.org/learn/machine-learning) where it all (?) started.
 
 ## Tools
 
 [Wekinator](http://www.wekinator.org/) for interactive ML (see also [Sound Control](http://soundcontrolsoftware.com/) and [InteractML](https://interactml.com/), also by Rebecca Fiebrink et al)
-- [ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/) for interactive ML in [Max](#max) 
 
-[FluCoMa](https://www.flucoma.org/) and [MASOM](https://github.com/ktatar/MASOM) for unsupervised learning in Max
+[FluCoMa](https://www.flucoma.org/) for supervised and unsupervised learning in Max, Pd and SuperCollider. See also [a guide](https://github.com/flucoma/flucoma-for-pedagogues/blob/main/flucoma-for-pedagogues.pdf) on how to learn/teach FluCoMa.
 
-[MuBu for Max](https://forum.ircam.fr/projects/detail/mubu/) also does interactive ML among other things
+[ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/) for basic interactive ML in [Max](#max).
 
-[fastai](https://docs.fast.ai/) / [PyTorch](https://pytorch.org/) for coding your own deep learning models
+[ML Audio Salad](https://github.com/ktatar/mlaudiosalad) for unsupervised learning in Max.
 
-[ml5](https://ml5js.org/) / [Tensorflow.js](https://teachablemachine.withgoogle.com/) for working with deep learning online
+[MuBu for Max](https://forum.ircam.fr/projects/detail/mubu/) also does interactive ML among other things.
+
+[fastai](https://docs.fast.ai/) / [PyTorch](https://pytorch.org/) for coding your own deep learning models.
+
+[ml5](https://ml5js.org/) / [Tensorflow.js](https://teachablemachine.withgoogle.com/) for working with deep learning online.
   
-[Runway](https://runwayml.com/) offers a code-less (interactive) deep learning experience
+[Runway](https://runwayml.com/) offers a code-less (interactive) deep learning experience.
 
-[Google](https://github.com/dvschultz/ml-art-colabs) [Colab](https://ljvmiranda921.github.io/notebook/2021/08/11/vqgan-list/)
+[Google Colab](https://github.com/dvschultz/ml-art-colabs) and an alternative cloud GPU solution, [Paperspace Gradient](https://gradient.run/).
 
 ## Datasets
 
-- [Internet Archive Book Images](https://www.flickr.com/photos/internetarchivebookimages) @ flickr
+- [Internet Archive Book Images](https://www.flickr.com/photos/internetarchivebookimages) @ flickr.
 
 # Misc
 
-Live coding environments: [Supercollider](https://supercollider.github.io/), [Sonic Pi](https://sonic-pi.net/), [TidalCycles](https://tidalcycles.org/), [Hydra](https://hydra.ojack.xyz/) …
+[TouchDesigner](https://derivative.ca/UserGuide/Learning_TouchDesigner) learning resources and [documentation](https://docs.derivative.ca/Operator). More links for TD+python [[here](slides/01-12-practical-python#10)].
 
-[bitsy](https://make.bitsy.org/), a very basic, minimalist game making tool by Adam Le Doux. See a quick tutorial by [Claire Morwood](https://www.shimmerwitch.space/bitsyTutorial.html). Many extensions and clones exist -- see [bipsi](https://kool.tools/bipsi/).
+Live coding environments: [Supercollider](https://supercollider.github.io/), [Sonic Pi](https://sonic-pi.net/), [TidalCycles](https://tidalcycles.org/), [Hydra](https://hydra.ojack.xyz/) … and [the book](https://livecodingbook.toplap.org/).
 
-[Constraint Systems](https://constraint.systems/) by Grant Custer: *alternative interfaces for creating and editing images and text*.
+[Constraint Systems](https://constraint.systems/) by Grant Custer: "alternative interfaces for creating and editing images and text".
 
 [vvvv](https://vvvv.org/), a(nother) visual, node-based environment. Mostly used [for visuals](https://vvvv.org/propaganda).
 
 [tixy.land](https://tixy.land/) by [Martin Kleppe](https://twitter.com/aemkei/status/1323399877611708416): when all you need is (t)ime, (i)teration, and the (x,y) plane.
 
-[mmm](https://build.mmm.page/): visual drag&drop webpage maker
+[mmm](https://build.mmm.page/): visual drag&drop webpage maker.
 
-[Awesome Creative Coding](https://github.com/terkelg/awesome-creative-coding): more creative coding resources "primarily for beginners/intermediates"
+[Awesome Creative Coding](https://github.com/terkelg/awesome-creative-coding): more creative coding resources "primarily for beginners/intermediates".
+
+Newsletters etc: Lynn Cherny's [Things I Think Are Awesome](https://arnicas.substack.com), Niall Moody's [here and then gone](https://www.niallmoody.com/work/here-and-then-gone/), Guy Parsons' [prompt/response](https://promptresponse.substack.com/).

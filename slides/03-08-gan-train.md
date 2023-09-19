@@ -194,6 +194,8 @@ no / minimal extra content
 
 [dataset building notebook](https://colab.research.google.com/drive/1R4iPwpEqStq2P3JlECnUBFc6q06TC2eq)
 
+[training SG in 2022](https://youtu.be/uRLV26zlyZw)
+
 
 ---
 name: training-tips

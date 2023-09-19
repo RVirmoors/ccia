@@ -6,9 +6,9 @@ title: Intro to Creative Coding for Interactive Arts
 class: center, middle
 .title[Creative Coding and Software Design 1]
 <br/><br/>
-.subtitle[Week 1: Intro to Creative Coding for Interactive Arts]
+.subtitle[Intro to Creative Coding for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2021] 
+.date[Oct 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -44,6 +44,8 @@ class: left
 
 [Classroom](https://classroom.google.com/)
 
+[my site](https://rvirmoors.github.io/ccia/): Creative Coding for Interactive Arts
+
 ---
 ## General advice
 
@@ -59,6 +61,27 @@ google, stackoverflow etc
 
 BUILD STUFF!
 
+---
+
+## Making mistakes
+
+neuroplasticity
+
+--
+
+mistakes: good for learning!
+
+--
+
+how many?
+
+--
+
+15% mistakes (["the 85% rule"](https://youtu.be/t1F7EEGPQwo?t=117))
+
+--
+
+so: challenge yourself & BUILD STUFF.
 
 ---
 name: what-we-cover
@@ -94,10 +117,6 @@ coding style
 
 more [software](https://en.wikipedia.org/wiki/Software_design) [design](https://en.wikipedia.org/wiki/Code_Complete)    
 
---
-
-coding is [not computer science](https://ryxcommar.com/2020/05/15/coding-is-not-computer-science/)
-
 ---
 ## Programming components
 
@@ -122,27 +141,9 @@ adaptation
 - → code
 
 ---
-## Programming paradigms
+## Features
 
-Imperative programming: statement ~ command
-- e.g. `i = i + 1;`
-
-
-Procedural programming: procedure ~ function ~ method
-- e.g. `i = increment(i);`
-
-
-Object-oriented programming: class / object
-- e.g. `i.increment();`
-
---
-
-Declarative programming: not *how*, but *what* to do: e.g. HTML
-
----
-## Advantages
-
-of "classical" text-based coding:
+of "standard" text-based code:
 
 - reproducible
 
@@ -159,24 +160,26 @@ name: tools
 class: left
 # Tools
 
-Processing / Java
+- Processing / Java
+- p5.js / JS
+- *oF / C++*
 
-p5.js / JS
 
-Python
+- Python
+- Arduino
 
-Arduino
 
-*oF / C++*
+- *Unity / C#*
+- *Godot / GDScript*
+- *PICO-8 / lua*
 
-Unity / C#
 
-Max
+- Max
+- Pd
+- TouchDesigner
 
-Pd
 
-*TouchDesigner*
-
+- [GitHub](https://desktop.github.com/)
 
 See more [resources](../resources).
 
@@ -196,6 +199,12 @@ A. depends on your target domain
 
 B. PYTHON!
 - accessible, modular, multi-platform = “swiss army knife” language
+
+--
+
+C. it doesn't matter!
+- you can pick up and learn any language/tool: fundamentals are similar
+
 
 ---
 name: processing

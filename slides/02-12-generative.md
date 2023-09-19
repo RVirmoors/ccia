@@ -6,9 +6,9 @@ title: Generative processes
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 12: Generative processes]
+.subtitle[Week 14: Generative processes]
 <br/><br/><br/><br/><br/><br/>
-.date[May 2021]
+.date[May 2022]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -59,6 +59,13 @@ name: randomness
 random, drunk, decide
 
 urn
+
+
+<br/><br/><br/><br/><br/><br/>
+
+.right-column[
+<iframe src="https://www.youtube.com/embed/p99d_D6pMvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
 
 ---
 name: rules
@@ -128,10 +135,20 @@ generative grammar:
 - **initial** symbol S (*sentence*)
 - set of **terminal** symbols (*words*)
 
-L-system
+--
+
+.left-column[
+L-systems
 - **parallel** rewriting
 - jit.linden
 - jit.turtle
+]
+
+
+.right-column[
+  <br/>
+<iframe src="https://www.youtube.com/embed/f6ra024-ASY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
 
 ---
 

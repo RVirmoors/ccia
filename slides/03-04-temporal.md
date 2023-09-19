@@ -6,9 +6,9 @@ title: Temporal modelling
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 4: Temporal modelling]
+.subtitle[Temporal modelling]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2021] 
+.date[Oct 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -120,7 +120,7 @@ time series ~ sequential + timestamped data
 
 --
 
-recap [time series processing](03-02-classification#27)
+recap [time series processing](03-02-classification#30)
 
 being able to *follow* time series:
 
@@ -144,9 +144,10 @@ probabilistic
 
 --
 
-<br/><br/><br/><br/><br/><br/><br/>
 big data
 - the standard algos (DTW …) can be accel’d through DL ([Raffel](https://www.colinraffel.com/publications/thesis.pdf))
+
+current DL approaches: RNN, LSTM, Seq2Seq, Transformer, ...
 
 ---
 name: dynamic-time-warping-dtw

@@ -1,14 +1,14 @@
 ---
 layout: presentation
-title: Intro to Max & Pd and Unity
+title: Intro to real-time systems
 ---
 
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 1: Intro to Max & Pd and Unity]
+.subtitle[Intro to real-time systems]
 <br/><br/><br/><br/><br/><br/>
-.date[Feb 2021] 
+.date[Mar 2023] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -23,9 +23,9 @@ class: left
       
 1. [Semester overview](#semester-overview)
 2. [Interactive programming](#interactive-programming)
-3. [Max & Pd](#max--pd)
+3. [Max \& Pd](#max--pd)
 4. [Unity](#unity)
-5. [Assignment](#assignment)
+5. [TouchDesigner](#touchdesigner)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -40,27 +40,46 @@ class: left
 [Syllabus](https://www.notion.so/rvirmoors/Creative-Coding-and-Software-Design-2-b6cab9fba18a4e5c85f97fc3f0364aa7)
 
 
-| 2h lab | ~ | review assignments. practice w/ new concepts |
+| 2h lab | ~ | assignments work. practice w/ new concepts |
 | --- | | --- |
-| 2h lecture | ~ | review readings. new concepts. next assignments / readings |
+| 2h lecture | ~ | new concepts. assignments / readings |
 
-Unity 
-- (w/ AGD, weeks 2-4 & 8-10)
+Python & TouchDesigner
 
-Max . Pd? TD?
+[version control](01-03-fsm.md#version-control)
 
-Arduino, RPi, sensors
+Max / Pure Data
+
+Arduino, RPi, [Daisy](https://www.electro-smith.com/daisy/daisy), sensors
 
 ---
 
-## Final project (20%)
+## Semester objective
 
-A *or* Ba *or* Bb
+create **layered** interaction
+
+--
+
+- beyond "[Mickey Mousing](https://en.wikipedia.org/wiki/Mickey_Mousing)"
+- not just purely reactive
+
+--
+
+how?
+
+--
+
+what are YOUR objectives?
+
+---
+
+## Assignments
+
+complete 3 small practical / research projects
 
 A. practical project
 - interactive app / installation / tool, using sensor / sound / video user input
 - project documentation (1-3 pages w/ bibliography)
-- topic: week 9
 
 B. research project
 - *review* paper
@@ -69,6 +88,8 @@ B. research project
   - 60+ publications (papers, chapters, books …), out of which:
   - 6 items: 1-2 summary paragraphs (context+what is interesting to you), NOT taken from the abstract
 - see [resources](../resources#academic)
+
+topics on [Classroom](https://classroom.google.com/)
 
 ---
 name: interactive-programming  
@@ -89,6 +110,7 @@ program **state**
 |Pure Data|✅|✅|✅|
 |TouchDesigner|✅|❌|❌|
 |vvvv|✅|✅|❌|
+|Python notebooks|❌|✅|✅|
 |Supercollider|❌|✅|✅|
 |Unity*|❌|❌|✅|
 
@@ -171,7 +193,7 @@ commercial software / Unity Technologies
 
 runs on Win & OSX, compiles to Linux & many more
 
-[documentation](https://docs.unity3d.com/Manual/index.html) : *Help > Reference*
+[documentation](https://docs.unity3d.com/Manual/index.html)
 
 [C# API](https://docs.unity3d.com/Manual/ScriptingImportantClasses.html)
 
@@ -183,22 +205,20 @@ imperative programming / iterative prototyping / experience design
 
 --
 
-FOSS alternative: [Godot](https://godotengine.org/features)
+alternatives - [Godot](https://godotengine.org/features), [PICO-8](https://www.lexaloffle.com/pico-8.php)
 
 ---
+name: touchdesigner
+# TouchDesigner
 
-name: assignment       
-class: left
-#  Assignment
+commercial software / Derivative
 
-[Ruby's Adventure](https://learn.unity.com/project/ruby-s-2d-rpg)
+runs on Win & OSX
 
-and/or
+[documentation](https://docs.derivative.ca/Main_Page)
 
-[Create with Code](https://learn.unity.com/course/create-with-code)
+[Python scripting](https://docs.derivative.ca/Category:Python)
 
+learning by practice → 💡 → intuition (*not the same* as Max/Pd)
 
 See more [resources](../resources).
-
-
-

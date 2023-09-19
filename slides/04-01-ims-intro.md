@@ -6,9 +6,9 @@ title: Introduction
 class: center, middle
 .title[Interactive Music Systems]
 <br/><br/>
-.subtitle[Week 1: Introduction]
+.subtitle[Introduction]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2021] 
+.date[Nov 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -103,9 +103,14 @@ sonification
 
 --
 
+what does an electronic music composer *do*?
+- [A+M+T podcast ep w/ Elainie Lillios](https://artmusictech.libsyn.com/podcast-373-elainie-lillios)
+
+--
+
 IMS = computer music + *machine musicianship*
 
-see also: [musical agents](https://kivanctatar.com/An-Introduction-to-Creative-Artificial-Intelligence-for-Music) (computational creativity)
+- see also: [musical agents](https://kivanctatar.com/Blog) (computational creativity)
 
 ---
 
@@ -125,9 +130,9 @@ score-driven vs performance-driven
 name: tools
 # Tools
 
-interactive sequencing: Max for Live, IanniX, Open Stage Control, TWO
+interactive sequencing: Max for Live, IanniX, ossia score, Open Stage Control, TWO
 
-interactive synthesis: MuBu
+interactive synthesis: FluCoMa, MuBu
 
 live coding: Supercollider, Sonic Pi, TidalCycles …
 
@@ -135,7 +140,7 @@ network music: Jamulus, JackTrip
 
 reactive programming: Antescofo
 
-spatialisation: Spat, ICST Ambisonics
+spatialisation: Ircam Spat, ICST Ambisonics
 
 ---
 name: links
@@ -167,16 +172,16 @@ name: links
 - [JNMR](https://www.tandfonline.com/loi/nnmr20)
 - [CMJ](https://direct.mit.edu/comj) 
 
-google scholar, sci-hub, ...
 
-[resources](../resources#research)
+- google scholar, semantic scholar, sci-hub, ...
+- [resources](../resources#research)
 
 ---
 ## Follow
 
-https://llllllll.co
+forums: [FluCoMa](https://discourse.flucoma.org), [NIME](https://forum.nime.org), [lines](https://llllllll.co)
 
-https://toplap.org / [forum](https://forum.toplap.org/) / [TidalCycles forum](https://club.tidalcycles.org/)
+live coding / laptop music: [toplap](https://toplap.org) / [forum](https://forum.toplap.org/) / [TidalCycles forum](https://club.tidalcycles.org/)
 
 [Art + music + technology](http://artmusictech.libsyn.com/), [play talk play](http://amplifiersandexplosions.com/play-talk-play/), [Sound + process](https://soundcloud.com/sound-and-process)
 
@@ -217,8 +222,10 @@ name: assignment
 
 create a minimalistic instrument in Max, which takes one input (audio, sensor, mouse etc) and controls one sonic parameter. Record a 1-minute performance (audio or video) using the instrument.
 
-OR
-
-present a *sound portrait* (15-20min)
+<br/><br/><br/><br/><br/><br/>
 
 Reading: [(Drummond, 2009)](http://www.sfu.ca/~eigenfel/Drummond-Understanind%20Interactive%20Systems.pdf)
+
+Listening: [The Holmes Archive of Electronic Music](https://theholmesarchive.podbean.com/)
+
+inspiration: [Meara O'Reilly](https://mearaoreilly.com/)

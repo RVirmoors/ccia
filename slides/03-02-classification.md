@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Week 2: Classification]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2021] 
+.date[Oct 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -21,7 +21,7 @@ name: toc
 class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
-1. [Types of ML](#types-of-ml)
+1. [ML representations](#ml-representations)
 2. [Supervised learning](#supervised-learning)
 3. [Classification](#classification)
 4. [kNN in python & sklearn](#knn-in-python--sklearn)
@@ -32,11 +32,36 @@ class: left
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
 ---
 layout: true  .toc[[★](#toc)]
-        
+
+---
+name: ml-representations  
+class: left
+# ML representations
+
+.right-column[
+<iframe width="100%" src="https://www.youtube.com/embed/LSS_bos_TPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+a data**point** is a [vector](https://natureofcode.com/book/chapter-1-vectors/)
+<br/><br/><br/><br/><br/><br/>
+
+--
+
+a **dataset** is a collection of points / vectors
+<br/><br/><br/><br/><br/><br/>
+
+--
+
+a **model** *fits* the dataset onto a [*latent space*](https://stats.stackexchange.com/a/442360)
+
 ---
 name: types-of-ml  
 class: left
-# Types of ML
+## Types of ML
+
+*how* is the model trained? ~ *how* is the latent space formed?
+
+--
 
 supervised (90% of this semester)
 - based on user-labelled data
@@ -65,7 +90,7 @@ input ~ *data*, output ~ *label*
 
 → input+output ~ *labelled data*
 
-<img style="width:50%"  src="../attachments/ml-pipeline.png">
+<img style="width:75%"  src="../attachments/ml-pipeline.png">
 
 ---
 ## sup.ML tasks
@@ -206,19 +231,14 @@ features ~ representations ~ dimensions
 
 --
 
-feature extraction → feature *vectors*
-
-embedding features in a *feature space*
-
---
-
 preprocessing (for kNN)
 
-- normalization
+- [normalization](https://learn.flucoma.org/learn/why-scale/)
 - eliminate irrelevant input data
-- eliminate / reduce redundant features: 
+- [eliminate / reduce redundant features](https://ai.stackexchange.com/questions/11285/what-is-the-difference-between-latent-and-embedding-spaces): 
+    - *embedding*
     - *feature selection*
-    - *latent space / dimensionality* reduction
+    - *dimensionality reduction*
 
 ---
 ## Interactive / real-time input
@@ -232,7 +252,7 @@ time series data
 processing
 
 - preprocessing: smooth/filter, rectify, window, env fol, min/max ...
-- spectral: FFT, MFCC ...
+- spectral: FFT, [MFCC](https://learn.flucoma.org/reference/mfcc/) ...
 - statistical features: mean, stddev, higher moments (skew, kurtosis) ...
 - Max
     - objects: [peakamp~], [zerox~], [slide], [onebang]

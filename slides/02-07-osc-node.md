@@ -1,14 +1,14 @@
 ---
 layout: presentation
-title: OSC and Node in Max
+title: OSC and Node in Max / Pd
 ---
 
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 7: OSC and Node in Max]
+.subtitle[OSC and Node in Max / Pd]
 <br/><br/><br/><br/><br/><br/>
-.date[Apr 2021]
+.date[Apr 2023]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -22,7 +22,7 @@ class: left
 # ★ Table of Contents ★     <!-- omit in toc -->
 
 1. [Review: OSC, Node.js](#review-osc-nodejs)
-2. [Sensors to Max](#sensors-to-max)
+2. [Sensors to Max / Pd](#sensors-to-max--pd)
 3. [Node for Max](#node-for-max)
 4. [Assignment](#assignment)
 
@@ -43,10 +43,10 @@ see [Sem 1 slides](../slides/01-07-osc#communication)
 
 
 ---
-name: sensors-to-max
-# Sensors to Max
+name: sensors-to-max--pd
+# Sensors to Max / Pd
 
-USB cable → [serial](https://github.com/jaimovier/SARCduino) // MIDI etc
+USB cable → [serial](https://github.com/jaimovier/SARCduino) [.](https://github.com/alexdrymonitis/Arduino_Pd) // MIDI etc
 
 WiFi / network → UDP // [OpenSoundControl](../resources#opensoundcontrol)
 
@@ -76,10 +76,26 @@ timing & scheduling: [OSC-timetag], [OSC-schedule]
 
 .right-column[
     
-    <img style="width:80%"  src="../attachments/cnmat-osc.png">
+<img style="width:80%"  src="../attachments/cnmat-osc.png">
 
-- see also: [odot](https://github.com/CNMAT/CNMAT-odot), [collab-hub](https://www.collab-hub.io/)
+- see also: [odot](https://github.com/CNMAT/CNMAT-odot)
 - *...or just use [OSC-route]*]
+
+---
+## OpenSoundControl in Pure Data
+
+- OSC message > `oscformat` > OSC blob
+- OSC blob > `oscparse` > OSC message
+- `netsend -u -b` and `netreceive -u -b` to send/receive over UDP
+
+OR
+
+[direct comms python <> pd](https://guitarextended.wordpress.com/2012/11/03/make-python-and-pure-data-communicate-on-the-raspberry-pi/)
+
+OR
+
+- Help > Find externals > `ggee`
+- use the `shell` object to run python scripts and `print()` straight to Pd
 
 ---
 name: basic-example-sonic-loop
@@ -119,6 +135,8 @@ name: node-for-max
 - [Node for Max](https://cycling74.com/articles/node-for-max-intro-%E2%80%93-let%E2%80%99s-get-started) intro @ Cycling '74.
 - https://github.com/Cycling74/n4m-examples
 - https://github.com/Cycling74/n4m-community
+
+- see also: [collab-hub](https://www.collab-hub.io/), [CidLink](http://www.enricopietrocola.com/software)
 
 ---
 class: center

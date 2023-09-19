@@ -21,8 +21,8 @@ name: toc
 class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
-1. [Links](#links)
-2. [Assignment](#assignment)
+1. [Training](#training)
+2. [Links](#links)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -30,23 +30,28 @@ class: left
 layout: true  .toc[[★](#toc)]
 
 ---
+name: training
+# Training
+
+gradient descent
+
+--
+
+*stochastic* g. d. = not over the whole batch/dataset, but random *minibatches*
+- https://github.com/fastai/course-v3/blob/master/nbs/dl1/lesson2-sgd.ipynb
+
+if training fails:
+- check your data: redundant, noisy?
+- check params: learning rate & no. of epochs
+- check your data!!! do you have enough? is it representative?
+- get more data, just in case :)
+
+https://twitter.com/karpathy/status/1299921324333170689?s=20
+
+
+---
 name: links  
 class: left
 # Links
 
 https://github.com/drscotthawley/DLAIE
-
-
----
-
-name: assignment       
-class: left
-#  Assignment
-
-...
-
-
-See more [resources](../resources).
-
-
-

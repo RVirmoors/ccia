@@ -7,37 +7,36 @@ title: Creative Coding for Interactive Art
 
 Lecture notes and [[resources]] for the creative coding and interactive music courses [I](//rvirmoors.github.io) teach
 at the [ITPMA M.A.](//cinetic.arts.ro/en/itpma/) @UNATC. <br/>
-Work-in-progress, transitioning from google slides & assorted notebooks. What's it all for? Read the [[manifesto]].
+Work-in-progress, transitioning from google slides & assorted notebooks. See my [[musings]] on what this all might be good for.
 
 ## Fundamentals
 
 *Building up a set of skills and tools to start your creative coding practice.*
 <br/><br/>
 
-| **Processing & p5js** | | | **Extensions** | |                        | **Python** | |            
-| :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | 
-| Intro to CC for IA  |  | [slides](slides/01-01-cc-intro.md)  | Visualization     |  |                    | Practical Python  |  [slides](slides/01-12-practical-python) | 
-| Basics     | | [slides](slides/01-02-basics.md) | Sound     |  |                 | More Python       |  [slides](slides/01-13-more-python) |
-| Finite State Machines | | [slides](slides/01-03-fsm.md)   | Node.js and APIs     |  |
-| Loops     | | [slides](slides/01-04-loops.md)          | Physical computing     |  | [slides](slides/01-07-osc.md)
-| Arrays     | | [slides](slides/01-05-arrays.md)        | Advanced OOP     |  |
-| Functions     | | [slides](slides/01-06-functions.md)
-| Objects     | |
+| **Processing & p5js** | | | **Bitsy & PICO-8** | |  | **Extensions** | | | **Python** | |      
+| :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | --- | :-------- | -------- | 
+| Intro to CC for IA  |  | [slides](slides/01-01-cc-intro.md)  | Intro to Game Dev  |  | [slides](slides/01-01-gd-intro.md)  |  Visualization     |  |                    | Practical Python  |  [slides](slides/01-12-practical-python) | 
+| Basics     | | [slides](slides/01-02-basics.md) | Bitsy and variables     | | [slides](slides/01-02-gd-basics.md) | Sound     |  |                 | More Python       |  [slides](slides/01-13-more-python) |
+| Finite State Machines | | [slides](slides/01-03-fsm.md)  |  PICO-8 and FSMs | | [slides](slides/01-03-pico8.md)   | Physical computing     |  | [slides](slides/01-07-osc.md) | [[TouchDesigner and Python]] 
+| Loops     | | [slides](slides/01-04-loops.md) |  Loops     | | [slides](slides/01-04-gd-loops.md) | Feeds, APIs, Node.js |  | [slides](slides/01-08-node.md)
+| Arrays     | | [slides](slides/01-05-arrays.md) | Functions     | | [slides](slides/01-05-gd-functions.md)  | Advanced OOP     |  | [slides](slides/01-10-more-oop.md)
+| Functions     | | [slides](slides/01-06-functions.md) | Arrays / Tables  | | [slides](slides/01-06-gd-arrays.md)
+| Objects     | | [slides](slides/01-09-oop.md) | Objects / Metatables     | | [slides](slides/01-07-p8-oop.md)
 
 ## Real-time systems
 
 *Prototyping interactive systems with dataflow languages and game engines. The focus is on nimble, experimental iteration.*
 <br/><br/>
 
-| **Max & Pure Data** | |               | **Unity** | |     
+| **Visual programming** | |               | **Game engines** | |     
 | :-------- | -------- |---             | :-------- | -------- | 
-| [[Intro to Max & Pd and Unity]] | [slides](slides/02-01-max-unity-intro) | | [[From Processing to Unity]] | [slides](slides/02-02-p5-to-unity.md) |
-| [[Data and signal flow]]   | [slides](slides/02-05-types-flow) |                    | Personal project    | [slides](slides/02-03-personal-project.md) |  
+| [[Intro to real-time systems]] | [slides](slides/02-01-max-unity-intro) | | Debugging and version control | [slides](slides/02-01-gd-debug.md) |
+| [[Data and signal flow]]   | [slides](slides/02-05-types-flow) | | [[From Processing to Unity]] | [slides](slides/02-02-p5-to-unity.md) |
 | [[Control]]   | [slides](slides/02-06-control) |                    | [[OSC in Unity]]    |  |  
-| [[OSC and Node in Max]] | [slides](slides/02-07-osc-node.md)  |    | Procedural audio in Unity | [slides](slides/02-10-unity-pd.md)  |  
+| OSC and Node in Max | [slides](slides/02-07-osc-node.md)  |    | Procedural audio in Unity | [slides](slides/02-10-unity-pd.md)  |  
 | Signal analysis  | [slides](slides/02-11-signal-analysis.md) |       |  |  |  
 | Generative processes  | [slides](slides/02-12-generative.md) |       |  |  |  
-| TouchDesigner basics    |  |   
 
 ## Machine learning
 
@@ -46,11 +45,11 @@ Work-in-progress, transitioning from google slides & assorted notebooks. What's 
 
 | **Wekinator** | | | **Code** | | | **Deep learning** | |            
 | :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | 
-| Intro to ML for IA |  | [slides](slides/03-01-ml-intro.md) | ml5.js: transfer learning |  | [slides](slides/03-05-transfer.md)  | Unsupervised learning. VAEs  | | 
-| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | | GANs: datasets & training  | | [slides](slides/03-08-gan-train.md) 
-| Regression. Neural nets  |  | [slides](slides/03-03-regression.md) | PyTorch and fast.ai     |  | | [[GANs: interactive inference]]  | | 
-| Temporal modelling  | | [slides](slides/03-04-temporal.md)  | PyTorch: training and editing networks     |  | | RNN&co: text  | | 
-|   |  |  |      |  | | RNN&co: music  | | 
+| Intro to ML for IA |  | [slides](slides/03-01-ml-intro.md) | ml5.js: transfer learning |  | [slides](slides/03-05-transfer.md)  |  VAEs  | | 
+| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | [colab](https://colab.research.google.com/drive/1LWUDaBr6a8wRjXY_qcUeRkIVVMfTSMXW?usp=sharing) | GANs: datasets & training  | | [slides](slides/03-08-gan-train.md) 
+| Regression. Neural nets  |  | [slides](slides/03-03-regression.md) | PyTorch and fast.ai     |  | [ipynb](https://github.com/RVirmoors/cc1/blob/master/ml/python-weki/fastai-classify.ipynb) | [[GANs: interactive inference]]  | | [slides](slides/03-09-gan-inference.md) 
+| Temporal modelling  | | [slides](slides/03-04-temporal.md)  | PyTorch: training and editing networks     |  | | RNN&co: text  | | [slides](slides/03-10-rnn-text.md)
+| Unsupervised learning |  | [slides](slides/03-06-unsupervised.md) |      |  | | RNN&co: music  | | [slides](slides/03-11-rnn-audio.md)
 
 ## Interactive music systems
 
@@ -60,17 +59,18 @@ Work-in-progress, transitioning from google slides & assorted notebooks. What's 
 | **Max for Live** | | | **Live coding** | | | **Reactive programming** | |            
 | :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | 
 | Intro to IMS |  | [slides](slides/04-01-ims-intro.md)  | SuperCollider     |  | [slides](slides/04-05-supercollider.md) | Live electronics  | | 
-| Interactive devices |  | [slides](slides/04-02-interactive-devices.md) | Sonic Pi     |  | | Antescofo basics  | | 
-| The M4L API  |  |  | TidalCycles     |  | | Advanced Antescofo  | | 
+| Interactive devices |  | [slides](slides/04-02-interactive-devices.md) | Sonic Pi     |  | | Antescofo basics  | | [slides](slides/04-09-scofo-basics.md)
+| The M4L API  |  | [slides](slides/04-03-m4l-api.md) | TidalCycles     |  | | Advanced Antescofo  | | [slides](slides/04-10-more-scofo.md) 
 | Interactive spatialisation  |  | [slides](slides/04-04-spat.md) |      |  | | Real-time RNN music  | |
 
 [//begin]: # "Autogenerated link references for markdown compatibility"
 [resources]: resources.md "Getting started"
-[manifesto]: manifesto.md "Manifesto"
-[Intro to Max & Pd and Unity]: intro-to-max--pd-and-unity.md "Intro to Max & Pd and Unity"
+[musings]: musings.md "Musings"
+[TouchDesigner and Python]: touchdesigner-and-python.md "TouchDesigner and Python"
+[Intro to real-time systems]: intro-to-real-time-systems.md "Intro to real-time systems"
 [From Processing to Unity]: from-processing-to-unity.md "From Processing to Unity"
 [Data and signal flow]: data-and-signal-flow.md "Data and signal flow"
 [Control]: control.md "Control"
 [OSC in Unity]: osc-in-unity.md "OSC in Unity"
-[OSC and Node in Max]: osc-and-node-in-max.md "OSC and Node in Max"
+[GANs: interactive inference]: gans-interactive-inference.md "GANs: interactive inference"
 [//end]: # "Autogenerated link references"

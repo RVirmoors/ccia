@@ -6,9 +6,9 @@ title: Arrays
 class: center, middle
 .title[Creative Coding and Software Design 1]
 <br/><br/>
-.subtitle[Week 5: Arrays]
+.subtitle[Arrays]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2021] 
+.date[Apr 2023] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -22,7 +22,7 @@ class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
 
 1. [Arrays](#arrays)
-2. [Useful built-in vars & functions](#useful-built-in-vars--functions)
+2. [Useful built-in vars \& functions](#useful-built-in-vars--functions)
 3. [Common uses](#common-uses)
 4. [Images](#images)
 5. [Animation](#animation)
@@ -31,6 +31,12 @@ class: left
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
 ---
 layout: true  .toc[[★](#toc)]
+
+---
+class: center
+## Data and perception: Parag K. Mital
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/b_y1FKQs6UA?start=25" title="Parag K. Mital - Talk @ Jeffrey Deitch Gallery - April 3, 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 name: arrays

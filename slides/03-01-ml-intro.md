@@ -6,9 +6,9 @@ title: Intro to Machine Learning for Interactive Arts
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 1: Intro to Machine Learning for Interactive Arts]
+.subtitle[Intro to Machine Learning for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2021] 
+.date[Oct 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -50,7 +50,7 @@ class: left
 
 *learn* structure / functionality **from data**
 
-<img style="width:50%"  src="../attachments/ml-pipeline.png">
+<img style="width:75%"  src="../attachments/ml-pipeline.png">
 
 --
 
@@ -142,11 +142,19 @@ name: what-we-cover
 | small models (few layers) |&nbsp;&nbsp; | big models (many layers) |
 | fast training (local CPU) |&nbsp;&nbsp; | slow training (GPU / cloud) |
 | analysis, action |&nbsp;&nbsp; | analysis, generation  |
-| [regression synth](https://mimicproject.com/code/8de3cbbe-b7c6-d79f-65fa-42fd1aa43a26) |&nbsp;&nbsp; | [VQGAN-CLIP](https://minimaxir.com/2021/08/vqgan-clip/) |
+| [regression synth](https://mimicproject.com/code/8de3cbbe-b7c6-d79f-65fa-42fd1aa43a26) |&nbsp;&nbsp; | [EbSynth](https://ebsynth.com/) |
 
 DL can also be part of an interactive system:
-- (almost) real-time inference 
+- almost* real-time inference 
 - *transfer learning*
+
+--
+
+*2022 update: faster-than-realtime inference is common (on [GPU](https://huggingface.co/spaces/openai/whisper)**)
+
+--
+
+**or even [CPU](https://github.com/acids-ircam/rave_vst)
 
 ---
 
@@ -191,7 +199,8 @@ class: left
 # Tools
 
 [Wekinator](http://www.wekinator.org/) 
-- [ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/) 
+- [ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/)
+- [FluCoMa](https://flucoma.org/)
 - [MuBu for Max](https://forum.ircam.fr/projects/detail/mubu/)  
 
 
@@ -211,5 +220,3 @@ See more [resources](../resources#machine-learning).
 Twitter: [Andreas Refsgaard](https://twitter.com/AndreasRef), [Max Woolf](https://twitter.com/minimaxir), [vadim epstein](https://twitter.com/eps696), [Adverb](https://twitter.com/advadnoun), [Emily Short](https://twitter.com/emshort), [Chris Donahue](https://twitter.com/chrisdonahuey), [AK](https://twitter.com/ak92501), [Janelle Shane](https://twitter.com/JanelleCShane), [Rebecca Fiebrink](https://twitter.com/RebeccaFiebrink), [Parag K. Mital](https://twitter.com/pkmital), [Jesse Engel](https://twitter.com/jesseengel), [dadabots](https://twitter.com/dadabots), [Kyle McDonald](https://twitter.com/kcimc), [Memo Akten](https://twitter.com/memotv)...
 
 Lectures/MOOCs: [Rebecca Fiebrink](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists/info), [Gene Kogan](https://ml4a.net/) [+](https://www.youtube.com/playlist?list=PLaN6Cxwpu9UKR2mPc39bZEJoyAoCwRw_q), [Yining Shi](https://github.com/yining1023/machine-learning-for-the-web), [Artificial Images](https://www.youtube.com/channel/UCaZuPdmZ380SFUMKHVsv_AA), [Daniel Shiffman](https://www.youtube.com/c/TheCodingTrain)
-
-

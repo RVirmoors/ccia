@@ -4,11 +4,11 @@ title: From Processing to Unity
 ---
 
 class: center, middle
-.title[Creative Coding and Software Design / Game Development 2]
+.title[Game Development 2]
 <br/><br/>
-.subtitle[Week 2: From Processing to Unity]
+.subtitle[Week 3: From Processing to Unity]
 <br/><br/><br/><br/><br/><br/>
-.date[Mar 2021] 
+.date[Mar 2022]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -39,12 +39,12 @@ name: setting-up
 
 [Get Unity](https://unity3d.com/get-unity/download)
 
-[Visual Studio](https://docs.unity3d.com/Manual/ScriptingSettingUp.html)
+[Visual Studio](https://docs.unity3d.com/Manual/ScriptingSettingUp.html) code editors
 
-- [Community](https://visualstudio.microsoft.com/vs/unity-tools/)
+- [VS Community](https://visualstudio.microsoft.com/vs/unity-tools/)
   - [officially recommended IDE](https://youtu.be/KH0nqTpOVuM)
   - [installation](https://youtu.be/nna58aKumJ8)
-- [Code](https://code.visualstudio.com/docs/other/unity)
+- [VS Code](https://code.visualstudio.com/docs/other/unity)
   - lightweight
   - [open source](https://github.com/microsoft/vscode)-based
 
@@ -115,41 +115,11 @@ name: webgl-build
 name: sharing-your-project
 # Sharing your project
 
-standard export
-
-version control
-
----
-
-## Exporting
-
 right-click on Scene > *Export Package...*
 
 - → myProject.unitypackage
 
 upload to classroom, google drive, etc
-
----
-
-## Version control
-
-.left-column[
-  [GitHub Desktop](https://desktop.github.com/)
-
-- [GitHub for Unity](https://unity.github.com/)
-
-- [How to Git with Unity](https://thoughtbot.com/blog/how-to-git-with-unity)
-
-- [my first Unity repo](https://github.com/RVirmoors/Unity)
-
-THE BIG FIVE
-- clone, pull, add, commit, push
-
-more git+Github [resources](../resources#git-and-github)
-]
-
-
-.right-column[<img style="width:100%"  src="../attachments/git-in-case-of-fire.png">]
 
 ---
 
@@ -162,4 +132,4 @@ Refactor the project using:
 - Colliders 
 - as many Unity-specific helpers as you find useful
 
-Share your work as github URL / text / video / .unitypackage
+Share your work as text / video / .unitypackage

@@ -6,9 +6,9 @@ title: Interactive devices
 class: center, middle
 .title[Interactive Music Systems]
 <br/><br/>
-.subtitle[Week 2: Interactive devices]
+.subtitle[Interactive devices]
 <br/><br/><br/><br/><br/><br/>
-.date[Jul 2021] 
+.date[Nov 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -36,9 +36,9 @@ name: review
 # Review
 
 Tools
-- Max
-- Ableton Live
-- HCI and OSC
+- [Max](02-01-max-unity-intro)
+- [Ableton Live](04-03-m4l-api#ableton-live)
+- [HCI and OSC](01-07-osc)
 
 --
 
@@ -76,6 +76,20 @@ https://github.com/RVirmoors/deltaScapes
 Live devices: mapping, triggering, audio output
 
 [Live API](https://docs.cycling74.com/max8/vignettes/live_api): control DAW parameters
+
+---
+## Discussion
+
+"strata" of sonification
+- generative
+- allusive
+- curatorial (auditory display)
+
+([Milad Mardakheh](https://learn.flucoma.org/explore/mardakheh/))
+
+--
+
+read more: [The Sonification Handbook](https://sonification.de/handbook/)
 
 ---
 class: center
