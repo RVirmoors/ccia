@@ -4,11 +4,7 @@
   "editor.overviewRulerBorder": false,
   "editor.lineHeight": 24,
   "[markdown]": {
-    "editor.quickSuggestions": {
-      "comments": "on",
-      "strings": "on",
-      "other": "on"
-    }
+    "editor.quickSuggestions": true
   },
   "files.defaultLanguage": "markdown",
   "files.exclude": {

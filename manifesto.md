@@ -14,7 +14,7 @@ Work in progress: a list of randomly assembled thoughts about what this material
 
 # The good stuff comes after.
 
-{% newthought 'We don’t start out' %} creating amazing work--that's for you to take the time and make on your own. My aim is to show you the tools and help you build an intuition of what they can do and where they may take you.
+{% newthought 'We don’t start out' %} creating great work--that's for you to take the time and make on your own. My aim is to show you the tools and help you build an intuition of what they can do and where they may take you.
 
 There's a great course (which someday I'll find the time to complete) called Drawabox which sets a [50% rule](https://drawabox.com/lesson/0/2/50percent): half the time you complete dry technical exercises, and the other half you create. This idea seems very healthy to me: you acquire new skills easier when you can just focus on the process and not worry about the artistic value of the result. But then you need to keep the creative force alive that made you want to get into this field, which means going off on your own and spending time building stuff.
 
