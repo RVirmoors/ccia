@@ -7,7 +7,7 @@ title: Creative Coding for Interactive Art
 
 Lecture notes and [[resources]] for the creative coding and interactive music courses [I](//rvirmoors.github.io) teach
 at the [ITPMA M.A.](//cinetic.arts.ro/en/itpma/) @UNATC. <br/>
-Work-in-progress, transitioning from google slides & assorted notebooks. See my [[musings]] on what this all might be good for.
+Work-in-progress, transitioning from google slides & assorted notebooks. See my [[musings]] on what it's all about.
 
 ## Fundamentals
 
