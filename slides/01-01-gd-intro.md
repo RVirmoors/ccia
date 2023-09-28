@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Game Development]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2022] 
+.date[Oct 2023] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -170,7 +170,7 @@ name: dev--you
 
 --
 
-[resources](https://github.com/search?q=awesome+game+development)
+[awesome resources](https://github.com/search?q=awesome+game+development)
 
 ---
 ## Programming components
