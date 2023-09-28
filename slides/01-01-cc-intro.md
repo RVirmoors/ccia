@@ -49,7 +49,7 @@ class: left
 ---
 ## General advice
 
-bring laptops, [take notes](https://www.lesswrong.com/posts/T382CLwAjsy3fmecf/how-to-take-smart-notes-ahrens-2017), build stuff
+bring laptops, take notes, build stuff
 
 ask questions! [pluralistic ignorance](https://youarenotsosmart.com/2019/07/02/yanss-157-the-psychology-behind-why-people-dont-speak-out-against-and-even-defend-norms-they-secretly-despise/)
 
@@ -84,6 +84,12 @@ how many?
 so: challenge yourself & BUILD STUFF.
 
 ---
+## Programming as exploration
+
+<iframe width="49%" height=500px src="https://www.youtube.com/embed/7YpFGkG-u1w?start=834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="50%" height=500px src="https://www.youtube.com/embed/8u2tooYxicE?start=78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
 name: what-we-cover
 # What we cover
 
@@ -97,7 +103,7 @@ focus on **interaction**
 
 --
 
-[resources](https://github.com/terkelg/awesome-creative-coding)
+[awesome resources](https://github.com/terkelg/awesome-creative-coding)
 
 
 ---
@@ -114,11 +120,18 @@ architecture … algorithm
 design patterns
 
 coding style 
-
-more [software](https://en.wikipedia.org/wiki/Software_design) [design](https://en.wikipedia.org/wiki/Code_Complete)    
+   
 
 ---
-## Programming components
+## Dev components
+
+| **intention**  |+| **invention**  |+| **adaptation** |
+|---|-|----|-|-- |
+| ideas | | logic | | programming |
+| goals | | algorithms | | compiler etc |
+
+---
+## Dev components
 
 .right-column[
 <iframe width="100%" src="https://www.youtube.com/embed/MrQrkioQoEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -169,8 +182,8 @@ class: left
 - Arduino
 
 
-- *Unity / C#*
 - *Godot / GDScript*
+- *Unity / C#*
 - *PICO-8 / lua*
 
 
@@ -204,7 +217,6 @@ B. PYTHON!
 
 C. it doesn't matter!
 - you can pick up and learn any language/tool: fundamentals are similar
-
 
 ---
 name: processing

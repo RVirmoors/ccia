@@ -57,7 +57,7 @@ this slideshow: MANY links
 ---
 ## General advice
 
-bring laptops, [take notes](https://www.lesswrong.com/posts/T382CLwAjsy3fmecf/how-to-take-smart-notes-ahrens-2017), build stuff
+bring laptops, take notes, build stuff
 
 ask questions! [pluralistic ignorance](https://youarenotsosmart.com/2019/07/02/yanss-157-the-psychology-behind-why-people-dont-speak-out-against-and-even-defend-norms-they-secretly-despise/)
 
@@ -158,22 +158,19 @@ class: center
 name: dev--you
 # Dev & you
 
-- [0.3% of world’s population can code](https://youtu.be/MrQrkioQoEA)
-- ?? % of jobs use code
+<iframe width="49%" height=500px src="https://www.youtube.com/embed/7YpFGkG-u1w?start=834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="50%" height=500px src="https://www.youtube.com/embed/8u2tooYxicE?start=78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
---
+---
+## Dev components
 
 | **intention**  |+| **invention**  |+| **adaptation** |
 |---|-|----|-|-- |
 | ideas | | logic | | programming |
 | goals | | algorithms | | compiler etc |
 
---
-
-[awesome resources](https://github.com/search?q=awesome+game+development)
-
 ---
-## Programming components
+## Dev components
 
 .right-column[
 <iframe width="100%" src="https://www.youtube.com/embed/MrQrkioQoEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -194,6 +191,29 @@ invention
 adaptation
 - programming language, compiler, SW+HW architecture
 - → code
+
+---
+class: center
+## How many languages will you learn?
+
+<img style="width:80%"  src="../attachments/number-of-languages.png">
+
+---
+## What's the "best" programming language?
+
+A. depends on your target domain
+- → Godot, Unreal, Unity, PICO-8, Twine, Ink, Processing  ...
+
+--
+
+B. PYTHON!
+- accessible, modular, multi-platform = “swiss army knife” language
+
+--
+
+C. it doesn't matter!
+- you can pick up and learn any language/tool: fundamentals are similar
+
 
 ---
 name: tools       
@@ -226,27 +246,11 @@ class: left
 
 - *Max, Pd, TouchDesigner* …
 
----
-class: center
-## How many languages will you learn?
-
-<img style="width:80%"  src="../attachments/number-of-languages.png">
-
----
-## What's the "best" programming language?
-
-A. depends on your target domain
-- → Unity, Godot, Unreal, PICO-8, Twine, Ink, Processing  ...
 
 --
 
-B. PYTHON!
-- accessible, modular, multi-platform = “swiss army knife” language
+[awesome resources](https://github.com/search?q=awesome+game+development)
 
---
-
-C. it doesn't matter!
-- you can pick up and learn any language/tool: fundamentals are similar
 
 ---
 name: bitsy
@@ -255,7 +259,7 @@ class: center
 
 <iframe width="100%" height="450" frameborder="0" src="https://bitsy.org"></iframe>
 
-"a little editor for little games or worlds."
+<!-- "a little editor for little games or worlds." -->
 
 ---
 class: center
