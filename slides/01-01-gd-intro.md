@@ -39,12 +39,12 @@ class: left
 # Semester overview
 
 lectures (2h): Grig
-- 50%: assignments (per class?)
-- weeks 2, 6, 7, 11-14
+- 50%: assignments (per class)
+- weeks 1, 3, 8-12
 
 labs (2h): Mara
-- 50%: lab (20p) + final (30p)
-- weeks 1, 3-5, 8-10
+- 50%: lab (30p) + final (20p)
+- weeks 2, 4-7, 13-14
 
 --
 
@@ -74,14 +74,13 @@ google, stackoverflow etc
 BUILD STUFF!
 
 ---
-
 ## Making mistakes
 
 neuroplasticity
 
 --
 
-mistakes: good for learning!
+mistakes ➡ learning
 
 --
 
@@ -93,7 +92,7 @@ how many?
 
 --
 
-so: challenge yourself & BUILD STUFF.
+so... challenge yourself & BUILD STUFF.
 
 ---
 
@@ -132,8 +131,9 @@ class: center
 ## Gamedev favs
 
 - [Emily Short](https://emshort.blog/) (Galatea)
+- [Yahtzee Croshaw](https://fullyramblomatic-yahtzee.blogspot.com/) (7 Days a Skeptic, Zero Punctuation)
+- [Tim Cain](https://www.youtube.com/@CainOnGames) (Fallout)
 - [Ron Gilbert](https://grumpygamer.com/) (Monkey Island)
-- [Yahtzee Croshaw](https://fullyramblomatic-yahtzee.blogspot.com/) (7 Days a Skeptic)
 - [Eleanor Dare](https://rejectedshortstories.uk/2021/12/10/eleanor-dare-some-work/) (stories in 3D)
 - [Stacey Mason](https://cerebralarcade.com/) (Responsive Narrative)
 
@@ -141,11 +141,11 @@ class: center
 - [Terry Cavanagh](https://distractionware.com) (Super Hexagon)
 - [Ian MacLarty](http://ianmaclarty.com/index.html) (Catacombs of Solaris)
 - [Derek Yu](http://www.derekyu.com/) (Spelunky)
-- [Lucas Pope](https://dukope.com/) (Papers Please)
+- [Lucas Pope](https://dukope.com/) (Papers Please, Return of the Obra Dinn)
 
 
-- [Gabe Cuzzillo](https://twitter.com/GabeCuzzillo) (Ape Out)
 - [Tom Hall](https://www.lexaloffle.com/bbs/?uid=32135) (Commander Keen)
+- [Gabe Cuzzillo](https://twitter.com/GabeCuzzillo) (Ape Out)
 - [JP LeBreton](https://jp.itch.io/) (Doom mods)
 
 
@@ -282,4 +282,4 @@ task
 deliverables
 - game link / upload
 
-due: WEEK 6
+due: WEEK 3

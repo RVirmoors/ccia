@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Machine Learning for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2022] 
+.date[Oct 2023] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -24,7 +24,8 @@ class: left
 1. [Semester overview](#semester-overview)
 2. [Machine Learning](#machine-learning)
 3. [What we cover](#what-we-cover)
-4. [Tools](#tools)
+4. [Interactive Machine Learning](#interactive-machine-learning)
+5. [Links](#links)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -51,6 +52,10 @@ class: left
 *learn* structure / functionality **from data**
 
 <img style="width:75%"  src="../attachments/ml-pipeline.png">
+
+--
+
+AI?
 
 --
 
@@ -154,13 +159,11 @@ DL can also be part of an interactive system:
 
 --
 
-**or even [CPU](https://github.com/acids-ircam/rave_vst)
+**or even [CPU](https://github.com/acids-ircam/nn_tilde)
 
 ---
-
-## Interactive Machine Learning
-
-first ~40% of the class
+name: interactive-machine-learning
+# Interactive Machine Learning
 
 human-in-the-loop (training and inference)
 
@@ -194,20 +197,20 @@ workflow
 creating something truly *new*?
 
 ---
-name: tools       
+name: links       
 class: left
-# Tools
+# Links
 
 [Wekinator](http://www.wekinator.org/) 
-- [ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/)
 - [FluCoMa](https://flucoma.org/)
-- [MuBu for Max](https://forum.ircam.fr/projects/detail/mubu/)  
+- [ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/)
+- [MuBu for Max](https://forum.ircam.fr/projects/detail/mubu/)
+- [IIL tools](https://iil.is/outputs#open-source) 
 
 
 - [fastai](https://docs.fast.ai/) / [PyTorch](https://pytorch.org/)
 - [ml5](https://ml5js.org/) / [Tensorflow.js](https://teachablemachine.withgoogle.com/)
 - [Runway](https://runwayml.com/)
-- [MASOM](https://github.com/ktatar/MASOM)
 
 [Google](https://github.com/dvschultz/ml-art-colabs) [Colab](https://ljvmiranda921.github.io/notebook/2021/08/11/vqgan-list/)
 
