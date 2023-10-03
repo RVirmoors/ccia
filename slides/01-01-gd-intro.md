@@ -162,6 +162,33 @@ name: dev--you
 <iframe width="50%" height=500px src="https://www.youtube.com/embed/8u2tooYxicE?start=78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
+## Skills in programming
+
+--
+
+logic
+
+--
+
+generalisation
+
+--
+
+architecture
+
+--
+
+computer science
+
+--
+
+"I'm bad at programming!" 😭
+
+- → *what skill* should I improve?
+- → does it matter?
+
+
+---
 ## Dev components
 
 | **intention**  |+| **invention**  |+| **adaptation** |

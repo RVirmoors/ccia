@@ -90,37 +90,30 @@ so: challenge yourself & BUILD STUFF.
 <iframe width="50%" height=500px src="https://www.youtube.com/embed/8u2tooYxicE?start=78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
-name: what-we-cover
-# What we cover
-
-creative coding: not just "visual apps"
-
-focus on **interaction**
+## Skills in programming
 
 --
 
-[creative applications](http://www.creativeapplications.net/)
+logic
 
 --
 
-[awesome resources](https://github.com/terkelg/awesome-creative-coding)
-
-
----
-## Glossary
-
-scripting ~ coding ~ programming ~ developing
+generalisation
 
 --
 
-architecture … algorithm
+architecture
 
 --
 
-design patterns
+computer science
 
-coding style 
-   
+--
+
+"I'm bad at programming!" 😭
+
+- → *what skill* should I improve?
+- → does it matter?
 
 ---
 ## Dev components
@@ -152,6 +145,38 @@ invention
 adaptation
 - programming language, compiler, SW+HW architecture
 - → code
+
+---
+name: what-we-cover
+# What we cover
+
+creative coding: not just "visual apps"
+
+focus on **interaction**
+
+--
+
+[creative applications](http://www.creativeapplications.net/)
+
+--
+
+[awesome resources](https://github.com/terkelg/awesome-creative-coding)
+
+
+---
+## Glossary
+
+scripting ~ coding ~ programming ~ developing
+
+--
+
+architecture … algorithm
+
+--
+
+design patterns
+
+coding style 
 
 ---
 ## Features
