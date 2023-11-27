@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Week 5: Transfer learning]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2021] 
+.date[Nov 2023] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -136,4 +136,4 @@ more online ML
 - [ml5.js train a neural network](https://youtu.be/8HEgeAbYphA)
 
 more transfer learning
-- [fastai course](https://course.fast.ai/videos/?lesson=2)
+- [fastai course](https://course.fast.ai/Lessons/lesson4.html)

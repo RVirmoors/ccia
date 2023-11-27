@@ -99,7 +99,7 @@ mixed music
 
 live coding
 
-sonification
+sonification / auditory display
 
 --
 
