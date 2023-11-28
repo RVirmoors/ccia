@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Loops]
 <br/><br/><br/><br/><br/><br/>
-.date[Dec 2022] 
+.date[Nov 2023] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -18,7 +18,7 @@ Author: Grigore Burloiu, UNATC
 
 ---
 class: center
-## the future of learning?
+## the future of learning? (Dec '22)
 
 [<img width="80%" src="../attachments/chatgpt-p8-start.png">](https://chat.openai.com/chat)
     
@@ -158,14 +158,33 @@ end
 name: assignment
 # Assignment
 
+1. a .p8 sketch where
+   1. pressing a button draws a vertical line in the center of the screen
+   2. pressing again clears the screen & draws 2 equally distanced lines
+   3. press again, 3 lines
+   4. 4 lines etc
+
+--
+
+2. same as above, but on the even numbers (2, 4, ...) draw horizontal lines
+
+--
+
+<img src="../attachments/gd-loops-assgmt.png" width="80%">
+
+--
+
+try to get **as many drawings** as possible in **as few lines of code**
+
+---
+## Assignment (cont'd)
+
 Plan a new game to build in PICO-8.
 
 - can be a mod of an existing PICO-8 cart
 - can be a new implementation of an existing design
 
-deliverables:
-- in-depth description of your primary gameplay loop 
-  - (use flowcharts or FSMs if needed)
-- your `.p8` file showing some initial progress
+deliverable:
+- your `.p8` file showing some (any) initial progress
 
 <iframe width="50%" height="230" src="https://www.youtube.com/embed/Hq7IiMPH_DE" title="5 Bad Genres For Your First Game - Game Design Corner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="50%" height="230" src="https://www.youtube.com/embed/4TxIS3Zi_RQ" title="5 Overlooked Genres for Your First Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
