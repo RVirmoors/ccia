@@ -46,11 +46,11 @@ name: keyboard-interactivity
 ```lua
 -- standard buttons: ⬆️⬇️⬅️➡️🅾️❎
 function _update()
-    if (btn(🅾️)) do
+    if (btn(🅾️)) then
         sfx(0) -- if O is held down
     end
 
-    if (btnp(❎)) do
+    if (btnp(❎)) then
         sfx(1) -- if X was just pressed
     end
 end
