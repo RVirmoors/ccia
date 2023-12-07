@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Functions]
 <br/><br/><br/><br/><br/><br/>
-.date[Dec 2022]
+.date[Dec 2023]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -20,12 +20,15 @@ Author: Grigore Burloiu, UNATC
 name: toc
 class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
-
 1. [Structuring your programs](#structuring-your-programs)
 2. [Functions](#functions)
 3. [Common uses](#common-uses)
 4. [Exercises](#exercises)
-5. [Assignment](#assignment)
+5. [Assignment I](#assignment-i)
+6. [Physics](#physics)
+7. [Lerp](#lerp)
+8. [Assignment II](#assignment-ii)
+
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -182,10 +185,19 @@ but how to rotate it?
 
 look for [code](https://www.lexaloffle.com/bbs/?tid=2189) [online](https://www.lexaloffle.com/bbs/?tid=3593)
 
-implement in [your cart](p8/ship.p8)
+implement in [your cart](p8/ship_funcs.p8)
 
 ---
-## physics
+name: assignment-i
+# Assignment I
+
+call the functions in `ship_funcs.p8` in the `_draw()` and `_update()` functions
+
+upload a working `ship.p8` file
+
+---
+name: physics
+# Physics
 
 remember [basic trig](01-04-gd-loops#drawing)
 
@@ -204,8 +216,15 @@ p8 does not include any pyhsics, you have to [code your own](https://heilaut.git
 ]
 
 ---
-name: assignment
-# Assignment
+name: lerp
+# Lerp
+
+coming soon
+
+
+---
+name: assignment-ii
+# Assignment II
 
 outline the program structure for your .p8 game
 - use code tabs if you'd like!
