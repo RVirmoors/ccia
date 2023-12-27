@@ -8,7 +8,7 @@ A sporadic list of thoughts on what this material is about and how you might app
 
 (most of this is also things I tell myself on a regular basis...)
 
-[Ignorance and equality.](#ignorance-and-equality) [The good stuff comes after.](#the-good-stuff-comes-after) [You're here to have fun.](#youre-here-to-have-fun) [Look for alternative perspectives.](#look-for-alternative-perspectives)
+[Ignorance and equality.](#ignorance-and-equality) [The good stuff comes after.](#the-good-stuff-comes-after) [We're here to have fun.](#were-here-to-have-fun) [Look for alternative perspectives.](#look-for-alternative-perspectives)
 
 # Ignorance and equality.
 
@@ -31,13 +31,13 @@ Yes, I am conflicted about leaving too many breadcrumbs, as if you weren't able 
 
 # The good stuff comes after.
 
-{% newthought 'We don’t start here' %} by creating amazing work--that's for you to take the time and make on your own. My job is to show you the tools and help you build an intuition of what they can do and where they may take you.
+{% newthought 'There is no amazing code' %} (and much less so art) on this site--that's for you to take the time and make on your own. I just want to show you some tools and help you build an intuition of what they can do and where they may take you.
 
 There's a great course (which someday I'll find the time to complete) called Drawabox which sets a [50% rule](https://drawabox.com/lesson/0/2/50percent): half the time you complete dry technical exercises, and the other half you create. This idea seems very healthy to me: you acquire new skills easier when you can just focus on the process and not worry about the artistic value of the result. But then you need to keep the creative force alive that made you want to get into this field, which means going off on your own and spending time building stuff.
 
 Let's count ourselves lucky. Most other things you've had to learn haven't been this fun. We get to see and hear things take shape and respond to our actions! And, anytime you like, you can take these examples and ideas, pull them apart and build some of your own.
 
-# You're here to have fun.
+# We're here to have fun.
 
 {% newthought 'There is joy in picking up tools and concepts, and there is beauty.' %} If you're not having a good time with a part of the material, you shouldn't force it. Try using the skills you already have to build something, or just switch to something else.
 
