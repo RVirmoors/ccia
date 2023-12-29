@@ -49,6 +49,6 @@ Let's count ourselves lucky. Most other things you've had to learn haven't been 
 
 I've come across this advice in many places, among them [Gene Kogan's course @ ITP](https://ml4a.github.io/classes/itp-F18/) (one great source to learn about ML for art): try to approach new concepts from many different angles. Both when learning about them and when applying them: every time you listen to someone new, take notes from another book, or engage something in a different way, it becomes more your own and not just a thing "out there" that's standing in your way.
 
-Still, the best way to take ownership of a concept or technique is to apply it in your work. Even if you do it "wrong", the experience itself is valuable and the knowledge you draw from it will push you forward, as long as you're being honest with yourself.
+Still, the best way to take ownership of a concept or technique is to apply it in your work. Even if you do it "wrong", the experience itself is valuable and the knowledge you draw from it will push you forward, as long as you take the time to honestly reflect on it.
 
 *to be continued*
