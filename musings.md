@@ -8,7 +8,7 @@ A sporadic list of thoughts on what this material is about and how you might app
 
 (most of this is also things I tell myself on a regular basis...)
 
-[Ignorance and equality.](#ignorance-and-equality) [The good stuff comes after.](#the-good-stuff-comes-after) [We're here to have fun.](#were-here-to-have-fun) [Look for alternative perspectives.](#look-for-alternative-perspectives)
+[Ignorance and equality.](#ignorance-and-equality) [We're here to have fun.](#were-here-to-have-fun) [The good stuff comes after.](#the-good-stuff-comes-after)  [Look for alternative perspectives.](#look-for-alternative-perspectives)
 
 # Ignorance and equality.
 
@@ -29,22 +29,26 @@ So, where do these thoughts on emancipatory education leave us? It's pretty obvi
 
 Yes, I am conflicted about leaving too many breadcrumbs, as if you weren't able to find them on your own.{% sidenote 'dirty' 'I’ve always felt a little dirty doing this, and now I know why. On the other hand, I’ve had many teachers point out shortcuts to liberating insights, and that’s what I am aiming for too.'%} Which is why I insist that going off the beaten path is where the true growth happens.
 
-# The good stuff comes after.
-
-{% newthought 'There is no amazing code' %} (and much less so art) on this site--that's for you to take the time and make on your own. I just want to show you some tools and help you build an intuition of what they can do and where they may take you.
-
-There's a great course (which someday I'll find the time to complete) called Drawabox which sets a [50% rule](https://drawabox.com/lesson/0/2/50percent): half the time you complete dry technical exercises, and the other half you create. This idea seems very healthy to me: you acquire new skills easier when you can just focus on the process and not worry about the artistic value of the result. But then you need to keep the creative force alive that made you want to get into this field, which means going off on your own and spending time building stuff.
-
-Let's count ourselves lucky. Most other things you've had to learn haven't been this fun. We get to see and hear things take shape and respond to our actions! And, anytime you like, you can take these examples and ideas, pull them apart and build some of your own.
-
 # We're here to have fun.
 
 {% newthought 'There is joy in picking up tools and concepts, and there is beauty.' %} If you're not having a good time with a part of the material, you shouldn't force it. Try using the skills you already have to build something, or just switch to something else.
 
-The learning journey is valuable in itself. Take the time to appreciate how far you've come. But again, this value gets lost if you don't apply yourself to some actual projects. Of course, that includes collaboration and dissemination: it can feel intimidating to put yourself out there, but a lot of good can come out of it. But after all it's all ones and zeros, so try to keep things in perspective---consider the impact of your actions but maybe don't take yourself too seriously.
+The learning journey is valuable in itself. Take the time to appreciate how far you've come. But again, this value gets lost if you don't apply yourself to some actual projects. Of course, that includes collaboration and dissemination: it can feel intimidating to put yourself out there, but a lot of good can come out of it. Assembling a portfolio of sketches is a useful way to build an identity and to shine a light on your particular style, as well as any gaps in your experience.
+
+At the end of the day it's all ones and zeros, so try to keep things in perspective---consider the impact of your actions but maybe don't take yourself too seriously.
+
+# The good stuff comes after.
+
+{% newthought 'There is no amazing code' %} (and much less so art) on this site--that's for you to take the time and make on your own. I just want to show you some tools and help you build an intuition of what they can do and where they may take you.
+
+There's a great course (which someday I'll find the time to complete) called Drawabox which sets a [50% rule](https://drawabox.com/lesson/0/2/50percent): half the time you execute dry technical exercises, and the other half you create. This idea seems very healthy to me: you acquire new skills easier when you can just focus on the process and not worry about the artistic value of the result. But then you need to keep the creative force alive that made you want to get into this field, which means going off on your own and spending time building stuff.
+
+Let's count ourselves lucky. Most other things you've had to learn haven't been this fun. We get to see and hear things take shape and respond to our actions! And, anytime you like, you can take these examples and ideas, pull them apart and build some of your own.
 
 # Look for alternative perspectives.
 
-I've come across this advice in many places, most notably for me [Gene Kogan's course @ ITP](https://ml4a.github.io/classes/itp-F18/) (one great source to learn about ML for art): try to approach new concepts from many different angles. Both when learning about them and when applying them: every time you listen to someone new or engage something in a different way, it becomes more your own and not just a thing "out there" that's standing in your way.
+I've come across this advice in many places, among them [Gene Kogan's course @ ITP](https://ml4a.github.io/classes/itp-F18/) (one great source to learn about ML for art): try to approach new concepts from many different angles. Both when learning about them and when applying them: every time you listen to someone new, take notes from another book, or engage something in a different way, it becomes more your own and not just a thing "out there" that's standing in your way.
+
+Still, the best way to take ownership of a concept or technique is to apply it in your work. Even if you do it "wrong", the experience itself is valuable and the knowledge you draw from it will push you forward, as long as you're being honest with yourself.
 
 *to be continued*
