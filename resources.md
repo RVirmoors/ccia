@@ -127,6 +127,8 @@ Other telematic tools: [Jamulus](https://jamulus.io/wiki/Getting-Started) & [Jac
 
 Sound / synth design: [Puckette book (Pd)](http://msp.ucsd.edu/techniques/latest/book.pdf) and [Max ports](https://github.com/georgeNikmus/The-Theory-and-Technique-of-Electronic-Music-Max-Patches); [Farnell book (Pd)](https://www.amazon.com/Designing-Sound-Press-Andy-Farnell/dp/0262014416) and [Max ports](https://github.com/unriginal/Designing-Sound-Max-Patches)
 
+More music books: [Sweet Anticipation](https://mitpress.mit.edu/9780262582780/sweet-anticipation/), [Curtis Roads](https://www.curtisroads.net/books), [Sonic Writing](http://www.sonicwriting.org/)
+
 [Computer music classes](http://www.ringbuffer.org/teaching/computer-music-basics/) by Henrik von Coler, a great supplement to this site.
 
 ## Max
