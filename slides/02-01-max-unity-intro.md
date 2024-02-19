@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to real-time systems]
 <br/><br/><br/><br/><br/><br/>
-.date[Mar 2023] 
+.date[Feb 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -75,21 +75,15 @@ what are YOUR objectives?
 
 ## Assignments
 
-complete 3 small practical / research projects
-
-A. practical project
-- interactive app / installation / tool, using sensor / sound / video user input
-- project documentation (1-3 pages w/ bibliography)
-
-B. research project
-- *review* paper
-  - 3-6 pages w/ bibliography (10+ items)
-- annotated bibliography
-  - 60+ publications (papers, chapters, books …), out of which:
-  - 6 items: 1-2 summary paragraphs (context+what is interesting to you), NOT taken from the abstract
+complete 2 interactive projects
+- 40% each
 - see [resources](../resources#academic)
+- topics on [Classroom](https://classroom.google.com/)
 
-topics on [Classroom](https://classroom.google.com/)
+weekly "dev diary"
+- 2% each, total up to 20%
+- simple assignment to get you started
+- any work counts (aside from the 2 projects above)
 
 ---
 name: interactive-programming  
@@ -220,5 +214,3 @@ runs on Win & OSX
 [Python scripting](https://docs.derivative.ca/Category:Python)
 
 learning by practice → 💡 → intuition (*not the same* as Max/Pd)
-
-See more [resources](../resources).
