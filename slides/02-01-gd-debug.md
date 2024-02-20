@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Debugging and version control]
 <br/><br/><br/><br/><br/><br/>
-.date[Feb 2023] 
+.date[Feb 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -69,7 +69,7 @@ class: center
 
 --
 
-what happened?
+[what happened?](https://www.youtube.com/watch?v=B6XLbzF6BDU&t=858s)
 
 --
 
@@ -191,8 +191,7 @@ name: assignment
 # Assignment
 
 create a github repo for your existing PICO-8 project
+- edit the `readme.md` with a basic description
 
-edit the `readme.md` with a basic description
-
-also include your statement-of-originality file
-- to be kept up to date
+create a basic Gantt chart / project timeline
+- at least 6 mini-milestones
