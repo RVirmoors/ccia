@@ -31,7 +31,7 @@ Next, check that you're running the appropriate CUDA version, by executing `nvid
 [StyleGAN3](https://github.com/dvschultz/stylegan3) requires CUDA 11.1 or later. The current (Dec 2021) version of PyTorch uses CUDA 10 or 11, so make sure you select the appropriate version to download [on their site](https://pytorch.org/get-started/locally/).
 
 Now with PyTorch installed, you can check that it can leverage your GPU through CUDA:{% sidenote 'novenv' 'Notice I wasn’t in a `venv` here yet, just using the Python+PyTorch I have in my global environment. But you need to check the components in your `venv`.'%}
-{% fullwidth 'attachments/torch-cuda.png' '' %}
+{% fullwidth '../attachments/torch-cuda.png' '' %}
 
 Finally, let's download an expanded StyleGAN3 code repo from [PDillis](https://github.com/PDillis/stylegan3-fun):
 ```
@@ -52,7 +52,7 @@ Now you can try out a basic image generation command:{% sidenote 'error' 'In my 
 Check the `stylegan3/out` folder and you should see 5 exported images.
 
 Now let's do something silly and project the cat face into the human faces dataset:
-{% marginfigure 'cat' 'attachments/ffhq-cat.jpg' 'Meow.' %}
+{% marginfigure 'cat' '../attachments/ffhq-cat.jpg' 'Meow.' %}
 ```
 > python projector.py --target=out/seed0002.png --project-in-wplus --save-video --num-steps=1000 --network=https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan2/versions/1/files/stylegan2-ffhq-512x512.pkl
 ```

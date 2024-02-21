@@ -4,7 +4,7 @@ layout: default
 
 # Development Document
 
-{% marginfigure 'sketch' 'attachments/sketch-tf.png' 'Mock-up of a possible layout for the site.' %}
+{% marginfigure 'sketch' '../attachments/sketch-tf.png' 'Mock-up of a possible layout for the site.' %}
 {% newthought 'Process.' %}
 The project will involve building a syllabus site, representing quick references, interactive demos, and a portal to related materials. I foresee three stages: planning and initial research, building the site, and writing additional content. 
 

@@ -14,12 +14,12 @@ Once you get used to ints and floats in Max, sooner or later you will need to co
 
 Two elements are key here: building lists with [pack] and [pak], and defining lists as messages with *replaceable arguments* (```$1```, ```$2``` etc).
 
-{% marginfigure 'maxset' 'attachments/max-set.gif' 'Setting a value without triggering further output.' %}
+{% marginfigure 'maxset' '../attachments/max-set.gif' 'Setting a value without triggering further output.' %}
 A basic use case would be sending a ```set``` message to an object. Many object accept such messages, usually for setting an internal state without passing it on downstream. Try recreating the right-hand patch, first without the ```set $1``` message, and see what happens. You can replace the bottom [number] with e.g. a [message], and get the same effect: the [bang] remains untriggered.
 
 Another way to create a ```set``` message is via the [prepend] object. With the "set" argument ([prepend set]) you tell the object to reproduce whatever message it receives, preceded by "set". And we've [already used](data-and-signal-flow.md#exercise-audio-pixel-visualiser) the [pak] object to make a list-message---in this case you might use [pak set 0].{% sidenote 'pak' 'This is my least favourite way to make lists, mainly because it’s so easy to mess up the [pak] inlets.'%} As usual with Max, you have different methods for almost the same outcome,{% sidenote 'outcome' 'e.g. [prepend] carries *any* incoming message, while ```set $1``` specifies that a single symbol (thru ```$1```) will be passed on.'%} so deciding on which one to use is often a matter of personal style.
 
-{% marginfigure 'see-also' 'attachments/see-also.png' 'Dig through the documentation via the See Also section.' %}
+{% marginfigure 'see-also' '../attachments/see-also.png' 'Dig through the documentation via the See Also section.' %}
 
 If you've mastered the above, the next step would be to look at [zl] (for most common list operations. My fave is [zl stream]) and [coll] (for storing collections of values, including lists, in memory). As always, start with the help patches, and move on to the "See Also" section of the reference tab for related objects and tutorials.
 
@@ -31,7 +31,7 @@ To get a signal in the first place, you need a source: a constant{% sidenote 'nu
 
 {% newthought 'The quickest way to get a sound file' %} into Max is by dragging one from the left-hand Audio panel (or anywhere on your computer) into the unlocked patch, which produces a [playlist~] object. This object is very powerful and easy to use, which is why we'll save it for later!
 
-{% marginfigure 'buffer-groove' 'attachments/buffer-groove.png' 'Looping through a sound file loaded into a [buffer~].' %}
+{% marginfigure 'buffer-groove' '../attachments/buffer-groove.png' 'Looping through a sound file loaded into a [buffer~].' %}
 
 To better understand how Max deals with audio material, create a [buffer~ mySound] object, drag a soundfile onto it (or send it the ```read``` message), then double-click it to check that your sound was loaded. Then use the [groove~] and [ezdac~] objects as seen on the right.
 
@@ -55,7 +55,7 @@ Messages. Of course, good old-fashioned messages also allow you to change the va
 
 ## Example
 
-{% marginfigure 'ex' 'attachments/adc-glmodel-task.png' 'Components for controlling a 3D model with audio.' %}
+{% marginfigure 'ex' '../attachments/adc-glmodel-task.png' 'Components for controlling a 3D model with audio.' %}
 You can now get around well enough to implement a spectacular audio-reactive 3D visualisation. Try to use the objects below (or replace the [ezadc~] with the buffer-groove system above) and make an object's scale react to your sound's amplitude.
 
 Tip: start by copy-pasting the jit.gl.model help patch. Check that object's args to find out which controls the scaling. 

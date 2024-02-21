@@ -73,7 +73,7 @@ Finally, drop the ```Main``` script onto ```GameController```'s inspector, and o
 The first method is used to find out, in world units rather than pixels, the size of the screen.
 Since the viewport's (1, 1) position points to a corner, translating it to the world gives us half its width:
 
-{% maincolumn 'attachments/coords.png' 'World dimensions in black, viewport coordinates in blue. This image and the code below correspond to my decision to leave the camera at (0, 0). If you chose to move it, you would probably use `width` instead of `halfWidth` etc.' %}
+{% maincolumn '../attachments/coords.png' 'World dimensions in black, viewport coordinates in blue. This image and the code below correspond to my decision to leave the camera at (0, 0). If you chose to move it, you would probably use `width` instead of `halfWidth` etc.' %}
 
 ```cs
 private float halfWidth, halfHeight;

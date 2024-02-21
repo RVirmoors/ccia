@@ -18,7 +18,7 @@ You can use this Textport to write your Python code, but I highly recommend goin
 
 We're now ready to make our first network. Double-click to create two `Constant` TOPs and a `Select` TOP. Hit `P` to edit parameters: make the `Constant` different colours, and have the `Select` refer to the `constant1` TOP. 
 
-{% fullwidth 'attachments/td-layout.png' 'Basic starting layout.' %}
+{% fullwidth '../attachments/td-layout.png' 'Basic starting layout.' %}
 <br/>
 You can change the names `constant1` etc to something more descriptive, or leave them as is. Think of this as a very abstracted boilerplate for a project comprising two different scenes, one of which is selected for output. Now let's see how we can program this selection!
 
@@ -83,7 +83,7 @@ def onCellChange(dat, cells, prev):
 
 A more elegant solution than the raw `Text` DAT is to use a bespoke data structure, in the form of a `Table` DAT.
 
-{% maincolumn 'attachments/td-state.png' 'A `Table` DAT encoding the system state.' %}
+{% maincolumn '../attachments/td-state.png' 'A `Table` DAT encoding the system state.' %}
 
 You can imagine such a table being used to store a series of global variables in a more complex system, whose changes could be monitored in the `datexec`:
 
@@ -104,7 +104,7 @@ def onValueChange(channel, sampleIndex, val, prev):
 	return
 ```
 
-{% fullwidth 'attachments/td-fsm.gif' 'Possible implemented network. Code in `panelexec1` alters `stateTable`, which triggers `datexec1` to reassign `select1`.' %}
+{% fullwidth '../attachments/td-fsm.gif' 'Possible implemented network. Code in `panelexec1` alters `stateTable`, which triggers `datexec1` to reassign `select1`.' %}
 
 ## Background actions: `execute`
 

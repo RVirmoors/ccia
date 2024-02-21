@@ -20,9 +20,9 @@ Max/Pd works by generating and transmitting data from one *object* to another. A
 
 As an example, press **N** and type in ```+```, then hit Enter. The [+ ] object adds two numbers together:
 
-{% maincolumn 'attachments/max-plus-object.png' 'A [+ ] object, with inlets on top (left: <span style="color:lightcoral">hot</span>, right: <span style="color:cornflowerblue">cold</span>) and an outlet on the bottom.' %}
+{% maincolumn '../attachments/max-plus-object.png' 'A [+ ] object, with inlets on top (left: <span style="color:lightcoral">hot</span>, right: <span style="color:cornflowerblue">cold</span>) and an outlet on the bottom.' %}
 
-{% marginfigure 'lock' 'attachments/max-lock.png' 'The lock button is found on the bottom-left of the patcher window. Click it to toggle in and out of *edit mode*.' %}
+{% marginfigure 'lock' '../attachments/max-lock.png' 'The lock button is found on the bottom-left of the patcher window. Click it to toggle in and out of *edit mode*.' %}
 Connect number boxes (key **I**) to the inlets and outlets and now you can see it in action. But first, you need to *lock* the program, or *patch*. Hit the lock icon, or **Ctrl+click** anywhere on the canvas.
 
 {% newthought 'Every object has a help patch' %}, which you access (with the patch unlocked) by **Alt+click**ing on the object. Whenever you're in doubt, or looking for inspiration or related info, check out these help patches. Understanding them is the best way to learn Max. And just like any patch, you can unlock them and copy-paste anything you find useful into your project.
@@ -33,7 +33,7 @@ This distinction between hot and cold inlets, and their layout on an object (mos
 
 Let's focus for a minute on the [message] object (key **M**).
 
-{% fullwidth 'attachments/max-pd-messages.png' 'Different behaviours in Max/Pd messages.' %}
+{% fullwidth '../attachments/max-pd-messages.png' 'Different behaviours in Max/Pd messages.' %}
 
 <br/>
 Notice how a ```set ``` message to the left input (or any input in the Max object’s right, cold, inlet) sets the content, and anything else into the left, hot, inlet, causes downward triggering{% sidenote 'bang' 'Generally the easiest way to trigger something is to [bang] it (key **B**).'%} of the current content.
@@ -42,7 +42,7 @@ Notice how a ```set ``` message to the left input (or any input in the Max objec
 
 So far we have dealt with objects functioning at the *control rate*, or about 1000 operations per second. MSP, or signal-based, objects run at *audio rate*, which is the sampling rate of your DAC.{% sidenote 'audio' 'Set your sample rate, and other audio settings, from Options > Audio Status.'%} This allows us to generate and process sound in real time. 
 
-{% marginfigure 'lock' 'attachments/msp-cycle.png' 'A sinewave generator being controlled, visualised and sent to the soundcard’s output.' %}
+{% marginfigure 'lock' '../attachments/msp-cycle.png' 'A sinewave generator being controlled, visualised and sent to the soundcard’s output.' %}
 In the right-hand patch I note in comments (key **C**) the name of the graphical objects used. See their help files to find out more.
 
 The float number (key **F**) controls the frequency of the [sinewave](https://en.wikipedia.org/wiki/Sine_wave) generator. Everything downstream of the [cycle~] object is a signal: as long as the audio engine is on (which can be toggled by clicking on the [ezdac~]... make sure your speaker volume is at a reasonable setting first), connected MSP objects will process signal values, which flow continuously through the striped-green patch cords. With the patch locked, drag on the float number box to change the frequency. Notice that as you drag above 20-40 Hz, the sine wave becomes audible.
@@ -77,7 +77,7 @@ Which leads us to this...
 
 ## Exercise: audio-pixel visualiser
 
-{% marginfigure 'jitpix' 'attachments/jitter-pixel3.gif' 'Pixel visualisation of a sine wave. The left pixel brightness is mapped to the [positive half-cycle](https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/waveforms-tim1.gif), and the right pixel to the negative half-cycle.' %}
+{% marginfigure 'jitpix' '../attachments/jitter-pixel3.gif' 'Pixel visualisation of a sine wave. The left pixel brightness is mapped to the [positive half-cycle](https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/waveforms-tim1.gif), and the right pixel to the negative half-cycle.' %}
 We've already seen how the [scope~] object allows us to see the amplitude of a sinewave (or any signal) over time. Another, perhaps more dynamic way to display the same information, would be to map its instantaneous value to the brightness of a pixel: see the right-hand animation for an example.
 
 You can recreate this effect using the objects below:{% sidenote 'rule' 'A general rule for working in Max/Pd: there is always more than one way to get something done. You might try replacing the [number~] with [snapshot~].'%}
@@ -88,7 +88,7 @@ Tip: try getting the first pixel (mapping values 0. to 1.) to work first, and th
 
 General tip: when an object doesn't work as intended, a good idea is to reset it by editing it, adding a space and hitting **Enter**. This reinitialises the object, setting all its internal variables to the default:
 
-{% maincolumn 'attachments/max-reset-obj.gif' 'Resetting the [pak] object to get rid of unwanted outputs.' %}
+{% maincolumn '../attachments/max-reset-obj.gif' 'Resetting the [pak] object to get rid of unwanted outputs.' %}
 
 This trick sometimes helps with MSP objects as well, on the rare occasion when they get "stuck" and won't process sound for some reason.
 

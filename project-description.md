@@ -16,7 +16,7 @@ My main aim is to impart the concepts and intuition that enable a creative codin
 
 Below is my sketch of a possible layout of the site, with the 3 modules (data, vectors, signals) containing several concepts, each of them illustrated through links and demos, and interconnected through tags. 
 
-{% fullwidth 'attachments/sketch-tf.png' 'Mock-up of a possible layout for the site.' %}
+{% fullwidth '../attachments/sketch-tf.png' 'Mock-up of a possible layout for the site.' %}
 
 <br/>
 Once the basic site is built, I'll use the remaining time to draft teacher notes, which educators can use for navigating the materials in a workshop setting. These might look similar to [my class notes](http://rvirmoors.github.io/ccia){% sidenote 'site' 'I started this site during Winter break, and am gradually filling it in, based on my previous [slides](https://docs.google.com/presentation/d/1cz5MhOBl1zmIKHEyA88DntralSN9Ad1wMm_QmPul7EY/edit?usp=sharing), [code](https://github.com/RVirmoors/cc1) and class recordings, as we progress.'%} / [syllabus](https://www.notion.so/rvirmoors/Creative-Coding-and-Software-Design-1-2924578f95ba4de1a95ce28ab0e1ae50), with specific readings and practical assignments for each topic.
