@@ -55,7 +55,7 @@ Meanwhile, Pd has also continued to evolve as a community-based project, mirrori
 
 Here's how you might add two numbers together:
 
-{% maincolumn 'attachments/max-pd-purr.png' 'Patcher UI comparison.<br/>Left: Max. Middle: Pd vanilla.<br/>Right: [Purr Data](https://agraef.github.io/purr-data-intro/), a community-driven, extended fork of Pd which includes a modernised frontend.' %}
+{% maincolumn '../attachments/max-pd-purr.png' 'Patcher UI comparison.<br/>Left: Max. Middle: Pd vanilla.<br/>Right: [Purr Data](https://agraef.github.io/purr-data-intro/), a community-driven, extended fork of Pd which includes a modernised frontend.' %}
 The Max interface (left) has probably the best look and feel, but the usage of the `[+]` object is the exact same: at least for core components, the transition from Max to Pd and vice versa is trivial.
 
 ## Unity
