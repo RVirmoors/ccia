@@ -22,9 +22,10 @@ class: left
 # ★ Table of Contents ★     <!-- omit in toc -->
 
 1. [The 30 Circle Test](#the-30-circle-test)
-2. [Debugging](#debugging)
-3. [Version control](#version-control)
-4. [Assignment](#assignment)
+2. [Semester overview](#semester-overview)
+3. [Debugging](#debugging)
+4. [Version control](#version-control)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -74,6 +75,20 @@ class: center
 --
 
 <iframe width="25%" height="120" src="https://www.youtube.com/embed/B6XLbzF6BDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+name: semester-overview
+# Semester overview
+
+Grig / PICO-8
+- weeks 1, 2, (3), 12, 13, 14
+- 6 assignments, 10p each, 50p max
+- building & sharing a PICO-8 game
+
+Mara / Unity
+- weeks 4-11
+- 40p class activity, 10p exam session presentation
+- collaborating & developing a game in Unity
 
 ---
 name: debugging
