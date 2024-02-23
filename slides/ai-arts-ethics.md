@@ -37,6 +37,21 @@ class: left
 layout: true  .toc[[★](#toc)]
 
 ---
+## AI & me
+
+--
+
+teaching / UNATC
+- [Interactive Technologies for Performing and Media Arts](https://itpma.notion.site/) (ITPMA) M.A.
+- [semester course](https://www.notion.so/itpma/Creative-Coding-and-Software-Design-3-c18bb7e2da834cabb027a681abefec2c) on Machine Learning for interactive arts
+
+--
+
+guitar / PANDREA
+
+[<img width="100%" src="../attachments/londoAI/pandrea.png">](https://youtu.be/X1V-Z2dNiEo)
+
+---
 name: definitions
 # Definitions
 
@@ -54,7 +69,7 @@ Machine Learning ~ Deep Learning ~ Artificial Intelligence
 
 --
 
-[AI art](https://www.libreai.com/a-short-overview-on-ai-art/) is:
+[AI art](https://www.libreai.com/art-ai/a-short-overview-on-ai-art/) is:
 - a subset of *generative* art
 - sometimes *interactive* (in training and/or execution)
 
@@ -152,11 +167,6 @@ inherited bias
 - transfer learning
 
 ---
-## Material footprint
-
-___ energy cost comparison
-
----
 ## Social cost
 
 ___ training 
@@ -165,8 +175,19 @@ https://en.wikipedia.org/wiki/ChatGPT#Training
 
 ___ replacing jobs 
 - ismir job ad gen.ai 
-- mastering - prf fb goosman reply 
+- [mastering](https://www.facebook.com/groups/34526354913/posts/10161317376399914/?__cft__[0]=AZX6knJf6rlYg-Wp8QMIMxtQEiZMqGfmPJqHskJLfiVfG7G9FBemfiO48lVp7Y_gV22OgyhBm5J-G7R15EVNZuUEdZtEVPC101Tqf6Okk68sOvk9BaNX7gfSnTYf7cfL35vnqO_ntj1fE3czBRKSTHHh&__tn__=%2CO%2CP-R)
 - background muzak gen.ai 
+
+___ feeding the burnout society
+
+lxl m39
+- achievement society
+
+---
+## Material footprint
+
+___ energy cost comparison
+
 
 ---
 name: the-players
@@ -180,6 +201,7 @@ Google
 <img style="width:50%"  src="../attachments/ml-deepdream-dog.png">
 
 - 2016: [Magenta](https://magenta.tensorflow.org/)
+  - mapping: DDSP demo
 - 2017: [Colab](https://colab.google/): [interactive code](https://en.wikipedia.org/wiki/Project_Jupyter) + cloud GPUs + free
 
 ---
@@ -218,6 +240,12 @@ billionaire companies built on open source - ACSL
 
 [lawyers&hackers](https://www.artistsandhackers.org/lawyers-hackers) @m23
 
+--
+
+https://hackaday.com/2023/05/05/leaked-internal-google-document-claims-open-source-ai-will-outcompete-google-and-openai/
+
+holly herndon AI voice
+
 https://discord.com/channels/1071587740384235571/1071875501406310500/1209506723220688927
 
 https://github.com/MihaiTraista/bassoon-keyslaps-corpus
@@ -237,9 +265,6 @@ https://youtu.be/t4FbknvszHU
 - applied on me vs public 
 - trained on ??
 - ethics gait posture 
-
----
-mapping: DDSP demo
 
 ---
 generation: RAVE demo
@@ -298,10 +323,18 @@ https://youtu.be/LWT99riOWeQ
 
 - superhumanness? (ex. curing cancer?)
 
+- usage - R&D
+
+- contemplation - hyperactivity
+
 - analog - digital
   - ML analog? biocomputing?
 
 ---
+
+ne formam gust critic
+
+nu repetam argumentele corporatiilor
 
 https://terribleminds.com/ramble/2024/01/10/just-say-no-to-artificial-intelligence-in-your-creative-pursuits-please-jfc-wtaf/
 
