@@ -175,7 +175,7 @@ https://github.com/RVirmoors/deltaScapes
 
 name: artistic-uses-of-dl       
 class: left
-#  Artistic uses of DL
+# Artistic uses of DL
 
 text
 
@@ -187,7 +187,7 @@ image
 
 ## Symbolic sequences: text
 
-2018: Generative Pretrained Transformer (OpenAI GPT)
+2018: [Generative Pretrained Transformer](https://openai.com/research/language-unsupervised) (OpenAI GPT)
 
 2019: [GPT-2](https://www.openai.com/blog/gpt-2-1-5b-release/)
 
