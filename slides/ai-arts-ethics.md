@@ -56,8 +56,6 @@ class: left
 name: definitions
 # Definitions
 
---
-
 Machine Learning ~ Deep Learning ~ [Artificial Intelligence](https://en.wikipedia.org/wiki/Mechanical_Turk)
 
 --
@@ -76,6 +74,11 @@ Machine Learning ~ Deep Learning ~ [Artificial Intelligence](https://en.wikipedi
 
 ---
 ## What does an AI model *do?*
+
+.right-column[
+  <img width="100%" src="../attachments/ann-layers.png">
+]
+
 
 mapping
 - inputs → outputs
@@ -141,9 +144,13 @@ model |  ~  | information *mapped*
 --
 
 all the above are **fallible**: subject to *choices* and *noise*
+
+<br/><br/><br/><br/><br/><br/><br/>
 - [Critical Perspectives on Computer Vision](https://slideslive.com/38923500/critical-perspectives-on-computer-vision) / Emily Denton
+- [Whose ground truth? accounting for individual and collective identities underlying dataset annotation](https://arxiv.org/pdf/2112.04554.pdf)
+- [Microsoft lays off AI ethics and society team](https://www.theverge.com/2023/3/13/23638823/microsoft-ethics-society-team-responsible-ai-layoffs)
 - [Reddit strikes $60M deal allowing Google to train AI on user posts](https://www.baltimoresun.com/2024/02/22/reddit-strikes-60m-deal-allowing-google-to-train-ai-models-on-its-posts-unveils-ipo-plans/)
-- ___ more links
+
  
 ---
 ## Types of knowledge in ML models
@@ -181,42 +188,123 @@ inherited bias
 ---
 ## Social cost
 
-___ training 
+training large models
+- crowdsourcing data
+  - privacy
+  - opt-in
+- addressing bias
+  - ChatGPT used [Kenyan workers](https://time.com/6247678/openai-chatgpt-kenya-workers/) for ["traumatizing" work](https://www.theguardian.com/technology/2023/aug/02/ai-chatbot-training-human-toll-content-moderator-meta-openai)
 
-https://en.wikipedia.org/wiki/ChatGPT#Training
+<img style="width:80%"  src="../attachments/londoAI/kenya.png">
 
-___ replacing jobs 
-- ismir job ad gen.ai 
-- [mastering](https://www.facebook.com/groups/34526354913/posts/10161317376399914/?__cft__[0]=AZX6knJf6rlYg-Wp8QMIMxtQEiZMqGfmPJqHskJLfiVfG7G9FBemfiO48lVp7Y_gV22OgyhBm5J-G7R15EVNZuUEdZtEVPC101Tqf6Okk68sOvk9BaNX7gfSnTYf7cfL35vnqO_ntj1fE3czBRKSTHHh&__tn__=%2CO%2CP-R)
-- background muzak gen.ai 
+---
+## Social cost
 
-___ feeding the burnout society
+[replacing jobs](https://en.wikipedia.org/wiki/Technological_unemployment) 
 
-lxl m39
-- achievement society
+<img style="width:100%"  src="../attachments/londoAI/job.png">
+
+--
+
+[<img style="width:50%"  src="../attachments/londoAI/mastering-post.png"><img style="width:50%"  src="../attachments/londoAI/mastering-goosman.png">](https://www.facebook.com/groups/34526354913/posts/10161317376399914/?__cft__[0]=AZX6knJf6rlYg-Wp8QMIMxtQEiZMqGfmPJqHskJLfiVfG7G9FBemfiO48lVp7Y_gV22OgyhBm5J-G7R15EVNZuUEdZtEVPC101Tqf6Okk68sOvk9BaNX7gfSnTYf7cfL35vnqO_ntj1fE3czBRKSTHHh&__tn__=%2CO%2CP-R)
+
+---
+## Social cost
+
+[<img style="width:100%"  src="../attachments/londoAI/strike.png">](https://www.theguardian.com/culture/2023/oct/01/hollywood-writers-strike-artificial-intelligence)
+
+“AI is under control of the writers, not under control of the studios. It’s not to be used as an automation technology. It’s complementary to humans.”
+- Simon Johnson, MIT
+---
+## Social cost
+
+feeding the achievement/burnout society
+
+<img style="width:100%"  src="../attachments/londoAI/vita.png">
+
+"The loss of the faculty of contemplation affects our relation to language. Dazed by the rush of information and communication we move away from **poetry** as the contemplation of language, and begin even to hate it. When language is nothing but work and the production of information, it loses its radiance. It becomes worn out and **keeps producing the same**."
+- Byung-Chul Han, Vita Contemplativa
 
 ---
 ## Material footprint
 
-___ energy cost comparison
+Raspberry Pi 5 single-board computer: 6W
 
-minipcs https://youtu.be/rGUnsiivqeU
+[<img style="width:100%"  src="../attachments/londoAI/raspi-6w.png">](https://youtu.be/rGUnsiivqeU)
 
 google search query = 5W for 3min = 0.25Wh
 
-gaming pc 300W https://youtu.be/_dMA35UO5eY
+---
+## Material footprint
 
-dl rig 2000W https://www.reddit.com/r/deeplearning/comments/106zlpz/building_a_4x_3090_machine_learning_machine_would/
+N100 mini PC: 30W
+
+[<img style="width:100%"  src="../attachments/londoAI/n100.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+N100 mini PC: 30W
+
+[<img style="width:100%"  src="../attachments/londoAI/n100-r.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+i5 desktop PC: 65W
+
+[<img style="width:100%"  src="../attachments/londoAI/i5.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+i5 desktop PC: 65W
+
+[<img style="width:100%"  src="../attachments/londoAI/i5-r.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+gaming PC: 300W
+
+[<img style="width:100%"  src="../attachments/londoAI/gaming.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+gaming PC: 300W
+
+[<img style="width:100%"  src="../attachments/londoAI/gaming-r.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+deep learning rig: 2000W
+
+[<img style="width:50%"  src="../attachments/londoAI/dl-rig.png">](https://www.reddit.com/r/deeplearning/comments/106zlpz/building_a_4x_3090_machine_learning_machine_would/)
+
+---
+## Material footprint
+
+deep learning rig: 2000W
+
+[<img style="width:50%"  src="../attachments/londoAI/dl-rig-r.png">](https://www.reddit.com/r/deeplearning/comments/106zlpz/building_a_4x_3090_machine_learning_machine_would/)
 
 https://github.com/TimDettmers/carbonneutral
 
-training ChatGPT 1064MWh
+---
+## Material footprint
 
-chatgpt inference 260MWh / day or 9Wh / query (vs 0.25Wh / google search)
+training ChatGPT: 1064MWh
+
+chatgpt inference: 260MWh / day or 9Wh / query 
+- (vs 0.25Wh / google search)
+
+<img style="width:100%"  src="../attachments/londoAI/datacentre.png">
 
 [AI and its carbon footprint: How much water does ChatGPT consume?](https://lifestyle.livemint.com/news/big-story/ai-carbon-footprint-openai-chatgpt-water-google-microsoft-111697802189371.html)
 
-- [*between 2010 and 2018, data center energy usage has been fairly stable, accounting for around 1 to 2 percent of global consumption. ... His fear is that things might be different for AI precisely because of the trend for companies to simply throw bigger models and more data at any task.*](https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption)
+- ["between 2010 and 2018, data center energy usage has been fairly stable, accounting for around 1 to 2 percent of global consumption. ... His fear is that things might be different for AI precisely because of the trend for companies to simply throw bigger models and more data at any task."](https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption)
 
 [Power Hungry Processing: Watts Driving the Cost of AI Deployment?](https://arxiv.org/pdf/2311.16863.pdf)
 
@@ -265,28 +353,55 @@ NVIDIA
 ---
 ## open source
 
-artists as tool builders
+--
 
-billionaire companies built on open source - ACSL 
-
-[lawyers&hackers](https://www.artistsandhackers.org/lawyers-hackers) @m23
+does not guarantee transparency or fairness → [Explainable AI](https://christophm.github.io/interpretable-ml-book/)
 
 --
 
-https://hackaday.com/2023/05/05/leaked-internal-google-document-claims-open-source-ai-will-outcompete-google-and-openai/
+artists as tool builders
 
-holly herndon AI voice
+[<img width="100%" src="../attachments/londoAI/hollyplus.png">](https://holly.mirror.xyz/54ds2IiOnvthjGFkokFCoaI4EabytH9xjAYy1irHy94)
 
-https://github.com/MihaiTraista/bassoon-keyslaps-corpus
+--
+
+billionaire companies built on open source → [ACSL](https://anticapitalist.software/) 
+- [lawyers&hackers](https://www.artistsandhackers.org/lawyers-hackers) podcast @m23
+
+--
+
+[Google: Open Source AI Will Outcompete Google And OpenAI](https://hackaday.com/2023/05/05/leaked-internal-google-document-claims-open-source-ai-will-outcompete-google-and-openai/)
 
 ---
 class: center
 name: ai-art-in-practice
 # AI Art in practice
 
-<img width="80%" src="../attachments/londoAI/ethical-ai-meme.png">
+[<img width="80%" src="../attachments/londoAI/ethical-ai-meme.png">](https://youtu.be/t4FbknvszHU)
 
-https://youtu.be/t4FbknvszHU
+---
+## <span style='color:aqua'>make a dataset & play with it</span>
+
+.right-column[
+<video preload="auto" width="100%" height="auto"  data-setup="{}" loop controls>
+<source src="../attachments/londoAI/bassoon.mov" type="video/mp4" /></video>
+
+- [Mihai Traista on SP-tools discord](https://discord.com/channels/1071587740384235571/1071875501406310500/1209506723220688927)
+- https://github.com/MihaiTraista/bassoon-keyslaps-corpus
+]
+
+--
+
+Reaper
+- record sounds
+- hit D to split
+- batch export .wavs to folder
+
+--
+
+Max / [SP-tools](https://github.com/rconstanzo/sp-tools)
+- sp.corpuscreate
+- sp.corpusmatch
 
 ---
 ## Pose estimation
@@ -309,36 +424,13 @@ https://youtu.be/t4FbknvszHU
 gait surveillance
 ]
 
----
-## let's make a dataset & play with it
-
-.right-column[
-<video preload="auto" width="100%" height="auto"  data-setup="{}" loop controls>
-<source src="../attachments/londoAI/bassoon.mov" type="video/mp4" /></video>
-
-- [Mihai Traista on SP-tools discord](https://discord.com/channels/1071587740384235571/1071875501406310500/1209506723220688927)
-]
-
---
-
-Reaper
-- record sounds
-- hit D to split
-- batch export .wavs to folder
-
---
-
-Max / [SP-tools](https://github.com/rconstanzo/sp-tools)
-- sp.corpuscreate
-- sp.corpusmatch
 
 ---
 ## Voice In My Head
 
-*[Kyle McDonald](https://kylemcdonald.net/) & [Lauren Lee McCarthy](https://lauren-mccarthy.com/)*
+[Kyle McDonald](https://kylemcdonald.net/) & [Lauren Lee McCarthy](https://lauren-mccarthy.com/)
 
-<img width="100%" src="../attachments/londoAI/voice.png">
-- https://lauren-mccarthy.com/Voice-In-My-Head
+[<img width="100%" src="../attachments/londoAI/voice.png">](https://lauren-mccarthy.com/Voice-In-My-Head)
 
 --
 
@@ -351,7 +443,7 @@ Max / [SP-tools](https://github.com/rconstanzo/sp-tools)
 data ethics
 
 ---
-## Generate video
+## Generating video
 
 <iframe width="100%" height="300" src="https://www.youtube.com/embed/ryNtckMT49M" title="Pooky Park" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -371,41 +463,89 @@ OpenAI "hold my beer": [Sora](https://openai.com/sora)
 name: reflections
 # Reflections
 
-ethics is a continuum - where/how to draw the line? 
+.right-column[
+  [<img width="100%" src="https://thebulletin.org/wp-content/uploads/2022/10/DALL%C2%B7E-2022-10-25-13.01.17-A-nineteenth-century-engraving-of-artists-rioting-and-smashing-computer-monitors-with-hammers.png">](https://thebulletin.org/2022/10/is-ai-arts-true-foe/)
+]
 
-ethics is multidimensional 
-- ___pe rand, 2 axe, 3 axe etc... 
-- multe dimensiuni = ethics ML model sa ne zica ce e etic si ce nu - necesar pt alignment, general AI
+--
 
-AXE
-- tool - instrument (extensie/dialog/struggle) - partener (cocreativity)
+train your eye for AI
 
-"unde se afla subiectul/dorintele care permit muzica interesanta?"
+--
 
-- mapping - generation
+consider the balance of power
 
-- plagiarism - metacreation
+--
 
-[Active Divergence with Generative Deep Learning](https://arxiv.org/pdf/2107.05599.pdf)
+<br/><br/><br/>
 
-- usage - R&D
+ethics is a continuum
+- where & how to draw the line?
 
-- contemplation - hyperactivity
+<br/><br/><br/><br/><br/><br/>
 
-- analog - digital
-  - ML analog? biocomputing?
-
----
-
-ne formam gust critic
-
-nu repetam argumentele corporatiilor
-
-https://terribleminds.com/ramble/2024/01/10/just-say-no-to-artificial-intelligence-in-your-creative-pursuits-please-jfc-wtaf/
-
-allison parrish: art is the only ethical use of AI ___source??
+- [Just Say No to Artificial Intelligence In Your Creative Pursuits](https://terribleminds.com/ramble/2024/01/10/just-say-no-to-artificial-intelligence-in-your-creative-pursuits-please-jfc-wtaf/#comment-1678765)
+- [Active Divergence with Generative Deep Learning](https://arxiv.org/pdf/2107.05599.pdf)
 
 ---
+class: center
+## ethics is multidimensional 
+
+<img width="100%" src="../attachments/londoAI/1W.png">
+
+---
+class: center
+## ethics is multidimensional 
+
+<img width="100%" src="../attachments/londoAI/2plag.png">
+
+---
+class: center
+## ethics is multidimensional
+
+<img width="100%" src="../attachments/londoAI/3map.png">
+
+---
+class: center
+## ethics is multidimensional 
+
+<img width="100%" src="../attachments/londoAI/4tool.png">
+
+---
+class: center
+## ethics is multidimensional 
+
+<img width="100%" src="../attachments/londoAI/5user.png">
+
+---
+class: center
+## ethics is multidimensional 
+
+<img width="100%" src="../attachments/londoAI/6hyper.png">
+
+---
+class: center
+## a job for machine ethics :)
+
+<img width="100%" src="../attachments/londoAI/7all.png">
+
+---
+class: center, middle
+## coda
+
+---
+class: center, middle
+
+<img width="50%" src="../attachments/londoAI/aparrish.png">
+
+*Art is the only ethical use of AI.*
+
+- [Allison Parrish](https://www.decontextualize.com/), 
+- quoted by [Claire Evans (YACHT)](https://youtu.be/udTZCx5cALg) 
+- via [Code as Creative Medium](https://mitpress.mit.edu/9780262542043/code-as-creative-medium/)
+
+---
+class: center, middle
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/iGJcF4bLKd4" title="Nick Cave" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
