@@ -18,19 +18,6 @@ class: center, middle
 ???
 
 Author: Grigore Burloiu, UNATC
-    
----
-name: toc
-class: left
-# ★ Table of Contents ★      <!-- omit in toc -->
-      
-1. [Definitions](#definitions)
-2. [AI ethics](#ai-ethics)
-3. [The Players](#the-players)
-4. [AI Art in practice](#ai-art-in-practice)
-5. [Reflections](#reflections)
-6. [References](#references)
-
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
 ---
@@ -45,11 +32,25 @@ teaching / UNATC
 - [Interactive Technologies for Performing and Media Arts](https://itpma.notion.site/) (ITPMA) M.A.
 - [semester course](https://www.notion.so/itpma/Creative-Coding-and-Software-Design-3-c18bb7e2da834cabb027a681abefec2c) on Machine Learning for interactive arts
 
+[<img width="100%" src="../attachments/londoAI/diana-cc.gif">](https://ars.electronica.art/who-owns-the-truth/en/clouded-consciousness/)
+
 --
 
-guitar / PANDREA
+PhD / UPB
+- *Dynamic Music Representations for Real-Time Performance*
 
-[<img width="100%" src="../attachments/londoAI/pandrea.png">](https://youtu.be/X1V-Z2dNiEo)
+- [<img width="40%" src="../attachments/londoAI/pandrea.png">](https://youtu.be/X1V-Z2dNiEo) <iframe width="40%" height="88" src="https://www.youtube.com/embed/EIS1bAxAiNc" title="rvdtw~" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+      
+1. [Definitions](#definitions)
+2. [AI ethics](#ai-ethics)
+3. [The Players](#the-players)
+4. [AI Art in practice](#ai-art-in-practice)
+5. [Reflections](#reflections)
 
 ---
 name: definitions
@@ -57,7 +58,7 @@ name: definitions
 
 --
 
-Machine Learning ~ Deep Learning ~ Artificial Intelligence
+Machine Learning ~ Deep Learning ~ [Artificial Intelligence](https://en.wikipedia.org/wiki/Mechanical_Turk)
 
 --
 
@@ -70,8 +71,8 @@ Machine Learning ~ Deep Learning ~ Artificial Intelligence
 --
 
 [AI art](https://www.libreai.com/art-ai/a-short-overview-on-ai-art/) is:
-- a subset of *generative* art
-- sometimes *interactive* (in training and/or execution)
+- a subset of [*generative* art](https://en.wikipedia.org/wiki/Generative_art)
+- sometimes [*interactive*](https://en.wikipedia.org/wiki/Interactive_art) (in training and/or execution)
 
 ---
 ## What does an AI model *do?*
@@ -85,9 +86,13 @@ generation
 - prompt → continuation
 
 ---
-## Mapping example
+## Mapping examples
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/19980514?h=c5cdf1479c" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div style="padding:36.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/19980514?h=c5cdf1479c" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+--
+
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/9Vu6tNmTRQY" title="Rodrigo Constanzo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 ## Generation vs mapping
@@ -96,9 +101,15 @@ technically:
 - input = history
 - output = future
 
-we're mapping the present state / recent memory / recorded history
+<br/>
 
-onto a future continuation
+we're mapping 
+- the present state / recent memory / recorded history
+
+onto 
+- a future continuation
+
+<br/><br/>
 
 --
 
@@ -131,6 +142,7 @@ model |  ~  | information *mapped*
 
 all the above are **fallible**: subject to *choices* and *noise*
 - [Critical Perspectives on Computer Vision](https://slideslive.com/38923500/critical-perspectives-on-computer-vision) / Emily Denton
+- [Reddit strikes $60M deal allowing Google to train AI on user posts](https://www.baltimoresun.com/2024/02/22/reddit-strikes-60m-deal-allowing-google-to-train-ai-models-on-its-posts-unveils-ipo-plans/)
 - ___ more links
  
 ---
@@ -188,6 +200,26 @@ lxl m39
 
 ___ energy cost comparison
 
+minipcs https://youtu.be/rGUnsiivqeU
+
+google search query = 5W for 3min = 0.25Wh
+
+gaming pc 300W https://youtu.be/_dMA35UO5eY
+
+dl rig 2000W https://www.reddit.com/r/deeplearning/comments/106zlpz/building_a_4x_3090_machine_learning_machine_would/
+
+https://github.com/TimDettmers/carbonneutral
+
+training ChatGPT 1064MWh
+
+chatgpt inference 260MWh / day or 9Wh / query (vs 0.25Wh / google search)
+
+[AI and its carbon footprint: How much water does ChatGPT consume?](https://lifestyle.livemint.com/news/big-story/ai-carbon-footprint-openai-chatgpt-water-google-microsoft-111697802189371.html)
+
+- [*between 2010 and 2018, data center energy usage has been fairly stable, accounting for around 1 to 2 percent of global consumption. ... His fear is that things might be different for AI precisely because of the trend for companies to simply throw bigger models and more data at any task.*](https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption)
+
+[Power Hungry Processing: Watts Driving the Cost of AI Deployment?](https://arxiv.org/pdf/2311.16863.pdf)
+
 
 ---
 name: the-players
@@ -200,8 +232,7 @@ Google
 
 <img style="width:50%"  src="../attachments/ml-deepdream-dog.png">
 
-- 2016: [Magenta](https://magenta.tensorflow.org/)
-  - mapping: DDSP demo
+- 2016: [Magenta](https://magenta.tensorflow.org/) / <span style='color:aqua'>DDSP</span>
 - 2017: [Colab](https://colab.google/): [interactive code](https://en.wikipedia.org/wiki/Project_Jupyter) + cloud GPUs + free
 
 ---
@@ -246,8 +277,6 @@ https://hackaday.com/2023/05/05/leaked-internal-google-document-claims-open-sour
 
 holly herndon AI voice
 
-https://discord.com/channels/1071587740384235571/1071875501406310500/1209506723220688927
-
 https://github.com/MihaiTraista/bassoon-keyslaps-corpus
 
 ---
@@ -260,32 +289,66 @@ name: ai-art-in-practice
 https://youtu.be/t4FbknvszHU
 
 ---
-## posenet
+## Pose estimation
 
-- applied on me vs public 
-- trained on ??
-- ethics gait posture 
+<img width="50%" src="https://github.com/google-coral/project-posenet/raw/master/media/anonymizer.gif"><iframe width="50%" height="282" src="https://www.youtube.com/embed/dMZs04TzxUI" title="ircam RAVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+--
+
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/Nim80x4S9y0" title="ochi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+--
+
+.left-column[
+["anonymous and <br/> privacy-preserving"](https://github.com/google-coral/project-posenet)
+]
+
+--
+
+.right-column[
+gait surveillance
+]
 
 ---
-generation: RAVE demo
+## let's make a dataset & play with it
+
+.right-column[
+<video preload="auto" width="100%" height="auto"  data-setup="{}" loop controls>
+<source src="../attachments/londoAI/bassoon.mov" type="video/mp4" /></video>
+
+- [Mihai Traista on SP-tools discord](https://discord.com/channels/1071587740384235571/1071875501406310500/1209506723220688927)
+]
+
+--
+
+Reaper
+- record sounds
+- hit D to split
+- batch export .wavs to folder
+
+--
+
+Max / [SP-tools](https://github.com/rconstanzo/sp-tools)
+- sp.corpuscreate
+- sp.corpusmatch
 
 ---
-inbetween = modelling time: rolypoly~ demo video
+## Voice In My Head
 
+*[Kyle McDonald](https://kylemcdonald.net/) & [Lauren Lee McCarthy](https://lauren-mccarthy.com/)*
 
----
-clustermatch guitar - mic demo
+<img width="100%" src="../attachments/londoAI/voice.png">
+- https://lauren-mccarthy.com/Voice-In-My-Head
 
-https://youtu.be/9Vu6tNmTRQY
+--
 
+(self-)surveillance
 
----
+[shared subjectivity](https://youtu.be/LWT99riOWeQ)
 
-## StyleGAN - truncation
+"algorithmic living"
 
-<iframe width="100%" height="250" src="https://www.youtube.com/embed/Yk7DCLH97z0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</iframe><iframe width="100%" height="300" src="https://www.youtube.com/embed/C1RW2RbY7f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+data ethics
 
 ---
 ## Generate video
@@ -302,7 +365,7 @@ OpenAI "hold my beer": [Sora](https://openai.com/sora)
 
 --
 
-<iframe width="100%" height="150" src="https://www.youtube.com/embed/-MUEXGaxFDA?start=1697" title="AI is rotten" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="150" src="https://www.youtube.com/embed/-MUEXGaxFDA?start=1686" title="AI is rotten" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 name: reflections
@@ -316,12 +379,14 @@ ethics is multidimensional
 
 AXE
 - tool - instrument (extensie/dialog/struggle) - partener (cocreativity)
-https://youtu.be/LWT99riOWeQ
+
 "unde se afla subiectul/dorintele care permit muzica interesanta?"
 
 - mapping - generation
 
-- superhumanness? (ex. curing cancer?)
+- plagiarism - metacreation
+
+[Active Divergence with Generative Deep Learning](https://arxiv.org/pdf/2107.05599.pdf)
 
 - usage - R&D
 
@@ -342,12 +407,7 @@ allison parrish: art is the only ethical use of AI ___source??
 
 ---
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/iGJcF4bLKd4" title="AI is rotten" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
----
-name: references
-# References
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/iGJcF4bLKd4" title="Nick Cave" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 class: center, middle
