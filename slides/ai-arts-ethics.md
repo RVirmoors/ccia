@@ -31,6 +31,7 @@ layout: true  .toc[[★](#toc)]
 teaching / UNATC
 - [Interactive Technologies for Performing and Media Arts](https://itpma.notion.site/) (ITPMA) M.A.
 - [semester course](https://www.notion.so/itpma/Creative-Coding-and-Software-Design-3-c18bb7e2da834cabb027a681abefec2c) on Machine Learning for interactive arts
+- [workshops](https://youtu.be/t4FbknvszHU) etc
 
 [<img width="100%" src="../attachments/londoAI/diana-cc.gif">](https://ars.electronica.art/who-owns-the-truth/en/clouded-consciousness/)
 
@@ -325,7 +326,7 @@ Google
 
 <img style="width:50%"  src="../attachments/ml-deepdream-dog.png">
 
-- 2016: [Magenta](https://magenta.tensorflow.org/) / <span style='color:aqua'>DDSP</span>
+- 2016: [Magenta](https://magenta.tensorflow.org/) / <span style='color:aqua'>DDSP</span> <audio controls src="../attachments/londoAI/dem.mp3" style="height: 20px;"></audio>
 - 2017: [Colab](https://colab.google/): [interactive code](https://en.wikipedia.org/wiki/Project_Jupyter) + cloud GPUs + free
 
 ---
@@ -371,7 +372,7 @@ artists as tool builders
 --
 
 billionaire companies built on open source → [ACSL](https://anticapitalist.software/) 
-- [lawyers&hackers](https://www.artistsandhackers.org/lawyers-hackers) podcast @m23
+- [artists&hackers](https://www.artistsandhackers.org/lawyers-hackers) podcast @m23
 
 --
 
