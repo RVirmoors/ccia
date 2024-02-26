@@ -8,9 +8,9 @@ class: center, middle
 <br/><br/>
 .subtitle[[bit.ly/londoAI](https://bit.ly/londoAI)
 <br/><img width=25% src="../attachments/londoAI/bitly_londoAI.png">
-<br/><br/>SERALA // Londohome
+<br/>SERALA // Londohome
 <br/>grigore.burloiu@unatc.ro]
-<br/><br/><br/><br/>
+<br/><br/><br/>
 .date[Feb 2024]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
@@ -64,7 +64,7 @@ Machine Learning ~ Deep Learning ~ [Artificial Intelligence](https://en.wikipedi
 
 --
 
-<img width="75%" src="https://upload.wikimedia.org/wikipedia/en/a/a7/Google_Homepage.PNG">
+<img width="66%" src="https://upload.wikimedia.org/wikipedia/en/a/a7/Google_Homepage.PNG">
 
 --
 
@@ -302,11 +302,16 @@ chatgpt inference: 260MWh / day or 9Wh / query
 
 <img style="width:100%"  src="../attachments/londoAI/datacentre.png">
 
+.left-column[
 [AI and its carbon footprint: How much water does ChatGPT consume?](https://lifestyle.livemint.com/news/big-story/ai-carbon-footprint-openai-chatgpt-water-google-microsoft-111697802189371.html)
+]
 
-- ["between 2010 and 2018, data center energy usage has been fairly stable, accounting for around 1 to 2 percent of global consumption. ... His fear is that things might be different for AI precisely because of the trend for companies to simply throw bigger models and more data at any task."](https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption)
-
+.right-column[
 [Power Hungry Processing: Watts Driving the Cost of AI Deployment?](https://arxiv.org/pdf/2311.16863.pdf)
+]
+
+- "between 2010 and 2018, data center energy usage has been fairly stable, accounting for around 1 to 2 percent of global consumption. ... things might be different for AI precisely because of the trend for companies to simply throw bigger models and more data at any task." [source](https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption)
+
 
 
 ---
@@ -477,7 +482,7 @@ consider the balance of power
 
 --
 
-<br/><br/><br/>
+<br/><br/>
 
 ethics is a continuum
 - where & how to draw the line?
@@ -555,6 +560,6 @@ class: center, middle
 
 <br/><br/>[bit.ly/londoAI](https://bit.ly/londoAI)
 <br/><img width=50% src="../attachments/londoAI/bitly_londoAI.png">
-<br/><br/>grigore.burloiu@unatc.ro
+<br/>grigore.burloiu@unatc.ro
 <br/>[itpma.notion.site](https://itpma.notion.site)
 <br/>[rvirmoors.github.io](https://rvirmoors.github.io)
