@@ -73,6 +73,9 @@ Machine Learning ~ Deep Learning ~ [Artificial Intelligence](https://en.wikipedi
 - a subset of [*generative* art](https://en.wikipedia.org/wiki/Generative_art)
 - sometimes [*interactive*](https://en.wikipedia.org/wiki/Interactive_art) (in training and/or execution)
 
+- [AI and the social construction of creativity](https://journals.sagepub.com/doi/10.1177/13548565231187730)
+- [AI and the Arts: How Machine Learning is Changing Creative Work](https://www.oii.ox.ac.uk/news-events/reports/ai-the-arts/)
+
 ---
 ## What does an AI model *do?*
 
