@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Arrays / Tables]
 <br/><br/><br/><br/><br/><br/>
-.date[Jan 2023] 
+.date[Feb 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -118,7 +118,7 @@ animated sprites
 
 --
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ```lua
 left_walk_anim = {1,2,3,4}
@@ -161,7 +161,7 @@ a value inside a table [can itself be a table](https://nerdyteachers.com/PICO-8/
 name: assignment
 # Assignment
 
-create a playable interaction in your p8 game
+prototype a playable interaction in your p8 game
 - should ideally be your main gameplay loop
 
 AND
@@ -170,4 +170,4 @@ fill in your [statement-of-originality.yml](../attachments/statement-of-original
 
 <br/><br/><br/><br/>
 
-attach `.p8` and `.yml` files to your assignment
+add the `.p8` and `.yml` files to your github
