@@ -4,7 +4,7 @@ title: Arrays / Tables
 ---
 
 class: center, middle
-.title[Game Development 1]
+.title[Game Development 2]
 <br/><br/>
 .subtitle[Arrays / Tables]
 <br/><br/><br/><br/><br/><br/>
