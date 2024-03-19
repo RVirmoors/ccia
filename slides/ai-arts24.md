@@ -32,7 +32,7 @@ teaching / UNATC
 - [semester course](https://www.notion.so/itpma/Creative-Coding-and-Software-Design-3-c18bb7e2da834cabb027a681abefec2c) on Machine Learning for interactive arts
 - [workshops](https://youtu.be/t4FbknvszHU) etc
 
-[<img width="100%" src="../attachments/londoAI/diana-cc.gif">](https://ars.electronica.art/who-owns-the-truth/en/clouded-consciousness/)
+[<img width="100%" src="../attachments/londoAI/corpus-viderum.png">](https://ranrun.studio/portfolio/corpus-viderum)
 
 --
 
