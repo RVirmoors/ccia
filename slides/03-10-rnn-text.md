@@ -22,7 +22,7 @@ class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
 1. [NLP models](#nlp-models)
-2. [Generative text & art](#generative-text--art)
+2. [Generative text \& art](#generative-text--art)
 3. [Recurrent Neural Networks](#recurrent-neural-networks)
 4. [Example](#example)
 5. [Links](#links)
@@ -193,6 +193,8 @@ https://youtu.be/OhCzX0iLnOc
 clip-vqgan: https://imgur.com/a/SnSIQRu https://github.com/sadnow/360Diffusion/blob/main/Upscaling_UltraQuick_CLIP_Guided_Diffusion_HQ_256x256_and_512x512.ipynb https://www.lesswrong.com/posts/toYwxxAHEpsf8mkn9/experimentation-with-ai-generated-images-vqgan-clip-or https://twitter.com/98_0634741763/status/1414442147877695488 
 
 text games: https://versificator.itch.io/gruescript
+
+LLMs - [open source vs commercial service](https://pub.towardsai.net/the-difference-between-open-source-models-and-commercial-ai-ml-apis-7c930cefaed8)
 
 See more [resources](../resources).
 
