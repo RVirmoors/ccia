@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Machine Learning for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2023] 
+.date[Oct 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -195,6 +195,16 @@ workflow
 --
 
 creating something truly *new*?
+
+---
+## The future: learning interaction
+
+[DeepMind Genie](https://sites.google.com/view/genie-2024/): Generative Interactive Environments
+
+<iframe width="190" height="80" src="https://www.youtube.com/embed/b3REaKYEW3k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- [MLST interview](https://www.youtube.com/watch?v=kbt0ZFoI2Hc)
+
 
 ---
 name: links       
