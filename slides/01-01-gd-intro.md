@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Game Development]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2023] 
+.date[Oct 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -40,11 +40,11 @@ class: left
 
 lectures (2h): Grig
 - 50%: assignments (per class)
-- weeks 1, 3, 8-12
+- weeks 2, 4, ...
 
-labs (2h): Mara
+labs (2h): Dragos
 - 50%: lab (30p) + final (20p)
-- weeks 2, 4-7, 13-14
+- weeks 1, (3), 5, ...
 
 --
 
@@ -99,7 +99,7 @@ so... challenge yourself & BUILD STUFF.
 name: me--games
 # Me & games
 
-90s gamer
+90s PC gamer
 
 --
 
@@ -187,38 +187,6 @@ computer science
 - → *what skill* should I improve?
 - → does it matter?
 
-
----
-## Dev components
-
-| **intention**  |+| **invention**  |+| **adaptation** |
-|---|-|----|-|-- |
-| ideas | | logic | | programming |
-| goals | | algorithms | | compiler etc |
-
----
-## Dev components
-
-.right-column[
-<iframe width="100%" src="https://www.youtube.com/embed/MrQrkioQoEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-]
-
-intention
-- ideas, goals
-- → `//comments`
-
---
-
-invention
-- logic, algorithms
-- → [flowcharting](https://www.visual-paradigm.com/tutorials/flowchart-tutorial/), pseudocode
-
---
-
-adaptation
-- programming language, compiler, SW+HW architecture
-- → code
-
 ---
 class: center
 ## How many languages will you learn?
@@ -282,7 +250,7 @@ class: left
 ---
 name: bitsy
 class: center
-# Bitsy
+# [Bitsy](https://bitsy.org/)
 
 <iframe width="100%" height="450" frameborder="0" src="https://bitsy.org"></iframe>
 
@@ -291,6 +259,10 @@ class: center
 ---
 class: center
 ## Play Bitsy games!
+
+- https://fakemilia.itch.io/liminal
+- https://friendlycosmonaut.itch.io/demeterandpersephone
+- https://ronzylady.itch.io/
 
 <iframe width="33%" height="247" frameborder="0" src="https://v6p9d9t4.ssl.hwcdn.net/html/2115106/index.html?v=1591302057"></iframe><iframe width="33%" height="247" frameborder="0" src="https://v6p9d9t4.ssl.hwcdn.net/html/2347743/LIMINAL_BITSY_final_build/index.html"></iframe><iframe width="33%" height="247" frameborder="0" src="https://v6p9d9t4.ssl.hwcdn.net/html/1435548/demeterandpersephone/index.html?v=1574335551"></iframe>
 
@@ -309,4 +281,4 @@ task
 deliverables
 - game link / upload
 
-due: WEEK 3
+due: WEEK 4

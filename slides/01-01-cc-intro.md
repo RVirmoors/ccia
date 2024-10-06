@@ -69,7 +69,7 @@ neuroplasticity
 
 --
 
-mistakes: good for learning!
+mistakes ➡ learning
 
 --
 
