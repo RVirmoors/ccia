@@ -114,6 +114,10 @@ WRONG! -[Tomas Mikolov](https://cs.nyu.edu/~welleck/episode25.html)
 
 ## ML / DL myths
 
+circa 2018
+
+--
+
 | **myth** (*you don't need*) |&nbsp;&nbsp; | **truth** (*you can*) |
 |-------------------|-|-------|
 | expensive computers |&nbsp;&nbsp; | use machines in the cloud for free |
@@ -121,14 +125,14 @@ WRONG! -[Tomas Mikolov](https://cs.nyu.edu/~welleck/episode25.html)
 | lots of data |&nbsp;&nbsp; | start from pre-trained models |
 | lots of time |&nbsp;&nbsp; | do inference in (almost) real time |
 
-(adapted from [course.fast.ai](https://course.fast.ai/#Is-this-course-for-me?))
+- (adapted from [course.fast.ai](https://course.fast.ai/#Is-this-course-for-me?))
 
 ---
 
 ## Getting into ML: two approaches
 
 classic: bottom-up
-- [A. Ng's MOOC](https://www.coursera.org/learn/machine-learning), most textbooks
+- [A. Ng's MOOC](https://www.coursera.org/learn/machine-learning), classic textbooks
 - (can lead to [burnout](https://www.reddit.com/r/MachineLearning/comments/73n9pm/d_confession_as_an_ai_researcher_seeking_advice/))
 
 maker: top-down
@@ -146,8 +150,7 @@ name: what-we-cover
 |-------------------|-|-------|
 | small models (few layers) |&nbsp;&nbsp; | big models (many layers) |
 | fast training (local CPU) |&nbsp;&nbsp; | slow training (GPU / cloud) |
-| analysis, action |&nbsp;&nbsp; | analysis, generation  |
-| [regression synth](https://mimicproject.com/code/8de3cbbe-b7c6-d79f-65fa-42fd1aa43a26) |&nbsp;&nbsp; | [EbSynth](https://ebsynth.com/) |
+| analysis, action |&nbsp;&nbsp; | analysis, generation**  |
 
 DL can also be part of an interactive system:
 - almost* real-time inference 
@@ -155,11 +158,12 @@ DL can also be part of an interactive system:
 
 --
 
-*2022 update: faster-than-realtime inference is common (on [GPU](https://huggingface.co/spaces/openai/whisper)**)
+
+- *2022 update: faster-than-realtime inference [is](https://github.com/acids-ircam/nn_tilde) [common](https://github.com/ggerganov/whisper.cpp)
 
 --
 
-**or even [CPU](https://github.com/acids-ircam/nn_tilde)
+**GenAI, potential vs dangers - [Paul Trillo at ArsE'24](https://youtu.be/kKM0F33CCkc?t=4853)
 
 ---
 name: interactive-machine-learning
@@ -167,7 +171,7 @@ name: interactive-machine-learning
 
 human-in-the-loop (training and inference)
 
-[Wekinator](https://twitter.com/search?q=wekinator), [Sound Control](http://soundcontrolsoftware.com/), [InteractML](https://interactml.com/) (Rebecca Fiebrink, since 2008!)
+[Wekinator](https://twitter.com/search?q=wekinator), [InteractML](https://interactml.com/) (Rebecca Fiebrink, since 2008!)
 
 [Wolf3D](https://twitter.com/stoj_io/status/840222647489318914) sound to action
 
@@ -196,12 +200,12 @@ workflow
 
 creating something truly *new*?
 
----
-## The future: learning interaction
+--
 
-[DeepMind Genie](https://sites.google.com/view/genie-2024/): Generative Interactive Environments
+iML + GenAI: learning interaction
+- [DeepMind Genie](https://sites.google.com/view/genie-2024/): Generative Interactive Environments
 
-<iframe width="190" height="80" src="https://www.youtube.com/embed/b3REaKYEW3k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- <iframe width="190" height="80" src="https://www.youtube.com/embed/b3REaKYEW3k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - [MLST interview](https://www.youtube.com/watch?v=kbt0ZFoI2Hc)
 
