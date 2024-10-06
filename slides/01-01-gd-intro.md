@@ -264,9 +264,7 @@ class: center
 - https://friendlycosmonaut.itch.io/demeterandpersephone
 - https://ronzylady.itch.io/
 
-<iframe width="33%" height="247" frameborder="0" src="https://v6p9d9t4.ssl.hwcdn.net/html/2115106/index.html?v=1591302057"></iframe><iframe width="33%" height="247" frameborder="0" src="https://v6p9d9t4.ssl.hwcdn.net/html/2347743/LIMINAL_BITSY_final_build/index.html"></iframe><iframe width="33%" height="247" frameborder="0" src="https://v6p9d9t4.ssl.hwcdn.net/html/1435548/demeterandpersephone/index.html?v=1574335551"></iframe>
-
-<iframe width="100%" height="247" src="https://www.youtube.com/embed/UL68vKUZzJc" title="Turning a Greek Myth into a Game with Bitsy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/UL68vKUZzJc" title="Turning a Greek Myth into a Game with Bitsy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - [find more](https://itch.io/games/made-with-bitsy) on itch.io
 
