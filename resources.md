@@ -244,6 +244,8 @@ See also: machine learning Max [tools](#tools)
 
 [TouchDesigner](https://derivative.ca/UserGuide/Learning_TouchDesigner) learning resources and [documentation](https://docs.derivative.ca/Operator). More links for TD+python [[here](slides/01-12-practical-python#10)].
 
+[HAP](https://hap.video/using-hap.html) is a video format optimised for real-time playback. It's super [easy to convert your videos to HAP](https://youtu.be/zuB3hyBMrDg), highly recommended.
+
 Live coding environments: [Supercollider](https://supercollider.github.io/), [Sonic Pi](https://sonic-pi.net/), [TidalCycles](https://tidalcycles.org/), [Hydra](https://hydra.ojack.xyz/) … and [the book](https://livecodingbook.toplap.org/).
 
 [Constraint Systems](https://constraint.systems/) by Grant Custer: "alternative interfaces for creating and editing images and text".
