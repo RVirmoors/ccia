@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Basics]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2022] 
+.date[Oct 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -144,6 +144,27 @@ name: operations
 ```java
     locked = !locked; // "NOT": an unary operator
 ```
+
+---
+## Logic
+
+combining `TRUE` ~ 1 and `FALSE` ~ 0
+
+--
+
+AND
+
+--
+
+- `*`
+
+--
+
+OR
+
+--
+
+- `+`
 
 ---
 class: center
