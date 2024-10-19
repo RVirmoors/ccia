@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Week 3: Regression. Neural networks]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2022] 
+.date[Oct 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -319,7 +319,7 @@ class: center
 
 --
 
-what is the latent space of a FF neural net?
+what defines a latent space in this neural net?
 
 ---
 ## Basic ANN architecture design
