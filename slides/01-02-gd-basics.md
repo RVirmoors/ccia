@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Bitsy and variables]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2022] 
+.date[Oct 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -193,7 +193,7 @@ name: assignment
 
 task
 - [add](https://make.bitsy.org/docs/) **variables** and **logic** to your [Bitsy](https://www.bitsy.org/) game
-- optional: upload to itch.io, add to [bitsy jam](https://twitter.com/adamledoux)
+- optional: upload to itch.io, add to [bitsy jam](https://itch.io/search?type=jams&q=bitsy)
 
 deliverables
-- game link / upload
+- game link / upload html file
