@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finite State Machines</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 1]
+<br/><br/>
+.subtitle[Finite State Machines]
+<br/><br/><br/><br/><br/><br/>
+.date[Nov 2022] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+
+1. [Version control](#version-control)
+2. [Scope](#scope)
+3. [Finite state machines](#finite-state-machines)
+4. [Mouse interactivity](#mouse-interactivity)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+name: version-control
+# Version control
+
+.left-column[
+centralised (e.g. SVN)
+<img style="width:80%"  src="../attachments/version-svn.png">
+]
+
+.right-column[
+distributed (e.g. Git)
+<img style="width:90%"  src="../attachments/version-git.png">
+]
+
+---
+## Distributed control
+
+.right-column[
+distributed (e.g. Git)
+<img style="width:90%"  src="../attachments/version-git.png">
+]
+
+Advantages:
+
+- redundancy
+- collaboration over multiple remote repos
+  - *forking* and *merging*
+
+--
+
+[Git basics](https://www.notion.so/Git-basics-a8cd5b9fabef44afbd91eaea97a8c91f)
+
+THE BIG FIVE
+- clone, pull, add, commit, push
+
+--
+
+[Git/hub resources](../resources#git-and-github)
+
+---
+class:center
+
+<img style="width:80%"  src="../attachments/git-meme.png">
+
+---
+class: center
+name: scope
+# Scope
+
+a.k.a. *visibility* of a variable, in a `{ ... }` block
+
+<img style="width:50%"  src="../attachments/if-flowchart.png">
+
+```java
+if (42 > 0) {    
+    boolean horizontal = true; // this var is only visible here  
+} else {
+    boolean horizontal = false;// this var is only visible here
+}
+print("I just drew ", horizontal);
+```
+
+---
+class: center
+## Global and local variables
+
+global: seen everywhere | local: overrides global
+
+<img style="width:50%"  src="../attachments/if-flowchart.png">
+
+```java
+boolean horizontal;     // this is a global variable
+if (42 > 0) {    
+    boolean horiz = true; // this var only exists here  
+} else {
+    horizontal = false; // the global variable on top
+}
+print("I just drew ", horizontal);
+```
+
+---
+name: finite-state-machines
+# Finite state machines
+
+.right-column[
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/x1mlHEUwl_8?start=122" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+states
+
+transition rules
+
+--
+
+represented by global var(s)
+
+computed every frame
+- (self-transition is possible)
+
+deterministic
+
+--
+
+FSM vs [flowcharts](01-02-basics#11). What's different?
+
+--
+
+[more @ wiki](https://en.wikipedia.org/wiki/Finite-state_machine)
+
+example - open and close door
+
+---
+name: mouse-interactivity
+# Mouse interactivity
+
+system functions and variables:
+
+display: `size(), frameRate(), background()`
+
+mouse status: `mouseX, mouseY, pmouseX, pmouseY, mousePressed`
+
+mouse events: `mousePressed(), mouseClicked()` [et](https://processing.org/reference#input-mouse) [al](https://processing.org/examples/mousefunctions.html)
+
+--
+
+recap [drawing basics](01-01-cc-intro#27)
+
+--
+
+example 
+- draw vertical lines towards the mouseX position. Vary line size based on mousing speed. Freeze drawing on mouse click.
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
