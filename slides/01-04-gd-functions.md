@@ -22,7 +22,7 @@ class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
 1. [Structuring your programs](#structuring-your-programs)
 2. [Functions](#functions)
-3. [Common uses](#common-uses)
+3. [Variable scope](#variable-scope)
 4. [Exercises](#exercises)
 5. [Assignment I](#assignment-i)
 6. [Physics](#physics)
@@ -100,7 +100,7 @@ end
 
 ---
 name: common-uses
-# Common uses
+## common uses
 
 .left-column[
 components 
@@ -142,6 +142,39 @@ color = pget(40, 70)
 flags = fget(1, 0)
   ```
 ]
+
+
+---
+name: variable-scope
+# Variable scope
+
+```lua
+function _init()
+    clips = 0
+end
+
+function _update()
+    if btn(❎) then 
+        clips += 1  -- add a clip
+    end
+end
+
+function _draw()
+    cls()   -- clear screen
+    print(clips)
+end
+```
+
+--
+
+variables in Lua are **global** by default
+
+to confine them to a block, declare them as `local`:
+```lua
+function _init()
+    local clips = 0 --cannot be accessed in _update() or _draw()
+end
+```
 
 ---
 name: exercises
@@ -245,10 +278,12 @@ related - [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=
 name: assignment-ii
 # Assignment II
 
-outline the program structure for your .p8 game
-- use code tabs if you'd like!
-- create placeholders for all functions you intend to implement
-- start prototyping your core game function
+Plan a new game to build in PICO-8.
 
-check out the [internal demos](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#_Example_Cartridges) as a guide, or [other](https://sophieh.itch.io/) [games](https://extar.itch.io/)
-- (get games via `splore`)
+- can be a mod of an existing PICO-8 cart
+- can be a new implementation of an existing design
+
+deliverable:
+- your `.p8` file showing some (any) initial progress
+
+<iframe width="50%" height="230" src="https://www.youtube.com/embed/Hq7IiMPH_DE" title="5 Bad Genres For Your First Game - Game Design Corner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="50%" height="230" src="https://www.youtube.com/embed/4TxIS3Zi_RQ" title="5 Overlooked Genres for Your First Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

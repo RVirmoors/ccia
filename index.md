@@ -19,8 +19,8 @@ Permanent work-in-progress. See my [[musings]] on what it's all about.
 | Intro to CC for IA  |  | [slides](slides/01-01-cc-intro.md)  | Intro to Game Dev  |  | [slides](slides/01-01-gd-intro.md)  |  Visualization     |  |                    | Practical Python  |  [slides](slides/01-12-practical-python) | 
 | Basics     | | [slides](slides/01-02-basics.md) | Bitsy and variables     | | [slides](slides/01-02-gd-basics.md) | Sound     |  |                 | More Python       |  [slides](slides/01-13-more-python) |
 | Finite State Machines | | [slides](slides/01-03-fsm.md)  |  PICO-8 and FSMs | | [slides](slides/01-03-pico8.md)   | Physical computing     |  | [slides](slides/01-07-osc.md) | [[TouchDesigner and Python]] 
-| Loops     | | [slides](slides/01-04-loops.md) |  Loops     | | [slides](slides/01-04-gd-loops.md) | Feeds, APIs, Node.js |  | [slides](slides/01-08-node.md)
-| Arrays     | | [slides](slides/01-05-arrays.md) | Functions     | | [slides](slides/01-05-gd-functions.md)  | Advanced OOP     |  | [slides](slides/01-10-more-oop.md)
+| Loops     | | [slides](slides/01-04-loops.md) | Functions     | | [slides](slides/01-04-gd-functions.md)  | Feeds, APIs, Node.js |  | [slides](slides/01-08-node.md)
+| Arrays     | | [slides](slides/01-05-arrays.md) | Loops     | | [slides](slides/01-05-gd-loops.md) | Advanced OOP     |  | [slides](slides/01-10-more-oop.md)
 | Functions     | | [slides](slides/01-06-functions.md) | Arrays / Tables  | | [slides](slides/01-06-gd-arrays.md)
 | Objects     | | [slides](slides/01-09-oop.md) | Objects / Metatables     | | [slides](slides/01-07-p8-oop.md)
 

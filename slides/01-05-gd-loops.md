@@ -179,12 +179,10 @@ try to get **as many drawings** as possible in **as few lines of code**
 ---
 ## Assignment (cont'd)
 
-Plan a new game to build in PICO-8.
+outline the program structure for your .p8 game
+- use code tabs if you'd like!
+- create placeholders for all functions you intend to implement
+- start prototyping your core game function
 
-- can be a mod of an existing PICO-8 cart
-- can be a new implementation of an existing design
-
-deliverable:
-- your `.p8` file showing some (any) initial progress
-
-<iframe width="50%" height="230" src="https://www.youtube.com/embed/Hq7IiMPH_DE" title="5 Bad Genres For Your First Game - Game Design Corner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="50%" height="230" src="https://www.youtube.com/embed/4TxIS3Zi_RQ" title="5 Overlooked Genres for Your First Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+check out the [internal demos](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#_Example_Cartridges) as a guide, or [other](https://sophieh.itch.io/) [games](https://extar.itch.io/)
+- (get games via `splore`)
