@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Unsupervised learning]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2022] 
+.date[Oct 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -25,6 +25,7 @@ class: left
 2. [Practical example](#practical-example)
 3. [Autoencoders](#autoencoders)
 4. [Links - FluCoMa](#links---flucoma)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -123,3 +124,15 @@ name: links---flucoma
 
 [SP-Tools](https://rodrigoconstanzo.com/2022/07/sp-tools-machine-learning-tools-for-drums-and-percussion-alpha/) performance system by R Constanzo
 - [GitHub repo](https://github.com/rconstanzo/SP-tools)
+
+---
+name: assignment
+# Assignment
+
+take your regression pipeline and adapt it into an autoencoder
+
+which mapping works better? why?
+
+<br/><br/>
+
+- further reading: [Latent Mappings: Generating Open-Ended Expressive Mappings Using Variational Autoencoders](https://nime.org/proc/nime21_66/) (Murray-Browne & Tigas, 2021)
