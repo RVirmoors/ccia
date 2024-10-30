@@ -6,9 +6,9 @@ title: Loops
 class: center, middle
 .title[Creative Coding and Software Design 1]
 <br/><br/>
-.subtitle[Week 4: Loops]
+.subtitle[Week 3: Loops]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2022] 
+.date[Nov 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
