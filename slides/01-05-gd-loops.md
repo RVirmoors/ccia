@@ -27,64 +27,13 @@ name: toc
 class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
 
-1. [Keyboard interactivity](#keyboard-interactivity)
-2. [Drawing](#drawing)
-3. [Loops](#loops)
-4. [Assignment](#assignment)
+1. [Loops](#loops)
+2. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
 ---
 layout: true  .toc[[★](#toc)]
-
----
-name: keyboard-interactivity
-# Keyboard interactivity
-
-[system functions](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Input) - `btn()`, `btnp()`
-
-```lua
--- standard buttons: ⬆️⬇️⬅️➡️🅾️❎
-function _update()
-    if (btn(🅾️)) then
-        sfx(0) -- if O is held down
-    end
-
-    if (btnp(❎)) then
-        sfx(1) -- if X was just pressed
-    end
-end
-```
-
---
-
-custom [mouse and keyboard input](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Mouse_and_Keyboard_Input)
-- [lua strings](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Strings_and_Type_Conversion)
-
----
-name: drawing
-# Drawing
-
-.right-column[
-- <img src="../attachments/p8-coords.png" width="75%">
-- <img src="../attachments/p8-color.png" width="75%">
-]
-
-.left-column[
-coordinate system
-
-colors
-
-```lua
-circfill(x, y, radius, color)
-```
-
-[intro to lua](https://demoman.net/?a=intro-to-lua) @ demoman.net
-
-basic trig: `sin`, `cos`, [`atan2`](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#ATAN2)
-
-randomness: [`rnd`](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#RND)
-]
 
 ---
 

@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Functions]
 <br/><br/><br/><br/><br/><br/>
-.date[Dec 2023]
+.date[Nov 2024]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -22,12 +22,14 @@ class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
 1. [Structuring your programs](#structuring-your-programs)
 2. [Functions](#functions)
-3. [Variable scope](#variable-scope)
-4. [Exercises](#exercises)
-5. [Assignment I](#assignment-i)
-6. [Physics](#physics)
-7. [Linear interpolation (lerp)](#linear-interpolation-lerp)
-8. [Assignment II](#assignment-ii)
+3. [Keyboard interactivity](#keyboard-interactivity)
+4. [Drawing](#drawing)
+5. [Variable scope](#variable-scope)
+6. [Exercises](#exercises)
+7. [Assignment I](#assignment-i)
+8. [Physics](#physics)
+9. [Linear interpolation (lerp)](#linear-interpolation-lerp)
+10. [Assignment II](#assignment-ii)
 
 
         
@@ -143,6 +145,54 @@ flags = fget(1, 0)
   ```
 ]
 
+---
+name: keyboard-interactivity
+# Keyboard interactivity
+
+[system functions](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Input) - `btn()`, `btnp()`
+
+```lua
+-- standard buttons: ⬆️⬇️⬅️➡️🅾️❎
+function _update()
+    if (btn(🅾️)) then
+        sfx(0) -- if O is held down
+    end
+
+    if (btnp(❎)) then
+        sfx(1) -- if X was just pressed
+    end
+end
+```
+
+--
+
+custom [mouse and keyboard input](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Mouse_and_Keyboard_Input)
+- [lua strings](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Strings_and_Type_Conversion)
+
+---
+name: drawing
+# Drawing
+
+.right-column[
+- <img src="../attachments/p8-coords.png" width="75%">
+- <img src="../attachments/p8-color.png" width="75%">
+]
+
+.left-column[
+coordinate system
+
+colors
+
+```lua
+circfill(x, y, radius, color)
+```
+
+[intro to lua](https://demoman.net/?a=intro-to-lua) @ demoman.net
+
+basic trig: `sin`, `cos`, [`atan2`](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#ATAN2)
+
+randomness: [`rnd`](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#RND)
+]
 
 ---
 name: variable-scope
@@ -273,17 +323,10 @@ no `lerp()` in pico-8... what to do?
 
 related - [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=1)
 
-
 ---
 name: assignment-ii
 # Assignment II
 
-Plan a new game to build in PICO-8.
-
-- can be a mod of an existing PICO-8 cart
-- can be a new implementation of an existing design
-
-deliverable:
-- your `.p8` file showing some (any) initial progress
-
-<iframe width="50%" height="230" src="https://www.youtube.com/embed/Hq7IiMPH_DE" title="5 Bad Genres For Your First Game - Game Design Corner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="50%" height="230" src="https://www.youtube.com/embed/4TxIS3Zi_RQ" title="5 Overlooked Genres for Your First Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+tutorials 1-4 in the [nerdy teachers platformer series](https://nerdyteachers.com/Explain/Platformer/)
+<br/><br/>
+attn: tuts 1,2,3 are easy. tut 4 is NOT. use pencil & paper, have patience. ask around if you get stuck!

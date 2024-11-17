@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Debugging and version control]
 <br/><br/><br/><br/><br/><br/>
-.date[Feb 2024] 
+.date[Nov 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -25,7 +25,8 @@ class: left
 2. [Semester overview](#semester-overview)
 3. [Debugging](#debugging)
 4. [Version control](#version-control)
-5. [Assignment](#assignment)
+5. [Assignment II](#assignment-ii)
+6. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -202,6 +203,22 @@ printh('HELLO DEBUG!')
 5. in GitHub Desktop, **commit** and **push** your changes
    
 ---
+name: assignment-ii
+# Assignment II
+
+Plan a new game to build in PICO-8.
+
+- can be a mod of an existing PICO-8 cart
+- can be a new implementation of an existing design
+
+deliverable:
+- your `.p8` file showing some (any) initial progress
+
+<iframe width="50%" height="230" src="https://www.youtube.com/embed/Hq7IiMPH_DE" title="5 Bad Genres For Your First Game - Game Design Corner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="50%" height="230" src="https://www.youtube.com/embed/4TxIS3Zi_RQ" title="5 Overlooked Genres for Your First Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+
 name: assignment
 # Assignment
 

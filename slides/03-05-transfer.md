@@ -6,9 +6,9 @@ title: Transfer learning
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 5: Transfer learning]
+.subtitle[Week 7: Transfer learning]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2023] 
+.date[Nov 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -45,19 +45,20 @@ knowledge |  ~  | information *mapped*
 all the above are **fallible** -- subject to *choices* and *noise*
 - [Critical Perspectives on Computer Vision](https://slideslive.com/38923500/critical-perspectives-on-computer-vision) / Emily Denton
 - [Introduction to Cultural Appropriation with Machine Learning](https://www.youtube.com/playlist?list=PLnV8Pp3XepxXh1zs2j6MOBRBiMBkvt2X0) / Parag Mital
+- [On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?](https://dl.acm.org/doi/abs/10.1145/3442188.3445922) / Bender, Gebru et al
  
 ---
 ## Types of knowledge in ML models
 
 domain knowledge
-- *appears in* alogrithm design
-- *comes from* preprocessed features, model architecture, output postprocessing
+- *appears in* algorithm design
+- preprocessed features, model architecture, output postprocessing
 
 --
 
 inferred knowledge
 - *appears in* dataset choice
-- *comes from* learning from data
+- learning from data
 
 --
 
@@ -68,12 +69,12 @@ inherited knowledge: transfer learning
 ## Types of bias in ML models
 
 domain bias
-- *appears in* alogrithm design
-- *comes from* preprocessed features, model architecture, output postprocessing
+- *appears in* algorithm design
+- preprocessed features, model architecture, output postprocessing
 
 inferred bias
 - *appears in* dataset choice
-- *comes from* learning from data
+- learning from data
 
 inherited bias: transfer learning 
 
