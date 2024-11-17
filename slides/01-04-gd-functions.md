@@ -327,11 +327,14 @@ related - [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=
 name: assignment-ii
 # Assignment II
 
-tutorials 1-4 in the [nerdy teachers platformer series](https://nerdyteachers.com/Explain/Platformer/)
+follow tutorials 1-4 in the [nerdy teachers platformer series](https://nerdyteachers.com/Explain/Platformer/)
 
 upload/link to another game that uses map collisions. write down
 - the function(s) involved (line, tab numbers)
 - any differences to the collision code in the tutorial
+
+
 <br/><br/>
 
-- attn: tuts 1,2,3 are easy. tut 4 is NOT. use pencil & paper, have patience. ask around if something is unclear!
+- attn: tuts 1,2,3 are easy. tut 4 is NOT. 
+- use pencil & paper, have patience. ask around if something is unclear!
