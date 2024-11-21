@@ -28,8 +28,7 @@ class: left
 6. [Exercises](#exercises)
 7. [Assignment I](#assignment-i)
 8. [Physics](#physics)
-9. [Linear interpolation (lerp)](#linear-interpolation-lerp)
-10. [Assignment II](#assignment-ii)
+9. [Assignment II](#assignment-ii)
 
 
         
@@ -282,7 +281,7 @@ upload a working `ship.p8` file
 name: physics
 # Physics
 
-remember [basic trig](01-04-gd-loops#drawing)
+remember [basic trig](#drawing)
 
 [vectors](https://natureofcode.com/book/chapter-1-vectors/) and [forces](https://natureofcode.com/book/chapter-2-forces/)
 
@@ -297,31 +296,6 @@ p8 does not include any physics, you need to [code your own](https://heilaut.git
 .right-column[
 <img width="100%" src="../attachments/ship-transf.png">
 ]
-
----
-name: linear-interpolation-lerp
-# Linear interpolation (lerp)
-
-[intro to lerp](https://www.alanzucconi.com/2021/01/24/linear-interpolation/) (Alan Zucconi)
-
---
-
-no `lerp()` in pico-8... what to do?
-
---
-
-[google](https://www.reddit.com/r/pico8/comments/17j5f0s/lerp_function/), prototype
-
---
-
-[the right way to lerp in Unity](https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/) (John French)
-
---
-
-
-[<img width="100%" src="../attachments/easings.png">](https://easings.net/)
-
-related - [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=1)
 
 ---
 name: assignment-ii

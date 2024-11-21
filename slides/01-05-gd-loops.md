@@ -28,7 +28,8 @@ class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
 
 1. [Loops](#loops)
-2. [Assignment](#assignment)
+2. [Linear interpolation (lerp)](#linear-interpolation-lerp)
+3. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -102,6 +103,47 @@ for i = from,to,increment do
     actions; ...   -- actions to be performed N times
 end
 ```
+---
+
+name: linear-interpolation-lerp
+# Linear interpolation (lerp)
+
+[intro to lerp](https://www.alanzucconi.com/2021/01/24/linear-interpolation/) (Alan Zucconi)
+
+--
+
+no `lerp()` in pico-8... what to do?
+
+--
+
+[google](https://www.reddit.com/r/pico8/comments/17j5f0s/lerp_function/), prototype
+
+--
+
+[the right way to lerp in Unity](https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/) (John French)
+
+--
+
+[<img width="100%" src="../attachments/easings.png">](https://easings.net/)
+
+related - [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=1)
+
+---
+## Lerping and looping
+
+.right-column[
+[<img width="100%" src="../attachments/easings.png">](https://easings.net/)
+
+- [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=1)
+]
+
+.left-column[
+one iteration per frame = animation
+
+--
+
+all iterations at once = for loop
+]
 
 ---
 name: assignment
