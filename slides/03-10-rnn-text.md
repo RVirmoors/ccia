@@ -6,7 +6,7 @@ title: RNN&co - language
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 8: RNN&co - language]
+.subtitle[Week 9: RNN&co - language]
 <br/><br/><br/><br/><br/><br/>
 .date[Nov 2024]
 <br/><br/><br/>
@@ -168,17 +168,16 @@ state of the art: [OpenAI GPT-4o](https://minimaxir.com/2024/10/speech-prompt-en
 --
 
 - LLMs - [open source vs commercial service](https://pub.towardsai.net/the-difference-between-open-source-models-and-commercial-ai-ml-apis-7c930cefaed8)
-- noise cancellation: Krisp
+- noise cancellation: [Krisp](https://krisp.ai/)
 
 ---
 ## RAG - retrieval augmented generation
 
 [<img src="../attachments/cc-rag.png" width="100%">](https://docs.google.com/presentation/d/1Jrs1XNgY44YI8VWV94TctEduxM5aUXjf7dhS5g76f30/edit#slide=id.g316ed12350d_0_2173)
 
----
-## RAG - retrieval augmented generation
+--
 
-two steps:
+two steps
 
 1. index your texts (e.g. using [Faiss](https://github.com/facebookresearch/faiss))
 2. insert your search result into the chat prompt
