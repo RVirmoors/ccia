@@ -45,11 +45,11 @@ Permanent work-in-progress. See my [[musings]] on what it's all about.
 
 | **Wekinator** | | | **Code** | | | **Deep learning** | |            
 | :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | 
-| Intro to ML for IA |  | [slides](slides/03-01-ml-intro.md) | ml5.js: transfer learning |  | [slides](slides/03-05-transfer.md)  |  VAEs  | | 
-| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | [colab](https://colab.research.google.com/drive/1LWUDaBr6a8wRjXY_qcUeRkIVVMfTSMXW?usp=sharing) | GANs: datasets & training  | | [slides](slides/03-08-gan-train.md) 
-| Regression. Neural nets  |  | [slides](slides/03-03-regression.md) | PyTorch and fast.ai     |  | [ipynb](https://github.com/RVirmoors/cc1/blob/master/ml/python-weki/fastai-classify.ipynb) | [[GANs: interactive inference]]  | | [slides](slides/03-09-gan-inference.md) 
-| Temporal modelling  | | [slides](slides/03-04-temporal.md)  | PyTorch: training and editing networks     |  | | RNN&co: text  | | [slides](slides/03-10-rnn-text.md)
-| Unsupervised learning |  | [slides](slides/03-06-unsupervised.md) |      |  | | RNN&co: music  | | [slides](slides/03-11-rnn-audio.md)
+| Intro to ML for IA |  | [slides](slides/03-01-ml-intro.md) | ml5.js: transfer learning |  | [slides](slides/03-05-transfer.md)  | GANs: datasets & training  | | [slides](slides/03-08-gan-train.md) |
+| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | [colab](https://colab.research.google.com/drive/1LWUDaBr6a8wRjXY_qcUeRkIVVMfTSMXW?usp=sharing) | [[GANs: interactive inference]]  | | [slides](slides/03-09-gan-inference.md) |
+| Regression. Neural nets  |  | [slides](slides/03-03-regression.md) | PyTorch and fast.ai     |  | [ipynb](https://github.com/RVirmoors/cc1/blob/master/ml/python-weki/fastai-classify.ipynb) | RNN&co: language  | | [slides](slides/03-10-rnn-text.md) |
+| Temporal modelling  | | [slides](slides/03-04-temporal.md)  | PyTorch: training a VAE     |  | | Text to image  | | [slides](slides/03-11-text-image.md)
+| Unsupervised learning |  | [slides](slides/03-06-unsupervised.md) |      |  | | RNN&co: music  | | [slides](slides/03-12-rnn-audio.md)
 
 ## Interactive music systems
 

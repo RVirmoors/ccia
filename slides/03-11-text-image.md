@@ -1,14 +1,14 @@
 ---
 layout: presentation
-title: RNN&co - language
+title: RNN&co - text
 ---
 
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 8: RNN&co - language]
+.subtitle[Week 10: RNN&co - text]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2024]
+.date[Jan 2022] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -21,10 +21,11 @@ name: toc
 class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
-1. [Language models](#language-models)
-2. [Recurrent Neural Networks](#recurrent-neural-networks)
-3. [Classic example](#classic-example)
-4. [Modern convAI with Vocode](#modern-convai-with-vocode)
+1. [NLP models](#nlp-models)
+2. [Generative text \& art](#generative-text--art)
+3. [Recurrent Neural Networks](#recurrent-neural-networks)
+4. [Example](#example)
+5. [Links](#links)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -32,8 +33,8 @@ class: left
 layout: true  .toc[[★](#toc)]
 
 ---
-name: Language-models
-# Language models
+name: nlp-models
+# NLP models
 
 2018: Generative Pretrained Transformer (OpenAI GPT)
 
@@ -51,10 +52,9 @@ name: Language-models
 
 2021: [CLIP](https://openai.com/blog/clip/) (OpenAI)
 
-2022: ChatGPT (based on GPT3.5)
-
 ---
-## early gpt-art
+name: generative-text--art
+# Generative text & art
 
 [Project December](https://projectdecember.net/) (Jason Rohrer)
 
@@ -64,10 +64,55 @@ name: Language-models
 
 [Co-authoring with GPT-2](https://emshort.blog/2021/07/18/the-uncanny-deck-co-authoring-with-gpt-2/) (Emily Short)
 
----
-## "the peak of AI-generated content"
+[Wordcraft](https://www.youtube.com/watch?v=9p4mfA0Fyd8) (Google)
 
-[<img src="../attachments/uncanny-ai.png" width="100%">](https://minimaxir.com/2024/08/ai-seinfeld/)
+---
+class: center
+## Text to image: CLIP+VQGAN
+
+<a href="https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan"><img style="width:75%"  src="../attachments/vqgan-clip-explain.png"></a>
+
+---
+class: center
+## Text to image: CLIP+VQGAN
+
+<a href="https://ml.berkeley.edu/blog/posts/clip-art/"><img style="width:100%"  src="../attachments/../attachments/ml-clip-how.png"></a>
+
+---
+
+## Text to image: CLIP+VQGAN
+
+[How to Generate Customized AI Art Using VQGAN and CLIP](https://minimaxir.com/2021/08/vqgan-clip/) (Max Woolf)
+
+[The art of asking nicely](https://www.aiweirdness.com/the-art-of-asking-nicely/) (Janelle Shane)
+
+[List of VQGAN+CLIP Implementations](https://ljvmiranda921.github.io/notebook/2021/08/11/vqgan-list/) (Lj Miranda)
+
+[<img style="width:40%"  src="../attachments/ml-clip-vqgan-ak.png">](https://twitter.com/ak92501/status/1414797726743769088)<img style="width:40%"  src="../attachments/ml-clip-vqgan-cyberpunk.png">
+
+---
+class: center
+## Text to image
+
+[<img style="width:100%"  src="../attachments/ml-pixeldraw.png">](https://colab.research.google.com/github/dribnet/clipit/blob/master/demos/PixelDrawer.ipynb)
+
+[PixelDraw](https://twitter.com/dribnet/status/1427613617973653505) (dribnet)
+
+---
+class: center
+## Text to image
+
+[<img style="width:100%"  src="../attachments/ml-dalle-mini.png">](https://twitter.com/borisdayma/status/1421117516605267968?s=20)
+
+[DALL-E mini](https://huggingface.co/spaces/flax-community/dalle-mini) (Dayma et al)
+
+---
+class: center
+## Text to image
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/573533102?h=a5d2891108&color=ffffff&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+[Aphantasia](https://github.com/eps696/aphantasia) (Vadim Epstein)
 
 ---
 name: recurrent-neural-networks
@@ -121,10 +166,8 @@ preprocessing text: tokenization & embedding
 - [karpathy/minGPT](https://github.com/karpathy/minGPT) (learn about / train GPT from scratch)
 
 ---
-name: classic-example
-# Classic example
-
-(2022)
+name: example
+# Example
 
 fiction-based chatbot (w.i.p)
 
@@ -133,8 +176,6 @@ fiction-based chatbot (w.i.p)
 
 [colab notebook](https://colab.research.google.com/drive/1OXl3YFRosEvOd2DfybLOneTkr-OhtFC_?usp=sharing)
 
-[blog](https://rvirmoors.github.io/2022/08/31/fiction-chatbot/)
-
 ]
 
 .right-column[
@@ -142,43 +183,20 @@ fiction-based chatbot (w.i.p)
 ]
 
 ---
-name: modern-convai-with-vocode  
+name: links  
 class: left
-# Modern convAI with Vocode
+# Links
 
-(2024)
+dataset ethics: https://twitter.com/Abebab/status/1445723482231173120 arxiv.org/abs/2110.01963 
+https://youtu.be/OhCzX0iLnOc
 
-state of the art: [OpenAI GPT-4o](https://minimaxir.com/2024/10/speech-prompt-engineering/)
-- affordable, sustainable?
+clip-vqgan: https://imgur.com/a/SnSIQRu https://github.com/sadnow/360Diffusion/blob/main/Upscaling_UltraQuick_CLIP_Guided_Diffusion_HQ_256x256_and_512x512.ipynb https://www.lesswrong.com/posts/toYwxxAHEpsf8mkn9/experimentation-with-ai-generated-images-vqgan-clip-or https://twitter.com/98_0634741763/status/1414442147877695488 
 
---
+text games: https://versificator.itch.io/gruescript
 
-[Vocode](https://docs.vocode.dev/) pipeline
-- transcriber
-- agent (LLM)
-- synthesizer
+LLMs - [open source vs commercial service](https://pub.towardsai.net/the-difference-between-open-source-models-and-commercial-ai-ml-apis-7c930cefaed8)
 
---
+See more [resources](../resources).
 
-[documentation](https://docs.vocode.dev/open-source/conversation-mechanics)
-- [python quickstart](https://docs.vocode.dev/open-source/python-quickstart)
 
-[chatty help](https://app.commanddash.io/agent?github=https://github.com/vocodedev/vocode-core)
 
---
-
-- LLMs - [open source vs commercial service](https://pub.towardsai.net/the-difference-between-open-source-models-and-commercial-ai-ml-apis-7c930cefaed8)
-- noise cancellation: Krisp
-
----
-## RAG - retrieval augmented generation
-
-[<img src="../attachments/cc-rag.png" width="100%">](https://docs.google.com/presentation/d/1Jrs1XNgY44YI8VWV94TctEduxM5aUXjf7dhS5g76f30/edit#slide=id.g316ed12350d_0_2173)
-
----
-## RAG - retrieval augmented generation
-
-two steps:
-
-1. index your texts (e.g. using [Faiss](https://github.com/facebookresearch/faiss))
-2. insert your search result into the chat prompt
