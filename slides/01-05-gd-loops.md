@@ -141,7 +141,7 @@ one iteration per frame = animation
 
 --
 
-all iterations at once = for loop
+all iterations at once = `for` loop
 
 
 ---
@@ -154,7 +154,6 @@ name: assignment
    3. press again, 3 lines
    4. 4 lines etc
 
---
 
 2. same as above, but on the even numbers (2, 4, ...) draw horizontal lines
 
@@ -164,15 +163,4 @@ name: assignment
 
 --
 
-try to get **as many drawings** as possible in **as few lines of code**
-
----
-## Assignment (cont'd)
-
-outline the program structure for your .p8 game
-- use code tabs if you'd like!
-- create placeholders for all functions you intend to implement
-- start prototyping your core game function
-
-check out the [internal demos](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#_Example_Cartridges) as a guide, or [other](https://sophieh.itch.io/) [games](https://extar.itch.io/)
-- (get games via `splore`)
+3. tutorial 5 in the [nerdy teachers platformer series](https://nerdyteachers.com/Explain/Platformer/). upload your game file(s)
