@@ -137,13 +137,12 @@ related - [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=
 - [easing functions](https://www.lexaloffle.com/bbs/?tid=40577&authuser=1)
 ]
 
-.left-column[
 one iteration per frame = animation
 
 --
 
 all iterations at once = for loop
-]
+
 
 ---
 name: assignment
