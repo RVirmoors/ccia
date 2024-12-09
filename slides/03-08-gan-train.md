@@ -203,9 +203,11 @@ no / minimal extra content
 name: training-tips
 # Training tips
 
-[SG3 training notebook](https://github.com/dvschultz/stylegan3/blob/main/SG3.ipynb)
+use one of these:
+- [stylegan3-fun](https://github.com/PDillis/stylegan3-fun) by Diego Porres
+- [SG3 training notebook](https://github.com/dvschultz/stylegan3/blob/main/SG3.ipynb) by Derrick Schultz
 
-[read](https://github.com/dvschultz/stylegan3/blob/main/docs/configs.md)
+[read](https://github.com/dvschultz/stylegan3/blob/main/docs/configs.md) the readmes
 
 start from pre-trained model!
 
