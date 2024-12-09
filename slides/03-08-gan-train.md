@@ -6,9 +6,9 @@ title: GANs - datasets & training
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 8: GANs - datasets & training]
+.subtitle[Week 10: GANs - datasets & training]
 <br/><br/><br/><br/><br/><br/>
-.date[Dec 2021] 
+.date[Dec 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -40,9 +40,9 @@ layout: true  .toc[[★](#toc)]
 name: generative-models
 # Generative models
 
-[Intro to generative nets](https://blog.openai.com/generative-models/) blog @ OpenAI
+[Intro to generative nets](https://openai.com/index/generative-models/) classic blog @ OpenAI
 
-[ML for Creativity and Design](https://neuripscreativityworkshop.github.io/2021/) workshop & [gallery](http://www.aiartonline.com/) @ NeurIPS
+[ML for Creativity and Design](https://neuripscreativityworkshop.github.io/2023/) [workshops](https://x.com/ML4CDworkshop) @ [NeurIPS](https://neurips.cc/virtual/2023/workshop/66545)
 
 recap [deep convolutional nets](../slides/03-05-transfer#deep-convolutional-nns) (CNN)
 
@@ -134,7 +134,9 @@ critic
 ## GAN intuition
 [<img style="width:100%"  src="../attachments/ml-gan.png">](https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan/)
 
-[Scott Hawley DL course](https://github.com/drscotthawley/DLAIE/blob/main/Lessons/13_GAN_Overview.ipynb)
+[Scott Hawley DL course](https://github.com/drscotthawley/DLAIE/blob/main/Lessons/12_GAN_Overview.ipynb)
+
+[Jeff Heaton DL course](https://github.com/jeffheaton/app_deep_learning/blob/main/t81_558_class_07_1_img_generative.ipynb)
 
 [intro course](http://introtodeeplearning.com/) @ MIT
 
