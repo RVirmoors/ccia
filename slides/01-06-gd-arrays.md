@@ -140,6 +140,7 @@ name: assignment
 # Assignment
 
 1. finish the [nerdy teachers platformer series](https://nerdyteachers.com/Explain/Platformer/): tutorials 6 & 7. Upload your game file(s)
+
 2. back to the [4 sample games](https://www.lexaloffle.com/bbs/?tid=144823) by Bennett Foddy. Write down:
-   a. anything that confuses you, or that you would like explained
-   b. interesting uses of tables, and how they might translate into our platformer game
+   1. anything that confuses you, or that you would like explained
+   2. interesting uses of tables, and how they might translate into our platformer game
