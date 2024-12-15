@@ -4,11 +4,11 @@ title: Arrays / Tables
 ---
 
 class: center, middle
-.title[Game Development 2]
+.title[Game Development 1]
 <br/><br/>
 .subtitle[Arrays / Tables]
 <br/><br/><br/><br/><br/><br/>
-.date[Feb 2024] 
+.date[Dec 2024] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -16,28 +16,6 @@ class: center, middle
 
 Author: Grigore Burloiu, UNATC
 
----
-## Attribution
-
-**PICO-8** is an open ecosystem
-- see other people's code & assets
-- take and modify them if you wish
-
---
-
-you SHOULD mention the source! e.g.:
-```lua
--- taken from http://....
-function rspr(s,x,y,a,w,h)
-```
-
---
-
-**academia** takes plagiarism seriously
-- submit a [statement of originality](https://comp.anu.edu.au/courses/comp1720/resources/faq/#how-do-i-fill-out-my-statement-of-originality)
-- mention all code & assets you take / use as inspiration
-- anything you don't mention is 100% your work!
-    
 ---
 name: toc
 class: left
@@ -77,7 +55,7 @@ end
 --
 
 [arrays in Lua/PICO-8](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Tables) are *1-indexed*
-- remember: screen coords are 0-indexed! (0-127)
+- remember: screen coords (0-127) and flags (0-7) are 0-indexed!
 
 [useful functions](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Table_Functions)
 - `add`, `del`, `deli`, `count`, `#`, `all`
@@ -153,21 +131,15 @@ print(player.state)
 
 --
 
-a value inside a table [can itself be a table](https://nerdyteachers.com/PICO-8/Guide/)
-- we'll use this next week!
+a value inside a table [can itself be a table](https://NerdyTeachers.com/PICO-8/Guide/?Object-Oriented)
+- we'll look at this next semester!
 
 ---
 
 name: assignment
 # Assignment
 
-prototype a playable interaction in your p8 game
-- should ideally be your main gameplay loop
-
-AND
-
-fill in your [statement-of-originality.yml](../attachments/statement-of-originality.yml)
-
-<br/><br/><br/><br/>
-
-add the `.p8` and `.yml` files to your github
+1. finish the [nerdy teachers platformer series](https://nerdyteachers.com/Explain/Platformer/): tutorials 6 & 7. Upload your game file(s)
+2. back to the [4 sample games](https://www.lexaloffle.com/bbs/?tid=144823) by Bennett Foddy. Write down:
+   a. anything that confuses you, or that you would like explained
+   b. interesting uses of tables, and how they might translate into our platformer game
