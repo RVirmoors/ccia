@@ -135,7 +135,7 @@ apply diffusion not to the image directly, but on a (learned) latent representat
 
 --
 
-next? [flow matching](https://youtu.be/rC34475rEnw) ([Stable Diffusion 3](https://stability.ai/news/stable-diffusion-3))
+next: [flow matching](https://youtu.be/rC34475rEnw) ([Stable Diffusion 3](https://stability.ai/news/stable-diffusion-3), [FLUX.1](https://blackforestlabs.ai/announcing-black-forest-labs/))
 - a generalisation of diffusion
 - flowing from noise (known normal distribution) to a target distribution (approximated from dataset)
 
