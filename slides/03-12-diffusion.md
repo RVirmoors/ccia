@@ -24,7 +24,8 @@ class: left
 1. [Classic text to image](#classic-text-to-image)
 2. [More classic text to image](#more-classic-text-to-image)
 3. [Diffusion](#diffusion)
-4. [Diffusion in real time](#diffusion-in-real-time)
+4. [Finetuning diffusion models](#finetuning-diffusion-models)
+5. [Diffusion in real time](#diffusion-in-real-time)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -138,6 +139,21 @@ next? [flow matching](https://youtu.be/rC34475rEnw) ([Stable Diffusion 3](https:
 - a generalisation of diffusion
 - flowing from noise (known normal distribution) to a target distribution (approximated from dataset)
 
+---
+name: finetuning-diffusion-models
+# Finetuning diffusion models
+
+- what are [LoRA](https://youtu.be/IIy3YwsXtTE?t=456)s @ intro to AI video, civitai 2024
+
+https://github.com/bghira/SimpleTuner
+- [SD3 finetuning tutorial](https://stabilityai.notion.site/Stable-Diffusion-3-Medium-Fine-tuning-Tutorial-17f90df74bce4c62a295849f0dc8fb7e) (stability.ai)
+
+
+- [huggingface diffusers](https://huggingface.co/docs/diffusers/v0.32.1/training/text2image)
+
+existing finetuned SD models: [civitai](https://civitai.com/models), [huggingface](https://huggingface.co/models?library=diffusers)
+
+explore LoRAs with [huggingface spaces](https://huggingface.co/spaces/multimodalart/flux-lora-the-explorer)
 
 ---
 name: diffusion-in-real-time
