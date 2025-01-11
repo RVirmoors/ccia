@@ -171,6 +171,8 @@ name: diffusion-in-real-time
 
 https://github.com/cumulo-autumn/StreamDiffusion
 
-https://github.com/radames/Real-Time-Latent-Consistency-Model
+<img style="width:100%"  src="https://github.com/cumulo-autumn/StreamDiffusion/blob/main/assets/demo_02.gif">
 
-https://github.com/IDKiro/sdxs
+- https://github.com/radames/Real-Time-Latent-Consistency-Model
+
+- https://github.com/IDKiro/sdxs
