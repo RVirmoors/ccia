@@ -6,7 +6,7 @@ title: RNN&co - music
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 11: RNN&co - music]
+.subtitle[Week 13: RNN&co - music]
 <br/><br/><br/><br/><br/><br/>
 .date[Jan 2022] 
 <br/><br/><br/>
