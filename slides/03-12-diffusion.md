@@ -144,6 +144,9 @@ name: finetuning-diffusion-models
 # Finetuning diffusion models
 
 - what are [LoRA](https://youtu.be/IIy3YwsXtTE?t=456)s @ intro to AI video, civitai 2024
+  - faster, smaller than modifying a base model
+  - applied onto a base model
+  - [Low-rank adaptation for fast text-to-image diffusion fine-tuning](https://github.com/cloneofsimo/lora) (Ryu, 2023)
 
 https://github.com/bghira/SimpleTuner
 - [SD3 finetuning tutorial](https://stabilityai.notion.site/Stable-Diffusion-3-Medium-Fine-tuning-Tutorial-17f90df74bce4c62a295849f0dc8fb7e) (stability.ai)
