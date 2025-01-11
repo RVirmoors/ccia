@@ -24,6 +24,7 @@ class: left
 1. [Classic text to image](#classic-text-to-image)
 2. [More classic text to image](#more-classic-text-to-image)
 3. [Diffusion](#diffusion)
+4. [Diffusion in real time](#diffusion-in-real-time)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -80,6 +81,7 @@ Recap
 - autoencoders
   - [U-Net](https://github.com/drscotthawley/DLAIE/blob/ca5903c61d419e598ff3ee247c39295e0ae5a706/Lessons/11_Autoencoders_UNets_Skips_ResNets.ipynb)
   - [Diffusion Transformer](https://arxiv.org/abs/2212.09748)
+- GANs
 - RNNs
 
 --
@@ -91,14 +93,58 @@ Papers
 Video tutorials
 - [paper explanation](https://youtu.be/HoKDTa5jHvg)
 - [implementation](https://youtu.be/TBCRlnwJtZU)
+- [latent diffusion](https://youtu.be/J87hffSMB60?t=393) [.](https://youtu.be/rC34475rEnw)
 
-Webpage tutorial
+Web tutorial
 - [What are Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/), Lilian Weng 2021
 
 ---
-
 ## Intuition
 
----
+forward process
 
+[<img style="width:100%"  src="../attachments/diffusion-fwd.png">](https://youtu.be/HoKDTa5jHvg?t=248)
+
+- add noise (from a **known** normal distribution)
+
+--
+
+reverse process
+- remove the noise step by step
+- neural net
+  - input = current step
+  - prediction = noise (to be removed from current step)
+
+---
 ## Latent Diffusion
+
+- popularised by Stable Diffusion 1
+
+[<img style="width:100%"  src="../attachments/latent-diffusion.png">](https://youtu.be/rC34475rEnw)
+
+apply diffusion not to the image directly, but on a (learned) latent representation of the image
+- why?
+
+---
+## Latent Diffusion
+
+- popularised by Stable Diffusion 1
+
+[<img style="width:100%"  src="../attachments/latent-diffusion2.png">](https://youtu.be/rC34475rEnw)
+
+--
+
+next? [flow matching](https://youtu.be/rC34475rEnw) ([Stable Diffusion 3](https://stability.ai/news/stable-diffusion-3))
+- a generalisation of diffusion
+- flowing from noise (known normal distribution) to a target distribution (approximated from dataset)
+
+
+---
+name: diffusion-in-real-time
+# Diffusion in real time
+
+https://github.com/cumulo-autumn/StreamDiffusion
+
+https://github.com/radames/Real-Time-Latent-Consistency-Model
+
+https://github.com/IDKiro/sdxs
