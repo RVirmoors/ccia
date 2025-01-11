@@ -170,10 +170,11 @@ name: diffusion-in-real-time
 # Diffusion in real time
 
 https://github.com/cumulo-autumn/StreamDiffusion
-- [TouchDesigner implementation](https://github.com/olegchomp/TouchDiffusion)
 
 <img style="width:50%"  src="https://github.com/cumulo-autumn/StreamDiffusion/blob/main/assets/demo_02.gif?raw=true">
 
-- https://github.com/radames/Real-Time-Latent-Consistency-Model
+- [TouchDesigner implementation](https://github.com/olegchomp/TouchDiffusion)
 
+
+- https://github.com/radames/Real-Time-Latent-Consistency-Model
 - https://github.com/IDKiro/sdxs
