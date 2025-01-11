@@ -21,7 +21,7 @@ name: toc
 class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
-1. [Classic text to image: CLIP+VQGAN](#classic-text-to-image-clipvqgan)
+1. [Classic text to image](#classic-text-to-image)
 2. [More classic text to image](#more-classic-text-to-image)
 3. [Diffusion](#diffusion)
 
@@ -33,7 +33,7 @@ layout: true  .toc[[★](#toc)]
 ---
 name: introduction  
 class: left
-# Classic text to image: CLIP+VQGAN
+# Classic text to image
 
 <a href="https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan"><img style="width:75%"  src="../attachments/vqgan-clip-explain.png"></a>
 
@@ -60,19 +60,11 @@ class: center
 
 [<img style="width:100%"  src="../attachments/ml-pixeldraw.png">](https://colab.research.google.com/github/dribnet/clipit/blob/master/demos/PixelDrawer.ipynb)
 
-[PixelDraw](https://twitter.com/dribnet/status/1427613617973653505) (dribnet)
+[PixelDraw](https://twitter.com/dribnet/status/1427613617973653505) / [pixray](https://github.com/pixray/pixray) (Tom White)
 
 ---
 class: center
-## Text to image
-
-[<img style="width:100%"  src="../attachments/ml-dalle-mini.png">](https://twitter.com/borisdayma/status/1421117516605267968?s=20)
-
-[DALL-E mini](https://huggingface.co/spaces/flax-community/dalle-mini) (Dayma et al)
-
----
-class: center
-## Text to image
+## Classic text(s) to video
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/573533102?h=a5d2891108&color=ffffff&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
@@ -86,8 +78,11 @@ class: left
 
 Recap
 - autoencoders
-  - see also: [U-Net](https://github.com/drscotthawley/DLAIE/blob/ca5903c61d419e598ff3ee247c39295e0ae5a706/Lessons/11_Autoencoders_UNets_Skips_ResNets.ipynb)
+  - [U-Net](https://github.com/drscotthawley/DLAIE/blob/ca5903c61d419e598ff3ee247c39295e0ae5a706/Lessons/11_Autoencoders_UNets_Skips_ResNets.ipynb)
+  - [Diffusion Transformer](https://arxiv.org/abs/2212.09748)
 - RNNs
+
+--
 
 Papers
 - [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) (Ho et al, 2020)
@@ -99,3 +94,11 @@ Video tutorials
 
 Webpage tutorial
 - [What are Diffusion Models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/), Lilian Weng 2021
+
+---
+
+## Intuition
+
+---
+
+## Latent Diffusion
