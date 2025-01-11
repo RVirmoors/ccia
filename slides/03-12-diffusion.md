@@ -151,12 +151,19 @@ name: finetuning-diffusion-models
 https://github.com/bghira/SimpleTuner
 - [SD3 finetuning tutorial](https://stabilityai.notion.site/Stable-Diffusion-3-Medium-Fine-tuning-Tutorial-17f90df74bce4c62a295849f0dc8fb7e) (stability.ai)
 
-
 - [huggingface diffusers](https://huggingface.co/docs/diffusers/v0.32.1/training/text2image)
+
+--
 
 existing finetuned SD models: [civitai](https://civitai.com/models), [huggingface](https://huggingface.co/models?library=diffusers)
 
 explore LoRAs with [huggingface spaces](https://huggingface.co/spaces/multimodalart/flux-lora-the-explorer)
+
+--
+
+ethics
+- [civitai creators program](https://civitai.com/creators-program)
+- is it enough?
 
 ---
 name: diffusion-in-real-time
