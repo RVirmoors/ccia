@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Debugging and version control]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2024] 
+.date[Mar 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -25,8 +25,7 @@ class: left
 2. [Semester overview](#semester-overview)
 3. [Debugging](#debugging)
 4. [Version control](#version-control)
-5. [Assignment II](#assignment-ii)
-6. [Assignment](#assignment)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -82,12 +81,12 @@ name: semester-overview
 # Semester overview
 
 Grig / PICO-8
-- weeks 1, 2, (3), 12, 13, 14
+- weeks 2, 4, 6, 8, 10, 12, 14
 - 6 assignments, 10p each, 50p max
 - building & sharing a PICO-8 game
 
-Mara / Unity
-- weeks 4-11
+Dragos / Unity
+- weeks 1, 3, 5, 7, 9, 11, 13
 - 40p class activity, 10p exam session presentation
 - collaborating & developing a game in Unity
 
@@ -203,27 +202,27 @@ printh('HELLO DEBUG!')
 5. in GitHub Desktop, **commit** and **push** your changes
    
 ---
-name: assignment-ii
-# Assignment II
+name: assignment
+# Assignment
 
 Plan a new game to build in PICO-8.
 
 - can be a mod of an existing PICO-8 cart
 - can be a new implementation of an existing design
 
-deliverable:
-- your `.p8` file showing some (any) initial progress
-
 <iframe width="50%" height="230" src="https://www.youtube.com/embed/Hq7IiMPH_DE" title="5 Bad Genres For Your First Game - Game Design Corner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="50%" height="230" src="https://www.youtube.com/embed/4TxIS3Zi_RQ" title="5 Overlooked Genres for Your First Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-
-name: assignment
-# Assignment
-
-create a github repo for your existing PICO-8 project
+create a github repo for your new PICO-8 project
 - edit the `readme.md` with a basic description
 
-create a basic Gantt chart / project timeline
-- at least 6 mini-milestones
+--
+
+deliverable: github link to
+- your `.p8` file showing some (any) initial progress
+- `readme.md` file
+
+(optionally)
+*create a basic Gantt chart / project timeline
+- at least 6 mini-milestones*
