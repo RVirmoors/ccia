@@ -3,21 +3,22 @@ name: Build and Deploy to Github Pages
 on:
   push:
     branches:
-      - source  # Change if your source branch is different
+      - source  # Your source branch
 
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # This is why pacman doesn't work
+
     steps:
       - uses: actions/checkout@v3
 
       - name: Install Ruby (Latest)
-        run: sudo pacman -Sy ruby
+        run: sudo apt-get update && sudo apt-get install -y ruby-full
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'  # Use a supported version
+          ruby-version: '3.1'  # Use the latest supported version
 
       - uses: actions/cache@v3
         with:
