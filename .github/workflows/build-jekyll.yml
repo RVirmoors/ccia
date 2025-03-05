@@ -33,8 +33,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           branch: 'master'
-          jekyll_src: './'
-          jekyll_baseurl: 'ccia'
+          destination_dir: 'ccia'
           
       # - uses: jeffreytse/jekyll-deploy-action@v0.5.0
       #   with:
