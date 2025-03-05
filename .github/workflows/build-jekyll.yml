@@ -34,3 +34,4 @@ jobs:
           branch: 'master'
           jekyll_src: './'
           jekyll_baseurl: 'ccia'
+          ruby_version: '3.1'
