@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[More Python]
 <br/><br/><br/><br/><br/><br/>
-.date[Mar 2023] 
+.date[Mar 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -24,6 +24,7 @@ class: left
 1. [Working with libraries (modules)](#working-with-libraries-modules)
 2. [Advanced language features](#advanced-language-features)
 3. [Creating scripts](#creating-scripts)
+4. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -140,3 +141,16 @@ prep: virtual environment
 pip install libraries: [pretty_midi](https://github.com/craffel/pretty-midi), [python-osc](https://github.com/attwad/python-osc), ...
 
 other modules: `argparse` or `absl-py`, `time`
+
+---
+
+name: assignment
+# Assignment
+
+in TouchDesigner, create
+- a CHOP with one channel
+  - can be a constant, an LFO, whatever
+- a table DAT with 2 cells
+- a CHOP Execute python script for
+  - negative CHOP values are sent to one cell
+  - positive CHOP values are sent to the other
