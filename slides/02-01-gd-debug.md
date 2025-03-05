@@ -134,7 +134,7 @@ logging: [`Debug.Log()`](https://docs.unity3d.com/ScriptReference/Debug.Log.html
 
 using Visual Studio:
 - pausing the execution on a *breakpoint* in code
-- inspecting the memory 
+- inspecting the memory
 
 <iframe width="100%" height="300" src="https://www.youtube.com/embed/rjNDXKgbhgY" title="Visual Studio &amp; Unity: Debugging Your Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
