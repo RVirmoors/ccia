@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to real-time systems]
 <br/><br/><br/><br/><br/><br/>
-.date[Feb 2024] 
+.date[Mar 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -70,6 +70,30 @@ how?
 --
 
 what are YOUR objectives?
+
+---
+
+## towards a taxonomy of interactivity
+
+"sculpture" – minimal or ambient interaction (e.g., a kinetic sculpture that moves with the wind)
+
+--
+
+"instrument" – cause-effect response (e.g., a Theremin-like interactive sound sculpture)
+
+--
+
+"story" – a narrative, which may be linear or branching (e.g., interactive projection mapping that unfolds based on movement)
+
+--
+
+"character" – agency, memory, communication (e.g., an AI-driven entity that responds to your tone and words)
+
+--
+
+"partner" – co-creation (e.g., a generative AI installation that creates music or poetry based on shared input)
+
+inspired by Edmonds et al (2004) via [chatgpt](https://chatgpt.com/share/67ca0c05-4414-8002-b774-034f70798908)
 
 ---
 
