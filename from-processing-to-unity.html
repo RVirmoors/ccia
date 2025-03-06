@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/from-processing-to-unity.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="from-processing-to-unity">From Processing to Unity<!-- omit in toc --></h1>
+
+<p>We start from basic principles, introducing Unity concepts as we need them in a toy example, transitioning from a simple p5js game.</p>
+
+<p><a href="#mini-game-from-scratch">Mini-game from scratch</a> . <a href="#unity-fying-our-project">Unity-fying our project</a></p>
+
+<h2 id="mini-game-from-scratch">Mini-game from scratch</h2>
+
+<p>This session isn’t an introduction to making 2D games in Unity. For that, you should first follow a lesson such as <a href="https://learn.unity.com/project/ruby-s-2d-rpg">Ruby’s Adventure</a>. In fact, since we bypass many helpers particular to Unity, this workflow is not generally recommended. Our plan here is to make a bridge from the open world of Processing to the game-specific model of Unity, and learn more about both sides in the process.</p>
+
+<p>We begin from last semester’s basic <a href="https://openprocessing.org/sketch/998046">circle-and-square game</a>:</p>
+
+<iframe src="https://openprocessing.org/sketch/998046/embed/" width="800" height="400"></iframe>
+
+<p><span class="newthought">Before we get to</span>  writing code in Unity, we need to set the stage. Start a new 2D project and set the scene view as follows:</p>
+
+<p><img src="attachments/2d-start.png" alt="" /></p>
+
+<p>…and the camera:</p>
+
+<p><img src="attachments/2d-start-camera.png" alt="" /></p>
+
+<p>That should get you up and running with a blank 2D canvas. Now let’s create our two entities: the player avatar and the collectable item.
+First, make a new <code class="language-plaintext highlighter-rouge">Sprites</code> folder in the Project, underneath your <code class="language-plaintext highlighter-rouge">Assets</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Assets: Create &gt; Folder &gt; "Sprites"</code></p>
+
+<p>Right-click inside it and create two sprites:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Create &gt; Sprites &gt; Square, Circle</code></p>
+
+<p>In order for them to appear in your scene, you need to create <code class="language-plaintext highlighter-rouge">GameObject</code>s to host them. Right-click in your Hierarchy panel and:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Scene: 2D Object &gt; Sprite</code></p>
+
+<p>…twice, for a <code class="language-plaintext highlighter-rouge">Player</code> and an <code class="language-plaintext highlighter-rouge">Apple</code> object. Drag the corresponding sprites onto the gameobjects. 
+You can adjust the <code class="language-plaintext highlighter-rouge">Scale</code> parameter to turn the <code class="language-plaintext highlighter-rouge">Player</code>’s square into a rectangle. And don’t forget to set some colours:</p>
+
+<p><img src="attachments/2d-sprite-player.png" alt="" /></p>
+
+<p><span class="newthought">You probably noticed</span>  that both your objects are situated at the origin, or the (0, 0) spatial coordinates, which
+coincide with the center of your camera’s viewport. But you may remember that this isn’t how Processing works: it holds (0, 0) as the top-left
+display window corner.</p>
+
+<p>Now, you have two options here. You might change the location of the camera so that (0, 0) points to a corner:</p>
+
+<p><img src="attachments/2d-camera-move.png" alt="" /></p>
+
+<p>This would allow you to port the p5.js code with minimal changes. The other option is to leave the origin in the middle, and deal with it in code.
+Since this seems more paradigmatic to Unity, I will go for it and not move the camera. But feel free to try both.</p>
+
+<p>We’re finally ready to create our script. As with the sprites, this will be an asset located in a Project folder:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Assets: Create &gt; Folder &gt; "Scripts"</code></p>
+
+<p>Then right-click and:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Create &gt; C# Script &gt; "Main"</code></p>
+
+<p>Again, we need an object in the scene to <em>contain</em> the script asset. Technically, this could be any of our existing objects: the <code class="language-plaintext highlighter-rouge">MainCamera</code>, the <code class="language-plaintext highlighter-rouge">Player</code> or the <code class="language-plaintext highlighter-rouge">Apple</code>. However, it’s good practice to reserve another object in the Hierarchy for the main app code:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Scene: Create Empty &gt; "GameController"</code></p>
+
+<p>Finally, drop the <code class="language-plaintext highlighter-rouge">Main</code> script onto <code class="language-plaintext highlighter-rouge">GameController</code>’s inspector, and open it in your code editor.</p>
+
+<p><span class="newthought">The code structure</span>  should look familiar to you by now: instead of p5.js’s <code class="language-plaintext highlighter-rouge">setup()</code> and <code class="language-plaintext highlighter-rouge">draw()</code> we now have <code class="language-plaintext highlighter-rouge">Start()</code> and <code class="language-plaintext highlighter-rouge">Update()</code>. As mentioned above, the main adjustment we’ll have to make will be camera-related. This is due to Processing dealing directly with screen coordinates, and Unity distinguishing between <em>viewport</em> (or screen) and <em>world</em> coordinates. To this end we shall use two methods<label for="methods" class="margin-toggle sidenote-number"></label><input type="checkbox" id="methods" class="margin-toggle" /><span class="sidenote">Remember: methods are <em>functions</em>. Their defining characteristic, in OOP, is that they belong to a <em>class</em>, and so can be applied to objects of that class. </span> of Unity’s <code class="language-plaintext highlighter-rouge">Camera</code> class: <a href="https://docs.unity3d.com/ScriptReference/Camera.ViewportToWorldPoint.html">ViewportToWorldPoint</a> and <a href="https://docs.unity3d.com/ScriptReference/Camera.ScreenToWorldPoint.html">ScreenToWorldPoint</a>.</p>
+
+<p>The first method is used to find out, in world units rather than pixels, the size of the screen.
+Since the viewport’s (1, 1) position points to a corner, translating it to the world gives us half its width:</p>
+
+<figure><img src="ccia/../attachments/coords.png" /><figcaption class="maincolumn-figure">World dimensions in black, viewport coordinates in blue. This image and the code below correspond to my decision to leave the camera at (0, 0). If you chose to move it, you would probably use <code>width</code> instead of <code>halfWidth</code> etc.</figcaption></figure>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="kt">float</span> <span class="n">halfWidth</span><span class="p">,</span> <span class="n">halfHeight</span><span class="p">;</span>
+
+<span class="c1">// Start is called before the first frame update</span>
+<span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Vector2</span> <span class="n">cView</span> <span class="p">=</span> <span class="n">Camera</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="nf">ViewportToWorldPoint</span><span class="p">(</span><span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="n">Camera</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">nearClipPlane</span><span class="p">));</span>
+    <span class="n">halfWidth</span> <span class="p">=</span> <span class="n">cView</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+    <span class="n">halfHeight</span> <span class="p">=</span> <span class="n">cView</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="nf">Log</span><span class="p">(</span><span class="n">halfHeight</span> <span class="p">+</span> <span class="s">" "</span> <span class="p">+</span> <span class="n">halfWidth</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>You can now run the game and check the console to find out your viewport dimensions. Notice that if you resize the viewport frame and restart the game, the reported size will also change. <em>What values do you expect to see if you pass <code class="language-plaintext highlighter-rouge">ViewportToWorldPoint(new Vector(0, 0, ...</code> instead of <code class="language-plaintext highlighter-rouge">(1, 1, ...</code>?</em></p>
+
+<p><span class="newthought">Going back to the p5.js app,</span>  <code class="language-plaintext highlighter-rouge">setup()</code> deals with initial positions—and so will our <code class="language-plaintext highlighter-rouge">Start()</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">player</code> and <code class="language-plaintext highlighter-rouge">apple</code> now need to refer to the <code class="language-plaintext highlighter-rouge">GameObject</code>s in our scene.</p>
+
+<p><code class="language-plaintext highlighter-rouge">dest</code>, the target position, is an internal variable of the type <code class="language-plaintext highlighter-rouge">Vector2</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">step</code> can be a public variable, adjustable in the Unity editor.</p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="n">GameObject</span> <span class="n">player</span><span class="p">;</span>
+<span class="k">private</span> <span class="n">GameObject</span> <span class="n">apple</span><span class="p">;</span>
+<span class="k">private</span> <span class="n">Vector2</span> <span class="n">dest</span><span class="p">;</span>
+<span class="k">public</span> <span class="kt">float</span> <span class="n">step</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="p">...</span>
+    <span class="n">player</span> <span class="p">=</span> <span class="n">GameObject</span><span class="p">.</span><span class="nf">Find</span><span class="p">(</span><span class="s">"Player"</span><span class="p">);</span>
+    <span class="n">apple</span> <span class="p">=</span> <span class="n">GameObject</span><span class="p">.</span><span class="nf">Find</span><span class="p">(</span><span class="s">"Apple"</span><span class="p">);</span>
+    <span class="c1">// Player starts in the middle:</span>
+    <span class="n">player</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector2</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+    <span class="c1">// Apple starts at random position</span>
+    <span class="kt">float</span> <span class="n">width</span> <span class="p">=</span> <span class="n">halfWidth</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">height</span> <span class="p">=</span> <span class="n">halfHeight</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
+    <span class="n">apple</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector2</span><span class="p">(</span><span class="n">Random</span><span class="p">.</span><span class="k">value</span> <span class="p">*</span> <span class="n">width</span> <span class="p">-</span> <span class="n">halfWidth</span><span class="p">,</span> <span class="n">Random</span><span class="p">.</span><span class="k">value</span> <span class="p">*</span> <span class="n">height</span> <span class="p">-</span> <span class="n">halfHeight</span><span class="p">);</span>
+    <span class="n">dest</span> <span class="p">=</span> <span class="n">player</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">+</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0.1f</span><span class="p">,</span> <span class="m">0.1f</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Then, in the <code class="language-plaintext highlighter-rouge">Update()</code> function, we use <code class="language-plaintext highlighter-rouge">ScreenToWorldPoint</code> to interpret the mouse position in world coordinates. The rest is just a matter of translation:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>from p5.js</th>
+      <th>to Unity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mouseIsPressed</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Input.GetMouseButton</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dist</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Vector2.Distance</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://p5js.org/reference/#/p5/mag"><code class="language-plaintext highlighter-rouge">mag</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">Vector2.magnitude</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">+=</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Transform.Translate</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Can you tell the difference between class members starting with capital letters (e.g. <code class="language-plaintext highlighter-rouge">Distance</code>) and those starting with small letters (e.g. <code class="language-plaintext highlighter-rouge">magnitude</code>)?</em></p>
+
+<div class="language-cs highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="nf">GetMouseButton</span><span class="p">(</span><span class="m">0</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">dest</span> <span class="p">=</span> <span class="n">Camera</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="nf">ScreenToWorldPoint</span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="n">mousePosition</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">float</span> <span class="n">dist</span> <span class="p">=</span> <span class="n">Vector2</span><span class="p">.</span><span class="nf">Distance</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">player</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">);</span>
+    <span class="n">Vector2</span> <span class="n">move</span> <span class="p">=</span> <span class="p">(</span><span class="n">step</span> <span class="p">*</span> <span class="p">(</span><span class="n">dest</span> <span class="p">-</span> <span class="p">(</span><span class="n">Vector2</span><span class="p">)</span><span class="n">player</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">)</span> <span class="p">/</span> <span class="n">dist</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">move</span><span class="p">.</span><span class="n">magnitude</span> <span class="p">&lt;</span> <span class="n">dist</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">player</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="nf">Translate</span><span class="p">(</span><span class="n">move</span><span class="p">);</span>
+    <span class="p">}</span>        
+    <span class="c1">// if player is close to apple:</span>
+    <span class="kt">float</span> <span class="n">pToA</span> <span class="p">=</span> <span class="n">Vector2</span><span class="p">.</span><span class="nf">Distance</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span> <span class="n">apple</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pToA</span> <span class="p">&lt;</span> <span class="m">0.9f</span><span class="p">)</span> <span class="p">{</span>            
+        <span class="kt">float</span> <span class="n">width</span> <span class="p">=</span> <span class="n">halfWidth</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
+        <span class="kt">float</span> <span class="n">height</span> <span class="p">=</span> <span class="n">halfHeight</span> <span class="p">*</span> <span class="m">2</span><span class="p">;</span>
+        <span class="n">apple</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector2</span><span class="p">(</span><span class="n">Random</span><span class="p">.</span><span class="k">value</span> <span class="p">*</span> <span class="n">width</span> <span class="p">-</span> <span class="n">halfWidth</span><span class="p">,</span> <span class="n">Random</span><span class="p">.</span><span class="k">value</span> <span class="p">*</span> <span class="n">height</span> <span class="p">-</span> <span class="n">halfHeight</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Obviously, the actual drawing of the sprites, refreshing of the canvas between frames, etc are done implicitly by Unity in the back-end.</p>
+
+<p><em>Notice that we’ve re-used the same 3 lines of code to reposition the apple to a random point. Writing the exact same code twice should give you pause:</em><label for="cleancode" class="margin-toggle sidenote-number"></label><input type="checkbox" id="cleancode" class="margin-toggle" /><span class="sidenote">However, obsessing about clean code can also be unproductive. The purpose of code is to help you get things done. <a href="https://overreacted.io/goodbye-clean-code/">Clean code is not a goal.</a> </span> <em>maybe you can turn these three lines into a helper function.</em></p>
+
+<p>You can now test the project, and play around with different values for <code class="language-plaintext highlighter-rouge">step</code> until you get the right feel.</p>
+
+<h2 id="unity-fying-our-project">Unity-fying our project</h2>
+
+<p>Our game now already leverages some of Unity’s abilities. But there are many we haven’t yet touched–from methods that make our life easier, to larger features such as the collision/physics engine. Can you think of some? Maybe start from the <a href="https://docs.unity3d.com/ScriptReference/Vector2.html">script reference</a>, or review <a href="https://learn.unity.com/project/ruby-s-2d-rpg">Ruby’s Adventure</a>.</p>
+
+<p>Before you start working, plan ahead and consider if you want to incrementally refactor the project to be more Unity-compliant, or if you’d find it easier to remake it from scratch. Sometimes, especially in the early stages, stopping to recreate the project from the ground up can be a refreshing practice.</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

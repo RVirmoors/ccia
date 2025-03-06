@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced OOP</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 1]
+<br/><br/>
+.subtitle[Week 10: Advanced OOP]
+<br/><br/><br/><br/><br/><br/>
+.date[Jan 2022]
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★     <!-- omit in toc -->
+
+1. [Advanced OOP](#advanced-oop)
+2. [Physics recap](#physics-recap)
+3. [Example: particle systems](#example-particle-systems)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+        
+---
+name: advanced-oop
+# Advanced OOP
+
+inheritance
+```java
+class Dog extends Animal {  } // gets all of the parent’s methods&vars
+```
+
+polymorphism
+```java
+Animal spot = new Dog(); // modifying parent methods
+```
+- [example](http://learningprocessing.com/examples/chp22/example-22-02-polymorphism)
+- superclass: constructor `super()`, method `super.method()`
+```java
+(spot instanceof Dog) // → true / false
+```
+
+---
+name: physics-recap
+# Physics recap
+
+position
+
+speed
+
+acceleration
+
+force
+
+--
+
+all of these are *vectors*!
+
+[PVector](https://processing.org/reference/PVector.html) ` :    x, y     |     mag, angle`
+
+
+---
+name: example-particle-systems
+# Example: particle systems
+
+.cite[A particle system is a collection of many many minute particles that together represent a fuzzy object. Over a period of time, particles are generated into a system, move and change from within the system, and die from the system.]
+
+--
+
+emitter
+
+lifespan
+
+--
+
+fixed # of particles: [Array](https://processing.org/reference/Array.html)
+
+variable # of particles: [ArrayList](https://processing.org/reference/ArrayList.html)
+
+- [example](https://processing.org/examples/simpleparticlesystem.html)
+
+---
+## Variants
+
+[particle web](https://github.com/RVirmoors/cc1/blob/master/cc1-2017/cc1_11_01_particles/cc1_11_01_particles.pde)
+
+<img src="../attachments/particle-web.png" width="100%">
+
+[+ deflector](https://github.com/RVirmoors/cc1/blob/master/cc1-2017/cc1_11_04_deflector/cc1_11_04_deflector.pde) (polymorphism)
+
+---
+class: center
+## Particle effects
+
+<img src="../attachments/ship-particles.gif">
+
+(start from [here](https://github.com/RVirmoors/cc1/tree/master/cc1-2021/ship))
+
+--
+
+<br/>
+- more: [The Nature of Code](https://natureofcode.com/book/) (D. Shiffman), [examples](https://twitter.com/search?q=natureofcode)
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/touchdesigner-and-python.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="touchdesigner-and-python">TouchDesigner and Python<!-- omit in toc --></h1>
+
+<p>A practical introduction to processing data and logic in TD using Python.</p>
+
+<p><a href="#setting-up">Setting up</a> . <a href="#running-a-script-text">Running a script: <code class="language-plaintext highlighter-rouge">text</code></a> . <a href="#triggering-a-script-panelexec">Triggering a script: <code class="language-plaintext highlighter-rouge">panelexec</code></a> . <a href="#encoding-state-table-and-datexec">Encoding state: <code class="language-plaintext highlighter-rouge">table</code> and <code class="language-plaintext highlighter-rouge">datexec</code></a> . <a href="#reacting-to-signals-chopexec">Reacting to signals: <code class="language-plaintext highlighter-rouge">chopexec</code></a> . <a href="#background-actions-execute">Background actions: <code class="language-plaintext highlighter-rouge">execute</code></a></p>
+
+<h2 id="setting-up">Setting up</h2>
+
+<p>Our plan for this session is to get started with Python inside TouchDesigner.<label for="tdlearn" class="margin-toggle sidenote-number"></label><input type="checkbox" id="tdlearn" class="margin-toggle" /><span class="sidenote">For a general intro to TouchDesigner, there are many [<a href="resources#misc">resources</a>] you can tap. Being a visual environment, TD lends itself well to <a href="https://youtu.be/wmM1lCWtn6o">video tutorials</a>. The usual caveat applies: take notes and replicate/expand on the material, don’t just passively consume it. </span> We’re going to run Python scripts inside a <code class="language-plaintext highlighter-rouge">text</code> DAT, and then in various Execute DATs: <code class="language-plaintext highlighter-rouge">panelexec</code>, <code class="language-plaintext highlighter-rouge">datexec</code>, <code class="language-plaintext highlighter-rouge">chopexec</code>, and <code class="language-plaintext highlighter-rouge">execute</code>.</p>
+
+<p>But first, let’s set up our work environment. In the <code class="language-plaintext highlighter-rouge">Pane Layout</code> panel under the menu bar <img src="attachments/td-pane.png" alt="" />, switch to a vertical split layout, and set the right pane to <code class="language-plaintext highlighter-rouge">Textport and DATs (Alt+9)</code>. This gives us a handy Python terminal<label for="repl" class="margin-toggle sidenote-number"></label><input type="checkbox" id="repl" class="margin-toggle" /><span class="sidenote">aka a <a href="https://python.land/introduction-to-python/the-repl">REPL</a> </span> to work with.</p>
+
+<p>You can use this Textport to write your Python code, but I highly recommend going for an external [<a href="resources#editors">editor</a>]. Select your editor of choice in <code class="language-plaintext highlighter-rouge">Edit &gt; Preferences &gt; DATs &gt; Text Editor</code>. If you use VS Code, then also check out this <a href="https://github.com/picturesbyrobots/td-completes-me">autocomplete extension</a>.</p>
+
+<p>We’re now ready to make our first network. Double-click to create two <code class="language-plaintext highlighter-rouge">Constant</code> TOPs and a <code class="language-plaintext highlighter-rouge">Select</code> TOP. Hit <code class="language-plaintext highlighter-rouge">P</code> to edit parameters: make the <code class="language-plaintext highlighter-rouge">Constant</code> different colours, and have the <code class="language-plaintext highlighter-rouge">Select</code> refer to the <code class="language-plaintext highlighter-rouge">constant1</code> TOP.</p>
+
+<figure class="fullwidth"><img src="ccia/../attachments/td-layout.png" /><figcaption>Basic starting layout.</figcaption></figure>
+<p><br />
+You can change the names <code class="language-plaintext highlighter-rouge">constant1</code> etc to something more descriptive, or leave them as is. Think of this as a very abstracted boilerplate for a project comprising two different scenes, one of which is selected for output. Now let’s see how we can program this selection!</p>
+
+<h2 id="running-a-script-text">Running a script: <code class="language-plaintext highlighter-rouge">text</code></h2>
+
+<p>The easiest way to try out a Python script in TD is to place it inside a <code class="language-plaintext highlighter-rouge">Text</code> DAT. Create one, edit it (Ctrl+E)<label for="cmd" class="margin-toggle sidenote-number"></label><input type="checkbox" id="cmd" class="margin-toggle" /><span class="sidenote">As usual, this guide is Windows-centric. Mac users should replace Ctrl with Cmd. </span> and save it with these contents:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">HELLO WORLD</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Now, with the Text DAT selected, you can hit Ctrl+R to run the script. You should see the result in the right-hand Textport.</p>
+
+<p>Let’s try now to change the contents of the <code class="language-plaintext highlighter-rouge">select1</code> TOP. We want it to refer to the other colour. In <code class="language-plaintext highlighter-rouge">select1</code>’s parameter panel, click on <code class="language-plaintext highlighter-rouge">+ TOP</code> to find out its Python name, which is <code class="language-plaintext highlighter-rouge">top</code>. Next, click on the <img src="attachments/td-pyhelp.png" alt="" /> <code class="language-plaintext highlighter-rouge">Python Help...</code> button to find out that you can access this parameter using <a href="https://www.askpython.com/python/built-in-methods/dot-notation">dot notation</a>, via the <a href="https://docs.derivative.ca/ParCollection_Class"><code class="language-plaintext highlighter-rouge">.par</code> member</a>.</p>
+
+<p>We can then treat this parameter just as we would any Python variable, and assign it a different value:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">op</span><span class="p">(</span><span class="sh">'</span><span class="s">select1</span><span class="sh">'</span><span class="p">).</span><span class="n">par</span><span class="p">.</span><span class="n">top</span> <span class="o">=</span> <span class="sh">"</span><span class="s">constant2</span><span class="sh">"</span>
+</code></pre></div></div>
+<p>Voila! Run the <code class="language-plaintext highlighter-rouge">text1</code> script and the colour is now different.</p>
+
+<p><em>Exercise: change the Python code to toggle between <code class="language-plaintext highlighter-rouge">"constant1"</code> and <code class="language-plaintext highlighter-rouge">"constant2"</code> every time it is run. Hint: just as you modified the <code class="language-plaintext highlighter-rouge">.par.top</code> variable, you can read (and <code class="language-plaintext highlighter-rouge">print()</code>) its current value.</em></p>
+
+<h2 id="triggering-a-script-panelexec">Triggering a script: <code class="language-plaintext highlighter-rouge">panelexec</code></h2>
+
+<p>By now you may be tired of hitting Ctrl+R all the time. Why not use a nice button instead?</p>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">Button</code> COMP. It defaults to a toggle, but you can choose to make it momentary. Click its <img src="attachments/td-vieweractive.png" alt="" /> <code class="language-plaintext highlighter-rouge">Viewer Active</code> toggle (low-right corner) to make it clickable.</p>
+
+<p>To respond to these clicks, we need a new script: this time, inside a <code class="language-plaintext highlighter-rouge">Panel Execute</code> DAT. Before editing its contents, let’s set the parameters. <code class="language-plaintext highlighter-rouge">Panels</code> gets <code class="language-plaintext highlighter-rouge">button1</code>, and you need to turn on the relevant method (<code class="language-plaintext highlighter-rouge">Off to On</code> responds to mouse presses).</p>
+
+<p>Another important parameter is <a href="https://docs.derivative.ca/Panel_Value"><code class="language-plaintext highlighter-rouge">Panel Value</code></a>. It defaults to <code class="language-plaintext highlighter-rouge">select</code>, which simply reports mouse clicks, but you can change it to <code class="language-plaintext highlighter-rouge">state</code> to monitor the status of the button.</p>
+
+<p>Finally, inside the <code class="language-plaintext highlighter-rouge">onOffToOn()</code> method we could re-implement our previous code, but since we already have it inside the <code class="language-plaintext highlighter-rouge">text1</code> DAT, we can also just run it directly:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">onOffToOn</span><span class="p">(</span><span class="n">panelValue</span><span class="p">):</span>
+	<span class="nf">op</span><span class="p">(</span><span class="sh">'</span><span class="s">text1</span><span class="sh">'</span><span class="p">).</span><span class="nf">run</span><span class="p">()</span>
+	<span class="k">return</span>
+</code></pre></div></div>
+
+<p><em>Exercise: use the <code class="language-plaintext highlighter-rouge">panelValue</code> parameter to choose between <code class="language-plaintext highlighter-rouge">"constant1"</code> and <code class="language-plaintext highlighter-rouge">"constant2"</code> depending on the state of the button.</em></p>
+
+<h2 id="encoding-state-table-and-datexec">Encoding state: <code class="language-plaintext highlighter-rouge">table</code> and <code class="language-plaintext highlighter-rouge">datexec</code></h2>
+
+<p>Our system works pretty well, but what if we need to visibly store and access the system state, to and from various locations?<label for="p5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="p5" class="margin-toggle" /><span class="sidenote">In P5 etc we would use global variables for this purpose. </span> Let’s try to change the architecture, centering it on a data structure that contains the state. We can then have two types of Execute scripts: ones triggered by the inputs (like the <code class="language-plaintext highlighter-rouge">Button</code> interface) which <strong>alter</strong> the state, and ones that <strong>respond to</strong> changes in the state and trigger output effects. The resulting framework will perform the same task, but allows for greater modularity and transparency.</p>
+
+<p>The first thing we can do is use a <code class="language-plaintext highlighter-rouge">Text</code> DAT to hold the state data. Create one and rename it <code class="language-plaintext highlighter-rouge">state</code>. Then, in your input reaction script, you could modify the <code class="language-plaintext highlighter-rouge">state</code> contents:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="bp">...</span>
+<span class="nf">op</span><span class="p">(</span><span class="sh">'</span><span class="s">state</span><span class="sh">'</span><span class="p">).</span><span class="n">text</span> <span class="o">=</span> <span class="sh">"</span><span class="s">constant2</span><span class="sh">"</span>
+</code></pre></div></div>
+
+<p>You can then respond to changes in the <code class="language-plaintext highlighter-rouge">state</code> DAT using a <code class="language-plaintext highlighter-rouge">DAT Execute</code> DAT. As before, we first link its <code class="language-plaintext highlighter-rouge">DATs</code> field to our <code class="language-plaintext highlighter-rouge">state</code> DAT and activate the corresponding methods before editing the code:<label for="methods" class="margin-toggle sidenote-number"></label><input type="checkbox" id="methods" class="margin-toggle" /><span class="sidenote">Depending on your needs, you should probably use <code class="language-plaintext highlighter-rouge">onTableChange</code> or <code class="language-plaintext highlighter-rouge">onCellChange</code>, and not both. </span></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">onTableChange</span><span class="p">(</span><span class="n">dat</span><span class="p">):</span>
+	<span class="nf">print</span><span class="p">(</span><span class="n">dat</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+	<span class="k">return</span>
+
+<span class="k">def</span> <span class="nf">onCellChange</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">prev</span><span class="p">):</span>
+	<span class="nf">print</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="sh">"</span><span class="s">from</span><span class="sh">"</span><span class="p">,</span> <span class="n">prev</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+	<span class="k">return</span>
+</code></pre></div></div>
+
+<p>A more elegant solution than the raw <code class="language-plaintext highlighter-rouge">Text</code> DAT is to use a bespoke data structure, in the form of a <code class="language-plaintext highlighter-rouge">Table</code> DAT.</p>
+
+<figure><img src="ccia/../attachments/td-state.png" /><figcaption class="maincolumn-figure">A <code>Table</code> DAT encoding the system state.</figcaption></figure>
+
+<p>You can imagine such a table being used to store a series of global variables in a more complex system, whose changes could be monitored in the <code class="language-plaintext highlighter-rouge">datexec</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">onCellChange</span><span class="p">(</span><span class="n">dat</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">prev</span><span class="p">):</span>
+	<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">changed</span><span class="sh">"</span><span class="p">,</span> <span class="n">cells</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="sh">"</span><span class="s">to</span><span class="sh">"</span><span class="p">,</span> <span class="n">cells</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="sh">"</span><span class="s">from</span><span class="sh">"</span><span class="p">,</span> <span class="n">prev</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+	<span class="k">return</span>
+</code></pre></div></div>
+
+<h2 id="reacting-to-signals-chopexec">Reacting to signals: <code class="language-plaintext highlighter-rouge">chopexec</code></h2>
+
+<p>CHOPs in TouchDesigner deal with continuous signals;<label for="sig" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sig" class="margin-toggle" /><span class="sidenote">similarly to signals<code class="language-plaintext highlighter-rouge">~</code> in Max &amp; Pd. </span> in the following we will use an <code class="language-plaintext highlighter-rouge">LFO</code> CHOP, but the general idea applies to all sorts of datastreams like audio, DMX, Kinect etc.</p>
+
+<p>As was the case for Panels and Tables, we shall associate our <code class="language-plaintext highlighter-rouge">LFO</code> CHOP to a <code class="language-plaintext highlighter-rouge">CHOP Execute</code> DAT. By now you should be able to configure its parameters yourself. And modulating a parameter by the LFO value is again just a matter of accessing the appropriate <code class="language-plaintext highlighter-rouge">.par</code>:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">onValueChange</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">sampleIndex</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">prev</span><span class="p">):</span>
+	<span class="nf">op</span><span class="p">(</span><span class="sh">'</span><span class="s">constant1</span><span class="sh">'</span><span class="p">).</span><span class="n">par</span><span class="p">.</span><span class="n">colorb</span> <span class="o">=</span> <span class="n">val</span> <span class="c1"># change B value
+</span>	<span class="k">return</span>
+</code></pre></div></div>
+
+<figure class="fullwidth"><img src="ccia/../attachments/td-fsm.gif" /><figcaption>Possible implemented network. Code in <code>panelexec1</code> alters <code>stateTable</code>, which triggers <code>datexec1</code> to reassign <code>select1</code>.</figcaption></figure>
+
+<h2 id="background-actions-execute">Background actions: <code class="language-plaintext highlighter-rouge">execute</code></h2>
+
+<p>We have seen so far how to trigger scripts manually, or have them react to interface input, or state changes, or continuous signals. Another option is the <code class="language-plaintext highlighter-rouge">Execute</code> DAT, which provides various methods: for example, you could have the equivalent of the P5 <code class="language-plaintext highlighter-rouge">draw()</code> function using the <code class="language-plaintext highlighter-rouge">Frame Start</code> method, which executes its contents every frame.</p>
+
+<p>That’s it for now! It’s up to you to start plugging any kind<label for="libs" class="margin-toggle sidenote-number"></label><input type="checkbox" id="libs" class="margin-toggle" /><span class="sidenote">One subject that we did not touch here are Python external libraries, aka modules. See [<a href="01-13-more-python#6">this slide</a>] for some starting points. </span> of Python code into your TD networks and bring them to life. Of course this is just the beginning, and there are many [<a href="slides/01-12-practical-python#10">online resources</a>] out there to help you build compelling interactive systems.</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>
