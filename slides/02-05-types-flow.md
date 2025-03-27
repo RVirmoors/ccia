@@ -6,9 +6,9 @@ title: Data and signal flow
 class: center, middle
 .title[Creative Coding and Software Design 2]
 <br/><br/>
-.subtitle[Week 6: Data and signal flow]
+.subtitle[Week 5: Data and signal flow]
 <br/><br/><br/><br/><br/><br/>
-.date[Mar 2022] 
+.date[Mar 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -51,8 +51,12 @@ name: maxpd-objects
 
 .right-column[![](../attachments/max-plus-object.png)]
 
+--
+
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 *Pd: copy maxhotkey-plugin.tcl to ```/Documents/Pd/externals/``` to enable Max-like hotkeys
+
+(or just use [PlugData](https://plugdata.org/)!)
 
 **Pd doesn't have an ```int``` type: all its numbers are ```float``` precision. Shift+drag on a number box to access its decimals.
 
@@ -225,9 +229,9 @@ class: center
 ---
 class: center
 ## Procedural audio / Unity
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/yCiX9DdtWvw?start=218" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/0xr4aL1C24E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[more](https://github.com/LibPdIntegration/LibPdIntegration) . [more](https://youtu.be/0xr4aL1C24E)
+[more](https://github.com/LibPdIntegration/LibPdIntegration)
 
 ---
 name: ex5
