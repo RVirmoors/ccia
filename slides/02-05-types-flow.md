@@ -164,6 +164,8 @@ F. [Audiovisual](#ex6)
 
 G. [Sonification](#ex7)
 
+H. [Live coding](#ex8)
+
 ---
 name: ex1
 class: center
@@ -267,6 +269,13 @@ class: center
 
 [more](https://github.com/tkzic/internet-sensors)
 
+---
+name: ex8
+class: center
+## Edo Paulus
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/tAtYht4QVnA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[more](https://www.eude.nl/projects/max-live-coding/)
 
 ---
 name: assignment       
