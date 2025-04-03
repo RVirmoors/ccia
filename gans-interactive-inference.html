@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/gans-interactive-inference.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="gans-interactive-inference">GANs: interactive inference<!-- omit in toc --></h1>
+
+<p>We use StyleGAN to generate images, guided in (almost) real time by projecting a live video feed into it.</p>
+
+<p><a href="#setup">Setup</a> . <a href="#interactive-projection">Interactive projection</a> . <a href="#going-further">Going further</a></p>
+
+<h2 id="setup">Setup</h2>
+
+<p>Note: preparing a DL pipeline (even for fun) takes a while, so set aside a decent amount of time, patience, and hard drive space.</p>
+
+<p>Let’s start with basic requirements. You need a Windows machine<label for="linux" class="margin-toggle sidenote-number"></label><input type="checkbox" id="linux" class="margin-toggle" /><span class="sidenote">A similar process should work in Linux, although I haven’t tried it yet. </span> with a Nvidia GPU and Python 3.9<label for="py-spout" class="margin-toggle sidenote-number"></label><input type="checkbox" id="py-spout" class="margin-toggle" /><span class="sidenote">Previously, the Spout-for-Python library supported Python 3.7 at the latest, but <a href="https://github.com/marenz2569/Spout-for-Python">this more recent fork of the library</a> works well with v3.9 </span> 64 bit.</p>
+
+<p>Here we will use <code class="language-plaintext highlighter-rouge">pip</code> and <code class="language-plaintext highlighter-rouge">venv</code> but you can also install <a href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> and then run <code class="language-plaintext highlighter-rouge">conda</code> to manage virtual environments and to install <code class="language-plaintext highlighter-rouge">torch</code> and other libraries.</p>
+
+<p>Open a <code class="language-plaintext highlighter-rouge">cmd</code> terminal in an empty folder and run <code class="language-plaintext highlighter-rouge">python</code> followed by <code class="language-plaintext highlighter-rouge">quit()</code>. If the heading mentions <code class="language-plaintext highlighter-rouge">3.7</code> and <code class="language-plaintext highlighter-rouge">64 bit</code> you’re in luck: you can create a virtual environment by typing <code class="language-plaintext highlighter-rouge">python -m venv venv</code>. Otherwise find or <a href="https://www.python.org/downloads/release/python-379/">download</a> a Python 3.7 executable and use it for your venv:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; c:/path/to/python37/python -m venv venv
+&gt; cd venv/Scripts
+&gt; activate
+&gt; cd ../..
+</code></pre></div></div>
+
+<p>From this point onwards, everything must happen inside your <code class="language-plaintext highlighter-rouge">(venv)</code>.</p>
+
+<p>Next, check that you’re running the appropriate CUDA version, by executing <code class="language-plaintext highlighter-rouge">nvidia-smi</code> in the terminal.
+<a href="https://github.com/dvschultz/stylegan3">StyleGAN3</a> requires CUDA 11.1 or later. The current (Dec 2021) version of PyTorch uses CUDA 10 or 11, so make sure you select the appropriate version to download <a href="https://pytorch.org/get-started/locally/">on their site</a>.</p>
+
+<p>Now with PyTorch installed, you can check that it can leverage your GPU through CUDA:<label for="novenv" class="margin-toggle sidenote-number"></label><input type="checkbox" id="novenv" class="margin-toggle" /><span class="sidenote">Notice I wasn’t in a <code class="language-plaintext highlighter-rouge">venv</code> here yet, just using the Python+PyTorch I have in my global environment. But you need to check the components in your <code class="language-plaintext highlighter-rouge">venv</code>. </span></p>
+<figure class="fullwidth"><img src="ccia/../attachments/torch-cuda.png" /><figcaption></figcaption></figure>
+
+<p>Finally, let’s download an expanded StyleGAN3 code repo from <a href="https://github.com/PDillis/stylegan3-fun">PDillis</a>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; git clone https://github.com/PDillis/stylegan3-fun.git
+</code></pre></div></div>
+<p>If you have <code class="language-plaintext highlighter-rouge">conda</code> you can follow the instructions in the <a href="https://github.com/PDillis/stylegan3-fun#readme">readme</a> and use it to create your environment, but for our purposes it’s enough to just install the modules using <code class="language-plaintext highlighter-rouge">pip</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; pip install click requests scipy ninja imageio imageio-ffmpeg tdqm
+</code></pre></div></div>
+
+<p>Since StyleGAN needs to compile stuff on the fly, you need to set up Visual Studio and point to it. You can choose to just install Build Tools, or <a href="https://visualstudio.microsoft.com/vs/">get</a> the whole VS Community package. Then simply find and run <code class="language-plaintext highlighter-rouge">"C:\Program Files (x86)\Microsoft Visual Studio\&lt;VERSION&gt;\Community\VC\Auxiliary\Build\vcvars64.bat"</code></p>
+
+<p>Now you can try out a basic image generation command:<label for="error" class="margin-toggle sidenote-number"></label><input type="checkbox" id="error" class="margin-toggle" /><span class="sidenote">In my case I got a <code class="language-plaintext highlighter-rouge">LNK1104</code> error for a missing <code class="language-plaintext highlighter-rouge">python37.lib</code>… I had to locate it in <code class="language-plaintext highlighter-rouge">%appdata%/../Local/Programs/Python/Python37/libs</code> and copy it to one of the <code class="language-plaintext highlighter-rouge">/LIBPATH:</code> folders, like my <code class="language-plaintext highlighter-rouge">venv/Scripts/libs</code>. </span></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; cd stylegan3-fun
+&gt; python gen_images.py --outdir=out --trunc=1 --seeds=0-4 --network=https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan3/versions/1/files/stylegan3-r-afhqv2-512x512.pkl
+</code></pre></div></div>
+<p>Check the <code class="language-plaintext highlighter-rouge">stylegan3/out</code> folder and you should see 5 exported images.</p>
+
+<p>Now let’s do something silly and project the cat face into the human faces dataset:
+<label for="cat" class="margin-toggle">⊕</label><input type="checkbox" id="cat" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/ffhq-cat.jpg" /><br />Meow.</span></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; python projector.py --target=out/seed0002.png --project-in-wplus --save-video --num-steps=1000 --network=https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan2/versions/1/files/stylegan2-ffhq-512x512.pkl
+</code></pre></div></div>
+
+<p>The first time you run the projector, it might take a long time (1h30m in my case) since it needs to download pre-trained pickles <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan2/files">from</a> <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan3/files">NVIDIA</a>. While you’re waiting, why not <a href="https://amarsaini.github.io/Epoching-Blog/jupyter/2020/08/10/Latent-Space-Exploration-with-StyleGAN2.html">do some background reading</a>.</p>
+
+<p>As we can see on the right, it turns out there’s quite catty figures to be found in the FFHQ latent space. So far so good, let’s start adding interactivity!</p>
+
+<h2 id="interactive-projection">Interactive projection</h2>
+
+<p>Again, here is what we’re going for: taking a live video feed and <em>projecting</em> it, i.e. looking for the image closest to the running input, inside a StyleGAN model. Obviously a model trained on human faces should produce the most “natural” results, but you’re free to use anything!</p>
+
+<p>Now that we’ve got <code class="language-plaintext highlighter-rouge">stylegan3-fun</code> up and running, let’s leave it alone and refer to it when we need to. Go back to the main project folder, and then install the <a href="https://github.com/marenz2569/Spout-for-Python">Spout-for-Python</a> library<label for="spout" class="margin-toggle sidenote-number"></label><input type="checkbox" id="spout" class="margin-toggle" /><span class="sidenote">Spout allows us to send images between different software. Of course it would be preferable to have everything running GPU-optimised code in e.g. David Braun’s <a href="https://dirt.design/portfolio/pytorch-top/">TouchDesigner</a> <a href="https://dirt.design/portfolio/u-2-net-salient-object-detection/">work</a>. For now we have to settle with Spout-for-Python just handling (CPU-only) NumPy arrays. </span> and its dependencies.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; cd ..
+&gt; git clone https://github.com/Ajasra/Spout-for-Python.git
+&gt; pip install pygame pyopengl
+</code></pre></div></div>
+
+<p>If you’ve got a webcam, you can get away without using Spout for input (like we did in the <a href="https://github.com/RVirmoors/cc1/blob/master/ml/python-weki/fastai-classify.ipynb">image classification notebook</a>), but you will still need it for the realtime output buffer. From <code class="language-plaintext highlighter-rouge">Spout-for-Python</code>, move the subfolders <code class="language-plaintext highlighter-rouge">Library</code> and <code class="language-plaintext highlighter-rouge">SpoutSDK</code> directly to your project folder, next to <code class="language-plaintext highlighter-rouge">stylegan3-fun</code>.</p>
+
+<p>An optional step here is to first preprocess your input to have the image center on the detected face. Especially if using the FFHQ pretrained model, this produces the best looking results. I’ve adapted the <a href="https://github.com/RVirmoors/cc1/blob/master/ml/stylegan3/align_face.py">align_face.py</a> script <a href="https://github.com/AmarSaini/Epoching_StyleGan2_Setup">from here</a> and <a href="https://github.com/RVirmoors/cc1/blob/master/ml/stylegan3/align.py">connected it to Spout</a>… it works, but it’s quite slow<label for="pillow" class="margin-toggle sidenote-number"></label><input type="checkbox" id="pillow" class="margin-toggle" /><span class="sidenote">due to the face detection itself plus a bunch of <a href="https://pillow.readthedocs.io/en/stable/">Pillow</a>-based image processing. These could maybe be streamlined to all-PyTorch GPU code, but I’m not the one to do it. </span> so in my final script it’s commented out.</p>
+
+<p>We’re now finally ready to create a new <code class="language-plaintext highlighter-rouge">.py</code> source file and copy/adapt what we need, mainly from <a href="https://github.com/PDillis/stylegan3-fun/blob/main/projector.py">stylegan3-fun/projector.py</a>. Start by making sure we can import the required modules:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">sys</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="sh">'</span><span class="s">stylegan3-fun</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>With loading modules, you can go two ways: copy all <code class="language-plaintext highlighter-rouge">import</code> statements straight (which might mean you need to <code class="language-plaintext highlighter-rouge">pip install</code> some which you end up not using) or include them as they are needed.</p>
+
+<p>You can then read the <code class="language-plaintext highlighter-rouge">projector.py</code> file starting at the end, where we have the function that’s to be called when the script is run:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="nf">run_projection</span><span class="p">()</span>  <span class="c1"># pylint: disable=no-value-for-parameter
+</span></code></pre></div></div>
+<p>The basic program structure is: <code class="language-plaintext highlighter-rouge">run_projection()</code> calls <code class="language-plaintext highlighter-rouge">project()</code>, which includes a <code class="language-plaintext highlighter-rouge">for</code> loop that runs <code class="language-plaintext highlighter-rouge">num_times</code> times. You need to modify this code so that all of the setup stuff<label for="setup" class="margin-toggle sidenote-number"></label><input type="checkbox" id="setup" class="margin-toggle" /><span class="sidenote">some of which is located in <code class="language-plaintext highlighter-rouge">run_projection()</code>, and some in <code class="language-plaintext highlighter-rouge">project()</code>. </span> is separate from an endless <code class="language-plaintext highlighter-rouge">while True</code> loop, which (unlike the existing <code class="language-plaintext highlighter-rouge">for</code> loop) needs to constantly load a target image, and display images as they are generated – on the other hand you don’t need to save the history of the trajectory, and there’s a lot of extraneous code that you can simply discard.</p>
+
+<p>An important decision is whether, and where, to fix the learning rate. Since our target is potentially always changing, we probably don’t want a steadily decreasing LR. The easy solution is to fix it, but there might be smarter ways to handle this issue.</p>
+
+<p>Then, as long as you read carefully and understand the essentials, you should find everything you need inside <code class="language-plaintext highlighter-rouge">projector.py</code>. My resulting script is <a href="https://github.com/RVirmoors/cc1/blob/master/ml/stylegan3/projectRT.py">here</a>. By default it runs the pretrained StyleGAN2 FFHQ-512 model (inference runs much faster on SG2 models than SG3), but you can change it with the <code class="language-plaintext highlighter-rouge">--network</code> argument.</p>
+
+<p>Here’s a quick demo… since I didn’t have any relevant materials on hand, I just used some stock TouchDesigner images.</p>
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/uUguphZs7nE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="going-further">Going further</h2>
+
+<p>I’ve already alluded to several directions for inquiry above, but let’s think of what else you could do. First, once you’ve got the code working, you might ask yourself: do we really need to perform inference in the <code class="language-plaintext highlighter-rouge">G</code> generator twice, once to compute the loss for optimisation, and once at the end to display the generated image? Try instead to display the first synthesized image,<label for="hint" class="margin-toggle sidenote-number"></label><input type="checkbox" id="hint" class="margin-toggle" /><span class="sidenote">Hint: look in <a href="https://github.com/PDillis/stylegan3-fun/blob/main/torch_utils/gen_utils.py">gen_utils</a><code class="language-plaintext highlighter-rouge">.w_to_img()</code> to see how to convert from a tensor to a displayable NumPy array. </span> or try to just synthesize the optimised <code class="language-plaintext highlighter-rouge">w_opt</code> directly (without adding noise), see what happens and try to explain why.</p>
+
+<p>Moving on, there are other <code class="language-plaintext highlighter-rouge">stylegan3-fun</code> tools which you can leverage. The <a href="https://github.com/PDillis/stylegan3-fun/blob/main/visualizer.py">visualiser</a> is way more fun than an analysis tool should be, and <a href="https://github.com/PDillis/stylegan3-fun/blob/main/style_mixing.py">style-mixing</a> is a nice way to blend between generation and style transfer. Again, do <a href="https://amarsaini.github.io/Epoching-Blog/jupyter/2020/08/10/Latent-Space-Exploration-with-StyleGAN2.html">your</a> <a href="https://lambdalabs.com/blog/stylegan-3/">reading</a> first, but then don’t be afraid to jump in!</p>
+
+<p>Moreover, all of these can be guided interactively through OSC. You might, for instance, adjust the learning rate via an external output, or you could add to <code class="language-plaintext highlighter-rouge">w_opt</code> a latent vector that’s been mapped (maybe to live audio features?) using something like Wekinator, like I show <a href="https://rvirmoors.github.io/2021/01/04/realtime-stylegan/">here</a>.</p>
+
+<p>Finally, this experience should have given you the confidence to dissect and adapt pretty much any generative net out there. Writing this at the end of 2021 I have no idea what next year’s trends will bring, but this general approach should still apply.</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>
