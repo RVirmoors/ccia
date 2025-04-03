@@ -47,6 +47,15 @@ messages: "text $1" ...
 coll, route
 
 ---
+## Routing messages
+
+select / sel
+
+switch
+
+gate, ggate
+
+---
 class: center
 ## Tip: reset object
 
