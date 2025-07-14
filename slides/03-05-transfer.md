@@ -50,10 +50,6 @@ all the above are **fallible** -- subject to *choices* and *noise*
 ---
 ## Types of knowledge in ML models
 
-.right-column[
-<img width="50%" src="../attachments/narration.jpg">
-]
-
 domain knowledge / "theory" "story"
 - *appears in* algorithm design
 - preprocessed features, model architecture, output postprocessing
@@ -67,6 +63,10 @@ inferred knowledge
 --
 
 inherited knowledge: transfer learning 
+
+.right-column[
+<img width="50%" src="../attachments/narration.jpg">
+]
 
 ---
 
