@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Week 7: Transfer learning]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2024] 
+.date[Jul 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -50,7 +50,11 @@ all the above are **fallible** -- subject to *choices* and *noise*
 ---
 ## Types of knowledge in ML models
 
-domain knowledge
+.right-column[
+<img width="50%" src="../attachments/narration.jpg">
+]
+
+domain knowledge / "theory" "story"
 - *appears in* algorithm design
 - preprocessed features, model architecture, output postprocessing
 
