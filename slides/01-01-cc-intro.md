@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Creative Coding for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2022] 
+.date[Oct 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -125,10 +125,6 @@ computer science
 
 ---
 ## Dev components
-
-.right-column[
-<iframe width="100%" src="https://www.youtube.com/embed/MrQrkioQoEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-]
 
 intention
 - ideas, goals
