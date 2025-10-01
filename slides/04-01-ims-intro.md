@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Introduction]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2023] 
+.date[Oct 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -33,10 +33,35 @@ class: left
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
 ---
 layout: true  .toc[[★](#toc)]
+
+---
+## What this class is NOT about
+
+- making electronic music
+
+--
+
+- making music
+
+--
+
+- music?
+
+--
+
+    - rather, *time-based media*
         
 ---
 name: class-summary
 # Class summary
+
+interactivity as the locus of sound creation
+
+--
+
+new interfaces for musical expression
+
+--
 
 three main topics:
 - max & live
@@ -49,7 +74,7 @@ all involve **coding** and **sonic experimentation**
 
 --
 
-interaction: in-class, too!
+interaction - in-class, too!
 - performance
 - inspiration
 - assignments
@@ -121,7 +146,7 @@ Interactive computer music systems are those whose behavior changes in response 
 *Epistemic tools*, extensions of the mind that tie it to the environment. (Thor Magnusson)
 
 machine musicianship
-- 2 processes: listening & action | *machine listening* & *live electronics*
+- 2 processes: listening & action, or *machine listening* & *live electronics*
 
 score-driven vs performance-driven
 
@@ -132,11 +157,11 @@ name: tools
 
 interactive sequencing: Max for Live, IanniX, ossia score, Open Stage Control, TWO
 
-interactive synthesis: FluCoMa, MuBu
+interactive analysis/synthesis: FluCoMa, DataKnot, SoMax, *MuBu*
 
 live coding: Supercollider, Sonic Pi, TidalCycles …
 
-network music: Jamulus, JackTrip
+*network music: Jamulus, JackTrip*
 
 reactive programming: Antescofo
 
@@ -181,6 +206,8 @@ name: links
 
 forums: [FluCoMa](https://discourse.flucoma.org), [NIME](https://forum.nime.org), [lines](https://llllllll.co)
 
+discord
+
 live coding / laptop music: [toplap](https://toplap.org) / [forum](https://forum.toplap.org/) / [TidalCycles forum](https://club.tidalcycles.org/)
 
 [Art + music + technology](http://artmusictech.libsyn.com/), [play talk play](http://amplifiersandexplosions.com/play-talk-play/), [Sound + process](https://soundcloud.com/sound-and-process)
@@ -220,7 +247,7 @@ human-robot improvisation
 name: assignment
 # Assignment
 
-create a minimalistic instrument in Max, which takes one input (audio, sensor, mouse etc) and controls one sonic parameter. Record a 1-minute performance (audio or video) using the instrument.
+create a minimalistic instrument in Max, which takes one input (audio, sensor, mouse etc) and controls one sonic parameter. Record / perform a 1-minute performance (audio or video) using the instrument.
 
 <br/><br/><br/><br/><br/><br/>
 
