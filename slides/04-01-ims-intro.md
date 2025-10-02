@@ -42,6 +42,9 @@ layout: true  .toc[[★](#toc)]
 --
 
 - making music
+.right-column[
+<iframe width="49%" height="250" src="https://www.youtube.com/embed/1old894PpIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
 
 --
 
@@ -242,6 +245,12 @@ biocomputing
 
 human-robot improvisation
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/qy02lwvGv3U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+## Examples
+
+multimedia composition
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/_UmkXs5ArDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 name: assignment
