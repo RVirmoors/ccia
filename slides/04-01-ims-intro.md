@@ -43,7 +43,7 @@ layout: true  .toc[[★](#toc)]
 
 - making music
 .right-column[
-<iframe width="49%" height="250" src="https://www.youtube.com/embed/1old894PpIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="250" src="https://www.youtube.com/embed/1old894PpIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 
 --
@@ -58,11 +58,8 @@ layout: true  .toc[[★](#toc)]
 name: class-summary
 # Class summary
 
-interactivity as the locus of sound creation
-
---
-
-new interfaces for musical expression
+- interactivity as the locus of sound creation
+- new interfaces for musical expression
 
 --
 
@@ -80,11 +77,11 @@ all involve **coding** and **sonic experimentation**
 interaction - in-class, too!
 - performance
 - inspiration
-- assignments
+- assignments - 15p each
 
 --
 
-final
+final - 30p
 - A. your own IMS
 - B. a 3+ page paper submitted to a workshop/conference/journal
 - see [syllabus](https://www.notion.so/itpma/Interactive-Music-Systems-eefdd64b55e249c1813aa0a1cd701383)
@@ -158,11 +155,11 @@ score-driven vs performance-driven
 name: tools
 # Tools
 
-interactive sequencing: Max for Live, IanniX, ossia score, Open Stage Control, TWO
+interactive sequencing: Max for Live, *IanniX, ossia score, Open Stage Control, TWO*
 
 interactive analysis/synthesis: FluCoMa, DataKnot, SoMax, *MuBu*
 
-live coding: Supercollider, Sonic Pi, TidalCycles …
+live coding: Supercollider, Sonic Pi, Hydra, *TidalCycles* …
 
 *network music: Jamulus, JackTrip*
 
