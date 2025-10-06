@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Machine Learning for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2024] 
+.date[Oct 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -22,10 +22,11 @@ class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
 1. [Semester overview](#semester-overview)
-2. [Machine Learning](#machine-learning)
-3. [What we cover](#what-we-cover)
-4. [Interactive Machine Learning](#interactive-machine-learning)
-5. [Links](#links)
+2. [AI ethics](#ai-ethics)
+3. [Machine Learning](#machine-learning)
+4. [What we cover](#what-we-cover)
+5. [Interactive Machine Learning](#interactive-machine-learning)
+6. [Links](#links)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -43,6 +44,172 @@ class: left
 [Syllabus](https://itpma.notion.site/itpma/Creative-Coding-and-Software-Design-3-c18bb7e2da834cabb027a681abefec2c)
 
 [Classroom](https://classroom.google.com/)
+
+---
+name: ai-ethics
+# AI ethics
+
+.left-column[
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/OhCzX0iLnOc" title="The danger of AI is weirder than you think | Janelle Shane" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+.right-column[
+[<img width="100%" height="250" src="../attachments/laion-ethics.png">](https://twitter.com/Abebab/status/1445723482231173120)
+]
+
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PLnV8Pp3XepxXh1zs2j6MOBRBiMBkvt2X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+## Building ML models
+
+data |    ~  |   *measurements*
+-|-|-
+information  |  ~ |  data *interpreted* 
+model |  ~  | information *mapped*
+
+--
+
+all the above are **fallible**: subject to *choices* and *noise*
+
+<br/><br/><br/><br/><br/><br/><br/>
+- [Critical Perspectives on Computer Vision](https://slideslive.com/38923500/critical-perspectives-on-computer-vision) / Emily Denton
+- [Whose ground truth? accounting for individual and collective identities underlying dataset annotation](https://arxiv.org/pdf/2112.04554.pdf)
+- [Microsoft lays off AI ethics and society team](https://www.theverge.com/2023/3/13/23638823/microsoft-ethics-society-team-responsible-ai-layoffs)
+- [Reddit strikes $60M deal allowing Google to train AI on user posts](https://www.baltimoresun.com/2024/02/22/reddit-strikes-60m-deal-allowing-google-to-train-ai-models-on-its-posts-unveils-ipo-plans/)
+
+---
+## Social cost
+
+training large models
+- crowdsourcing data
+  - privacy
+  - opt-in
+- addressing bias
+  - ChatGPT used [Kenyan workers](https://time.com/6247678/openai-chatgpt-kenya-workers/) for ["traumatizing" work](https://www.theguardian.com/technology/2023/aug/02/ai-chatbot-training-human-toll-content-moderator-meta-openai)
+
+<img style="width:80%"  src="../attachments/londoAI/kenya.png">
+
+---
+## Social cost
+
+[replacing jobs](https://en.wikipedia.org/wiki/Technological_unemployment) 
+
+<img style="width:100%"  src="../attachments/londoAI/job.png">
+
+--
+
+[<img style="width:50%"  src="../attachments/londoAI/mastering-post.png"><img style="width:50%"  src="../attachments/londoAI/mastering-goosman.png">](https://www.facebook.com/groups/34526354913/posts/10161317376399914/?__cft__[0]=AZX6knJf6rlYg-Wp8QMIMxtQEiZMqGfmPJqHskJLfiVfG7G9FBemfiO48lVp7Y_gV22OgyhBm5J-G7R15EVNZuUEdZtEVPC101Tqf6Okk68sOvk9BaNX7gfSnTYf7cfL35vnqO_ntj1fE3czBRKSTHHh&__tn__=%2CO%2CP-R)
+
+---
+## Social cost
+
+[<img style="width:100%"  src="../attachments/londoAI/strike.png">](https://www.theguardian.com/culture/2023/oct/01/hollywood-writers-strike-artificial-intelligence)
+
+“AI is under control of the writers, not under control of the studios. It’s not to be used as an automation technology. It’s complementary to humans.”
+- Simon Johnson, MIT
+---
+## Social cost
+
+feeding the achievement/burnout society
+
+<img style="width:100%"  src="../attachments/londoAI/vita.png">
+
+"The loss of the faculty of contemplation affects our relation to language. Dazed by the rush of information and communication we move away from **poetry** as the contemplation of language, and begin even to hate it. When language is nothing but work and the production of information, it loses its radiance. It becomes worn out and **keeps producing the same**."
+- Byung-Chul Han, Vita Contemplativa
+
+---
+## Material footprint
+
+Raspberry Pi 5 single-board computer: 6W
+
+[<img style="width:100%"  src="../attachments/londoAI/raspi-6w.png">](https://youtu.be/rGUnsiivqeU)
+
+google search query = 5W for 3min = 0.25Wh
+
+---
+## Material footprint
+
+gaming PC: 300W
+
+[<img style="width:100%"  src="../attachments/londoAI/gaming.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+gaming PC: 300W
+
+[<img style="width:100%"  src="../attachments/londoAI/gaming-r.png">](https://youtu.be/rGUnsiivqeU)
+
+---
+## Material footprint
+
+deep learning rig: 2000W
+
+[<img style="width:50%"  src="../attachments/londoAI/dl-rig.png">](https://www.reddit.com/r/deeplearning/comments/106zlpz/building_a_4x_3090_machine_learning_machine_would/)
+
+---
+## Material footprint
+
+deep learning rig: 2000W
+
+[<img style="width:50%"  src="../attachments/londoAI/dl-rig-r.png">](https://www.reddit.com/r/deeplearning/comments/106zlpz/building_a_4x_3090_machine_learning_machine_would/)
+
+https://github.com/TimDettmers/carbonneutral
+
+---
+## Material footprint
+
+training ChatGPT: 1064MWh
+
+chatgpt inference: 260MWh / day or 9Wh / query 
+- (vs 0.25Wh / google search)
+
+<img style="width:100%"  src="../attachments/londoAI/datacentre.png">
+
+.left-column[
+[AI and its carbon footprint: How much water does ChatGPT consume?](https://lifestyle.livemint.com/news/big-story/ai-carbon-footprint-openai-chatgpt-water-google-microsoft-111697802189371.html)
+]
+
+.right-column[
+[Power Hungry Processing: Watts Driving the Cost of AI Deployment?](https://arxiv.org/pdf/2311.16863.pdf)
+]
+
+- "between 2010 and 2018, data center energy usage has been fairly stable, accounting for around 1 to 2 percent of global consumption. ... things might be different for AI precisely because of the trend for companies to simply throw bigger models and more data at any task." [source](https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption)
+
+---
+## What's does ethical AI look like?
+
+is it even possible?
+
+--
+
+- low energy usage
+
+--
+
+- avoid bias
+
+--
+
+- respect data rights
+
+--
+
+- *don't replace [non-BS] human work*
+
+--
+
+examples?
+
+--
+
+- stem separation (music), photogrammetry
+
+--
+
+- real-time / interactive inference
+
 
 ---
 name: machine-learning
