@@ -67,6 +67,10 @@ google, stackoverflow etc
 
 --
 
+AI?
+
+--
+
 [don't trust advice](https://youtu.be/miwrDpbb25Q)[.](https://www.gamesindustry.biz/everything-i-said-was-wrong)
 
 --
@@ -279,4 +283,4 @@ task
 deliverables
 - game link / upload
 
-due: WEEK 4
+due: next week

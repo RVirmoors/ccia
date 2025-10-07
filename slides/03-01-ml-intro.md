@@ -208,7 +208,7 @@ examples?
 
 --
 
-- real-time / interactive inference
+- real-time / interactive inference (e.g. pose detection)
 
 
 ---
