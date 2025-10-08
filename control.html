@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/control.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="control">Control<!-- omit in toc --></h1>
+
+<p>Mapping and directing data and signal flows to control different outputs.</p>
+
+<p><a href="#lists">Lists</a> . <a href="#msp-basics">MSP basics</a> . <a href="#args-messages-attributes">Args, messages, attributes</a> . <a href="#example">Example</a></p>
+
+<h2 id="lists">Lists</h2>
+
+<p>Once you get used to ints and floats in Max, sooner or later you will need to combine them (and other symbols) into lists. As usual, a good place to get started is the internal <a href="https://docs.cycling74.com/max8/tutorials/basicchapter03">tutorial</a>.</p>
+
+<p>Two elements are key here: building lists with [pack] and [pak], and defining lists as messages with <em>replaceable arguments</em> (<code class="language-plaintext highlighter-rouge">$1</code>, <code class="language-plaintext highlighter-rouge">$2</code> etc).</p>
+
+<p><label for="maxset" class="margin-toggle">⊕</label><input type="checkbox" id="maxset" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/max-set.gif" /><br />Setting a value without triggering further output.</span>
+A basic use case would be sending a <code class="language-plaintext highlighter-rouge">set</code> message to an object. Many object accept such messages, usually for setting an internal state without passing it on downstream. Try recreating the right-hand patch, first without the <code class="language-plaintext highlighter-rouge">set $1</code> message, and see what happens. You can replace the bottom [number] with e.g. a [message], and get the same effect: the [button] remains untriggered.</p>
+
+<p>Another way to create a <code class="language-plaintext highlighter-rouge">set</code> message is via the [prepend] object. With the “set” argument ([prepend set]) you tell the object to reproduce whatever message it receives, preceded by “set”. And we’ve <a href="data-and-signal-flow.md#exercise-audio-pixel-visualiser">already used</a> the [pak] object to make a list-message—in this case you might use [pak set 0].<label for="pak" class="margin-toggle sidenote-number"></label><input type="checkbox" id="pak" class="margin-toggle" /><span class="sidenote">This is my least favourite way to make lists, mainly because it’s so easy to mess up the [pak] inlets. </span> As usual with Max, you have different methods for almost the same outcome,<label for="outcome" class="margin-toggle sidenote-number"></label><input type="checkbox" id="outcome" class="margin-toggle" /><span class="sidenote">e.g. [prepend] carries <em>any</em> incoming message, while <code class="language-plaintext highlighter-rouge">set $1</code> specifies that a single symbol (thru <code class="language-plaintext highlighter-rouge">$1</code>) will be passed on. </span> so deciding on which one to use is often a matter of personal style.</p>
+
+<p><label for="see-also" class="margin-toggle">⊕</label><input type="checkbox" id="see-also" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/see-also.png" /><br />Dig through the documentation via the See Also section.</span></p>
+
+<p>If you’ve mastered the above, the next step would be to look at [zl] (for most common list operations. My fave is [zl stream]) and [coll] (for storing collections of values, including lists, in memory). As always, start with the help patches, and move on to the “See Also” section of the reference tab for related objects and tutorials.</p>
+
+<h2 id="msp-basics">MSP basics</h2>
+
+<p>With signals you don’t have to worry about order precedence or lists,<label for="pak" class="margin-toggle sidenote-number"></label><input type="checkbox" id="pak" class="margin-toggle" /><span class="sidenote">(although there is the multichannel ([mc.~]) signal type, which we will leave for later) </span> so in some ways they’re easier to grasp. MSP signals flow continuously, and at any point you can tap into them with something like [number~], [meter~], [scope~], or [spectroscope~], to see if they’re behaving as expected.</p>
+
+<p>To get a signal in the first place, you need a source: a constant<label for="number" class="margin-toggle sidenote-number"></label><input type="checkbox" id="number" class="margin-toggle" /><span class="sidenote">[number~] – click on its small <span style="color:cornflowerblue"><strong>wave</strong></span> icon to turn it into an <span style="color:cornflowerblue"><strong>arrow</strong></span>, which converts the object from a monitor into a generator. </span>, an oscillator<label for="osc" class="margin-toggle sidenote-number"></label><input type="checkbox" id="osc" class="margin-toggle" /><span class="sidenote">[cycle~], [saw~] etc. </span>, a buffer<label for="buffer" class="margin-toggle sidenote-number"></label><input type="checkbox" id="buffer" class="margin-toggle" /><span class="sidenote">[buffer~] played with [play~], [groove~] etc. </span>, an analog input<label for="adc" class="margin-toggle sidenote-number"></label><input type="checkbox" id="adc" class="margin-toggle" /><span class="sidenote">[adc~] or [ezadc~] </span>, or randomness<label for="noise" class="margin-toggle sidenote-number"></label><input type="checkbox" id="noise" class="margin-toggle" /><span class="sidenote">[noise~] etc. </span> – all of them can be used to generate signals. But you probably won’t want to audition them straight<label for="dac" class="margin-toggle sidenote-number"></label><input type="checkbox" id="dac" class="margin-toggle" /><span class="sidenote">[dac~] or [ezdac~] </span>: some of them might act as <em>audio sources</em> (e.g. [cycle~ 440], a 440Hz tone), while others can be <em>control signals</em> (e.g. [cycle~ 1], a sine that repeats just once per second).</p>
+
+<p><span class="newthought">The quickest way to get a sound file</span>  into Max is by dragging one from the left-hand Audio panel (or anywhere on your computer) into the unlocked patch, which produces a [playlist~] object. This object is very powerful and easy to use, which is why we’ll save it for later!</p>
+
+<p><label for="buffer-groove" class="margin-toggle">⊕</label><input type="checkbox" id="buffer-groove" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/buffer-groove.png" /><br />Looping through a sound file loaded into a [buffer~].</span></p>
+
+<p>To better understand how Max deals with audio material, create a [buffer~ mySound] object, drag a soundfile onto it (or send it the <code class="language-plaintext highlighter-rouge">read</code> message), then double-click it to check that your sound was loaded. Then use the [groove~] and [ezdac~] objects as seen on the right.</p>
+
+<p>You should now hear your sound running in a loop. Again, check out the help patches to understand how it all works and get a feel for what you can change.</p>
+
+<h2 id="args-messages-attributes">Args, messages, attributes</h2>
+
+<p>Let’s take another look at the [groove~ mySound @loop 1] object. We have the object name, then an <strong>argument</strong> that ties it to the desired buffer, then @what?</p>
+
+<p>“@loop” is an <strong>attribute</strong> which, much like the object’s argument(s), sets its internal behaviour. The difference is that args are unnamed and ordered (here the first arg <em>has to be</em> a buffer name), while attributes are @named and can be called in any order, if at all.</p>
+
+<p><span class="newthought">There are several ways</span>  to see and change an object’s attributes:</p>
+
+<p>Directly in the object box. As you’re creating it, the autocomplete menu shows a list of possible arguments and attributes. As we’ve seen, attributes appear as “@name value”.</p>
+
+<p>Using the inspector (<strong>Ctrl+I</strong>).</p>
+
+<p>Right-clicking on the first inlet. This pops up a menu of all attributes and all possible messages into the object. Selecting an attribute produces an [attrui], an interface allowing you to change its value.</p>
+
+<p>Messages. Of course, good old-fashioned messages also allow you to change the value directly. In our case, we might send <code class="language-plaintext highlighter-rouge">loop 1</code>. Or, if we want to change the setting dynamically from elsewhere in the patch: <code class="language-plaintext highlighter-rouge">loop $1</code>.</p>
+
+<h2 id="example">Example</h2>
+
+<p><label for="ex" class="margin-toggle">⊕</label><input type="checkbox" id="ex" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/adc-glmodel-task.png" /><br />Components for controlling a 3D model with audio.</span>
+You can now get around well enough to implement a spectacular audio-reactive 3D visualisation. Try to use the objects below (or replace the [ezadc~] with the buffer-groove system above) and make an object’s scale react to your sound’s amplitude.</p>
+
+<p>Tip: start by copy-pasting the [jit.gl.model] help patch. Check that object’s args to find out which controls the scaling.</p>
+
+<p>Q: Why might the [slide(~)] objects prove useful? Find out more <a href="https://docs.cycling74.com/max8/tutorials/datachapter02">here</a>. When would you use [slide], and when [slide~]?</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>
