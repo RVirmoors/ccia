@@ -204,11 +204,15 @@ examples?
 
 --
 
-- stem separation (music), photogrammetry
+- automatic tasks - stem separation (music), photogrammetry
 
 --
 
 - real-time / interactive inference (e.g. pose detection)
+
+--
+
+- interactive (machine) learning?
 
 
 ---
@@ -274,8 +278,6 @@ WRONG! -[Tomas Mikolov](https://cs.nyu.edu/~welleck/episode25.html)
 [ML art](https://www.libreai.com/a-short-overview-on-ai-art/) is:
 - a subset of *generative* art
 - sometimes *interactive* (in training and/or execution)
-
-[ethical questions](https://www.youtube.com/watch?v=NMYTALX9kEw)
 
 ---
 
@@ -366,6 +368,7 @@ workflow
 --
 
 creating something truly *new*?
+- [active divergence](https://arxiv.org/abs/2107.05599)
 
 --
 
@@ -386,9 +389,11 @@ class: left
 - [FluCoMa](https://flucoma.org/)
 - [ml.star](https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/)
 - [MuBu for Max](https://forum.ircam.fr/projects/detail/mubu/)
-- [IIL tools](https://iil.is/outputs#open-source) 
+- [IIL tools](https://iil.is/outputs#open-source)
+- [scikit-learn](https://scikit-learn.org/stable/)
 
 
+- [Groq](https://groq.com/)
 - [fastai](https://docs.fast.ai/) / [PyTorch](https://pytorch.org/)
 - [ml5](https://ml5js.org/) / [Tensorflow.js](https://teachablemachine.withgoogle.com/)
 - [Runway](https://runwayml.com/)
