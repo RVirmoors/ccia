@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Interactive devices]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2022] 
+.date[Oct 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -21,10 +21,11 @@ name: toc
 class: left
 # ★ Table of Contents ★     <!-- omit in toc -->
 
-1. [Review](#review)
+1. [Ableton Live](#ableton-live)
 2. [Example: dance sonification](#example-dance-sonification)
 3. [Example: live electronics](#example-live-electronics)
 4. [Using M4L for interaction](#using-m4l-for-interaction)
+5. [Assignment](#assignment)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -32,23 +33,35 @@ class: left
 layout: true  .toc[[★](#toc)]
         
 ---
-name: review
-# Review
+name: ableton-live
+# Ableton Live
 
-Tools
-- [Max](02-01-max-unity-intro)
-- [Ableton Live](04-03-m4l-api#ableton-live)
-- [HCI and OSC](01-07-osc)
+tracks
+- clips
+
+--
+- devices
+  - effects (audio / midi input&output)
+  - instruments (midi input, audio output)
 
 --
 
-.right-column[
-<iframe width="100%" height="300" src="https://www.youtube.com/embed/qmJrMAcPxhw?start=1690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-]
-Technique
-- mapping and control
-- sound / sonification design
-- IMS: analysis + reaction
+scenes
+
+--
+
+views
+
+---
+## Basic shortcuts
+
+| TAB | switch *session* / *arrangement* view |
+|-|-----------|
+| Shift-TAB |  show effect chain / [audio or midi] clip |
+|double-click|        new clip (in session view), new event (in MIDI clip)|
+|ctrl-D / alt-drag|    duplicate|
+|ctrl-drag|            adjust note velocity|
+|F10|            back to arrangement|
 
 
 ---
@@ -150,3 +163,12 @@ various options:
 Reading: 
 - https://rodrigoconstanzo.com/2015/06/cut-glove/
 - https://docs.cycling74.com/max8/vignettes/max_for_live_topic
+
+---
+name: assignment
+# Assignment
+
+choose a [NIME paper](https://www.nime.org/archives/) and review it:
+- ~~3 paragraphs / 600-700 words~~
+- 2-3 slides ~~presentation~~ discussion
+- context + what you found interesting (NOT taken from abstract)
