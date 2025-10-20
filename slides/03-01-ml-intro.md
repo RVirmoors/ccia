@@ -77,6 +77,8 @@ all the above are **fallible**: subject to *choices* and *noise*
 - [Whose ground truth? accounting for individual and collective identities underlying dataset annotation](https://arxiv.org/pdf/2112.04554.pdf)
 - [Microsoft lays off AI ethics and society team](https://www.theverge.com/2023/3/13/23638823/microsoft-ethics-society-team-responsible-ai-layoffs)
 - [Reddit strikes $60M deal allowing Google to train AI on user posts](https://www.baltimoresun.com/2024/02/22/reddit-strikes-60m-deal-allowing-google-to-train-ai-models-on-its-posts-unveils-ipo-plans/)
+- [ChatGPT is bullshit](https://link.springer.com/article/10.1007/s10676-024-09775-5)
+- [How much research is being written by LLMs?](https://hai.stanford.edu/news/how-much-research-being-written-large-language-models)
 
 ---
 ## Social cost
