@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/resources.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body class="full-width">
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article>
+      <p><a href="#getting-started">Getting started</a> . <a href="#useful-tools">Useful tools</a> . <a href="#research">Research</a> . <a href="#processing">Processing</a> . <a href="#maxpd">Max/Pd</a> . <a href="#machine-learning">Machine learning</a> . <a href="#misc">Misc</a></p>
+
+<h1 id="getting-started">Getting started</h1>
+
+<p><a href="#coding">Coding</a> . <a href="#graphics">Graphics</a> . <a href="#audio">Audio</a> . <a href="#signals">Signals</a> . <a href="#student-work">Student work</a></p>
+
+<h2 id="coding">Coding</h2>
+
+<p><a href="https://www.gdquest.com/tutorial/getting-started/learn-to/code/">Learn to code</a> tutorial. Game engine-based, but the principles apply to any creative coding.</p>
+
+<p>For a more systematic intro to programming, try the <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50 online course</a> from Harvard, or the <a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a> book.</p>
+
+<p><a href="https://shiffman.net/">Books and videos</a> by the indefatigable Daniel Shiffman, an essential resource.</p>
+
+<p>Creative coding intros, using JavaScript, p5 etc: <a href="https://creative-coding.decontextualize.com/">Allison Parrish</a>, <a href="https://shiffman.net/a2z/">Daniel Shiffman</a>, <a href="https://awarua.github.io/creative-coding/tutorials/tut13/index.html">Jared Donovan</a></p>
+
+<p><a href="https://github.com/dabeaz-course/practical-python">Practical Python</a> course by David Beazley.</p>
+
+<p><a href="https://github.com/meinardmueller/PCP">Preparation Course for Python</a> by Meinard Müller et al. A solid introduction to programming via Python, notebooks, and towards numbers and [<a href="#signals">signals</a>].</p>
+
+<p><a href="http://www.jeffreythompson.org/collision-detection/">Collision Detection</a> introductory book by Jeff Thompson, with Processing implementations. See also the resulting <a href="https://github.com/bmoren/p5.collide2D">p5.js library</a>.</p>
+
+<h2 id="graphics">Graphics</h2>
+
+<p><a href="https://programmingdesignsystems.com/">Programming Design Systems</a> book by Rune Madsen, on the foundations of code-based graphic design.</p>
+
+<h2 id="audio">Audio</h2>
+
+<p><a href="https://www.freeaudioresource.com/">Free Audio Resources</a>, game-oriented but generally useful</p>
+
+<p><a href="https://learningmusic.ableton.com/">Learning Music</a> interactive tutorial @ Ableton</p>
+
+<p><a href="https://kivanctatar.com/An-Introduction-to-Creative-Artificial-Intelligence-for-Music">An Introduction to Creative Artificial Intelligence for Music</a> by Kıvanç Tatar, a quick tour of the world of (musical) metacreation.</p>
+
+<h2 id="signals">Signals</h2>
+
+<p><a href="https://jackschaedler.github.io/circles-sines-signals/">Seeing circles, sines and signals</a> by Jack Schaedler, a visual introduction to digital signal processing.</p>
+
+<p><a href="https://learn.flucoma.org/">Learning resources</a> @ FluCoMa, geared towards sound anaylsis, decomposition, recombination.</p>
+
+<h2 id="student-work">Student work</h2>
+
+<p><a href="https://www.anu.edu.au/students/academic-skills/academic-integrity/plagiarism">Plagiarism</a> – know what it is, and how to avoid it. Whenever in doubt, ask your prof.</p>
+
+<p><a href="https://charlesmartin.com.au/blog/2020/08/09/student-project-repository">How to present a student software project</a> guide by Charles Martin. See also the resources on Git et al <a href="#useful-tools">below</a>.</p>
+
+<h1 id="useful-tools">Useful tools</h1>
+
+<p><a href="#editors">Editors</a> . <a href="#git-and-github">Git and Github</a> . <a href="#opensoundcontrol">OSC</a></p>
+
+<p>Flowcharts! Any interactive project needs at least one, even if it’s just in your head. Here’s one <a href="https://www.visual-paradigm.com/tutorials/flowchart-tutorial/">tutorial</a>. There are about <a href="https://creately.com/diagram-type/flowchart">a</a> <a href="https://www.visme.co/flowchart-maker/">million</a> <a href="https://online.visual-paradigm.com/diagrams/features/flowchart-tool/">online</a> <a href="https://app.diagrams.net/">flowcharting</a> <a href="https://www.lucidchart.com/pages/">tools</a> out there.</p>
+
+<h2 id="editors">Editors</h2>
+
+<p><a href="https://code.visualstudio.com/">VS Code</a> by ms. Quick &amp; powerful; my main editor these days.</p>
+
+<p><a href="https://www.sublimetext.com/">Sublime Text</a> - my previous go-to editor. Great swiss army knife for code and text.</p>
+
+<p><a href="https://atom.io/">Atom</a> by github.</p>
+
+<h2 id="git-and-github">Git and GitHub</h2>
+
+<ul>
+  <li><a href="https://docs.github.com/en/github/getting-started-with-github">Getting started with GitHub</a></li>
+  <li><a href="https://docs.github.com/en/github/using-git/ignoring-files">Git: Ignoring files</a></li>
+  <li><a href="https://guides.github.com/features/wikis/">Documenting your projects on GitHub</a> using wikis.</li>
+  <li><a href="https://docs.github.com/en/github/working-with-github-pages">Working with GitHub Pages</a> to publish your sites.</li>
+  <li><a href="https://training.github.com/downloads/github-git-cheat-sheet/">Git cheat sheet</a> (basic @ GitHub)</li>
+  <li><a href="https://ndpsoftware.com/git-cheatsheet.html">Git cheat sheet</a> (pro @ NDP)</li>
+  <li><a href="https://git-scm.com/doc">Git documentation</a></li>
+</ul>
+
+<h2 id="opensoundcontrol">OpenSoundControl</h2>
+
+<p><a href="http://opensoundcontrol.org/">Official OSC website</a></p>
+
+<p><a href="https://thewizardofosc.com/more-on-osc/">What is OSC?</a> @ TWO, a powerful OSC sequencer and control system.</p>
+
+<p>Useful Max packages: CNMAT, <a href="https://github.com/CNMAT/CNMAT-odot">odot</a>, <a href="https://github.com/motiondescriptors/modosc">modosc</a> (mocap).</p>
+
+<p>Sequencing apps: <a href="https://ossia.io/">ossia score</a>, <a href="https://www.iannix.org/en/">IanniX</a>, <a href="https://openstagecontrol.ammd.net/">Open Stage Control</a>, <a href="https://controlmedia.art/">TWO</a></p>
+
+<p>Apps for sending device sensor data: <a href="https://apps.apple.com/us/app/syntien/id1203153534">Syntien</a> (iOS), <a href="https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&amp;hl=en">oscHook</a> (Android), <a href="https://f-droid.org/en/packages/org.sensors2.osc/">Sensors2OSC</a> (Android).</p>
+
+<p>Other mobile apps: <a href="https://hexler.net/software/touchosc">TouchOSC</a>, <a href="https://play.google.com/store/apps/details?id=net.videosc">VideOSC</a>, <a href="https://play.google.com/store/apps/details?id=com.iglesiaintermedia.mobmuplat">MobMuPlat</a> (w/ Pd) etc.</p>
+
+<p>Other telematic tools: <a href="https://jamulus.io/wiki/Getting-Started">Jamulus</a> &amp; <a href="https://ccrma.stanford.edu/software/jacktrip/">JackTrip</a> (audio), <a href="https://en.wikipedia.org/wiki/RTP-MIDI">RTP-MIDI</a>, <a href="https://www.midi.org/17-the-mma/99-web-midi">Web MIDI</a>.</p>
+
+<h1 id="research">Research</h1>
+
+<p><a href="#conferences">Conferences</a> . <a href="#journals">Journals</a></p>
+
+<ul>
+  <li><a href="http://scholar.google.com">Google Scholar</a> to look up topics, authors, titles etc.</li>
+  <li><a href="https://www.semanticscholar.org/">Semantic Scholar</a>, (superior?) alternative to Google Scholar.</li>
+  <li><a href="http://blogs.ub-filosofie.ro/jalobeanu-graduate/?p=37">Bibliographic research: basic rules</a> by Dana Jalobeanu (RO).</li>
+  <li><a href="https://www.notion.so/Dissertation-Writing-039082ced5e848aba4a410a952d7f933">Dissertation writing resources</a> @ ITPMA.</li>
+</ul>
+
+<h2 id="conferences">Conferences</h2>
+
+<ul>
+  <li><a href="//www.nime.org/archives/">New Interfaces for Musical Expression</a></li>
+  <li><a href="//aimusiccreativity.org/">AI Music Creativity</a></li>
+  <li><a href="//zenodo.org/communities/smc">Sound and Music Computing</a></li>
+  <li><a href="//quod.lib.umich.edu/i/icmc/">International Computer Music Conference</a></li>
+  <li><a href="https://iclc.toplap.org/">International Conference for Live Coding</a></li>
+  <li><a href="http://www.smcnetwork.org/conferences.html">more</a> <a href="http://conferences.smcnetwork.org/">conferences</a></li>
+</ul>
+
+<h2 id="journals">Journals</h2>
+
+<ul>
+  <li><a href="//www.tandfonline.com/loi/nnmr20">Journal of New Music Research</a></li>
+  <li><a href="//www.mitpressjournals.org/cmj">Computer Music Journal</a></li>
+  <li><a href="https://www.cambridge.org/core/journals/organised-sound">Organised Sound</a></li>
+</ul>
+
+<h1 id="processing">Processing</h1>
+
+<ul>
+  <li><a href="//discourse.processing.org/">Processing forums</a></li>
+</ul>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Mozilla tutorials</a> for getting started with the web, HTML, CSS, JavaScript – useful for p5.js beginners and intermediates alike.</p>
+
+<p><a href="https://www.dwitter.net/">dwitter</a>: p5.js in 140 characters or less.</p>
+
+<p><a href="https://github.com/v3ga/Processing">Generative algorithms</a> collection by Julien Gachadoat.</p>
+
+<h1 id="maxpd">Max/Pd</h1>
+
+<p><a href="#max">Max</a> . <a href="#pd">Pure data</a> . <a href="#related-communities">Related communities</a></p>
+
+<p>Sound / synth design: <a href="http://msp.ucsd.edu/techniques/latest/book.pdf">Puckette book (Pd)</a> and <a href="https://github.com/georgeNikmus/The-Theory-and-Technique-of-Electronic-Music-Max-Patches">Max ports</a>; <a href="https://www.amazon.com/Designing-Sound-Press-Andy-Farnell/dp/0262014416">Farnell book (Pd)</a> and <a href="https://github.com/unriginal/Designing-Sound-Max-Patches">Max ports</a></p>
+
+<p>More music books: <a href="https://mitpress.mit.edu/9780262582780/sweet-anticipation/">Sweet Anticipation</a>, <a href="https://www.curtisroads.net/books">Curtis Roads</a>, <a href="http://www.sonicwriting.org/">Sonic Writing</a></p>
+
+<p><a href="http://www.ringbuffer.org/teaching/computer-music-basics/">Computer music classes</a> by Henrik von Coler, a great supplement to this site.</p>
+
+<h2 id="max">Max</h2>
+
+<p><a href="#learning">Learning</a> . <a href="#externals">Externals</a></p>
+
+<h3 id="learning">Learning</h3>
+
+<p><a href="http://www.darwingrosse.com/20Objects/">20 Objects</a> course for learning Max, one “bellwether” object at a time.</p>
+
+<p><a href="https://drive.google.com/file/d/0B97y8ubkbDHwVVZKaFFTMjMxb0E/view">Practical starting guide</a> to Max/MSP/Jitter.</p>
+
+<p><a href="https://dobrian.github.io/cmp/index.html">Computer Music Programming</a> website and <a href="https://music.arts.uci.edu/dobrian/w18/music215A/examples/">course</a> by Christopher Dobrian, who is responsible for some of the very first Max tutorials.</p>
+
+<p><a href="https://github.com/imi/Max-for-the-Visual-Arts">Max for the Visual Arts</a> package (also available through the Package Manager)</p>
+
+<p><a href="https://www.youtube.com/playlist?list=PLD45EDA6F67827497">Delicious Max Tutorials</a>, my favourite Youtube playlist of Max tutorials. Not for absolute beginners; check it out once you’ve absorbed the basics.</p>
+
+<p><a href="https://www.youtube.com/channel/UCvDUaH2fbXP_Yc5Lc9UXfqA">Amazing Max Stuff</a> Youtube channel: good Jitter resource.</p>
+
+<p><a href="https://cycling74.com/articles/node-for-max-intro-%E2%80%93-let%E2%80%99s-get-started">Node for Max</a> intro @ Cycling ‘74.</p>
+
+<p><a href="https://cycling74.com/tutorials/gen~-for-beginners-part-1-a-place-to-start">gen~ for Beginners</a>: a place to start @ Cycling ‘74.</p>
+
+<p>MOOCs: <a href="https://www.kadenze.com/courses/programming-max-structuring-interactive-software-for-digital-arts-i">Programming Max</a>, <a href="https://www.kadenze.com/programs/generative-art-and-computational-creativity">Generative Art and Computational Creativity</a></p>
+
+<h3 id="externals">Externals</h3>
+
+<p>interactive sequencing: Max for Live, <a href="#opensoundcontrol">OSC sequencer apps</a></p>
+
+<p>interactive synthesis: <a href="https://forum.ircam.fr/projects/detail/mubu/">MuBu</a></p>
+
+<p>reactive programming: <a href="https://forum.ircam.fr/projects/detail/antescofo/">Antescofo</a></p>
+
+<p>spatialisation: <a href="https://forum.ircam.fr/projects/detail/spat/">Spat</a>, <a href="https://ambisonics.ch/">ICST Ambisonics</a></p>
+
+<p>See also: machine learning Max <a href="#tools">tools</a></p>
+
+<h2 id="pd">Pd</h2>
+
+<p><a href="https://www.youtube.com/playlist?list=PL12DC9A161D8DC5DC">Tutorial playlist</a> by Dr. Rafael Hernandez aka cheetomoskeeto.</p>
+
+<p><a href="http://msp.ucsd.edu/syllabi/index.htm">Classes</a> (w/ video) taught by MSP at UCSD.</p>
+
+<p><a href="http://pd-tutorial.com/english/">Programming Electronic Music in Pd</a> tutorial book.</p>
+
+<p><a href="https://archive.flossmanuals.net/pure-data/">Unofficial Manual</a> @ FLOSS.</p>
+
+<p><a href="https://github.com/porres/Live-Electronics-Tutorial">Live Electronics Tutorial</a> using Pd and the ELSE library by Alexandre Porres.</p>
+
+<p><a href="http://www.martin-brinkmann.de/pd-patches.html">Music patches</a> by Martin Brinkmann.</p>
+
+<h2 id="related-communities">Related communities</h2>
+
+<ul>
+  <li><a href="https://www.facebook.com/groups/maxmspjitter/">Max FB group</a></li>
+  <li><a href="https://forum.pdpatchrepo.info/">Pure Data</a> forums</li>
+  <li><a href="https://llllllll.co/">lines</a> - focus on DYI/boutique instruments</li>
+  <li><a href="https://forum.nime.org/">NIME</a> - academic/research</li>
+  <li>https://toplap.org / <a href="https://forum.toplap.org/">forum</a> / <a href="https://club.tidalcycles.org/">TidalCycles forum</a></li>
+</ul>
+
+<p><a href="https://discourse.flucoma.org/">FluCoMa</a> - the Fluid Corpus Manipulation toolbox for Max, Pd and SuperCollider</p>
+
+<ul>
+  <li><a href="http://artmusictech.libsyn.com/">Art+Music+Technology</a> podcast</li>
+</ul>
+
+<h1 id="machine-learning">Machine learning</h1>
+
+<p><a href="#courses">Courses</a> . <a href="#tools">Tools</a> . <a href="#datasets">Datasets</a></p>
+
+<h2 id="courses">Courses</h2>
+
+<p><a href="https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/">R. Fiebrink’s MOOC</a> / <a href="https://mimicproject.com/guides/kadenze">mimic</a> for interactive machine learning in music and art.</p>
+
+<ul>
+  <li><a href="https://github.com/acids-ircam/creative_ml">Creative Machine Learning</a> (Philippe Esling)</li>
+  <li><a href="https://github.com/drscotthawley/DLAIE">Deep Learning &amp; AI Ethics</a> (Scott Hawley)</li>
+  <li><a href="http://www.jordipons.me/apps/teaching-materials/">Deep neural networks for music</a> (Jordi Pons)</li>
+</ul>
+
+<p><a href="https://ml4a.net/">Gene Kogan</a> <a href="https://www.youtube.com/playlist?list=PLaN6Cxwpu9UKR2mPc39bZEJoyAoCwRw_q">+</a>, <a href="https://github.com/yining1023/machine-learning-for-the-web">Yining Shi</a>, <a href="https://www.youtube.com/channel/UCaZuPdmZ380SFUMKHVsv_AA">Derrick Schultz and Lia Coleman</a>, <a href="https://www.youtube.com/c/TheCodingTrain">Daniel Shiffman</a> for ML / deep learning in digital arts.</p>
+
+<p><a href="https://huggingface.co/course">HuggingFace</a> for text generation / NLP with deep learning.</p>
+
+<p><a href="https://ali-design.github.io/deepcreativity/">MIT 6.S192: Deep Learning for Art, Aesthetics, and Creativity</a> intro / general course.</p>
+
+<p><a href="https://course.fast.ai/">fast.ai</a> / <a href="https://github.com/fastai/fastbook">fastbook</a> (Jeremy Howard) for deep learning. Related: the <a href="https://d2l.ai/">Dive into Deep Learning</a> book.</p>
+
+<p><a href="https://www.coursera.org/learn/machine-learning">A. Ng’s machine learning MOOC</a> where it all (?) started.</p>
+
+<h2 id="tools">Tools</h2>
+
+<p><a href="http://www.wekinator.org/">Wekinator</a> for interactive ML (see also <a href="http://soundcontrolsoftware.com/">Sound Control</a> and <a href="https://interactml.com/">InteractML</a>, also by Rebecca Fiebrink et al)</p>
+
+<p><a href="https://www.flucoma.org/">FluCoMa</a> for supervised and unsupervised learning in Max, Pd and SuperCollider. See also <a href="https://github.com/flucoma/flucoma-for-pedagogues/blob/main/flucoma-for-pedagogues.pdf">a guide</a> on how to learn/teach FluCoMa.</p>
+
+<p><a href="https://www.benjamindaysmith.com/#/ml-machine-learning-toolkit-in-max/">ml.star</a> for basic interactive ML in <a href="#max">Max</a>.</p>
+
+<p><a href="https://github.com/ktatar/mlaudiosalad">ML Audio Salad</a> for unsupervised learning in Max.</p>
+
+<p><a href="https://forum.ircam.fr/projects/detail/mubu/">MuBu for Max</a> also does interactive ML among other things.</p>
+
+<p><a href="https://docs.fast.ai/">fastai</a> / <a href="https://pytorch.org/">PyTorch</a> for coding your own deep learning models.</p>
+
+<p><a href="https://ml5js.org/">ml5</a> / <a href="https://teachablemachine.withgoogle.com/">Tensorflow.js</a> for working with deep learning online.</p>
+
+<p><a href="https://runwayml.com/">Runway</a> offers a code-less (interactive) deep learning experience.</p>
+
+<p><a href="https://github.com/dvschultz/ml-art-colabs">Google Colab</a> and an alternative cloud GPU solution, <a href="https://gradient.run/">Paperspace Gradient</a>.</p>
+
+<h2 id="datasets">Datasets</h2>
+
+<ul>
+  <li><a href="https://www.flickr.com/photos/internetarchivebookimages">Internet Archive Book Images</a> @ flickr.</li>
+</ul>
+
+<h1 id="misc">Misc</h1>
+
+<p><a href="https://derivative.ca/UserGuide/Learning_TouchDesigner">TouchDesigner</a> learning resources and <a href="https://docs.derivative.ca/Operator">documentation</a>. More links for TD+python [<a href="slides/01-12-practical-python#10">here</a>].</p>
+
+<p><a href="https://hap.video/using-hap.html">HAP</a> is a video format optimised for real-time playback. It’s super <a href="https://youtu.be/zuB3hyBMrDg">easy to convert your videos to HAP</a>, highly recommended.</p>
+
+<p>Live coding environments: <a href="https://supercollider.github.io/">Supercollider</a>, <a href="https://sonic-pi.net/">Sonic Pi</a>, <a href="https://tidalcycles.org/">TidalCycles</a>, <a href="https://hydra.ojack.xyz/">Hydra</a> … and <a href="https://livecodingbook.toplap.org/">the book</a>.</p>
+
+<p><a href="https://constraint.systems/">Constraint Systems</a> by Grant Custer: “alternative interfaces for creating and editing images and text”.</p>
+
+<p><a href="https://vvvv.org/">vvvv</a>, a(nother) visual, node-based environment. Mostly used <a href="https://vvvv.org/propaganda">for visuals</a>.</p>
+
+<p><a href="https://tixy.land/">tixy.land</a> by <a href="https://twitter.com/aemkei/status/1323399877611708416">Martin Kleppe</a>: when all you need is (t)ime, (i)teration, and the (x,y) plane.</p>
+
+<p><a href="https://build.mmm.page/">mmm</a>: visual drag&amp;drop webpage maker.</p>
+
+<p><a href="https://github.com/terkelg/awesome-creative-coding">Awesome Creative Coding</a>: more creative coding resources “primarily for beginners/intermediates”.</p>
+
+<p>Newsletters etc: Lynn Cherny’s <a href="https://arnicas.substack.com">Things I Think Are Awesome</a>, Niall Moody’s <a href="https://www.niallmoody.com/work/here-and-then-gone/">here and then gone</a>, Guy Parsons’ <a href="https://promptresponse.substack.com/">prompt/response</a>.</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

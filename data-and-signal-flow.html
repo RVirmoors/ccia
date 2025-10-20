@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/data-and-signal-flow.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="data-and-signal-flow">Data and signal flow<!-- omit in toc --></h1>
+
+<p>We introduce the fundamentals of Max/Pd and apply them in a basic example.</p>
+
+<p><a href="#introduction">Introduction</a> . <a href="#anatomy-of-objects">Anatomy of objects</a> . <a href="#types">Types</a> . <a href="#exercise-audio-pixel-visualiser">Exercise: audio-pixel visualiser</a></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>It’s time to take our first steps in Max (and Pure Data<label for="maxpd" class="margin-toggle sidenote-number"></label><input type="checkbox" id="maxpd" class="margin-toggle" /><span class="sidenote">This material, for now, is mainly built around Max. I wholly encourage you to also give Pd a try. Most Max patches are easy to translate to Pd, and if, like me, you are getting into Pd coming from Max, this plugin that implements <a href="https://github.com/RVirmoors/maxhotkey-pd">Max hotkeys in Pd</a> should come in handy. </span>). Remember to check out the [<a href="resources.md" title="Getting started">resources</a>] page for other points of entry into <a href="resources#max">Max</a> and <a href="resources#pd">Pd</a>.</p>
+
+<p>I’ll be mentioning hotkeys as we go, so we can get around faster. See <a href="slides/02-05-types-flow#3">this slide</a> for the most common ones, and you can look up cheatsheets online.</p>
+
+<h2 id="anatomy-of-objects">Anatomy of objects</h2>
+
+<p>Max/Pd works by generating and transmitting data from one <em>object</em> to another. An object has <em>inlets</em> (on top) and <em>outlets</em> (on the bottom), and stores and processes data.<label for="obj" class="margin-toggle sidenote-number"></label><input type="checkbox" id="obj" class="margin-toggle" /><span class="sidenote">Max/Pd objects are written <a href="https://github.com/Cycling74/max-sdk">in</a> <a href="https://github.com/pure-data/externals-howto">C</a> (or <a href="https://github.com/Cycling74/min-devkit">C++</a>), so you can think of them as containers for small programs performing algorithms on data, which is what they are. </span> The data flows downstream via <em>patch cords</em> connecting objects.</p>
+
+<p>As an example, press <strong>N</strong> and type in <code class="language-plaintext highlighter-rouge">+</code>, then hit Enter. The [+ ] object adds two numbers together:</p>
+
+<figure><img src="ccia/../attachments/max-plus-object.png" /><figcaption class="maincolumn-figure">A [+ ] object, with inlets on top (left: <span style="color:lightcoral">hot</span>, right: <span style="color:cornflowerblue">cold</span>) and an outlet on the bottom.</figcaption></figure>
+
+<p><label for="lock" class="margin-toggle">⊕</label><input type="checkbox" id="lock" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/max-lock.png" /><br />The lock button is found on the bottom-left of the patcher window. Click it to toggle in and out of <em>edit mode</em>.</span>
+Connect number boxes (key <strong>I</strong>) to the inlets and outlets and now you can see it in action. But first, you need to <em>lock</em> the program, or <em>patch</em>. Hit the lock icon, or <strong>Ctrl+click</strong> anywhere on the canvas.</p>
+
+<p><span class="newthought">Every object has a help patch</span> , which you access (with the patch unlocked) by <strong>Alt+click</strong>ing on the object. Whenever you’re in doubt, or looking for inspiration or related info, check out these help patches. Understanding them is the best way to learn Max. And just like any patch, you can unlock them and copy-paste anything you find useful into your project.</p>
+
+<p>There are two types of inlets: <span style="color:lightcoral">hot</span> and <span style="color:cornflowerblue">cold</span>. Cold inlets <span style="color:cornflowerblue">set the internal state</span> of an object, while hot inlets both set the state, <strong>and</strong> <span style="color:lightcoral">trigger an operation</span> (usually resulting in an output down the object’s outlet).</p>
+
+<p>This distinction between hot and cold inlets, and their layout on an object (most often the hot inlet comes first, with cold inlet(s) to its right) dictates Max/Pd’s dataflow architecture, including matters like <a href="https://docs.cycling74.com/max8/tutorials/basicchapter05">right-to-left ordering</a>, and <a href="https://docs.cycling74.com/max8/refpages/trigger">trigger</a>ing data<label for="trigger" class="margin-toggle sidenote-number"></label><input type="checkbox" id="trigger" class="margin-toggle" /><span class="sidenote">Understanding how and when to use the [trigger]/[t] object is one of the <em>Aha!</em> moments you will encounter while learning Max/Pd. Our exercise at the end might be a good first step.  </span> to be stored and executed in sequence, sometimes with other operations and/or time passing inbetween.</p>
+
+<p>Let’s focus for a minute on the [message] object (key <strong>M</strong>).</p>
+
+<figure class="fullwidth"><img src="ccia/../attachments/max-pd-messages.png" /><figcaption>Different behaviours in Max/Pd messages.</figcaption></figure>
+
+<p><br />
+Notice how a <code class="language-plaintext highlighter-rouge">set</code> message to the left input (or any input in the Max object’s right, cold, inlet) sets the content, and anything else into the left, hot, inlet, causes downward triggering<label for="bang" class="margin-toggle sidenote-number"></label><input type="checkbox" id="bang" class="margin-toggle" /><span class="sidenote">Generally the easiest way to trigger something is to [bang] it (key <strong>B</strong>). </span> of the current content.</p>
+
+<h2 id="types">Types</h2>
+
+<p>So far we have dealt with objects functioning at the <em>control rate</em>, or about 1000 operations per second. MSP, or signal-based, objects run at <em>audio rate</em>, which is the sampling rate of your DAC.<label for="audio" class="margin-toggle sidenote-number"></label><input type="checkbox" id="audio" class="margin-toggle" /><span class="sidenote">Set your sample rate, and other audio settings, from Options &gt; Audio Status. </span> This allows us to generate and process sound in real time.</p>
+
+<p><label for="lock" class="margin-toggle">⊕</label><input type="checkbox" id="lock" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/msp-cycle.png" /><br />A sinewave generator being controlled, visualised and sent to the soundcard’s output.</span>
+In the right-hand patch I note in comments (key <strong>C</strong>) the name of the graphical objects used. See their help files to find out more.</p>
+
+<p>The float number (key <strong>F</strong>) controls the frequency of the <a href="https://en.wikipedia.org/wiki/Sine_wave">sinewave</a> generator. Everything downstream of the [cycle~] object is a signal: as long as the audio engine is on (which can be toggled by clicking on the [ezdac~]… make sure your speaker volume is at a reasonable setting first), connected MSP objects will process signal values, which flow continuously through the striped-green patch cords. With the patch locked, drag on the float number box to change the frequency. Notice that as you drag above 20-40 Hz, the sine wave becomes audible.</p>
+
+<p><span class="newthought">A useful metaphor</span>  for the distinction between Max / control rate, and MSP / audio rate, is the following:</p>
+
+<p><label for="max-msp" class="margin-toggle"> ⊕</label><input type="checkbox" id="max-msp" class="margin-toggle" /><span class="marginnote">Left: Max atoms. Right: MSP signals. </span>
+<img style="width:44%" src="attachments/max-tube.png" />
+<img style="width:55%" src="attachments/msp-pipe.png" /></p>
+
+<p>Max data is sent, like “messages through a tube”. MSP data flows, like “water down a pipe”. Max <em>atoms</em> are triggered individually. MSP <em>signals</em> flow continuously.</p>
+
+<p>Finally we have the Jitter <em>matrix</em> domain. Jitter objects share aspects of both Max and MSP: they are usually synced to a trigger source (see [<a href="https://docs.cycling74.com/max8/refpages/qmetro">qmetro</a>]), which then allows for continuous sending of frames. The [<a href="https://docs.cycling74.com/max8/refpages/jit.matrix">jit.matrix</a>] help patch is a good introduction.<label for="lists" class="margin-toggle sidenote-number"></label><input type="checkbox" id="lists" class="margin-toggle" /><span class="sidenote">To understand this patch, you first need to familiarise yourself with <a href="https://docs.cycling74.com/max8/tutorials/basicchapter03">lists</a>, and assembling them via the <a href="https://docs.cycling74.com/max8/refpages/pac">[pack]/[pak]</a> objects. </span></p>
+
+<p>See below a table of the main data types in Max, their canonic containers and corresponding hotkeys, and basic objects associated with them.</p>
+
+<p><label for="tab1" class="margin-toggle"> ⊕</label><input type="checkbox" id="tab1" class="margin-toggle" /><span class="marginnote">Table 1: Max data types. Note: Pd has no int type; all its numbers are floats. Pd’s equivalent of Jitter is called <a href="https://puredata.info/downloads/gem/">Gem</a>. </span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Container</th>
+      <th>Hotkey</th>
+      <th style="text-align: left">Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bang</td>
+      <td>[bang]</td>
+      <td><strong>B</strong></td>
+      <td style="text-align: left">[delay] [trigger]</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>[number]</td>
+      <td><strong>I</strong></td>
+      <td style="text-align: left">[+ ] [- ] [* ] [/ ] [&gt; ] [pipe] [sel] [route] …</td>
+    </tr>
+    <tr>
+      <td>float</td>
+      <td>[flonum]</td>
+      <td><strong>F</strong></td>
+      <td style="text-align: left">[scale] [slide] …</td>
+    </tr>
+    <tr>
+      <td>symbol</td>
+      <td>[message]</td>
+      <td><strong>M</strong></td>
+      <td style="text-align: left">[coll] <code class="language-plaintext highlighter-rouge">set</code></td>
+    </tr>
+    <tr>
+      <td>list</td>
+      <td>[message]</td>
+      <td><strong>M</strong></td>
+      <td style="text-align: left">[pack]/[pak] [unpack] [zl]</td>
+    </tr>
+    <tr>
+      <td>signal</td>
+      <td>[number~]</td>
+      <td> </td>
+      <td style="text-align: left">[cycle~] [+~ ] [*~ ] [abs~] [avg~] …</td>
+    </tr>
+    <tr>
+      <td>matrix</td>
+      <td>[jit.matrix]</td>
+      <td><strong>J</strong></td>
+      <td style="text-align: left">[jit.op] [jit.fill] …</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Another useful resource is this <a href="https://www.kadenze.com/courses/programming-max-structuring-interactive-software-for-digital-arts-i/resources/1777">type conversion table</a> from the Max MOOC @ Kadenze–a great starting point for navigating between different types.</p>
+
+<p>Which leads us to this…</p>
+
+<h2 id="exercise-audio-pixel-visualiser">Exercise: audio-pixel visualiser</h2>
+
+<p><label for="jitpix" class="margin-toggle">⊕</label><input type="checkbox" id="jitpix" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/jitter-pixel3.gif" /><br />Pixel visualisation of a sine wave. The left pixel brightness is mapped to the <a href="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/waveforms-tim1.gif">positive half-cycle</a>, and the right pixel to the negative half-cycle.</span>
+We’ve already seen how the [scope~] object allows us to see the amplitude of a sinewave (or any signal) over time. Another, perhaps more dynamic way to display the same information, would be to map its instantaneous value to the brightness of a pixel: see the right-hand animation for an example.</p>
+
+<p>You can recreate this effect using the objects below:<label for="rule" class="margin-toggle sidenote-number"></label><input type="checkbox" id="rule" class="margin-toggle" /><span class="sidenote">A general rule for working in Max/Pd: there is always more than one way to get something done. You might try replacing the [number~] with [snapshot~]. </span></p>
+
+<p><img src="attachments/msp-jit-objects.png" alt="" /></p>
+
+<p>Tip: try getting the first pixel (mapping values 0. to 1.) to work first, and then work on the negative side. Make sure you understand what each object does, and pay attention to which inlet you connect. To any outlet, you can connect a [print] or a [message] (use the right inlet) to monitor messages being sent, or a [scope~] to monitor the signal.</p>
+
+<p>General tip: when an object doesn’t work as intended, a good idea is to reset it by editing it, adding a space and hitting <strong>Enter</strong>. This reinitialises the object, setting all its internal variables to the default:</p>
+
+<figure><img src="ccia/../attachments/max-reset-obj.gif" /><figcaption class="maincolumn-figure">Resetting the [pak] object to get rid of unwanted outputs.</figcaption></figure>
+
+<p>This trick sometimes helps with MSP objects as well, on the rare occasion when they get “stuck” and won’t process sound for some reason.</p>
+
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

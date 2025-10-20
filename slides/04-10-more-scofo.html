@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>More Antescofo</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Interactive Music Systems]
+<br/><br/>
+.subtitle[More Antescofo]
+<br/><br/><br/><br/><br/><br/>
+.date[Nov 2022] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+      
+1. [Compound actions](#compound-actions)
+2. [Tracking non-audio events](#tracking-non-audio-events)
+3. [Example: *Piano Phase*](#example-piano-phase)
+4. [Time in Antescofo](#time-in-antescofo)
+5. [Assignment](#assignment)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+
+<br/><br/>
+
+[<img src="../attachments/scofo-time.png" width = "100%">](https://www.hesge.ch/hem/sites/default/files/contributions/presentation_jean-louis_giavitto_colloque_gesture-capture-notation_2019.pdf)
+        
+---
+name: compound-actions
+# Compound actions
+
+[Action groups](https://support.ircam.fr/docs/Antescofo/manuals/Reference/compound_group/): `GROUP`
+
+.left-column[
+```antescofo
+NOTE C3 1
+Group G1 {
+  ...
+}
+Group G2 {  …  }
+0.5 Group G3 {  …  }
+0.5 Group G4 {  …  }
+NOTE C4 1
+```
+]
+
+--
+
+.right-column[
+<img width="100%" src="../attachments/scofo-group.png">
+]
+
+---
+## Compound actions
+
+[Looped action groups](https://support.ircam.fr/docs/Antescofo/manuals/Reference/compound_loop/): `LOOP`
+
+.left-column[
+```antescofo
+NOTE C3 2/3
+$period := 1
+Loop L $period { 
+   $period := 0.5
+   … L … 
+}
+NOTE C4 1
+```
+]
+
+--
+
+<img width="100%" src="../attachments/scofo-loop.png">
+
+---
+name: tracking-non-audio-events
+# Tracking non-audio events
+
+non-audio events: `EVENT`
+
+--
+
+defining external variables: `setvar`
+
+[observing the variable](https://support.ircam.fr/docs/Antescofo/manuals/Reference/compound_whenever/): `whenever`
+
+
+---
+name: example-piano-phase
+class: center
+# Example: *Piano Phase*
+
+<img width="50%" src="../attachments/piano-phase-title.png">
+<iframe width="95%" height="250" src="https://www.youtube.com/embed/57TuvksMR70" title="Steve Reich - Piano Phase - Visualization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`*`
+
+- `*` missing the "acceleration" segments. See also [other performances](https://www.youtube.com/results?search_query=reich+piano+phase).
+
+---
+## The rules of *Piano Phase*
+
+<img width="100%" src="../attachments/piano-phase-notes.png">
+
+for `n_p = 12...18` periods:
+- play simultaneously
+  
+for `n_d = 4...16` periods: 
+- accelerate phase (displace) one of the pianos by one 16th note
+  
+resync
+
+all the above x12
+
+---
+## Implementing *Piano Phase*
+
+1. autonomous
+2. tempo-dynamic
+3. live accompaniment (warped pre-recording)
+4. live accompaniment (warped live recording)
+
+<img width="50%" src="../attachments/scofo-piano-phase.png">
+
+---
+
+name: time-in-antescofo  
+class: left
+#  Time in Antescofo
+
+[<img width="100%" src="../attachments/scofo-time2.png">](https://support.ircam.fr/docs/Antescofo/manuals/Reference/5-synchro/)
+
+---
+## Concurrency
+
+every action = its own (implicit) thread
+
+actions run in parallel, each with its *start time* and *duration*
+
+---
+## Synchronisation strategies
+
+`@loose` - uses the detected tempo [default]
+
+`@tight` - uses event information
+
+`@target` - in-between: dynamically use an anticipated event
+
+`@tempo` - uses a user-defined tempo value
+
+`@sync` - tracks a user-defined (`@tempovar`) tempo variable
+
+[Reference: sync strategies](http://support.ircam.fr/docs/Antescofo/manuals/Reference/time_synchro/)  
+[Antescofo model of time](https://hal.archives-ouvertes.fr/hal-01638115/document) paper
+
+---
+## Synchronisation strategies
+<img width="100%" src="../attachments/scofo-sync.png">
+
+---
+## Sync in *Piano Phase*
+
+v3 - `@tempo`
+
+v4 - `@target`
+
+v4bis - `@target + @sync & @tempovar`
+
+---
+
+name: assignment       
+class: left
+#  Assignment
+
+Exercises **2** and **4** of Piano Phase
+
+OR
+
+Create a [Sound Portrait](http://www.soundportraits.info/)
+- mp3: 10-20 minutes podcast w/ interviews, clips, your own voice?
+- doc: short bio text
+- youtube link(s)
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
