@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Unsupervised learning]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2024] 
+.date[Oct 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -85,10 +85,9 @@ exercise: write down the processes being depicted
 
 # Autoencoders
 
-<iframe width="100%" height="400" src="https://player.vimeo.com/video/440034938?h=96c0e82ffa&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
-- (start @ 9.38)
+[<img style="width:100%" src="../attachments/autoencode-arch.png">](https://www.grammarly.com/blog/ai/what-is-autoencoder/)
 
-[Autoencoders chapter](https://www.deeplearningbook.org/contents/autoencoders.html) in the Deep Learning book
+- [Autoencoders chapter](https://www.deeplearningbook.org/contents/autoencoders.html) in the Deep Learning book
 
 ---
 
@@ -122,8 +121,8 @@ name: links---flucoma
 
 [teaching / learning guide](https://github.com/flucoma/flucoma-for-pedagogues/blob/main/flucoma-for-pedagogues.pdf) 
 
-[SP-Tools](https://rodrigoconstanzo.com/2022/07/sp-tools-machine-learning-tools-for-drums-and-percussion-alpha/) performance system by R Constanzo
-- [GitHub repo](https://github.com/rconstanzo/SP-tools)
+[Data Knot](https://rodrigoconstanzo.com/2025/10/data-knot-machine-learning-tools-for-low-latency-real-time-performance/) performance system by R Constanzo (previously SP-tools)
+- [GitHub repo](https://github.com/rconstanzo/data-knot)
 
 ---
 name: assignment
