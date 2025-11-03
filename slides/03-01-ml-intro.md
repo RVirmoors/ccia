@@ -180,7 +180,7 @@ chatgpt inference: 260MWh / day or 9Wh / query
 - "between 2010 and 2018, data center energy usage has been fairly stable, accounting for around 1 to 2 percent of global consumption. ... things might be different for AI precisely because of the trend for companies to simply throw bigger models and more data at any task." [source](https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption)
 
 ---
-## What's does ethical AI look like?
+## What does ethical AI look like?
 
 is it even possible?
 
@@ -211,6 +211,10 @@ examples?
 --
 
 - real-time / interactive inference (e.g. pose detection)
+
+--
+
+- [active divergence](https://arxiv.org/abs/2107.05599)
 
 --
 
