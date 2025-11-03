@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/osc-in-unity.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="osc-in-unity">OSC in Unity<!-- omit in toc --></h1>
+
+<p>We control the spotlight on a character and its head movements using sensors in our phone.</p>
+
+<p><a href="#getting-up-and-running">Getting up and running</a> . <a href="#light-sensor-light-intensity">Light sensor, light intensity</a> . <a href="#animation-rigging">Animation rigging</a> . <a href="#phone-orientation-rotates-the-head">Phone orientation rotates the head</a></p>
+
+<h2 id="getting-up-and-running">Getting up and running</h2>
+
+<p>Modern phones are a rich source of control signals, ripe for prototyping all sorts of interactions.
+Last semester we covered the basics of [<a href="osc-and-hci.md" title="OSC and HCI">OSC and HCI</a>] with Processing, and for a refresh you can always check out the <a href="resources#opensoundcontrol">resources page</a>. Make sure you have an app on your phone that can access its sensors and send OSC messages.</p>
+
+<p><span class="newthought">You have several choices</span>  for OSC libraries in Unity. Today we’ll use <a href="https://github.com/stella3d/OscCore">OscCore</a>, a quick and modern implementation. Head to its <a href="https://github.com/stella3d/OscCore/releases">releases page</a> and grab the latest <code class="language-plaintext highlighter-rouge">.unitypackage</code> version.</p>
+
+<p>Next, download <a href="https://github.com/RVirmoors/Unity/blob/main/_packages/osc-unity-start.unitypackage">this package</a> containing the project we’ll be building upon. Start a new Unity 3D project and import both this package, and OscCore.</p>
+
+<figure class="fullwidth"><img src="ccia/../attachments/unity-plane-spot-eric.png" /><figcaption>Unity project, including a spotlight and rigged character.</figcaption></figure>
+
+<p>Next, open the scene in <code class="language-plaintext highlighter-rouge">Assets &gt; OscCore &gt; Runtime &gt; Scenes &gt; Debug &gt; Runtime Receiver Debug</code>. 
+I’ve got my phone connected and sending OSC via the <a href="https://play.google.com/store/apps/details?id=com.hollyhook.oscHook&amp;hl=en_US&amp;gl=US">OscHook</a> app,<label for="sensors" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sensors" class="margin-toggle" /><span class="sidenote">with the <strong>light</strong> and <strong>accelerometer</strong> streams activated. </span> and running that scene results in:</p>
+
+<figure><img src="ccia/../attachments/unity-osc-receive.png" /><figcaption class="maincolumn-figure">Stream of received OSC messages from OscHook. We see a list of addresses, followed by the formats of the values (in our case, <code>f</code> = float), and the values themselves.</figcaption></figure>
+
+<p>Now, there’s a high probability that Unity won’t make it this easy for you. <a href="https://answers.unity.com/questions/1458348/c-udpclient-not-receiving-packets-over-external-ip.html">It</a> <a href="https://answers.unity.com/questions/1514109/udp-messages-can-only-be-received-via-local-ip-but.html">appears</a> <a href="https://stackoverflow.com/questions/50560244/sending-udp-messages-works-receiving-not-c-sharp-on-unity3d">that</a> the Unity Editor will only receive <em>localhost</em> UDP packets<label for="local" class="margin-toggle sidenote-number"></label><input type="checkbox" id="local" class="margin-toggle" /><span class="sidenote">i.e. from different apps on the same machine. </span>, and not those coming from other IP’s.</p>
+
+<p>There are two fixes you can try.<label for="allow" class="margin-toggle sidenote-number"></label><input type="checkbox" id="allow" class="margin-toggle" /><span class="sidenote">Nope, <em>allowing</em> Unity through the firewall isn’t enough. At least for me… </span></p>
+
+<p>One is, if you’re a Windows user, to disable your firewall. This should instantly turn on the stream.</p>
+
+<p>If this fails, or if you don’t want to mess with your firewall (you probably shouldn’t), there’s a workaround: run <a href="https://github.com/RVirmoors/Unity/blob/main/receiveOSC/receiveOSC/receiveOSC.pde">this P5 sketch</a> (or a similar script) to simply receive packets on port 8999 and forward them to port 9000. Now Unity will see the messages, as they’re coming from the same machine.</p>
+
+<figure><img src="ccia/../attachments/hook-p5-unity.png" /><figcaption class="maincolumn-figure">Workaround to get external UDP / OSC messages into Unity.</figcaption></figure>
+
+<p>With this mess out of the way, let’s start doing things!</p>
+
+<h2 id="light-sensor-light-intensity">Light sensor, light intensity</h2>
+
+<p><label for="eric" class="margin-toggle">⊕</label><input type="checkbox" id="eric" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/unity-eric.png" /><br />Meet Eric, our virtual puppet.</span></p>
+
+<p>Go back to our main scene, which contains a spotlight on a character. I especially chose the blandest possible character model, so that any one you replace it with is bound to be an improvement. Just make sure that yours is also (1) animated and (2) <em>rigged</em>, which describes a skeleton along the model’s elements.</p>
+
+<p>The first thing to do is to make the light’s intensity dynamic, by tying it to our phone’s light sensor. OscCore lets us do this <a href="https://github.com/stella3d/OscCore#using-components">using components</a>. On the <code class="language-plaintext highlighter-rouge">Directional Light</code> object, add an <code class="language-plaintext highlighter-rouge">OSC Receiver</code> component to handle all incoming messages on port 9000.<label for="portno" class="margin-toggle sidenote-number"></label><input type="checkbox" id="portno" class="margin-toggle" /><span class="sidenote">or any number you choose to use, usually between 5000-13000. </span> Then add another component, choosing <code class="language-plaintext highlighter-rouge">OSC &gt; Input &gt; Float Input</code> and set the current object as the receiver, and the address to <code class="language-plaintext highlighter-rouge">/light</code>. Floats coming on this address can now control any parameters in any component on the present object. Finish configuring it as follows:</p>
+
+<figure><img src="ccia/../attachments/unity-osccore-float.png" /><figcaption class="maincolumn-figure">OSC messages coming in on port 9000 control the light intensity.</figcaption></figure>
+
+<p>If you run the project you should now see the light responding to you covering up the phone’s light sensor, or moving it around.<label for="error" class="margin-toggle sidenote-number"></label><input type="checkbox" id="error" class="margin-toggle" /><span class="sidenote">There is a compile error that can occur, claiming that only one socket can be open on a particular address. This means that the debug scene has left the socket open. You can try to go back and disable it, or use a different port number, or just restart Unity. </span> You might find, especially in the daytime, that the registered values are extremely high—you could scale them down using code, which means replacing the <code class="language-plaintext highlighter-rouge">Float Input</code> component with your own script. By the end of this lesson, you’ll be ready to give this a try. For now, let’s look at what Eric can do.</p>
+
+<h2 id="animation-rigging">Animation rigging</h2>
+
+<p>This is a fairly new feature in Unity, which allows us to control certain components in a rig (i.e. bones in a skeleton) while the rest of the body is performing a predetermined animation. <a href="https://youtu.be/Htl7ysv10Qs">This video</a> is a very good practical introduction, and you should probably watch it before you proceed.</p>
+
+<p>Let’s quickly go over the steps involved, most of which follow the same procedure as <a href="https://youtu.be/Htl7ysv10Qs">the video</a>.</p>
+
+<p>Activate Animation Rigging in the Package Manager.</p>
+
+<p>Select the character object and, from the main menu, do <code class="language-plaintext highlighter-rouge">Animation Rigging &gt; Bone Renderer Setup</code> and <code class="language-plaintext highlighter-rouge">Animation Rigging &gt; Rig Setup</code>.</p>
+
+<p>You might then renamed the newly created <code class="language-plaintext highlighter-rouge">Rig 1</code> object to something like <code class="language-plaintext highlighter-rouge">animRig</code>. Under it, create a child object and call it <code class="language-plaintext highlighter-rouge">headAim</code>. Add a component, <code class="language-plaintext highlighter-rouge">Animation Rigging &gt; Multi-Rotation Constraint</code>.</p>
+
+<p>There are many <a href="https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.0/manual/ConstraintComponents.html">kinds of constraints</a> available. We’ve chosen the one that best describes our use case: <em>rotating</em> the <code class="language-plaintext highlighter-rouge">head</code> object, which is found in Eric’s rig hierarchy (downstream from <code class="language-plaintext highlighter-rouge">root</code>). As the <em>source</em> of the constraint we will choose another newly-created child object under <code class="language-plaintext highlighter-rouge">animRig</code>, called <code class="language-plaintext highlighter-rouge">rotationOsc</code>:</p>
+
+<figure><img src="ccia/../attachments/unity-rotation-constraint.png" /><figcaption class="maincolumn-figure">Constraining the <code>head</code> to rotate following <code>rotationOsc</code>.</figcaption></figure>
+
+<div id="nlink"></div>
+<p>Add (this is optional) an editor gizmo for <code class="language-plaintext highlighter-rouge">rotationOsc</code>, and notice that when you run the project and rotate <code class="language-plaintext highlighter-rouge">rotationOsc</code> (either via the gizmo in the Scene view, or from the Inspector), Eric’s <code class="language-plaintext highlighter-rouge">head</code> rotates as well. Look for the Y and Z rotation values that produce a neutral position: in my case these are 90 and -90, respectively.<label for="neutral" class="margin-toggle sidenote-number"></label><input type="checkbox" id="neutral" class="margin-toggle" /><span class="sidenote">They depend on how you’ve positioned Eric and the <code class="language-plaintext highlighter-rouge">rotationOsc</code> cube relative to each other. This also has repercussions on the following section. </span></p>
+
+<p>Once this works as it should, you can add a <code class="language-plaintext highlighter-rouge">chestAim</code> object and constraint to make Eric move more of his body along with the head.</p>
+
+<h2 id="phone-orientation-rotates-the-head">Phone orientation rotates the head</h2>
+
+<p>First, let’s take a moment to realise how the <a href="https://www.fsps.muni.cz/emuni/data/reader/book-2/10.html">composition of forces</a> acts on the phone’s body. We have the gravitational pull acting straight down: this means that, if your phone is lying on a table, the acceleration \(\vec{g}\), of magnitude \(g = 9.8 m / s^2\), is acting solely on the <em>z</em> axis.</p>
+
+<p>As you start to tilt your phone, you’ll see \(\vec{g}\) being decomposed along the accelerometer’s other axes as well:</p>
+
+<figure><img src="ccia/../attachments/phone-anim.gif" /><figcaption class="maincolumn-figure">Composition of forces. If we ignore the force applied by our movement, gravity is the main force acting on the phone’s body. Tilt it around its <em>x</em> axis (width) and the gravitational acceleration will be registered on the phone’s <em>y</em> and <em>z</em> axes. Tilt it around the <em>y</em> axis (height), and you’ll see activity on the <em>x</em> and <em>z</em> axes.</figcaption></figure>
+
+<p>We can observe that, especially if we don’t make sudden moves, the 3 values in the accelerometer describe the phone’s orientation relative to the ground. This means we can use these parameters to set the orientation of our <code class="language-plaintext highlighter-rouge">rotationOSC</code> object.<label for="mag" class="margin-toggle sidenote-number"></label><input type="checkbox" id="mag" class="margin-toggle" /><span class="sidenote">In fact, we have access to just two Euler angles: <a href="https://en.wikipedia.org/wiki/Aircraft_principal_axes#/media/File:Yaw_Axis_Corrected.svg">pitch and roll</a> (Y and Z). The yaw (X), which would correspond to rotation around the Earth’s perpendicular, cannot be sensed by the accelerometer alone. For this a more complex device would be needed, such as a <a href="https://www.ti.com/lit/an/slaa518a/slaa518a.pdf">9-axis IMU with sensor fusion</a>. </span></p>
+
+<p><span class="newthought">First, let’s get the accelerations into Unity.</span>  We will need to process the accelerometer readings before applying them to <code class="language-plaintext highlighter-rouge">rotationOSC</code>’s <code class="language-plaintext highlighter-rouge">transform</code>. This means we shall read them <a href="https://github.com/stella3d/OscCore#using-code">using code</a>.</p>
+
+<p>Attach a new script to the <code class="language-plaintext highlighter-rouge">rotationOSC</code> object and name it something like <code class="language-plaintext highlighter-rouge">OscToRotation</code>. Start by embedding your new class in OscCore’s namespace:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">OscCore.Demo</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">OscToRotation</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+    <span class="p">{</span> 
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Inside our class, we need to access a <code class="language-plaintext highlighter-rouge">Receiver</code> and add methods to read the parameters.<label for="oschook" class="margin-toggle sidenote-number"></label><input type="checkbox" id="oschook" class="margin-toggle" /><span class="sidenote">The code below works for the addresses produced by OscHook. If your app sends, for instance, messages like <code class="language-plaintext highlighter-rouge">/accelerometer 0.01 0.01 0.98</code>, then you would use a single <code class="language-plaintext highlighter-rouge">Read()</code> method with <code class="language-plaintext highlighter-rouge">ReadFloatElement(0)</code>, <code class="language-plaintext highlighter-rouge">ReadFloatElement(1)</code> and <code class="language-plaintext highlighter-rouge">ReadFloatElement(2)</code>. </span></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">public</span> <span class="n">OscReceiver</span> <span class="n">Receiver</span><span class="p">;</span>
+        <span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">;</span>
+
+        <span class="k">void</span> <span class="nf">Awake</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">Receiver</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="nf">TryAddMethod</span><span class="p">(</span><span class="s">"/accelerometer/x"</span><span class="p">,</span> <span class="n">ReadX</span><span class="p">);</span>
+            <span class="n">Receiver</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="nf">TryAddMethod</span><span class="p">(</span><span class="s">"/accelerometer/y"</span><span class="p">,</span> <span class="n">ReadY</span><span class="p">);</span>
+            <span class="n">Receiver</span><span class="p">.</span><span class="n">Server</span><span class="p">.</span><span class="nf">TryAddMethod</span><span class="p">(</span><span class="s">"/accelerometer/z"</span><span class="p">,</span> <span class="n">ReadZ</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">void</span> <span class="nf">ReadX</span><span class="p">(</span><span class="n">OscMessageValues</span> <span class="n">values</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">x</span> <span class="p">=</span> <span class="n">values</span><span class="p">.</span><span class="nf">ReadFloatElement</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+        <span class="p">}</span>
+</code></pre></div></div>
+
+<p>I leave the implementation of <code class="language-plaintext highlighter-rouge">ReadY</code> and <code class="language-plaintext highlighter-rouge">ReadZ</code> to you. And don’t forget to populate the <code class="language-plaintext highlighter-rouge">Receiver</code> variable with the <code class="language-plaintext highlighter-rouge">Directional Light</code> object in the Unity Editor.</p>
+
+<p>Now would be a good time to check that you’re seeing the values as expected: add a <code class="language-plaintext highlighter-rouge">Debug.Log(x);</code> and see if you have a stream of floats between -1 and 1.<label for="scale" class="margin-toggle sidenote-number"></label><input type="checkbox" id="scale" class="margin-toggle" /><span class="sidenote">Some apps use a different range, like -10 to 10. In that case you would need to scale the numbers back down. </span></p>
+
+<p><span class="newthought">Finally, we can apply the mapping.</span>  Once we have the Euler angle values, we simply apply them to the <code class="language-plaintext highlighter-rouge">transform</code>:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="k">void</span> <span class="nf">Update</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kt">float</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">roll</span><span class="p">;</span>
+
+            <span class="n">transform</span><span class="p">.</span><span class="n">eulerAngles</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0f</span><span class="p">,</span> <span class="n">pitch</span><span class="p">,</span> <span class="n">roll</span><span class="p">);</span>
+        <span class="p">}</span>
+</code></pre></div></div>
+
+<p>This is the ideal problem to look up on stackoverflow. Not just in case our trigonometry’s rusty, but we can run across useful real-world tips like <a href="https://stackoverflow.com/a/30195572">this one</a>, for dealing with jitter-induced errors.</p>
+
+<p>My suggestion is to implement pitch and roll one at a time, otherwise it’ll all seem very chaotic. Keeping yaw and roll at their default values (I’ve got 0 and -90), you can set the pitch:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            <span class="n">pitch</span> <span class="p">=</span> <span class="p">-</span><span class="m">90</span> <span class="p">+</span> <span class="n">Mathf</span><span class="p">.</span><span class="nf">Atan2</span><span class="p">(-</span><span class="n">x</span><span class="p">,</span> <span class="n">Mathf</span><span class="p">.</span><span class="nf">Sqrt</span><span class="p">(</span><span class="n">y</span><span class="p">*</span><span class="n">y</span> <span class="p">+</span> <span class="n">z</span><span class="p">*</span><span class="n">z</span><span class="p">))</span> <span class="p">*</span> <span class="m">180</span><span class="p">/</span><span class="n">Mathf</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>I added the extra -90 by trial and error, by testing and seeing what looks good.<label for="extra" class="margin-toggle sidenote-number"></label><input type="checkbox" id="extra" class="margin-toggle" /><span class="sidenote">As we saw <a href="#nlink">before</a>, this value might be different for you, depending on how you set up your scene. A more robust solution might be to make these rotation values interdependent, rather than hardcoding them. </span> Once the pitch is under control, plug in the roll:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            <span class="kt">int</span> <span class="n">sign</span> <span class="p">=</span> <span class="p">(</span><span class="n">z</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">?</span> <span class="m">1</span> <span class="p">:</span> <span class="p">-</span><span class="m">1</span><span class="p">;</span>
+            <span class="kt">float</span> <span class="n">miu</span> <span class="p">=</span> <span class="m">0.001f</span><span class="p">;</span>
+            
+            <span class="n">pitch</span> <span class="p">=</span> <span class="p">-</span><span class="m">90</span> <span class="p">+</span> <span class="n">Mathf</span><span class="p">.</span><span class="nf">Atan2</span><span class="p">(-</span><span class="n">x</span><span class="p">,</span> <span class="n">Mathf</span><span class="p">.</span><span class="nf">Sqrt</span><span class="p">(</span><span class="n">y</span><span class="p">*</span><span class="n">y</span> <span class="p">+</span> <span class="n">z</span><span class="p">*</span><span class="n">z</span><span class="p">))</span> <span class="p">*</span> <span class="m">180</span><span class="p">/</span><span class="n">Mathf</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
+            <span class="n">roll</span>  <span class="p">=</span> <span class="p">-</span><span class="m">90</span> <span class="p">+</span> <span class="n">Mathf</span><span class="p">.</span><span class="nf">Atan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">sign</span><span class="p">*</span> <span class="n">Mathf</span><span class="p">.</span><span class="nf">Sqrt</span><span class="p">(</span><span class="n">z</span><span class="p">*</span><span class="n">z</span><span class="p">+</span> <span class="n">miu</span><span class="p">*</span><span class="n">x</span><span class="p">*</span><span class="n">x</span><span class="p">))</span> <span class="p">*</span> <span class="m">180</span><span class="p">/</span><span class="n">Mathf</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span> 
+</code></pre></div></div>
+
+<p>Again, an extra -90 in the roll gave me the best control over the forward-back movement of the character’s head. And there we have it, a creepy, shaky remote control puppet.</p>
+
+<figure><img src="ccia/../attachments/unity-puppet.gif" /><figcaption class="maincolumn-figure">Head rotation and light intensity controlled by phone sensors over OSC.</figcaption></figure>
+
+<p>From here you could work on reducing the shakiness by adding some filtering to the <code class="language-plaintext highlighter-rouge">x y z</code> values, or try something fun like controlling Eric’s hand by swinging your phone.</p>
+
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

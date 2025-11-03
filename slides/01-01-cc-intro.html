@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intro to Creative Coding for Interactive Arts</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 1]
+<br/><br/>
+.subtitle[Intro to Creative Coding for Interactive Arts]
+<br/><br/><br/><br/><br/><br/>
+.date[Oct 2025] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+      
+1. [Semester overview](#semester-overview)
+2. [What we cover](#what-we-cover)
+3. [Tools](#tools)
+4. [Processing](#processing)
+5. [An "AI Simulator"](#an-ai-simulator)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+        
+---
+name: semester-overview  
+class: left
+# Semester overview
+
+- 2h lab: new concepts in practice
+- 2h lecture: theory, discussion
+
+[Syllabus](https://www.notion.so/itpma/Creative-Coding-and-Software-Design-1-2924578f95ba4de1a95ce28ab0e1ae50)
+
+[Classroom](https://classroom.google.com/)
+
+[my site](https://rvirmoors.github.io/ccia/): Creative Coding for Interactive Arts
+
+---
+## General advice
+
+bring laptops, take notes, build stuff
+
+ask questions! [pluralistic ignorance](https://youarenotsosmart.com/2019/07/02/yanss-157-the-psychology-behind-why-people-dont-speak-out-against-and-even-defend-norms-they-secretly-despise/)
+
+[curse of knowledge](https://towardsdatascience.com/the-curse-of-knowledge-8deb4769bff9)
+
+google, stackoverflow etc
+
+--
+
+AI?
+
+--
+
+BUILD STUFF!
+
+---
+
+## Making mistakes
+
+neuroplasticity
+
+--
+
+mistakes ➡ learning
+
+--
+
+how many?
+
+--
+
+15% mistakes (["the 85% rule"](https://youtu.be/t1F7EEGPQwo?t=117))
+
+--
+
+so: challenge yourself & BUILD STUFF.
+
+---
+## Programming as exploration
+
+<iframe width="49%" height=500px src="https://www.youtube.com/embed/7YpFGkG-u1w?start=834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="50%" height=500px src="https://www.youtube.com/embed/8u2tooYxicE?start=78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+## Skills in programming
+
+--
+
+logic
+
+--
+
+generalisation
+
+--
+
+architecture
+
+--
+
+computer science
+
+--
+
+"I'm bad at programming!" 😭
+
+- → *what skill* should I improve?
+- → does it matter?
+
+---
+## Dev components
+
+| **intention**  |+| **invention**  |+| **adaptation** |
+|---|-|----|-|-- |
+| ideas | | logic | | programming |
+| goals | | algorithms | | compiler etc |
+
+---
+## Dev components
+
+intention
+- ideas, goals
+- → `//comments`
+
+--
+
+invention
+- logic, algorithms
+- → [flowcharting](https://www.visual-paradigm.com/tutorials/flowchart-tutorial/), pseudocode
+
+--
+
+adaptation
+- programming language, compiler, SW+HW architecture
+- → code
+
+---
+name: what-we-cover
+# What we cover
+
+creative coding: not just "visual apps"
+
+focus on **interaction**
+
+--
+
+[creative applications](http://www.creativeapplications.net/)
+
+--
+
+[awesome resources](https://github.com/terkelg/awesome-creative-coding)
+
+
+---
+## Glossary
+
+scripting ~ coding ~ programming ~ developing
+
+--
+
+architecture … algorithm
+
+--
+
+design patterns
+
+coding style 
+
+---
+## Features
+
+of "standard" text-based code:
+
+- reproducible
+
+--
+
+- readable
+
+--
+
+- diffable
+
+---
+name: tools       
+class: left
+# Tools
+
+- Processing / Java
+- p5.js / JS
+- *oF / C++*
+
+
+- Python
+- Arduino
+
+
+- *Godot / GDScript*
+- *Unity / C#*
+- *PICO-8 / lua*
+
+
+- Max
+- Pd
+- TouchDesigner
+
+
+- [GitHub](https://desktop.github.com/)
+
+See more [resources](../resources).
+
+---
+class: center
+## How many languages will you learn?
+
+<img style="width:80%"  src="../attachments/number-of-languages.png">
+
+---
+## What's the "best" programming language?
+
+A. depends on your target domain
+- → Processing/Java, p5.js, Max, Pd, oF/C++, TD, Unity/C#, Godot, Unreal/C++, pico-8,  ...
+
+--
+
+B. PYTHON!
+- accessible, modular, multi-platform = “swiss army knife” language
+
+--
+
+C. it doesn't matter!
+- you can pick up and learn any language/tool: fundamentals are similar
+
+---
+name: processing
+# Processing
+
+.right-column[
+[books](https://processing.org/books/)
+
+<img style="height:200px"  src="../attachments/p5-book.png">
+<img style="height:200px"  src="../attachments/oF-book.png">
+
+]
+
+.left-column[
+install @ [processing.org](https://processing.org/)
+
+[p5js editor](https://editor.p5js.org/) / [openprocessing](https://openprocessing.org/)
+
+[p5js and Processing](https://github.com/processing/p5.js/wiki/Processing-transition)
+
+also install [GitHub Desktop](https://desktop.github.com/)
+]
+
+---
+## p5 program flow
+
+| `setup()`         | / | execute once at init |
+|-------------------|---|----------------------|
+|`draw()`           | / | execute every frame  |
+| `mouseClicked()` etc  | / | triggered *events* |
+
+[basic example](https://processing.org/examples/setupdraw.html), [p5js](https://p5js.org/examples/structure-setup-and-draw.html)
+
+--
+
+.left-column[
+
+## drawing basics
+
+```java
+size(200,200);  // settings
+rectMode(CENTER);
+rect(100,100,20,100); //drawing
+ellipse(100,70,60,60);
+ellipse(81,70,16,32); 
+ellipse(119,70,16,32); 
+line(90,150,80,160);
+line(110,150,120,160);
+```
+]
+
+.right-column[
+
+<img style="width:66%"  src="../attachments/p5-coords.png">
+
+- [examples](https://processing.org/examples), [p5js](https://p5js.org/examples/)
+- [reference](https://processing.org/reference/), [p5js](https://p5js.org/reference/)
+- [basic tutorial](https://processing.org/tutorials/coordinatesystemandshapes), [p5js](https://p5js.org/learn/coordinate-system-and-shapes.html)
+]
+
+
+---
+name: an-ai-simulator
+class: center
+# An "AI Simulator"
+
+[Universal Paperclips](http://www.decisionproblem.com/paperclips/)
+
+[(original version)](https://web.archive.org/web/20171009230721/http://www.decisionproblem.com/paperclips/index2.html)
+- [article about the game](https://if50.substack.com/p/2017-universal-paperclips) / Aaron A. Reed
+
+---
+class: center
+## An "AI Simulator"
+
+<img style="width:80%"  src="../attachments/paperclips.png">
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>

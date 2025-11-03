@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/development-document.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="development-document">Development Document</h1>
+
+<p><label for="sketch" class="margin-toggle">⊕</label><input type="checkbox" id="sketch" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="ccia/../attachments/sketch-tf.png" /><br />Mock-up of a possible layout for the site.</span>
+<span class="newthought">Process.</span> 
+The project will involve building a syllabus site, representing quick references, interactive demos, and a portal to related materials. I foresee three stages: planning and initial research, building the site, and writing additional content.</p>
+
+<p>The syllabus will cover 3 sections each containing ~4-6 concepts, each with accompanying links and an embedded p5.js demo.<label for="tags" class="margin-toggle sidenote-number"></label><input type="checkbox" id="tags" class="margin-toggle" /><span class="sidenote">It is possible that a single demo might have multiple concepts in common, e.g. an app might have the #vectors #motion tags. </span> The site might be built using Jekyll (with <a href="https://jekyllrb.com/docs/collections/">Collections</a> for the tag system), or a dynamic solution, depending on the technical requirements for its deployment.</p>
+
+<p>With the site done, I will draft teacher plans. Most likely these will be just rough maps of the material, to be fleshed out once the first workshop takes place.</p>
+
+<p><span class="newthought">Timeline.</span> 
+I will set aside 2 weeks, maybe in July, to complete the above. Right now I am flexible w.r.t. my Summer schedule–my current preference would be July, 10h-17h EEST.</p>
+
+<p>The workshop will take place in late August or the first week of September, before the admission exam for the new academic cycle. Since the call stipulates for the last 7 hours to be “fulfilled over the course of the school year”, I can also organise a workshop later on, but the main point is to get students ready for the upcoming programme. A solution might be to set up an online workshop, open to all, in Oct/Nov.</p>
+
+<p><span class="newthought">Support.</span> 
+I would mainly look for guidance in the design/presentation of the material: finding a title&amp;description for maximum impact, laying out the page for easy navigation, integrating it with existing Processing resources etc. Of course, any assistance in locating useful content or ideas for examples would be super welcome too.</p>
+
+<p><span class="newthought">Resources.</span> 
+The project should be quite self-sufficient, using free/open-source resources. I am relying on my University’s infrastructure to publicise and organise the workshop(s).</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

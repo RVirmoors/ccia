@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/transfer-learning.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="transfer-learning">Transfer learning</h1>
+
+<p>more info <a href="https://docs.google.com/presentation/d/1s7vj_t-av_I9GEsLBXoBcj56AT14CKnzJdHb_HPZ2Ng/edit#slide=id.g6b9a804182_0_14">in slide-uri</a></p>
+
+<h3 id="1-classify-in-browser-a-vs-b">1. classify in browser, A vs B</h3>
+<ul>
+  <li><a href="https://editor.p5js.org/AndreasRef/sketches/BJkaHBMYm">p5js code</a></li>
+  <li><a href="https://drive.google.com/file/d/1rgRe_I0sYd0SKQxPjXUOuDD9XPLX1Ift/view">video</a> @ 35:30</li>
+</ul>
+
+<h3 id="2a-p5js-browser---wekinator">2A. p5js browser -&gt; wekinator</h3>
+<ul>
+  <li><a href="https://editor.p5js.org/RVirmoors/sketches/dWQBvx00s">p5js code</a> + <a href="https://github.com/genekogan/p5js-osc">OSC bridge</a></li>
+  <li><a href="https://drive.google.com/file/d/1ez5c85xDEXw1tR0gsLaTzbd3r1ds50-a/view">video</a> @ 3:30</li>
+</ul>
+
+<h3 id="2b-p5js-max---wekinator">2B. p5js max -&gt; wekinator</h3>
+<ul>
+  <li>code: max-ml5.zip (Classroom) -&gt; example_patch.maxpat</li>
+</ul>
+
+<p><img src="attachments/max-ml5.png" alt="" /></p>
+
+<p>(merge mai bine decat varianta 2A de mai sus, vezi si tu…)</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/project-description.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="project-description">Project Description</h1>
+
+<p>My name is Grigore Burloiu and I teach at the <a href="https://www.unatc.ro/eng/about/index.php">National University of Theatre and Film</a>, in the <a href="https://youtu.be/o3TwqY9KJpQ">Interactive Technologies</a> and <a href="https://youtu.be/YpO7Ia8d8RQ">Art of Game Design</a> M.A. programmes. I’m applying for a Teaching Fellowship to create a practice-oriented syllabus of creative coding prerequisites for aspiring digital artists.</p>
+
+<p><span class="newthought">I have been using Processing and p5.js</span>   to teach creative coding since 2017 (and other software, such as MaxMSP, since 2013). Our students come from various undergraduate backgrounds, such as arts, design, architecture, music, or engineering. In my experience, the main struggle many have getting into creative coding isn’t to do with creativity <em>or</em> coding (P5 is great at putting joy into learning to code) – it’s the gaps in basic technical concepts, specifically: <strong>data</strong> (types, structures), <strong>vectors</strong> (linear algebra, motion), and <strong>signals</strong> (DSP).</p>
+
+<p>Once they have a working understanding of these building blocks, students are enthusiastic to apply them using code. When someone is struggling with e.g. the screen coordinate system, learning about <code class="language-plaintext highlighter-rouge">for</code> loops at the same time can be a bit rough.<label for="challenge" class="margin-toggle sidenote-number"></label><input type="checkbox" id="challenge" class="margin-toggle" /><span class="sidenote">(naturally, it depends on the person and situation: sometimes, exactly this kind of double challenge leads to rewarding revelations) </span> Of course I’m not the first to bring up this problem: it is addressed in places such as the Processing handbook and The Nature of Code, or online tutorials like <a href="https://www.youtube.com/playlist?list=PLImQaTpSAdsD88wprTConznD1OY1EfK_V">Math for Game Devs</a>, but people just getting started might benefit from a systematic and open fundamental reference.</p>
+
+<p><span class="newthought">To this end, I propose</span>  to assemble an online syllabus covering the basics of data structures, linear algebra and digital signals, to the extent that they’re involved in standard creative coding practice. This will include linking to existing resources and contextualising them in a workshop plan, plus creating mini-demonstrations of the principles in action using p5.js.</p>
+
+<p>My main aim is to impart the concepts and intuition that enable a creative coding practice, without assuming any programming experience. Students wouldn’t have to understand the code behind the P5 demos, but they’d get the math involved, and know that later on in their journey they can return to the source and deepen their understanding.</p>
+
+<p>Below is my sketch of a possible layout of the site, with the 3 modules (data, vectors, signals) containing several concepts, each of them illustrated through links and demos, and interconnected through tags.</p>
+
+<figure class="fullwidth"><img src="ccia/../attachments/sketch-tf.png" /><figcaption>Mock-up of a possible layout for the site.</figcaption></figure>
+
+<p><br />
+Once the basic site is built, I’ll use the remaining time to draft teacher notes, which educators can use for navigating the materials in a workshop setting. These might look similar to <a href="http://rvirmoors.github.io/ccia">my class notes</a><label for="site" class="margin-toggle sidenote-number"></label><input type="checkbox" id="site" class="margin-toggle" /><span class="sidenote">I started this site during Winter break, and am gradually filling it in, based on my previous <a href="https://docs.google.com/presentation/d/1cz5MhOBl1zmIKHEyA88DntralSN9Ad1wMm_QmPul7EY/edit?usp=sharing">slides</a>, <a href="https://github.com/RVirmoors/cc1">code</a> and class recordings, as we progress. </span> / <a href="https://www.notion.so/rvirmoors/Creative-Coding-and-Software-Design-1-2924578f95ba4de1a95ce28ab0e1ae50">syllabus</a>, with specific readings and practical assignments for each topic.</p>
+
+<p><span class="newthought">I envision three categories of direct beneficiaries.</span>  The first is the immediate audience: prospective students of the ITPMA M.A. programme, who will be invited to join a workshop (organised through the University) where we interact with the material. The second category would be the wider community of creative coding enthusiasts (including educators and practitioners wishing to brush up), who will access the contents online. Finally, I am thinking of students and educators in adjacent fields who might be googling “dot product interactive demo” or “analog digital converter example” and stumbling on the world of interactive media and P5. All three pathways seem very exciting, so I’ll be keeping them in mind when designing the syllabus.</p>
+
+<p>And so, the main Priority Area which my project addresses is <strong>Accessibility</strong>: expanding the Processing community and bridging it with the education system. Anyone with an interest in digital arts practice and/or basic math/physics, and with access to the internet, will be able to enter the world of P5 by way of this online syllabus.</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2025 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

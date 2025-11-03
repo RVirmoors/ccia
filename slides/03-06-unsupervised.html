@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unsupervised learning</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 3]
+<br/><br/>
+.subtitle[Unsupervised learning]
+<br/><br/><br/><br/><br/><br/>
+.date[Oct 2025] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+      
+1. [Unsupervised learning](#unsupervised-learning)
+2. [Practical example](#practical-example)
+3. [Autoencoders](#autoencoders)
+4. [Links - FluCoMa](#links---flucoma)
+5. [Assignment](#assignment)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+name: unsupervised-learning
+# Unsupervised learning
+
+.right-column[
+<img style="width:100%"  src="../attachments/unsup-before.png">
+
+- input: R G B colour
+- output: X/Y position
+]
+
+.left-column[
+group unstructured data
+- or arrange along e.g. [a grid](https://learn.flucoma.org/reference/grid/)
+
+find patterns in a dataset
+
+**no** labels 
+- (to use as a guide)
+]
+
+--
+
+Two main operations:
+
+- [clustering](https://learn.flucoma.org/reference/kmeans/)
+- [dimensionality reduction](https://learn.flucoma.org/reference/umap/)
+
+---
+name: practical-example
+# Practical example
+
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/-VVdF1s7AZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+exercise: write down the processes being depicted
+
+---
+## UMAP in action
+
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/jdF4sW1aVDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Video tutorials
+
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/4dsX5uRips8?list=PLLzzOXU4pTgJNv3XL_DRQO4N9xXc0pJEu" title="Building a 2D Corpus Explorer (Part 1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- see also: [self-organising maps](https://medium.com/@abhinavr8/self-organizing-maps-ff5853a118d4) ([ml.star](https://cycling74.com/articles/content-you-need-ml%C2%B7star), [MASOM](https://github.com/ktatar/MASOM))
+  
+---
+
+# Autoencoders
+
+[<img style="width:100%" src="../attachments/autoencode-arch.png">](https://www.grammarly.com/blog/ai/what-is-autoencoder/)
+
+- [Autoencoders chapter](https://www.deeplearningbook.org/contents/autoencoders.html) in the Deep Learning book
+
+---
+
+## Why AE?
+
+[<img style="width:100%"  src="../attachments/autoencoder.png">](https://towardsdatascience.com/auto-encoder-what-is-it-and-what-is-it-used-for-part-1-3e5c6f017726)
+
+--
+
+1. train network end-to-end with `inputs=labels`
+2. "cut off" network in the middle, at the bottleneck
+3. sample from the latent space
+   - (like you would from a MLP Regressor)
+
+--
+
+What are the use cases for this?
+
+What pros/cons versus the standard MLP Regression technique?
+
+--
+
+- soon: [VAEs, GANs, et al](https://arxiv.org/pdf/2103.04922.pdf)!
+
+---
+
+name: links---flucoma
+# Links - FluCoMa
+
+[FluCoMa Learn](https://learn.flucoma.org/) platform
+
+[teaching / learning guide](https://github.com/flucoma/flucoma-for-pedagogues/blob/main/flucoma-for-pedagogues.pdf) 
+
+[Data Knot](https://rodrigoconstanzo.com/2025/10/data-knot-machine-learning-tools-for-low-latency-real-time-performance/) performance system by R Constanzo (previously SP-tools)
+- [GitHub repo](https://github.com/rconstanzo/data-knot)
+
+---
+name: assignment
+# Assignment
+
+take your regression pipeline and adapt it into an autoencoder
+
+which mapping works better? why?
+
+<br/><br/>
+
+- further reading: [Latent Mappings: Generating Open-Ended Expressive Mappings Using Variational Autoencoders](https://nime.org/proc/nime21_66/) (Murray-Browne & Tigas, 2021)
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>

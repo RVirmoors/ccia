@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signal analysis</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 2]
+<br/><br/>
+.subtitle[Signal analysis]
+<br/><br/><br/><br/><br/><br/>
+.date[Apr 2023]
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★     <!-- omit in toc -->
+
+1. [Review: Max objects](#review-max-objects)
+2. [Signals](#signals)
+3. [Tools](#tools)
+4. [Assignment](#assignment)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+        
+---
+name: review-max-objects
+# Review: Max objects
+
+trigger, scale, slide, cycle~, avg~ ...
+
+pack, zl, route
+
+udpsend, udpreceive, OSC-*
+
+node.script
+
+jit.matrix, jit.grab, jit.spill ...
+
+
+
+---
+name: signals
+# Signals
+
+| **signal** | **sampling rate** (Hz) | **frequency range** (Hz) |
+|--------|---------------|-----------------|
+|audio| 44100-96000 | 20-20000 |
+|EMG | [1000](https://www.sciencedirect.com/science/article/abs/pii/S0268003303000895) | [5-500](https://www.researchgate.net/figure/Frequency-spectrum-of-EMG-signal_fig2_232905752) |
+|EEG| 128-512 | 0.5-30 |
+|motion | 30-1000 | [0-20](https://pubmed.ncbi.nlm.nih.gov/3980487/) |
+|video| 15-60 | |
+
+---
+## Capturing articulation
+
+“The problem [...]  is  that,  to  really  play  [the  music],  and  for  the  audience  to see  that  the  dancers  are  playing,  you  need  to  move  like  a musician. [T]he movement of the dancer needs to be in service of  the  sound.  [...]  But  this  is  not  the  gestalt  that  we  perceive when  we  watch  a  dancer  move.  We  really  see  energy  – We're [...]  looking  at  the way  that  the  dancer  moves  through  space and the overall articulation of the movement.”
+
+Marc Coniglio (2002), cited in [Schacher, 2010](http://www.nime.org/proceedings/2010/nime2010_250.pdf)
+
+---
+## Processing signals
+
+data preprocessing
+- ...
+
+analysis
+- ...
+
+action
+- ...
+
+---
+## Processing signals
+
+data preprocessing
+
+- filtering, rectification, windowing, envelope following, normalisation
+
+analysis
+- amplitude, speed/frequency, segmentation, direction/orientation, spectral
+
+action
+- momentary/atomic trigger, discrete selection, continuous mapping
+
+
+---
+class: center
+## Example
+
+<img style="width:60%"  src="../attachments/msp-rgb.gif">
+
+---
+name: tools
+# Tools
+
+(MSP) objects
+
+external packages
+
+see also [resources](../resources#signals) and [discussion forums](https://cycling74.com/forums/how-to-mix-eul-quater-maths-and-motion-sensors)
+
+---
+
+## Useful objects
+
+sig~ ↔ snapshot~
+
+abs~, scale~, slide~
+
+peakamp~, fzero~, zerox~, thresh~, edge~
+
+function + line~, curve~
+
+
+---
+
+## Useful packages
+
+CNMAT externals
+
+jasch objects
+
+zsa.descriptors
+
+[odot](https://github.com/CNMAT/CNMAT-odot)
+
+[MuBu](https://forum.ircam.fr/projects/detail/mubu/) / [pipo~]
+
+[FluCoMa](flucoma.org)
+
+---
+name: assignment       
+class: left
+#  Assignment
+
+sonify an RGB pixel (or an array of pixels)
+
+- *might use audio-rgb.maxpat as source, or not*
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
