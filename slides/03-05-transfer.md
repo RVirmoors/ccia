@@ -117,7 +117,7 @@ transferring knowledge
 - from task to task
 
 ---
-## Video guides - ml5.js
+## Video guides - ml5.js (deprecated?)
 
 <iframe width="100%" height="200" src="https://www.youtube.com/embed/eeO-rWYFuG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="100%" height="200" src="https://www.youtube.com/embed/kRpZ5OqUY6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -131,9 +131,9 @@ built on [tensorflow.js](https://www.tensorflow.org/js)
 
 [Machine Learning for the Web](https://github.com/yining1023/machine-learning-for-the-web) course / Yining Shi
 
-[feature extractor](https://learn.ml5js.org/#/reference/feature-extractor) ml5.js documentation
+[image classifier](https://docs.ml5js.org/#/reference/image-classifier) ml5.js documentation
 
-examples
+examples (broken!)
 - [feature extractor classification](https://editor.p5js.org/ml5/sketches/FeatureExtractor_Image_Classification)
 - [KNN classification](https://editor.p5js.org/ml5/sketches/KNNClassification_Video)
 
