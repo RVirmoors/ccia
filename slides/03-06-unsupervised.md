@@ -82,7 +82,7 @@ exercise: write down the processes being depicted
 - see also: [self-organising maps](https://medium.com/@abhinavr8/self-organizing-maps-ff5853a118d4) ([ml.star](https://cycling74.com/articles/content-you-need-ml%C2%B7star), [MASOM](https://github.com/ktatar/MASOM))
   
 ---
-
+name: autoencoders
 # Autoencoders
 
 [<img style="width:100%" src="../attachments/autoencode-arch.png">](https://www.grammarly.com/blog/ai/what-is-autoencoder/)
