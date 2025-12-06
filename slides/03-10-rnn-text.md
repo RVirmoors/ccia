@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Week 9: RNN&co - language]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2024]
+.date[Dec 2025]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -24,12 +24,17 @@ class: left
 1. [Language models](#language-models)
 2. [Recurrent Neural Networks](#recurrent-neural-networks)
 3. [Classic example](#classic-example)
-4. [Modern convAI with Vocode](#modern-convai-with-vocode)
+4. [Modern convAI](#modern-convai)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
 ---
 layout: true  .toc[[★](#toc)]
+
+---
+<br/><br/>
+<video preload="auto" width="100%" height="auto"  data-setup="{}" autoplay loop controls>
+<source src="./videos/twitter-llm.mov" type="video/mp4" /></video>
 
 ---
 name: Language-models
@@ -142,28 +147,30 @@ fiction-based chatbot (w.i.p)
 ]
 
 ---
-name: modern-convai-with-vocode  
+name: modern-convai 
 class: left
-# Modern convAI with Vocode
+# Modern convAI
 
-(2024)
-
-state of the art: [OpenAI GPT-4o](https://minimaxir.com/2024/10/speech-prompt-engineering/)
+state of the art (2024): [OpenAI GPT-4o](https://minimaxir.com/2024/10/speech-prompt-engineering/)
 - affordable, sustainable?
 
 --
 
-[Vocode](https://docs.vocode.dev/) pipeline
-- transcriber
+[Vocode](https://docs.vocode.dev/) / [Pipecat](https://github.com/pipecat-ai/pipecat) pipelines
+- transcriber (STT)
 - agent (LLM)
-- synthesizer
+- synthesizer (TTS)
 
 --
 
-[documentation](https://docs.vocode.dev/open-source/conversation-mechanics)
-- [python quickstart](https://docs.vocode.dev/open-source/python-quickstart)
+documentation
+- [Vocode](https://docs.vocode.dev/open-source/conversation-mechanics)
+  - [python quickstart](https://docs.vocode.dev/open-source/python-quickstart)
+  - [collective-cadence project](https://github.com/rvirmoors/collective-cadence) (Grig '24)
+- [Pipecat](https://docs.pipecat.ai/guides/learn/overview)
+  - [quickstart](https://docs.pipecat.ai/getting-started/quickstart)
+  - [actor-llm project](https://github.com/rvirmoors/llm-actor) (Jan & Grig & Lorena '25)
 
-[chatty help](https://app.commanddash.io/agent?github=https://github.com/vocodedev/vocode-core)
 
 --
 
