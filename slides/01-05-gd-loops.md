@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Loops]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2023] 
+.date[Dec 2025] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -117,6 +117,7 @@ no `lerp()` in pico-8... what to do?
 --
 
 [google](https://www.reddit.com/r/pico8/comments/17j5f0s/lerp_function/), prototype
+- example: [tile-based player movement](https://youtu.be/SoFOva5FUnI)
 
 --
 
