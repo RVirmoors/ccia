@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Arrays / Tables]
 <br/><br/><br/><br/><br/><br/>
-.date[Dec 2024] 
+.date[Jan 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
