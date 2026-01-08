@@ -117,7 +117,7 @@ no `lerp()` in pico-8... what to do?
 --
 
 [google](https://www.reddit.com/r/pico8/comments/17j5f0s/lerp_function/), prototype
-- example: [tile-based player movement](https://youtu.be/SoFOva5FUnI)
+- example: [tile-based player movement](https://youtu.be/CO1qTJMH8mU)
 
 --
 

@@ -186,7 +186,7 @@ Exercises **2** and **4** of Piano Phase
 
 OR
 
-Create a [Sound Portrait](http://www.soundportraits.info/)
-- mp3: 10-20 minutes podcast w/ interviews, clips, your own voice?
+Create a [Sound Portrait](http://www.soundportraits.info/) / [Podcast](https://theatticmag.com/audio/2259/composer-corner-_-horatiu-radulescu.html)
+- mp3: 10-20 minute recording w/ interviews, audio clips, your own voice?
 - doc: short bio text
-- youtube link(s)
+- youtube wiki etc link(s)
