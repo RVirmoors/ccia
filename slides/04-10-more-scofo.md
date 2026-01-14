@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[More Antescofo]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2022] 
+.date[Jan 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -138,7 +138,7 @@ name: time-in-antescofo
 class: left
 #  Time in Antescofo
 
-[<img width="100%" src="../attachments/scofo-time2.png">](https://support.ircam.fr/docs/Antescofo/manuals/Reference/5-synchro/)
+[<img width="100%" src="../attachments/scofo-time2.png">](https://antescofo-doc.ircam.fr/Reference/5-synchro/)
 
 ---
 ## Concurrency
@@ -160,7 +160,7 @@ actions run in parallel, each with its *start time* and *duration*
 
 `@sync` - tracks a user-defined (`@tempovar`) tempo variable
 
-[Reference: sync strategies](http://support.ircam.fr/docs/Antescofo/manuals/Reference/time_synchro/)  
+[Reference: sync strategies](https://antescofo-doc.ircam.fr/Reference/time_synchro/)  
 [Antescofo model of time](https://hal.archives-ouvertes.fr/hal-01638115/document) paper
 
 ---
@@ -186,7 +186,7 @@ Exercises **2** and **4** of Piano Phase
 
 OR
 
-Create a [Sound Portrait](http://www.soundportraits.info/) / [Podcast](https://theatticmag.com/audio/2259/composer-corner-_-horatiu-radulescu.html)
+Create a [Sound Portrait](https://web.archive.org/web/20251208120508/https://www.soundportraits.info/) / [Podcast](https://theatticmag.com/audio/2259/composer-corner-_-horatiu-radulescu.html)
 - mp3: 10-20 minute recording w/ interviews, audio clips, your own voice?
 - doc: short bio text
 - youtube wiki etc link(s)
