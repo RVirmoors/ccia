@@ -6,9 +6,9 @@ title: Practical Python
 class: center, middle
 .title[Creative Coding and Software Design 2] 
 <br/><br/>
-.subtitle[Week 2: Practical Python]
+.subtitle[P1: Practical Python]
 <br/><br/><br/><br/><br/><br/>
-.date[Mar 2022] 
+.date[Mar 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -57,19 +57,19 @@ python --version
 python
 ```
 
-Python **3**.7+
+Python **3.10**+
 
 64 bit
 
-add to PATH
+add to PATH environment variable
 
 ???
 
-First, let's check if we already have Python installed on our system. Most modern code should work with version 3.7 or later.
+First, let's check if we already have Python installed on our system. Most modern code should work with version 3.10 or later.
 
-You can find out if your Python is 32 or 64 bit by running "python". Certain libraries, e.g. all modern deep learning frameworks, require 64 bit.
+You can find out if your Python is 32 or 64 bit by running "python". Many libraries require 64 bit.
 
-If you're on a Mac, it's likely you already have Python v2 installed, which won't do. There are tools that help you manage your Python installs, like Homebrew and Pyenv. And there's Anaconda, which can also manage your [libraries](#modules) -- think of it as an equivalent of Unity Hub maybe.
+If you're on an older Mac, it's possible you already have Python v2 installed, which won't do. There are tools that help you manage your Python installs, like Homebrew and Pyenv. And there's Anaconda, which can also manage your [libraries](#modules) -- think of it as an equivalent of Unity Hub maybe.
 
 --
 
