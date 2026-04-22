@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Signal analysis]
 <br/><br/><br/><br/><br/><br/>
-.date[Apr 2023]
+.date[Apr 2026]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -44,7 +44,6 @@ udpsend, udpreceive, OSC-*
 node.script
 
 jit.matrix, jit.grab, jit.spill ...
-
 
 
 ---
@@ -125,6 +124,10 @@ function + line~, curve~
 
 ## Useful packages
 
+[FluCoMa](https://flucoma.org)
+
+[Data Knot](https://rodrigoconstanzo.com/data-knot/)
+
 CNMAT externals
 
 jasch objects
@@ -135,8 +138,6 @@ zsa.descriptors
 
 [MuBu](https://forum.ircam.fr/projects/detail/mubu/) / [pipo~]
 
-[FluCoMa](flucoma.org)
-
 ---
 name: assignment       
 class: left
@@ -145,3 +146,4 @@ class: left
 sonify an RGB pixel (or an array of pixels)
 
 - *might use audio-rgb.maxpat as source, or not*
+- try using CNMAT resonators~ et al
