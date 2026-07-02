@@ -6,7 +6,7 @@ layout: default
 
 A basic interactive ML workflow to easily create mappings from motion to sound or other media outputs.
 
-[Input](#input) . [Mapping](#mapping) . [What comes next](#what-comes-next)
+[Input](#input) . [Mapping](#mapping) . [Results](#results)
 
 ## Input
 
@@ -22,11 +22,11 @@ You then hook it up to an Arduino-compatible microcontroller with WiFi{% sidenot
 
 Here's what it turned out like for me: my very first soldering job back in 2019. I didn't know how sensitive soldering wires directly into through-holes can be, but they've held up just fine since then! 
 
-{% maincolumn 'attachments/feather-imu.jpg' 'MPU IMU module stuck onto a HUZZAH Feather with double-sided tape, with 4 wires making the [I2C](https://en.wikipedia.org/wiki/I2C) connection. From [twitter](https://x.com/growlerpig/status/1183276083409555456/photo/1). Remember twitter?' %}
+{% maincolumn '../attachments/feather-imu.jpg' 'MPU IMU module stuck onto a HUZZAH Feather with double-sided tape, with 4 wires making the [I2C](https://en.wikipedia.org/wiki/I2C) connection. From [twitter](https://x.com/growlerpig/status/1183276083409555456/photo/1). Remember twitter?' %}
 
 My then-students [Dorin](https://cucicov.com/) and [Maria](https://www.instagram.com/what.is.bart/) helped with constructing fancy bracelets around 3 such sensor+board combos, with a pocket to house the LiPo battery and velcro to strap onto your wrist:
 
-{% maincolumn 'attachments/feather-imu.jpg' 'DYI motion bracelets. Over the years we have used them in various student projects, such as [Out of the Box](https://youtu.be/unKAOfE-q5Y) in Lyon, 2021.' %}
+{% maincolumn '../attachments/feather-imu.jpg' 'DYI motion bracelets. Over the years we have used them in various student projects, such as [Out of the Box](https://youtu.be/unKAOfE-q5Y) in Lyon, 2021.' %}
 
 It's then just a matter of getting Arduino code for your MPU sensor and configuring it to send [OSC](https://docs.arduino.cc/libraries/osc/) messages. Here's [one way to do it](https://github.com/RVirmoors/cc-patterns/tree/main/Arduino/sendAcc_OSC).
 
@@ -46,7 +46,7 @@ Let's take a moment to realise how the [composition of forces](https://www.fsps.
 
 As you start to tilt your phone, you'll see $$\vec{g}$$ being decomposed along the accelerometer's other axes as well:
 
-{% maincolumn 'attachments/phone-anim.gif' 'Composition of forces. If we ignore the force applied by our movement, gravity is the main force acting on the phone’s body. Tilt it around its *x* axis (width) and the gravitational acceleration will be registered on the phone’s *y* and *z* axes. Tilt it around the *y* axis (height), and you’ll see activity on the *x* and *z* axes.' %}
+{% maincolumn '../attachments/phone-anim.gif' 'Composition of forces. If we ignore the force applied by our movement, gravity is the main force acting on the phone’s body. Tilt it around its *x* axis (width) and the gravitational acceleration will be registered on the phone’s *y* and *z* axes. Tilt it around the *y* axis (height), and you’ll see activity on the *x* and *z* axes.' %}
 
 We can observe that, especially if we don't make sudden moves, the 3 values in the accelerometer describe the phone's orientation relative to the ground.{% sidenote 'mag' 'In fact, we have access to just two Euler angles: [pitch and roll](https://en.wikipedia.org/wiki/Aircraft_principal_axes#/media/File:Yaw_Axis_Corrected.svg) (Y and Z). The yaw (X), which would correspond to rotation around the Earth’s perpendicular, cannot be sensed by the accelerometer alone. For this a more complex device would be needed, such as a [9-axis IMU with sensor fusion](https://www.ti.com/lit/an/slaa518a/slaa518a.pdf).'%}
 
@@ -60,7 +60,7 @@ I will be using [PlugData](https://plugdata.org/) for this project, because it's
 
 Create an OSC listener and look at the console output.
 
-![OSC listener](attachments/pd-imu-receive.png)
+![OSC listener](../attachments/pd-imu-receive.png)
 
 You should see messages that look something like (for Sensors2OSC):
 
@@ -82,7 +82,7 @@ Sometimes the numbers range between -1 and 1. You can leave them as is, or `scal
 
 In Pd you want to add an array (the `Add object` button > `Array` in PlugData) to store the values. The result should look something like this:
 
-![IMU inputs](attachments/pd-imu-inputs.png)
+![IMU inputs](../attachments/pd-imu-inputs.png)
 
 Now make sure that as you move your sensor, the values move in the `vslider`s and the `inputs` array.
 
@@ -94,6 +94,6 @@ The remaining steps are pretty much identical to the FluCoMa tutorial on regress
 
 Your final Pd patch should look something like this:
 
-![final](attachments/pd-imu-final.png)
+![final](../attachments/pd-imu-final.png)
 
-## What comes next
+## Results
