@@ -60,7 +60,7 @@ I will be using [PlugData](https://plugdata.org/) for this project, because it's
 
 Create an OSC listener and look at the console output.
 
-![OSC listener](../attachments/pd-imu-receive.png)
+{% maincolumn '../attachments/pd-imu-receive.png' '' %}
 
 You should see messages that look something like (for Sensors2OSC):
 
@@ -82,7 +82,7 @@ Sometimes the numbers range between -1 and 1. You can leave them as is, or `scal
 
 In Pd you want to add an array (the `Add object` button > `Array` in PlugData) to store the values. The result should look something like this:
 
-![IMU inputs](../attachments/pd-imu-inputs.png)
+{% maincolumn '../attachments/pd-imu-inputs.png' '' %}
 
 Now make sure that as you move your sensor, the values move in the `vslider`s and the `inputs` array.
 
@@ -94,6 +94,6 @@ The remaining steps are pretty much identical to the FluCoMa tutorial on regress
 
 Your final Pd patch should look something like this:
 
-![final](../attachments/pd-imu-final.png)
+{% maincolumn '../attachments/pd-imu-final.png' '' %}
 
 ## Results
