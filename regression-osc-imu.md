@@ -106,4 +106,6 @@ You do the training and the performance just as explained in the video, except n
 
 Here you can see in Genova one of the students interacting with the system for the first time:
 
-{% maincolumnvideo '../attachments/video/imu-train-test.mp4' 'Training and testing the interactive ML motion-sound mapping.' %}
+{% maincolumnvideo '../attachments/video/imu-train-test.mp4' 'Training and testing the  motion-sound mapping system.' %}
+
+Of course, this is just the beginning. You can replace the output{% sidenote 'output' 'The first question in the workshop was, understandably, can this be used with something that doesn’t sound like random noises?'%} with some other parametric instrument or mix, or something in a totally different medium, like RGB lights or physical motors. But the principle, of associating input-output pairs and then being able to interpolate between (and extrapolate beyond) the given examples, remains.
