@@ -261,7 +261,7 @@ figcaption { float: right;
 
 figure.fullwidth figcaption { float: left; margin-right: 0%; margin-left: 10%; max-width: 100%; }
 
-img { max-width: 100%; }
+img, video { max-width: 100%; }
 
 .sidenote, .marginnote { float: right;
                          clear: right;

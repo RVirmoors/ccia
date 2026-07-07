@@ -12,6 +12,10 @@ A basic interactive ML workflow to easily create mappings from motion to sound o
 
 I'm going to describe a simple schema, first popularized by Rebecca Fiebrink in her now classic [Machine Learning for Musicians and Artists MOOC](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/info), to create sound-making instruments by *example* instead of by mathematical specification. Of course, a similar pattern can work for controlling other types of media, such as video, lights etc.
 
+Here's a quick taste of how it can work, recorded in our April '26 workshop in Genova as part of [the Transper project](https://www.transper.eu/pilots/pilot-2-genova).
+
+{% maincolumnvideo '../attachments/video/imu-demo.mp4' 'My then-student [Tony Macpela](https://tonymacpela.com/) demoing the system described in this guide.' %}
+
 {% newthought 'Our input of choice will be motion' %}, as described by relative movement of a point in 3D space by an [IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit), aka accelerometer.{% sidenote 'mocap' '(as opposed to *absolute* motion capture systems that report positions in space)'%} How do you get your hands on an IMU? I think you have three major options: [Make it](#make-it). [Buy it](#buy-it). [Phone it](#phone-it).
 
 ### Make it
@@ -26,7 +30,7 @@ Here's what it turned out like for me: my very first soldering job back in 2019.
 
 My then-students [Dorin](https://cucicov.com/) and [Maria](https://www.instagram.com/what.is.bart/) helped with constructing fancy bracelets around 3 such sensor+board combos, with a pocket to house the LiPo battery and velcro to strap onto your wrist:
 
-{% maincolumn '../attachments/feather-imu.jpg' 'DYI motion bracelets. Over the years we have used them in various student projects, such as [Out of the Box](https://youtu.be/unKAOfE-q5Y) in Lyon, 2021.' %}
+{% maincolumn '../attachments/pd-imu-bracelets.jpg' 'DYI motion bracelets. Over the years we have used them in various student projects, such as [Out of the Box](https://youtu.be/unKAOfE-q5Y) in Lyon, 2021.' %}
 
 It's then just a matter of getting Arduino code for your MPU sensor and configuring it to send [OSC](https://docs.arduino.cc/libraries/osc/) messages. Here's [one way to do it](https://github.com/RVirmoors/cc-patterns/tree/main/Arduino/sendAcc_OSC).
 
@@ -96,4 +100,10 @@ Your final Pd patch should look something like this:
 
 {% maincolumn '../attachments/pd-imu-final.png' '' %}
 
+You do the training and the performance just as explained in the video, except now instead of dragging sliders to set the input, you change the orientation of your physical sensor, which sets the sliders in the patch. So the sequence is: (1) set an output sound, (2) set a sensor position, (3) click the "add example" button, and repeat. Once all examples are in, train the regressor and then switch the toggle into the `RUN` setting.
+
 ## Results
+
+Here you can see in Genova one of the students interacting with the system for the first time:
+
+{% maincolumnvideo '../attachments/video/imu-train-test.mp4' 'Training and testing the interactive ML motion-sound mapping.' %}
