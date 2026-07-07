@@ -22,11 +22,11 @@ Here's a quick taste of how it can work, recorded in our April '26 workshop in G
 
 This is probably the cheapest and most fun option, if you're into tinkering with sensors and microcontrollers.{% sidenote 'tinker' 'And if you’re not, it’s a great beginner-friendly project to start with!'%} IMU sensors are very accessible; a 3-axis one like the MPU6050 is fine but you can also go for a so-called 9-axis sensor like the MPU9250 if you think you might use e.g. the gyroscope in the future.
 
-You then hook it up to an Arduino-compatible microcontroller with WiFi{% sidenote 'bt' 'An alternative to WiFi is Bluetooth, as seen for example in [this DYI project](https://inmagicwetrust.wordpress.com/2015/11/04/diy-project-wearable-imu-tracking-sensor/).'%} and, preferably, LiPo battery power. In the past I've used [Adafruit Feather](https://www.adafruit.com/product/2821) boards.
+You then hook it up to an Arduino-compatible microcontroller with WiFi{% sidenote 'bt' 'An alternative to WiFi is Bluetooth, as seen for example in [this DYI project](https://inmagicwetrust.wordpress.com/2015/11/04/diy-project-wearable-imu-tracking-sensor/) and several products available online.'%} and, preferably, LiPo battery power. In the past I've used [Adafruit Feather](https://www.adafruit.com/product/2821) boards.
 
 Here's what it turned out like for me: my very first soldering job back in 2019. I didn't know how sensitive soldering wires directly into through-holes can be, but they've held up just fine since then! 
 
-{% maincolumn '../attachments/feather-imu.jpg' 'MPU IMU module stuck onto a HUZZAH Feather with double-sided tape, with 4 wires making the [I2C](https://en.wikipedia.org/wiki/I2C) connection. From [twitter](https://x.com/growlerpig/status/1183276083409555456/photo/1). Remember twitter?' %}
+{% maincolumn '../attachments/feather-imu.jpg' 'MPU IMU module stuck onto a HUZZAH Feather with double-sided tape, with 4 wires making the [I2C](https://en.wikipedia.org/wiki/I2C) connection. From my [twitter](https://x.com/growlerpig/status/1183276083409555456/photo/1). Remember twitter?' %}
 
 My then-students [Dorin](https://cucicov.com/) and [Maria](https://www.instagram.com/what.is.bart/) helped with constructing fancy bracelets around 3 such sensor+board combos, with a pocket to house the LiPo battery and velcro to strap onto your wrist:
 
