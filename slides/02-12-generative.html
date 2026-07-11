@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generative processes</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 2]
+<br/><br/>
+.subtitle[Week 14: Generative processes]
+<br/><br/><br/><br/><br/><br/>
+.date[May 2022]
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★     <!-- omit in toc -->
+1. [Timing](#timing)
+2. [Randomness](#randomness)
+3. [Rules](#rules)
+4. [Cues](#cues)
+5. [Mapping](#mapping)
+6. [Recording / sequencing](#recording--sequencing)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+        
+---
+name: timing
+# Timing
+
+[Timing and Sequencing Events](https://docs.cycling74.com/max8/vignettes/timing_events_topic) | Max documentation
+
+metro
+
+pipe, delay
+
+transport
+
+timer 
+
+phasor~, rate~, edge~
+
+[Event Priority in Max](https://cycling74.com/articles/event-priority-in-max-scheduler-vs-queue) 
+   - [Scheduler settings](https://docs.cycling74.com/max8/vignettes/scheduler_settings)
+   - [Threading in Max](https://youtu.be/7n-sl687tkI) video
+
+---
+name: randomness
+# Randomness
+
+random, drunk, decide
+
+urn
+
+
+<br/><br/><br/><br/><br/><br/>
+
+.right-column[
+<iframe src="https://www.youtube.com/embed/p99d_D6pMvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+name: rules
+# Rules
+
+finite state machines (FSM)
+
+cellular automata (CA)
+
+grammars, L-systems
+
+artificial life (ALife)
+
+[Kadenze course](https://www.kadenze.com/courses/generative-art-and-computational-creativity-i/sessions/rule-based-systems-grammars-and-markov-chains) | SFU 
+
+deterministic / [nondeterministic](https://en.wikipedia.org/wiki/Nondeterministic_algorithm)
+
+chaos: 
+- [Strange Attractors](http://sites.music.columbia.edu/cmc/courses/g6611/spring2005/week1/sabook.pdf) book
+- [Fractals, Chaos, Self-Similarity](http://paulbourke.net/fractals/)
+
+---
+
+## Recap: finite state machines
+
+.left-column[
+a variable with:
+- **states**
+- transition **rules**
+
+computed every **step**
+- (self-transition is possible)
+]
+.right-column[
+<iframe src="https://www.youtube.com/embed/x1mlHEUwl_8?t=122s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+https://en.wikipedia.org/wiki/Finite-state_machine
+
+---
+
+## Cellular automata
+
+universe
+- n-dimensional grid of **cells** that can be in a finite number of **states**
+
+transition rule
+- for a cell, current state & neighbourhood → state @ next **step**
+
+example: Conway's *Game of Life*
+- jit.conway
+- [ConwayLife](https://conwaylife.com/)
+- [js implementation](http://pmav.eu/stuff/javascript-game-of-life-v3.1.1/)
+- [Life Game Orchestra](https://www.nime.org/proceedings/2009/nime2009_050.pdf) paper
+- [generative ambient patch](https://www.youtube.com/watch?v=mQjUlaYjZt8)
+
+---
+
+## Grammars 
+
+*rewriting*
+
+generative grammar: 
+- **rules**: symbol(s) → symbols
+  - symbols on the left *are made up of* symbols on the right
+  - may include variations
+- **initial** symbol S (*sentence*)
+- set of **terminal** symbols (*words*)
+
+--
+
+.left-column[
+L-systems
+- **parallel** rewriting
+- jit.linden
+- jit.turtle
+]
+
+
+.right-column[
+  <br/>
+<iframe src="https://www.youtube.com/embed/f6ra024-ASY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+## Artificial life 
+
+[Introduction to Artificial Life for People who Like AI](https://thegradient.pub/an-introduction-to-artificial-life-for-people-who-like-ai/)
+
+[Artificial Life](https://direct.mit.edu/artl) journal | MIT
+
+cells = agents
+
+multiagent systems
+
+genetic algorithms
+
+---
+name: cues
+# Cues
+
+playlist~
+
+qlist
+
+[Preload and play sound cues](https://music.arts.uci.edu/dobrian/maxcookbook/preload-and-play-sound-cues) | Max Cookbook
+
+useful package: Antescofo
+
+useful tool: [Jamoma](http://jamoma.org/)
+
+---
+name: mapping
+# Mapping
+
+scale
+
+table, function
+
+coll, dict
+
+---
+name: recording--sequencing
+# Recording / sequencing
+
+mtr
+
+seq
+
+useful packages: bach, cage, MuBu, ...
+
+useful tools: [IanniX](https://www.iannix.org/en/), [TWO](https://thewizardofosc.com/)
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>

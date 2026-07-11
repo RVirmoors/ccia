@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introduction</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Interactive Music Systems]
+<br/><br/>
+.subtitle[Introduction]
+<br/><br/><br/><br/><br/><br/>
+.date[Oct 2025] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★     <!-- omit in toc -->
+
+1. [Class summary](#class-summary)
+2. [Online music coordination](#online-music-coordination)
+3. [Definitions](#definitions)
+4. [Tools](#tools)
+5. [Links](#links)
+6. [Examples](#examples)
+7. [Assignment](#assignment)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+## What this class is NOT about
+
+- making electronic music
+
+--
+
+- making music
+.right-column[
+<iframe width="100%" height="250" src="https://www.youtube.com/embed/1old894PpIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+--
+
+- music?
+
+--
+
+    - rather, *time-based media*
+        
+---
+name: class-summary
+# Class summary
+
+- interactivity as the locus of sound creation
+- new interfaces for musical expression
+
+--
+
+three main topics:
+- max & live
+- live coding
+- reactive programming
+
+--
+
+all involve **coding** and **sonic experimentation**
+
+--
+
+interaction - in-class, too!
+- performance
+- inspiration
+- assignments - 15p each
+
+--
+
+final - 30p
+- A. your own IMS
+- B. a 3+ page paper submitted to a workshop/conference/journal
+- see [syllabus](https://www.notion.so/itpma/Interactive-Music-Systems-eefdd64b55e249c1813aa0a1cd701383)
+
+---
+name: online-music-coordination
+# Online music coordination
+
+*network music*
+
+[JackTrip](https://ccrma.stanford.edu/software/jacktrip/)
+
+[Jamulus](https://jamulus.io/wiki/Getting-Started)
+
+---
+name: definitions
+# Definitions
+
+computer music
+- definitions? examples?
+
+--
+
+
+computers facilitate 5 basic functions (Magnusson):
+
+1. programming (composing) of musical parameters
+2. storage of musical parameters
+3. retrieval of musical parameters
+4. audio synthesis of musical parameter execution
+5. editing and playback of the resulting material
+
+---
+
+## Four flavours of computer music
+
+fixed media / electroacoustic / tape music / acousmatic music
+
+mixed music
+
+live coding
+
+sonification / auditory display
+
+--
+
+what does an electronic music composer *do*?
+- [A+M+T podcast ep w/ Elainie Lillios](https://artmusictech.libsyn.com/podcast-373-elainie-lillios)
+
+--
+
+IMS = computer music + *machine musicianship*
+
+- see also: [musical agents](https://kivanctatar.com/Blog) (computational creativity)
+
+---
+
+## Defining IMS
+
+Interactive computer music systems are those whose behavior changes in response to musical input. (Robert Rowe)
+
+*Epistemic tools*, extensions of the mind that tie it to the environment. (Thor Magnusson)
+
+machine musicianship
+- 2 processes: listening & action, or *machine listening* & *live electronics*
+
+score-driven vs performance-driven
+
+
+---
+name: tools
+# Tools
+
+interactive sequencing: Max for Live, *IanniX, ossia score, Open Stage Control, TWO*
+
+interactive analysis/synthesis: FluCoMa, DataKnot, SoMax, *MuBu*
+
+live coding: Supercollider, Sonic Pi, Hydra, *TidalCycles* …
+
+*network music: Jamulus, JackTrip*
+
+reactive programming: Antescofo
+
+spatialisation: Ircam Spat, ICST Ambisonics
+
+---
+name: links
+# Links
+
+## Intro
+
+[Learning Music](https://learningmusic.ableton.com/), Ableton
+
+[Sound Portraits](http://www.soundportraits.info/), Doron Sadja
+
+- [ircam](https://www.ircam.fr/), [sonology](http://sonology.org/), [ccrma](https://ccrma.stanford.edu/)
+- [CM chronology](https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199792030.001.0001/oxfordhb-9780199792030-appendix-001)
+
+
+---
+
+## Academic
+
+- [NIME](http://www.nime.org/archives/)
+- [ICLC](https://iclc.toplap.org/) 
+- [SMC](https://zenodo.org/communities/smc)  
+- [ICMC](https://quod.lib.umich.edu/i/icmc/) 
+- [AIMC](https://aimusiccreativity.org/) 
+- [more](http://www.smcnetwork.org/conferences.html) [conferences](http://conferences.smcnetwork.org/)
+
+
+- [Organised Sound](https://www.cambridge.org/core/journals/organised-sound)
+- [JNMR](https://www.tandfonline.com/loi/nnmr20)
+- [CMJ](https://direct.mit.edu/comj) 
+
+
+- google scholar, semantic scholar, sci-hub, ...
+- [resources](../resources#research)
+
+---
+## Follow
+
+forums: [FluCoMa](https://discourse.flucoma.org), [NIME](https://forum.nime.org), [lines](https://llllllll.co)
+
+discord
+
+live coding / laptop music: [toplap](https://toplap.org) / [forum](https://forum.toplap.org/) / [TidalCycles forum](https://club.tidalcycles.org/)
+
+[Art + music + technology](http://artmusictech.libsyn.com/), [play talk play](http://amplifiersandexplosions.com/play-talk-play/), [Sound + process](https://soundcloud.com/sound-and-process)
+
+https://www.facebook.com/groups/2209224391/ 
+
+http://createdigitalmusic.com 
+
+http://www.creativeapplications.net/category/sound  
+
+---
+name: examples
+# Examples
+
+live coding
+<iframe width="80%" height="400" src="https://www.youtube.com/embed/ca3J1cztnrc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+## Examples
+
+live electronics
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/MzawnjOiccM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+## Examples
+
+biocomputing
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/GBPkl7YEiuE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+## Examples
+
+human-robot improvisation
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/qy02lwvGv3U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+## Examples
+
+multimedia composition
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/_UmkXs5ArDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+name: assignment
+# Assignment
+
+create a minimalistic instrument in Max, which takes one input (audio, sensor, mouse etc) and controls one sonic parameter. Record / perform a 1-minute performance (audio or video) using the instrument.
+
+<br/><br/><br/><br/><br/><br/>
+
+Reading: [(Drummond, 2009)](http://www.sfu.ca/~eigenfel/Drummond-Understanind%20Interactive%20Systems.pdf)
+
+Listening: [The Holmes Archive of Electronic Music](https://theholmesarchive.podbean.com/)
+
+inspiration: [Meara O'Reilly](https://mearaoreilly.com/)
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>

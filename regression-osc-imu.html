@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Creative Coding for Interactive Art</title>
+  <meta name="description" content="Class notes & resources for my courses @ ITPMA/UNATC.">
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="cciacss/print.css" media="print"> -->
+
+  <!--<link rel="canonical" href="ccia/regression-osc-imu.html">-->
+
+    <!--<link rel="alternate" type="application/rss+xml" title="Creative Coding for Interactive Art" href="ccia/feed.xml" /> -->
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+		<a href="index.html">Home</a> <a href="resources.html">Resources</a>
+	</nav>
+</header>
+    <article class="group">
+      <h1 id="motion-to-sound-with-regression">Motion to Sound with Regression<!-- omit in toc --></h1>
+
+<p>A basic interactive ML workflow to easily create mappings from motion to sound or other media outputs.</p>
+
+<p><a href="#input">Input</a> . <a href="#mapping">Mapping</a> . <a href="#results">Results</a></p>
+
+<h2 id="input">Input</h2>
+
+<p>I’m going to describe a simple schema, first popularized by Rebecca Fiebrink in her now classic <a href="https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/info">Machine Learning for Musicians and Artists MOOC</a>, to create sound-making instruments by <em>example</em> instead of by mathematical specification. Of course, a similar pattern can work for controlling other types of media, such as video, lights etc.</p>
+
+<p>Here’s a quick taste of how it can work, recorded in our April ‘26 workshop in Genova as part of <a href="https://www.transper.eu/pilots/pilot-2-genova">the Transper project</a>.</p>
+
+<figure><video class="maincolumn" controls="" playsinline="" preload="metadata"><source src="ccia/../attachments/video/imu-demo.mp4" type="video/mp4" /></video><figcaption class="maincolumn-figure">My then-student <a href="https://tonymacpela.com/">Tony Macpela</a> demoing the system described in this guide.</figcaption></figure>
+
+<p><span class="newthought">Our input of choice will be motion</span> , as described by relative movement of a point in 3D space by an <a href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">IMU</a>, aka accelerometer.<label for="mocap" class="margin-toggle sidenote-number"></label><input type="checkbox" id="mocap" class="margin-toggle" /><span class="sidenote">(as opposed to <em>absolute</em> motion capture systems that report positions in space) </span> How do you get your hands on an IMU? I think you have three major options: <a href="#make-it">Make it</a>. <a href="#buy-it">Buy it</a>. <a href="#phone-it">Phone it</a>.</p>
+
+<h3 id="make-it">Make it</h3>
+
+<p>This is probably the cheapest and most fun option, if you’re into tinkering with sensors and microcontrollers.<label for="tinker" class="margin-toggle sidenote-number"></label><input type="checkbox" id="tinker" class="margin-toggle" /><span class="sidenote">And if you’re not, it’s a great beginner-friendly project to start with! </span> IMU sensors are very accessible; a 3-axis one like the MPU6050 is fine but you can also go for a so-called 9-axis sensor like the MPU9250 if you think you might use e.g. the gyroscope in the future.</p>
+
+<p>You then hook it up to an Arduino-compatible microcontroller with WiFi<label for="bt" class="margin-toggle sidenote-number"></label><input type="checkbox" id="bt" class="margin-toggle" /><span class="sidenote">An alternative to WiFi is Bluetooth, as seen for example in <a href="https://inmagicwetrust.wordpress.com/2015/11/04/diy-project-wearable-imu-tracking-sensor/">this DYI project</a> and several products available online. </span> and, preferably, LiPo battery power. In the past I’ve used <a href="https://www.adafruit.com/product/2821">Adafruit Feather</a> boards.</p>
+
+<p>Here’s what it turned out like for me: my very first soldering job back in 2019. I didn’t know how sensitive soldering wires directly into through-holes can be, but they’ve held up just fine since then!</p>
+
+<figure><img src="ccia/../attachments/feather-imu.jpg" /><figcaption class="maincolumn-figure">MPU IMU module stuck onto a HUZZAH Feather with double-sided tape, with 4 wires making the <a href="https://en.wikipedia.org/wiki/I2C">I2C</a> connection. From my <a href="https://x.com/growlerpig/status/1183276083409555456/photo/1">twitter</a>. Remember twitter?</figcaption></figure>
+
+<p>My then-students <a href="https://cucicov.com/">Dorin</a> and <a href="https://www.instagram.com/what.is.bart/">Maria</a> helped with constructing fancy bracelets around 3 such sensor+board combos, with a pocket to house the LiPo battery and velcro to strap onto your wrist:</p>
+
+<figure><img src="ccia/../attachments/pd-imu-bracelets.jpg" /><figcaption class="maincolumn-figure">DYI motion bracelets. Over the years we have used them in various student projects, such as <a href="https://youtu.be/unKAOfE-q5Y">Out of the Box</a> in Lyon, 2021.</figcaption></figure>
+
+<p>It’s then just a matter of getting Arduino code for your MPU sensor and configuring it to send <a href="https://docs.arduino.cc/libraries/osc/">OSC</a> messages. Here’s <a href="https://github.com/RVirmoors/cc-patterns/tree/main/Arduino/sendAcc_OSC">one way to do it</a>.</p>
+
+<h3 id="buy-it">Buy it</h3>
+
+<p>There are off-the-shelf options if you just want to buy one of these pre-assembled. I haven’t used any of them myself but they should work fine. The ones I <a href="https://www.ato.com/wireless-imu-sensor">was</a> <a href="https://zenshin-tech.com/product/lpms-b2/">able</a> <a href="https://de.aliexpress.com/item/1005006208471099.html">to</a> <a href="https://www.shimmersensing.com/product/shimmer3-imu-unit/">find</a> online are all using Bluetooth and not WiFi.</p>
+
+<p>One version that I’d like to play with someday is the <a href="https://www.modularsquare.com/shop/eowave/r-iot-v3/">R-IOT</a>, developed by IRCAM.<label for="paper" class="margin-toggle sidenote-number"></label><input type="checkbox" id="paper" class="margin-toggle" /><span class="sidenote">Researching this I found <a href="https://www.mdpi.com/1424-8220/25/19/6188">this 2025 paper</a> from IRCAM on IMU sensors in performing arts, which looks like a good resource if you want to learn more. </span> Good luck finding it in stock.</p>
+
+<p>The main drawback for all of these would have to be the cost - a few times more expensive than making your own.</p>
+
+<h3 id="phone-it">Phone it</h3>
+
+<p><span class="newthought">But did you know</span>  you had an IMU sitting by your side all this time! Your phone uses an IMU to detect orientation. You just need an app that will let you access the sensor data and send it via OSC. For Android I currently (2026) use <a href="https://sensors2.org/osc/">Sensors2OSC</a>. For iPhone you can use <a href="https://apps.apple.com/us/app/seeosc/id6740987202">SeeOSC</a>.</p>
+
+<p>Let’s take a moment to realise how the <a href="https://www.fsps.muni.cz/emuni/data/reader/book-2/10.html">composition of forces</a> acts on the phone’s (or any sensor’s) body. We have the gravitational pull acting straight down: this means that, if your phone is lying on a table, the acceleration \(\vec{g}\), of magnitude \(g = 9.8 m / s^2\), is acting solely on the <em>z</em> axis.</p>
+
+<p>As you start to tilt your phone, you’ll see \(\vec{g}\) being decomposed along the accelerometer’s other axes as well:</p>
+
+<figure><img src="ccia/../attachments/phone-anim.gif" /><figcaption class="maincolumn-figure">Composition of forces. If we ignore the force applied by our movement, gravity is the main force acting on the phone’s body. Tilt it around its <em>x</em> axis (width) and the gravitational acceleration will be registered on the phone’s <em>y</em> and <em>z</em> axes. Tilt it around the <em>y</em> axis (height), and you’ll see activity on the <em>x</em> and <em>z</em> axes.</figcaption></figure>
+
+<p>We can observe that, especially if we don’t make sudden moves, the 3 values in the accelerometer describe the phone’s orientation relative to the ground.<label for="mag" class="margin-toggle sidenote-number"></label><input type="checkbox" id="mag" class="margin-toggle" /><span class="sidenote">In fact, we have access to just two Euler angles: <a href="https://en.wikipedia.org/wiki/Aircraft_principal_axes#/media/File:Yaw_Axis_Corrected.svg">pitch and roll</a> (Y and Z). The yaw (X), which would correspond to rotation around the Earth’s perpendicular, cannot be sensed by the accelerometer alone. For this a more complex device would be needed, such as a <a href="https://www.ti.com/lit/an/slaa518a/slaa518a.pdf">9-axis IMU with sensor fusion</a>. </span></p>
+
+<p>You can use one of those phone running armbands to hold your phone steady while you move. Overall, this solution is probably the most convenient, especially for things like public workshops and demonstrations. It’s also very handy in the prototyping stage of a project. I have used it once or twice for performances too, but I don’t consider it as reliable as the bespoke microcontroller option.</p>
+
+<h2 id="mapping">Mapping</h2>
+
+<p>After you have set up your Arduino or phone app to send OSC accelerometer values to your computer’s IP on a specific port (like <code class="language-plaintext highlighter-rouge">8000</code>), it is time to build the software that will receive them and turn them into sound.</p>
+
+<p>I will be using <a href="https://plugdata.org/">PlugData</a> for this project, because it’s free, open source, and user friendly. But you can very easily adapt the patch to <a href="https://cycling74.com/products/max">Max</a> if you prefer.</p>
+
+<p>Create an OSC listener and look at the console output.</p>
+
+<figure><img src="ccia/../attachments/pd-imu-receive.png" /><figcaption class="maincolumn-figure"></figcaption></figure>
+
+<p>You should see messages that look something like (for Sensors2OSC):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/accelerometer 0.0 0.0 9.8
+</code></pre></div></div>
+
+<p>or (other apps or Arduino scripts):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/accelerometer/x 0.0
+/accelerometer/y 0.0
+/accelerometer/z 9.8
+</code></pre></div></div>
+
+<p>First <code class="language-plaintext highlighter-rouge">route</code> the values out of the OSC messages.</p>
+
+<p>Sometimes the numbers range between -1 and 1. You can leave them as is, or <code class="language-plaintext highlighter-rouge">scale</code> them yourself in Pd/Max to the <code class="language-plaintext highlighter-rouge">0.0-1.0</code> range.</p>
+
+<p>In Pd you want to add an array (the <code class="language-plaintext highlighter-rouge">Add object</code> button &gt; <code class="language-plaintext highlighter-rouge">Array</code> in PlugData) to store the values. The result should look something like this:</p>
+
+<figure><img src="ccia/../attachments/pd-imu-inputs.png" /><figcaption class="maincolumn-figure"></figcaption></figure>
+
+<p>Now make sure that as you move your sensor, the values move in the <code class="language-plaintext highlighter-rouge">vslider</code>s and the <code class="language-plaintext highlighter-rouge">inputs</code> array.</p>
+
+<p><span class="newthought">The interactive ML</span>  pipeline is made possible by tools like <a href="https://wekinator.org/">Wekinator</a>, or, if you want to remain in the Pd (or Max) environment, I recommend you use <a href="https://wekinator.org/">FluCoMa</a>. Its <a href="https://learn.flucoma.org/reference/mlpregressor/">MLPRegressor</a> module implements a feed-forward neural network which can learn continuous mappings between inputs and outputs–exactly what we’re going for here.</p>
+
+<p>The remaining steps are pretty much identical to the FluCoMa tutorial on regression, which I am embedding below. See also the resources in the video description and on the <a href="https://learn.flucoma.org/learn/mlp-training/">FluCoMa</a> <a href="https://learn.flucoma.org/learn/mlp-parameters/">website</a>. They also have an equivalent tutorial video for <a href="https://youtu.be/XfNZzQPdPG0">Max</a>.</p>
+
+<iframe width="55%" height="300" src="https://www.youtube.com/embed/cVKexgWSU0s" title="Controlling a Synth using a Neural Network in Pure Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<p>Your final Pd patch should look something like this:</p>
+
+<figure><img src="ccia/../attachments/pd-imu-final.png" /><figcaption class="maincolumn-figure"></figcaption></figure>
+
+<p>You do the training and the performance just as explained in the video, except now instead of dragging sliders to set the input, you change the orientation of your physical sensor, which sets the sliders in the patch. So the sequence is: (1) set an output sound, (2) set a sensor position, (3) click the “add example” button, and repeat. Once all examples are in, train the regressor and then switch the toggle into the <code class="language-plaintext highlighter-rouge">RUN</code> setting.</p>
+
+<h2 id="results">Results</h2>
+
+<p>Here you can see in Genova one of the students interacting with the system for the first time:</p>
+
+<figure><video class="maincolumn" controls="" playsinline="" preload="metadata"><source src="ccia/../attachments/video/imu-train-test.mp4" type="video/mp4" /></video><figcaption class="maincolumn-figure">Training and testing the  motion-sound mapping system.</figcaption></figure>
+
+<p>Of course, this is just the beginning. You can replace the output<label for="output" class="margin-toggle sidenote-number"></label><input type="checkbox" id="output" class="margin-toggle" /><span class="sidenote">The first question in the workshop was, understandably, can this be used with something that doesn’t sound like random noises? </span> with some other parametric instrument or mix, or something in a totally different medium, like RGB lights or physical motors. But the principle, of associating input-output pairs and then being able to interpolate between (and extrapolate beyond) the given examples, remains.</p>
+
+    </article>
+    <span class="print-footer"> - Grigore Burloiu</span>
+    <footer>
+
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2026 Grigore Burloiu</span></br> <br>
+<span>Written and published using <a href="//foambubble.github.io/">Foam</a> and
+  a modified <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in 
+  <a href="//jekyllrb.com">Jekyll</a>.
+</br>
+  Found something unclear/missing/wrong? Go ahead and  
+  <a href="mailto:grigore.burloiu@unatc.ro">email me</a>, or open an issue
+  <a href="//github.com/rvirmoors/ccia">on Github</a>!</span>
+</div>  
+</footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

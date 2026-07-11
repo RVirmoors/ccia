@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basics</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 1]
+<br/><br/>
+.subtitle[Basics]
+<br/><br/><br/><br/><br/><br/>
+.date[Oct 2024] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+      
+1. [An "AI Simulator"](#an-ai-simulator)
+2. [Variables](#variables)
+3. [Operations](#operations)
+4. [Conditionals](#conditionals)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+name: an-ai-simulator
+class: center
+# An "AI Simulator"
+
+[Universal Paperclips](http://www.decisionproblem.com/paperclips/)
+
+[(original version)](https://web.archive.org/web/20171009230721/http://www.decisionproblem.com/paperclips/index2.html)
+- [article about the game](https://if50.substack.com/p/2017-universal-paperclips) / Aaron A. Reed
+
+---
+class: center
+## An "AI Simulator"
+
+<img style="width:80%"  src="../attachments/paperclips.png">
+
+---
+name: variables
+# Variables
+
+e.g. *the number of paperclips*
+
+--
+
+memory allocation & types
+
+--
+
+| boolean (`true`/`false`) | / | __ bits |
+|---|---|---|
+| int | / | 32 bits *(in p5)* |
+| float | / | 32 bits |
+| double | / | [64 bits](https://processing.org/reference/double.html) |
+
+--
+
+declaration & assignment
+
+```js
+    var x;  // declare a new variable "x"
+    x = 5;  // assign it a value
+```
+
+--
+
+```js
+    var x = 5;  // declare and assign at once
+```
+
+--
+
+  - p5/Java, Python: *strongly typed*. js: [*weakly/loosely typed*](https://medium.com/@xiaoyunyang/javascript-is-a-loosely-typed-language-meaning-you-dont-have-to-specify-what-type-of-information-137408d54fc7)
+  - p5/Java: *statically typed*. Python, js: [*dynamically typed*](https://pythonconquerstheuniverse.wordpress.com/2009/10/03/static-vs-dynamic-typing-of-programming-languages/) 
+
+---
+## Paperclips basic algorithm
+
+[flowchart](https://www.visual-paradigm.com/tutorials/flowchart-tutorial/)
+
+<img style="width:50%"  src="../attachments/paperclips-flowchart.png">
+
+--
+
+[p5js web editor](https://editor.p5js.org/) / Processing IDE
+
+```java
+void setup() {
+    ...
+}
+
+void draw() {
+    ...
+}
+
+void mouseClicked() {
+    ...
+}
+```
+
+---
+name: operations
+# Operations
+
+| an **expression** | : | *operand*(s), *operator* |
+|---------------|---|--------------------------|
+| is **evaluated** (into) | : | (*result*) |
+
+--
+
+```java
+    clips = clips + 1;
+```
+
+- `=` : the *assignment operator*
+
+--
+
+```java
+    2 + 2 == 5
+```
+
+--
+
+- result: 
+```java
+    False
+```
+
+--
+
+```java
+    locked = !locked; // "NOT": an unary operator
+```
+
+---
+## Logic
+
+combining `TRUE` ~ 1 and `FALSE` ~ 0
+
+--
+
+AND
+
+--
+
+- `*`
+
+--
+
+OR
+
+--
+
+- `+`
+
+---
+class: center
+name: conditionals
+# Conditionals
+
+<img style="width:50%"  src="../attachments/if-flowchart.png">
+
+```java
+if (condition) {    // expression
+    actions();      // operation(s)
+} else {
+    other_actions(); // ...
+}
+```
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
