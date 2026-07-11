@@ -21,6 +21,8 @@ Creative coding intros, using JavaScript, p5 etc: [Allison Parrish](https://crea
 
 [Preparation Course for Python](https://github.com/meinardmueller/PCP) by Meinard Müller et al. A solid introduction to programming via Python, notebooks, and towards numbers and [[signals](#signals)].
 
+[More Python learning resources](https://posts.decontextualize.com/python-resources/) on Allison Parrish's site.
+
 [Collision Detection](http://www.jeffreythompson.org/collision-detection/) introductory book by Jeff Thompson, with Processing implementations. See also the resulting [p5.js library](https://github.com/bmoren/p5.collide2D).
 
 ## Graphics

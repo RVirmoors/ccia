@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Creative Coding for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2025] 
+.date[Jul 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -37,8 +37,8 @@ name: semester-overview
 class: left
 # Semester overview
 
-- 2h lab: new concepts in practice
-- 2h lecture: theory, discussion
+- 1h lab: new concepts in practice
+- 1h lecture: theory, discussion
 
 [Syllabus](https://www.notion.so/itpma/Creative-Coding-and-Software-Design-1-2924578f95ba4de1a95ce28ab0e1ae50)
 
@@ -49,7 +49,7 @@ class: left
 ---
 ## General advice
 
-bring laptops, take notes, build stuff
+bring laptops to labs, take notes, build stuff
 
 ask questions! [pluralistic ignorance](https://youarenotsosmart.com/2019/07/02/yanss-157-the-psychology-behind-why-people-dont-speak-out-against-and-even-defend-norms-they-secretly-despise/)
 
@@ -67,7 +67,11 @@ BUILD STUFF!
 
 ---
 
-## Making mistakes
+## Programming as embodied craft
+
+"not something you *think*, something you *do*"
+
+--
 
 neuroplasticity
 
@@ -77,15 +81,12 @@ mistakes ➡ learning
 
 --
 
-how many?
+so challenge yourself & BUILD STUFF.
 
 --
 
-15% mistakes (["the 85% rule"](https://youtu.be/t1F7EEGPQwo?t=117))
-
---
-
-so: challenge yourself & BUILD STUFF.
+vs using AI. 
+- example: [Allison Parrish](https://www.decontextualize.com/) / [insta](https://www.instagram.com/p/Dal8D1bjswF/) [.](../attachments/ap-ai.png)
 
 ---
 ## Programming as exploration
@@ -164,7 +165,7 @@ focus on **interaction**
 
 
 ---
-## Glossary
+## Glossary of terms
 
 scripting ~ coding ~ programming ~ developing
 
@@ -177,21 +178,6 @@ architecture … algorithm
 design patterns
 
 coding style 
-
----
-## Features
-
-of "standard" text-based code:
-
-- reproducible
-
---
-
-- readable
-
---
-
-- diffable
 
 ---
 name: tools       
