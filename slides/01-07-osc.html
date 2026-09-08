@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Physical Computing</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 1]
+<br/><br/>
+.subtitle[Physical Computing]
+<br/><br/><br/><br/><br/><br/>
+.date[Apr 2023] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+
+1. [Libraries](#libraries)
+2. [Networking](#networking)
+3. [HCI](#hci)
+4. [Communication](#communication)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+name: libraries
+# Libraries
+
+processing - Sketch > Import Library...
+
+libs: [sound](https://processing.org/reference/libraries/sound/index.html), [net](https://processing.org/reference/libraries/net/index.html), [osc](http://www.sojamo.de/libraries/oscp5/), …
+
+https://processing.org/reference/libraries/ 
+
+---
+name: networking
+# Networking
+
+**topologies**
+
+one to one - one-way
+
+one to one - bidirectional
+
+--
+
+many to one | collaborative/crowd control
+
+--
+
+one to many | broadcasting
+
+--
+
+many to many | multiplayer
+
+---
+
+## processing.net library
+
+`import processing.net.*`
+
+`Server, Client`
+
+`available()`
+
+`clientEvent(), serverEvent()`
+
+`read(), readString()` …
+
+`write()`
+
+---
+
+## example
+
+multiplayer server & clients
+
+http://learningprocessing.com/examples/chp19/example-19-01-simple-server
+
+http://learningprocessing.com/examples/chp19/example-19-02-simple-client
+
+---
+name: hci
+# HCI
+
+example [syllabus](http://www.cs.nccu.edu.tw/~whliao/hci2014/) / [slides](https://www.slideshare.net/ZdenekLanc/hci-basics)
+
+design for human physique, age, perception, subconscious, experience, cognition, culture, motivations, mood
+
+--
+
+sensors : physical energy → electricity
+
+data : encoding & transmission
+
+information : processing & feedback
+
+---
+## Types of sensors
+
+.left-column[
+Capacitive touch
+
+EMG / electromyographic
+
+Switch, button
+
+Video / infrared camera
+
+Microphone
+
+Ultrasound
+
+Knobs & sliders
+]
+
+.right-column[
+Bend
+
+Magnetic field
+
+Accelerometer
+
+Gyroscope
+
+Photodiode
+
+GPS
+
+…  
+]
+
+---
+
+## Common HCI technology
+
+Arduino
+
+Raspberry Pi
+
+Kinect
+
+Wiimote
+
+Drawing tablet (Wacom etc)
+
+BCI
+
+Webcams
+
+Wearables
+
+Mobile devices: control surface + physical sensors
+
+---
+## Microcontrollers: Arduino etc
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/dOa3570JM2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+## Huzzah Feather
+
+.left-column[
+1 analog input
+
+9 digital I/O
+
+Arduino compatible
+
+built-in WiFi controller
+
+LiPoly acc. charger
+
+- https://www.adafruit.com/product/2821
+]
+.right-column[
+  <img width="100%" src="../attachments/feather.png">
+]
+
+---
+## Single Board Computers (SBC)
+
+ARM v Intel v ?
+
+software
+
+cost
+
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/RcvMxC81r_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Raspberry Pi 4 B
+.left-column[
+no analog inputs
+
+22 digital I/O
+
+single-board Linux computer
+
+built-in WiFi & Ethernet
+
+5V/3A DC power
+
+2x uHDMI, USB, SD card, stereo out
+
+- https://www.raspberrypi.org/products/raspberry-pi-4-model-b/ 
+]
+.right-column[
+  <img width="100%" src="../attachments/raspi4b.png">
+]
+
+---
+## Other platforms (focus on audio)
+
+[Bela](http://users.sussex.ac.uk/~thm21/ICLI_proceedings/2016/Practical/Workshops/129_Bela.pdf)
+
+[Daisy](https://www.electro-smith.com/daisy/daisy)
+
+[Axoloti](http://www.axoloti.com/), [Organelle](https://www.critterandguitari.com/organelle), [Teensy Audio](https://www.pjrc.com/store/teensy3_audio.html), [Pisound](https://blokas.io/), [Aleph](https://monome.org/aleph/)
+
+
+[comparison sheet](https://docs.google.com/spreadsheets/d/1lCcAwAynyZBDMc9DC4OqhzQerg8pFw5jJp8jHSKzNaE/edit?usp=sharing)
+
+new SBC's are appearing all the time. [Low energy computing](https://youtu.be/rGUnsiivqeU) is the future!
+
+---
+name: communication
+# Communication
+
+**input types**
+
+[I2C](https://learn.bela.io/products/trill/all-about-i2c/) - digital standard, 4 pins `VCC GND SDA SCL`, address
+
+<img style="width:60%"  src="../attachments/i2c.png">
+
+--
+
+analog - 3 pins `VCC GND SIG`, [sampled](https://learn.sparkfun.com/tutorials/analog-to-digital-conversion/all)
+
+digital - `0/1`, [PWM](https://learn.sparkfun.com/tutorials/pulse-width-modulation/all)
+
+---
+## Protocols
+
+USB cable → [serial](https://github.com/jaimovier/SARCduino) // MIDI etc
+
+WiFi / network → UDP // [OpenSoundControl](../resources#opensoundcontrol)
+
+Web → server-client // Node.js (socket.io etc)
+
+---
+## MIDI
+
+.left-column[
+<img style="width:100%"  src="../attachments/midi-msgs.png">
+- via [Colin Raffel](https://colinraffel.com/talks/ismir2017leveraging.pdf)
+]
+.right-column[
+<img style="width:100%"  src="../attachments/midi-data.png">
+]
+
+---
+## MIDI vs OSC
+
+.left-column[
+```midi
+144 60 64 (MIDI Note-on)
+128 60 64 (MIDI Note-off)
+144 60 64 (MIDI Note-on)
+```
+- pre-determined & standard
+- 8bit (0-127)
+  - (14bit int, sysex msgs)
+- state-dependent (e.g. note-off)
+- 16 channels
+- atomic changes 
+  - one parameter at a time
+]
+.right-column[
+```osc
+/wii/ir/x 0.1503
+/stylus/pressure 0.014
+/camera/look-at 5. 12. 17.
+/play-note 15 0.9
+```
+- user-defined & human-readable
+- int, float, string etc
+- state-flexible
+- unlimited channels
+- atomic changes
+  - multiple parameters
+]
+
+--
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+2020 - [MIDI 2.0](https://www.midi.org/midi-articles/details-about-midi-2-0-midi-ci-profiles-and-property-exchange)
+
+---
+## The oscp5 library
+
+.left-column[
+[`OscP5`](http://www.sojamo.de/libraries/oscP5/)
+
+`NetAddress`
+
+`OscBundle`
+
+`OscMessage`
+
+`checkTypeTag()`
+]
+.right-column[
+<img style="width:100%"  src="../attachments/osc-protocol.png">
+]
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+more [resources](../resources#opensoundcontrol)
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
