@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Creative Coding for Interactive Arts]
 <br/><br/><br/><br/><br/><br/>
-.date[Jul 2026] 
+.date[Sep 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -49,9 +49,11 @@ class: left
 ---
 ## General advice
 
-bring laptops to labs, take notes, build stuff
+take notes, build stuff
 
-ask questions! [pluralistic ignorance](https://youarenotsosmart.com/2019/07/02/yanss-157-the-psychology-behind-why-people-dont-speak-out-against-and-even-defend-norms-they-secretly-despise/)
+ask questions! 
+- [pluralistic ignorance](https://youarenotsosmart.com/2019/07/02/yanss-157-the-psychology-behind-why-people-dont-speak-out-against-and-even-defend-norms-they-secretly-despise/)
+- "When you ask your question. Any question. You begin to know more about what you really think." - [James Baldwin, 1963](https://pastdaily.com/james-baldwin-a-lecture-to-high-school-students-1963-past-daily-after-hours-reference-room/)
 
 [curse of knowledge](https://towardsdatascience.com/the-curse-of-knowledge-8deb4769bff9)
 
@@ -162,6 +164,8 @@ focus on **interaction**
 --
 
 [awesome resources](https://github.com/terkelg/awesome-creative-coding)
+
+more cool stuff: [Nima's likes](https://vimeo.com/nima3d/likes), [That Creative Code Page](https://available-anaconda-10d.notion.site/That-Creative-Code-Page-c5550ef2f7574126bdc77b09ed76651b)
 
 
 ---
