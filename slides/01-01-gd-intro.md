@@ -69,7 +69,7 @@ google, stackoverflow etc
 
 --
 
-AI[?](https://youtu.be/FPM92rF26EI?t=827)[!](https://youtu.be/A4aLYwtpyes)
+AI[?](https://youtu.be/FPM92rF26EI?t=827)[!](https://youtu.be/A4aLYwtpyes?t=449)
 
 --
 
