@@ -65,6 +65,11 @@ AI[?](https://youtu.be/FPM92rF26EI?t=827)[!](https://youtu.be/A4aLYwtpyes?t=449)
 
 --
 
+"am I learning, or am I building?"
+- this semester = learning!
+
+--
+
 BUILD STUFF!
 
 ---

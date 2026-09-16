@@ -73,6 +73,11 @@ AI[?](https://youtu.be/FPM92rF26EI?t=827)[!](https://youtu.be/A4aLYwtpyes?t=449)
 
 --
 
+"am I learning, or am I building?"
+- this semester = learning!
+
+--
+
 [don't trust advice](https://youtu.be/miwrDpbb25Q)[.](https://www.gamesindustry.biz/everything-i-said-was-wrong)
 
 --
