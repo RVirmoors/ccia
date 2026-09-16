@@ -69,7 +69,7 @@ google, stackoverflow etc
 
 --
 
-AI?
+AI[?](https://youtu.be/FPM92rF26EI?t=827)
 
 --
 
@@ -80,7 +80,12 @@ AI?
 BUILD STUFF!
 
 ---
-## Making mistakes
+## Programming as embodied craft
+
+"not something you *think*, something you *do*"
+- writing code is different from reviewing code
+
+--
 
 neuroplasticity
 
@@ -90,15 +95,7 @@ mistakes ➡ learning
 
 --
 
-how many?
-
---
-
-15% mistakes (["the 85% rule"](https://youtu.be/t1F7EEGPQwo?t=117))
-
---
-
-so... challenge yourself & BUILD STUFF.
+so challenge yourself & BUILD STUFF.
 
 ---
 

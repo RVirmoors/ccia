@@ -61,7 +61,7 @@ google, stackoverflow etc
 
 --
 
-AI?
+AI[?](https://youtu.be/FPM92rF26EI?t=827)
 
 --
 
@@ -72,6 +72,7 @@ BUILD STUFF!
 ## Programming as embodied craft
 
 "not something you *think*, something you *do*"
+- writing code is different from reviewing code
 
 --
 
