@@ -86,6 +86,7 @@ neuroplasticity
 --
 
 mistakes ➡ learning
+- [bad is stronger than good](https://research.vu.nl/en/publications/bad-is-stronger-than-good-2/)
 
 --
 
