@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Learning chatbot</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Using Deep Learning to generate dialogue text]
+<br/><br/>
+.subtitle[[bit.ly/chat-nova](https://bit.ly/chat-nova)
+<br/>Workshop @ CINETic / NOVA
+<br/><br/>grigore.burloiu@unatc.ro
+<br/>rvirmoors.github.io]
+<br/><br/><br/><br/><br/><br/>
+.date[Dec 2022]
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+      
+1. [Preamble: ethics](#preamble-ethics)
+2. [NLP models / OpenAI](#nlp-models--openai)
+3. [Generative text \& art](#generative-text--art)
+4. [A chatbot using GPT-2](#a-chatbot-using-gpt-2)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+name: preamble-ethics
+# Preamble: ethics
+
+.left-column[
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/OhCzX0iLnOc" title="The danger of AI is weirder than you think | Janelle Shane" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+.right-column[
+[<img width="100%" height="250" src="../attachments/laion-ethics.png">](https://twitter.com/Abebab/status/1445723482231173120)
+]
+
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/videoseries?list=PLnV8Pp3XepxXh1zs2j6MOBRBiMBkvt2X0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+---
+## Building ML models
+
+data |    ~  |   *measurements*
+-|-|-
+information  |  ~ |  data *interpreted* 
+model |  ~  | information *mapped*
+
+--
+
+all the above are **fallible**: subject to *choices* and *noise*
+- [Critical Perspectives on Computer Vision](https://slideslive.com/38923500/critical-perspectives-on-computer-vision) / Emily Denton
+- [OpenAI Chatbot spits out biased musings](https://twitter.com/daveyalba/status/1600892019878268928) / Davey Alba
+  - [my attempt](../attachments/chatgpt-ethics.png)
+ 
+---
+## Types of knowledge in ML models
+
+domain knowledge
+- *appears in* alogrithm design
+- *comes from* preprocessed features, model architecture, output postprocessing
+
+--
+
+inferred knowledge
+- *appears in* dataset choice
+- *comes from* learning from data
+
+--
+
+inherited knowledge: transfer learning 
+
+---
+
+## Types of bias in ML models
+
+domain bias
+- *appears in* alogrithm design
+- *comes from* preprocessed features, model architecture, output postprocessing
+
+inferred bias
+- *appears in* dataset choice
+- *comes from* learning from data
+
+inherited bias: transfer learning 
+
+---
+name: nlp-models--openai
+# NLP models / OpenAI
+
+2018: Generative Pretrained Transformer (OpenAI GPT)
+
+2019: [GPT-2](https://www.openai.com/blog/gpt-2-1-5b-release/)
+
+- [Hugging Face](https://huggingface.co/gpt2/) [+](https://huggingface.co/distilgpt2) [+](https://colab.research.google.com/github/jalammar/jalammar.github.io/blob/master/notebooks/Simple_Transformer_Language_Model.ipynb)
+- [Max Woolf](https://github.com/minimaxir/aitextgen) [+](https://minimaxir.com/2019/09/howto-gpt2/)
+- [Talk to Transformer](https://talktotransformer.com)
+
+2020: [GPT-3](https://openai.com/api/)
+
+- https://dailynous.com/2020/07/30/philosophers-gpt-3/ [+](http://henryshevlin.com/wp-content/uploads/2020/07/PratchettT.pdf) [+](https://gist.github.com/minimaxir/f4998c20f2520ad5969b03c9590f16ce)
+- [Tempering Expectations](https://minimaxir.com/2020/07/gpt3-expectations/) (Max Woolf)
+- code gen: [2020](https://twitter.com/sharifshameem/status/1284095222939451393), [2021](https://copilot.github.com/) [+](https://www.openai.com/blog/openai-codex)
+
+2021: [CLIP](https://openai.com/blog/clip/)
+
+2022: [ChatGPT](https://chat.openai.com/chat) / GPT-3.5
+
+---
+name: generative-text--art
+# Generative text & art
+
+[Project December](https://projectdecember.net/) (Jason Rohrer)
+
+[AI Dungeon](https://play.aidungeon.io)
+
+- [GPT2 Adventure](https://colab.research.google.com/drive/1khUaPex-gyk1wXXLuqcopiWmHmcKl4UP) (colab) [+](https://quicktotheratcave.tumblr.com/post/187432425523/shall-we-play-a-game)
+
+[Co-authoring with GPT-2](https://emshort.blog/2021/07/18/the-uncanny-deck-co-authoring-with-gpt-2/) (Emily Short)
+
+[Wordcraft](https://www.youtube.com/watch?v=9p4mfA0Fyd8) (Google)
+
+See more [resources](../resources).
+
+---
+name: a-chatbot-using-gpt-2
+# A chatbot using GPT-2
+
+1. use [Google Colab](https://colab.research.google.com) to train / test
+2. use [Huggingface](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling)[*](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads) or [aitextgen](https://docs.aitextgen.io/) libraries
+3. download your model and run it locally
+
+- all the code is available [here](https://github.com/RVirmoors/fiction-chatbot)
+
+--
+
+"knowledge" in a language model
+- "the language" ~ pre-training (e.g. GPT-2, NeoGPT, BERT...)
+- "background" ~ fine-tuning / transfer learning
+- "context" ~ prompting
+
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loops</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 1]
+<br/><br/>
+.subtitle[Week 3: Loops]
+<br/><br/><br/><br/><br/><br/>
+.date[Nov 2024] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+
+1. [Loops](#loops)
+2. [Nested loops](#nested-loops)
+3. [Keyboard interactivity](#keyboard-interactivity)
+4. [Colour](#colour)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+
+---
+
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/t4CRCJUmWsM?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+name: loops
+# Loops
+
+`draw()` → one loop / frame
+
+--
+
+what if we want *n* loops / frame?
+
+---
+## Architecture of a loop
+
+`while`
+
+--
+
+`for`
+
+--
+
+exercise
+- draw vertical lines up to a specific X coordinate
+- [flowchart](01-02-basics#11) before coding
+
+---
+## Loops in code
+
+```java
+while( cond ) { 
+    actions; ...
+}
+
+for ( start assgn ; end cond ; increment ) { 
+    actions; ...
+}
+```
+
+--
+
+- the above syntax, annotated --
+
+```java
+while( cond ) {     // while cond is true
+    actions; ...    // do actions
+}
+
+for ( start assgn ; end cond ; increment ) { 
+    // standard form:
+    // for (int i = 0; i < N; i++)
+    actions; ...    // actions to be performed N times
+}
+```
+
+---
+class: center
+name: nested-loops
+# Nested loops
+
+![](../attachments/nested-loop.png)
+
+---
+name: keyboard-interactivity
+# Keyboard interactivity
+
+the `char` [type](https://processing.org/reference/char.html)
+
+the `String` *composite datatype* ~ *class*
+
+- [characters & strings](https://processing.org/examples/charactersstrings.html) example
+
+--
+
+system functions and variables:
+
+keyboard status: `keyPressed, key, keyCode`
+
+keyboard events: `keyPressed(), keyReleased()` [et](https://processing.org/reference/#input-keyboard) [al](https://processing.org/examples/keyboard.html) [...](https://processing.org/examples/keyboardfunctions.html)
+
+- [Text and type](https://creative-coding.decontextualize.com/text-and-type/) p5js tutorial / Allison Parish
+
+---
+name: colour
+# Colour
+
+the `color` [type](https://processing.org/reference/color_datatype.html)
+- specified in `(R,G,B)` triplets or `#RRGGBB` hex values
+
+--
+
+.right-column[
+<img width="100%" src="../attachments/greyscale.png">
+]
+
+- greyscale: 8 bit
+- RGB: 3 x 8b = 24b
+- RGBA: (3+1) x 8b = 32b
+
+--
+
+<br/>
+.right-column[
+<img src="../attachments/photoshop-draw.png">
+]
+draw settings
+- `background(), stroke(), fill() / noStroke(), noFill()` [...](https://processing.org/reference/stroke_.html)
+
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>

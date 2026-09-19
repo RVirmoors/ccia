@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Max for Live API</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Interactive Music Systems]
+<br/><br/>
+.subtitle[The Max for Live API]
+<br/><br/><br/><br/><br/><br/>
+.date[Oct 2025] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★     <!-- omit in toc -->
+
+1. [Review](#review)
+2. [Controlling Ableton](#controlling-ableton)
+3. [The Live API](#the-live-api)
+4. [Example](#example)
+5. [Assignment](#assignment)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+        
+---
+name: review
+# Review
+
+Tools
+- [Max](02-01-max-unity-intro)
+- [Ableton Live](04-02-interactive-devices#ableton-live)
+- [HCI and OSC](01-07-osc)
+
+--
+
+.right-column[
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/qmJrMAcPxhw?start=1690" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+Technique
+- mapping and control
+- sound / sonification design
+- IMS: analysis + reaction
+
+---
+## Max for Live devices
+
+automation
+- `[live.*]` parameter objects
+- inspector - parameter - visibility - Automated and Stored
+
+local naming
+- use `---` before names of `send` `receive` `buffer~` etc to keep them local
+- (similar to `#0` in classic Max)
+
+open in presentation
+- right-click on patcher - inspector window - basic
+
+distribution: [freezing devices](https://docs.cycling74.com/userguide/m4l/live_freezing/)
+- [unfreezing creates a new copy](https://steinkamp.us/posts/2022-04-14-max-tips)
+- don't unfreeze! rather, keep your `dev/` folder separate and freeze for distribution + Save As to a `release/` folder
+  - Ableton's [m4l production guidelines](https://github.com/Ableton/maxdevtools/blob/main/m4l-production-guidelines/m4l-production-guidelines.md)
+  - Ableton's [building Max Devices Tour](https://www.youtube.com/watch?v=__R9P0ZOLbU&list=PLoh4MB-kbBmI1pXYI4M1jX2_5xpMNS-g-) videos
+  - [reddit workflow discussion](https://www.reddit.com/r/ableton/comments/1kgmes5/guide_on_workflow_for_building_m4l_devices_for/)
+
+---
+name: controlling-ableton
+# Controlling Ableton
+
+via MIDI
+
+.left-column[
+<img style="width:100%"  src="../attachments/live-midi1.png">
+]
+
+.right-column[<br/>
+<img style="width:100%"  src="../attachments/live-midi3.png">
+]
+
+<img style="width:100%"  src="../attachments/live-midi2.png">
+
+---
+## Max & Live integration
+
+Live handles audio+MIDI in & out to M4L devices
+
+[timing](https://docs.cycling74.com/max8/vignettes/live_timing): Max transport is led by Live   
+
+Max values can be Live [parameters](https://docs.cycling74.com/max8/vignettes/live_parameters) (for automation, presets etc)
+
+factory M4L [abstractions](https://docs.cycling74.com/max8/vignettes/live_abstractions) 
+
+more: 
+- https://docs.cycling74.com/max8/vignettes/doclive
+- https://docs.cycling74.com/max8/vignettes/live_limitations 
+
+---
+name: the-live-api
+# The Live API
+
+[control Live from Max](https://docs.cycling74.com/max8/vignettes/live_api_overview): transport, tracks, clips, ...
+
+<img style="width:75%"  src="../attachments/live-remote-api.png">
+
+- [Live API + JS](https://docs.cycling74.com/max8/vignettes/jsliveapi)
+- find `live.path` using the [Live Object Model](https://docs.cycling74.com/max8/vignettes/live_object_model)
+
+--
+- ... or simply use the [M4L API abstractions](https://docs.cycling74.com/max8/vignettes/live_apiabstractions)
+
+---
+# Example
+
+2 scenes: `listen`, `play`
+
+- ☐ - `listen` = learns a Markov chain (notes+durations)
+- ☒ - `play` = generates notes using Markov chain
+
+--
+
+switch between scenes when musician stays silent for n beats
+
+--
+
+is this an IMS?
+
+---
+## see also
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/yW8PkIl4tDE" title="C'est pour ça - [Extract] "Generative improvisation #1"" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+name: assignment
+# Assignment
+
+modify the `m4l-jam` project (or create a new one) which implements, at least:
+- a `listen` scene and a `jam` scene
+- switching between them based on machine listening and/or playing
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
