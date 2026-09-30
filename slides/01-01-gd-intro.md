@@ -96,8 +96,14 @@ neuroplasticity
 
 --
 
+.right-column[
+    [<img style="width:70%"  src="../attachments/mistakes.png">](https://www.instagram.com/p/DdYp7TptXDt/)
+]
+
+.left-column[
 mistakes ➡ learning
 - [bad is stronger than good](https://research.vu.nl/en/publications/bad-is-stronger-than-good-2/)
+]
 
 --
 

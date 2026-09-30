@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Introduction]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2025] 
+.date[Oct 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) + [KaTeX](https://katex.org)]
 
@@ -81,8 +81,8 @@ interaction - in-class, too!
 
 --
 
-final - 30p
-- A. your own IMS
+final - 40p
+- A. your implementation/interpretation of an IMS paper
 - B. a 3+ page paper submitted to a workshop/conference/journal
 - see [syllabus](https://www.notion.so/itpma/Interactive-Music-Systems-eefdd64b55e249c1813aa0a1cd701383)
 
