@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Intro to Game Development]
 <br/><br/><br/><br/><br/><br/>
-.date[Sep 2026]
+.date[Oct 2026]
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -40,11 +40,11 @@ class: left
 
 lectures (2h): Grig
 - 50%: assignments (per class)
-- weeks 2, 4, ...
+- weeks 1, 3, ...
 
-labs (2h): Dragos
+labs (2h): [Dragos / Emil](https://docs.google.com/spreadsheets/d/1ZeWHjmh58f2yuf609aW4ZNU1HQnFwZq8VpVWjhdhBZQ/)
 - 50%: lab (30p) + final (20p)
-- weeks 1, (3), 5, ...
+- weeks 2, 4, 6, ...
 
 --
 
@@ -107,7 +107,7 @@ mistakes ➡ learning
 
 --
 
-so challenge yourself & BUILD STUFF.
+challenge yourself & BUILD STUFF.
 
 ---
 
@@ -294,4 +294,4 @@ task
 deliverables
 - game link / upload
 
-due: next week
+due: week 3
