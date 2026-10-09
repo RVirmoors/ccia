@@ -38,7 +38,7 @@ name: semester-overview
 class: left
 # Semester overview
 
-- 2h lab: new concepts in practice
+- 1h lab: new concepts in practice
 - 1h lecture: theory, discussion
 
 [Syllabus](https://itpma.notion.site/itpma/Creative-Coding-and-Software-Design-3-c18bb7e2da834cabb027a681abefec2c)
