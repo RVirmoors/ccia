@@ -8,7 +8,7 @@ class: center, middle
 <br/><br/>
 .subtitle[Basics]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2024] 
+.date[Oct 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -22,9 +22,10 @@ class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
 1. [An "AI Simulator"](#an-ai-simulator)
-2. [Variables](#variables)
-3. [Operations](#operations)
-4. [Conditionals](#conditionals)
+2. [A distance sensor](#a-distance-sensor)
+3. [Variables](#variables)
+4. [Operations](#operations)
+5. [Conditionals](#conditionals)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
@@ -48,10 +49,17 @@ class: center
 <img style="width:80%"  src="../attachments/paperclips.png">
 
 ---
+name: a-distance-sensor
+class: center
+# A distance sensor
+
+<iframe width="700" height="480" src="https://drive.google.com/file/d/1xVHizA728KfQrhxxurM6oXuZ3YpVQRoo/preview" frameborder="0" allowfullscreen></iframe>
+
+---
 name: variables
 # Variables
 
-e.g. *the number of paperclips*
+e.g. "*the number of paperclips*", or "*the current distance*"
 
 --
 
@@ -180,3 +188,9 @@ if (condition) {    // expression
     other_actions(); // ...
 }
 ```
+
+---
+class: center
+## Fun with distance sensor
+
+<iframe width="700" height="480" src="https://drive.google.com/file/d/1wTTCszKZUE3X2B4zt7GLeMzq9wkUH2Z_/preview" frameborder="0" allowfullscreen></iframe>
