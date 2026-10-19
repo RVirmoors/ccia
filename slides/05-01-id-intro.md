@@ -6,7 +6,7 @@ title: Intro to Interactivity Design
 class: center, middle
 .title[Interactivity Design 1]
 <br/><br/>
-.subtitle[Intro to Interactivity Design]
+.subtitle[Interactivity with ML]
 <br/><br/><br/><br/><br/><br/>
 .date[Oct 2026] 
 <br/><br/><br/>

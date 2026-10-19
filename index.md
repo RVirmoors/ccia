@@ -43,10 +43,10 @@ Permanent work-in-progress. See my [[musings]] on what it's all about.
 *Creating rich mappings and outputs using interactive and deep machine learning.*
 <br/><br/>
 
-| **Wekinator** | | | **Code** | | | **Deep learning** | |            
-| :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | 
-| Intro to ML for IA |  | [slides](slides/03-01-ml-intro.md) | ml5.js: transfer learning |  | [slides](slides/03-05-transfer.md)  | GANs: datasets & training  | | [slides](slides/03-08-gan-train.md) |
-| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | [colab](https://colab.research.google.com/drive/1LWUDaBr6a8wRjXY_qcUeRkIVVMfTSMXW?usp=sharing) | [[GANs: interactive inference]]  | | [slides](slides/03-09-gan-inference.md) |
+| **Visual** | | | **Code** | | | **Deep learning** | | | **Interactivity** | |            
+| :-------- | -------- |--- | :-------- | -------- | --- | :-------- | -------- | |--- | :-------- | -------- |
+| Intro to ML for IA |  | [slides](slides/03-01-ml-intro.md) | ml5.js: transfer learning |  | [slides](slides/03-05-transfer.md)  | GANs: datasets & training  | | [slides](slides/03-08-gan-train.md) | Interactivity with ML |  | [slides](slides/05-01-id-intro.md) |
+| Classification. kNNs  |  | [slides](slides/03-02-classification.md) | Python: numpy, scikit.learn  |  | [colab](https://colab.research.google.com/drive/1LWUDaBr6a8wRjXY_qcUeRkIVVMfTSMXW?usp=sharing) | [[GANs: interactive inference]]  | | [slides](slides/03-09-gan-inference.md) | iML w/ Wekinator | | [slides](slides/05-02-wekinator.md) |
 | [Regression. Neural nets](regression-osc-imu.md)  |  | [slides](slides/03-03-regression.md) | PyTorch and fast.ai     |  | [ipynb](https://github.com/RVirmoors/cc1/blob/master/ml/python-weki/fastai-classify.ipynb) | RNN&co: language  | | [slides](slides/03-10-rnn-text.md) |
 | Temporal modelling  | | [slides](slides/03-04-temporal.md)  | PyTorch: training a VAE     |  | [slides](slides/03-07-pytorch.md) | Diffusion  | | [slides](slides/03-12-diffusion.md)
 | Unsupervised learning |  | [slides](slides/03-06-unsupervised.md) |      |  | | RNN&co: music  | | [slides](slides/03-13-rnn-audio.md)

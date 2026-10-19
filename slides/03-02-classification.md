@@ -6,9 +6,9 @@ title: Classification
 class: center, middle
 .title[Creative Coding and Software Design 3]
 <br/><br/>
-.subtitle[Week 2: Classification]
+.subtitle[Classification]
 <br/><br/><br/><br/><br/><br/>
-.date[Oct 2022] 
+.date[Oct 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -21,99 +21,15 @@ name: toc
 class: left
 # ★ Table of Contents ★      <!-- omit in toc -->
       
-1. [ML representations](#ml-representations)
-2. [Supervised learning](#supervised-learning)
-3. [Classification](#classification)
-4. [kNN in python & sklearn](#knn-in-python--sklearn)
-5. [Input data](#input-data)
-6. [Wekinator example](#wekinator-example)
+1. [Classification](#classification)
+2. [kNN in python \& sklearn](#knn-in-python--sklearn)
+3. [Input data](#input-data)
+4. [Wekinator example](#wekinator-example)
 
         
 <!-- Comment out the next slide if you don't want the Table of Contents link -->         
 ---
 layout: true  .toc[[★](#toc)]
-
----
-name: ml-representations  
-class: left
-# ML representations
-
-.right-column[
-<iframe width="100%" src="https://www.youtube.com/embed/LSS_bos_TPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-]
-
-a data**point** is a [vector](https://natureofcode.com/book/chapter-1-vectors/)
-<br/><br/><br/><br/><br/><br/>
-
---
-
-a **dataset** is a collection of points / vectors
-<br/><br/><br/><br/><br/><br/>
-
---
-
-a **model** *fits* the dataset onto a [*latent space*](https://stats.stackexchange.com/a/442360)
-
----
-name: types-of-ml  
-class: left
-## Types of ML
-
-*how* is the model trained? ~ *how* is the latent space formed?
-
---
-
-supervised (90% of this semester)
-- based on user-labelled data
-
---
-
-unsupervised (9%)
-- finding underlying structure in data
-
---
-
-reinforcement (?)
-- desired actions based on feedback from the environment
-
-
----
-name: supervised-learning
-class: left
-# Supervised learning
-
-input-output pairs are learned together
-
-input ~ *data*, output ~ *label* 
-
---
-
-→ input+output ~ *labelled data*
-
-<img style="width:75%"  src="../attachments/ml-pipeline.png">
-
----
-## sup.ML tasks
-
-.left-column[
-    classification
-
-<img style="width:80%"  src="../attachments/ml-classification.png">
-]
-
---
-
-.right-column[
-    regression
-
-<img style="width:80%"  src="../attachments/ml-regression.png">
-]
-
---
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-temporal modelling
-- classification/regression *over time*
 
 ---
 name: classification
@@ -247,16 +163,22 @@ time series data
 
 [examples @ Wekinator](http://www.wekinator.org/examples/#Pick_Choose_Inputs)
 
+- misc: [hand tracking (Python)](https://github.com/RVirmoors/cc-patterns/tree/main/Python/HandTracking_OSC), [Mediapipe in Max](https://github.com/lysdexic-audio), [send from TD](https://github.com/RVirmoors/cc-patterns/tree/main/TouchDesigner/send-osc)
+
 --
 
 processing
 
 - preprocessing: smooth/filter, rectify, window, env fol, min/max ...
+
 - spectral: FFT, [MFCC](https://learn.flucoma.org/reference/mfcc/) ...
+
 - statistical features: mean, stddev, higher moments (skew, kurtosis) ...
+
 - Max
     - objects: [peakamp~], [zerox~], [slide], [onebang]
-    - packages: zsa, mubu, flucoma
+    - packages: zsa, mubu, flucoma, dataknot
+
 - [weki Input Helper](http://www.wekinator.org/input-helper/)
 - see also [R Fiebrink's MOOC](https://www.kadenze.com/courses/machine-learning-for-musicians-and-artists-v/sessions/sensors-and-features-generating-useful-inputs-for-machine-learning)
 
