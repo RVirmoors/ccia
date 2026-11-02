@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intro to real-time systems</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Creative Coding and Software Design 2]
+<br/><br/>
+.subtitle[Intro to real-time systems]
+<br/><br/><br/><br/><br/><br/>
+.date[Mar 2025] 
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★      <!-- omit in toc -->
+      
+1. [Semester overview](#semester-overview)
+2. [Interactive programming](#interactive-programming)
+3. [Max \& Pd](#max--pd)
+4. [Unity](#unity)
+5. [TouchDesigner](#touchdesigner)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+        
+---
+name: semester-overview  
+class: left
+# Semester overview
+
+[Syllabus](https://www.notion.so/rvirmoors/Creative-Coding-and-Software-Design-2-b6cab9fba18a4e5c85f97fc3f0364aa7)
+
+
+| 2h lab | ~ | assignments work. practice w/ new concepts |
+| --- | | --- |
+| 2h lecture | ~ | new concepts. assignments / readings |
+
+Python & TouchDesigner
+
+[version control](01-03-fsm.md#version-control)
+
+Max / Pure Data
+
+Arduino, RPi, [Daisy](https://www.electro-smith.com/daisy/daisy), sensors
+
+---
+
+## Semester objective
+
+create **layered** interaction
+
+--
+
+- beyond "[Mickey Mousing](https://en.wikipedia.org/wiki/Mickey_Mousing)"
+- not just purely reactive
+
+--
+
+how?
+
+--
+
+what are YOUR objectives?
+
+---
+
+## towards a taxonomy of interactivity
+
+"sculpture" – minimal or ambient interaction 
+- (e.g., a kinetic sculpture that moves with the wind)
+
+--
+
+"instrument" – cause-effect response 
+- (e.g., a Theremin-like interactive sound sculpture)
+
+--
+
+"story" – a narrative, which may be linear or branching 
+- (e.g., interactive projection mapping that unfolds based on movement)
+
+--
+
+"character" – agency, memory, communication 
+- (e.g., an AI-driven entity that responds to your tone and words)
+
+--
+
+"partner" – co-creation 
+- (e.g., a generative AI installation that creates music or poetry based on shared input)
+
+
+- inspired by Edmonds et al (2004) via [chatgpt](https://chatgpt.com/share/67ca0c05-4414-8002-b774-034f70798908)
+
+---
+
+## Assignments
+
+complete 2 interactive projects
+- 40% each
+- see [resources](../resources#academic)
+- topics on [Classroom](https://classroom.google.com/)
+
+weekly "dev diary"
+- 2% each, total up to 20%
+- simple assignment to get you started
+- any work counts (aside from the 2 projects above)
+
+---
+name: interactive-programming  
+class: left
+# Interactive programming
+
+[@wikipedia](https://en.wikipedia.org/wiki/Interactive_programming)
+
+data **flow**
+
+program **state**
+
+--
+
+| | visual | free | Linux |
+|-|--------|------|-------|
+|Max|✅|❌|❌|
+|Pure Data|✅|✅|✅|
+|TouchDesigner|✅|❌|❌|
+|vvvv|✅|✅|❌|
+|Python notebooks|❌|✅|✅|
+|Supercollider|❌|✅|✅|
+|Unity*|❌|❌|✅|
+
+--
+
+*not actually interactive
+
+---
+name: max--pd  
+class: left
+# Max & Pd
+
+[Max](//cycling74.com/products/max/): created by [Miller Puckette](//msp.ucsd.edu/) in the 80s at IRCAM
+
+90s: M.S.P. → [Pure Data](//puredata.info/)
+
+1997: MSP / Max Signal Processing
+
+2003: Jitter
+
+2011: [Max](https://cycling74.com/products/maxforlive) [for](https://maxforlive.com/) [Live](https://www.ableton.com/en/live/max-for-live/)
+
+[also](https://cycling74.com/products/extendmax): C/C++, Gen, JavaScript + Node for Max, many *external* [packages](https://cycling74.com/packages/)
+
+meanwhile: 
+- Pd-Extended → [Purr Data](https://agraef.github.io/purr-data-intro/)
+
+- [libpd](https://github.com/libpd/libpd) : [Raspberry Pi](https://puredata.info/docs/raspberry-pi), [Unity](https://github.com/LibPdIntegration/LibPdIntegration) etc
+
+---
+
+## Max
+
+commercial software / Cycling ‘74
+
+runs on Win & OSX
+
+documentation : *Help > Reference*
+
+[hundreds of objects](https://docs.cycling74.com/max8/vignettes/thesaurus)
+
+learning by practice → 💡 → intuition
+
+dataflow programming / real-time prototyping / interaction design
+
+**js**, **node**, java, c/c++...
+
+---
+
+## Pure Data
+
+open source / copyrighted but free
+
+runs on Win, OSX, Linux
+
+[documentation](http://msp.ucsd.edu/Pd_documentation/index.htm) : *Help > HTML manual*
+
+[hundreds of objects](https://puredata.info/docs/faq/listofobjects)
+
+learning by practice → 💡 → intuition
+
+dataflow programming / real-time prototyping / interaction design
+
+**libpd**, [js](https://github.com/mganss/pdjs), c/c++...
+
+---
+
+class: center
+## UI comparison
+
+<img style="width:100%"  src="../attachments/max-pd-purr.png">
+
+---
+
+name: unity       
+class: left
+#  Unity
+
+commercial software / Unity Technologies
+
+runs on Win & OSX, compiles to Linux & many more
+
+[documentation](https://docs.unity3d.com/Manual/index.html)
+
+[C# API](https://docs.unity3d.com/Manual/ScriptingImportantClasses.html)
+
+learning by googling & rtfm
+
+imperative programming / iterative prototyping / experience design
+
+[plug-ins](https://docs.unity3d.com/Manual/Plugins.html)
+
+--
+
+alternatives - [Godot](https://godotengine.org/features), [PICO-8](https://www.lexaloffle.com/pico-8.php)
+
+---
+name: touchdesigner
+# TouchDesigner
+
+commercial software / Derivative
+
+runs on Win & OSX
+
+[documentation](https://docs.derivative.ca/Main_Page)
+
+[Python scripting](https://docs.derivative.ca/Category:Python)
+
+learning by practice → 💡 → intuition (*not the same* as Max/Pd)
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
