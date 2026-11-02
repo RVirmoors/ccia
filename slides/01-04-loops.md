@@ -6,9 +6,9 @@ title: Loops
 class: center, middle
 .title[Creative Coding and Software Design 1]
 <br/><br/>
-.subtitle[Week 3: Loops]
+.subtitle[Loops]
 <br/><br/><br/><br/><br/><br/>
-.date[Nov 2024] 
+.date[Nov 2026] 
 <br/><br/><br/>
 .note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
 
@@ -36,14 +36,25 @@ layout: true  .toc[[★](#toc)]
 <iframe width="100%" height="600" src="https://www.youtube.com/embed/t4CRCJUmWsM?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
-name: loops
-# Loops
+class: center
+## What's going on here?
 
-`draw()` → one loop / frame
+<img style="width:70%"  src="../attachments/circles-loop.gif">
 
 --
 
-what if we want *n* loops / frame?
+draw a flowchart!
+
+
+---
+name: loops
+# Loops
+
+`draw()` → one step / frame
+
+--
+
+what if we want *n* steps / frame?
 
 ---
 ## Architecture of a loop
@@ -88,6 +99,45 @@ for ( start assgn ; end cond ; increment ) {
     actions; ...    // actions to be performed N times
 }
 ```
+
+---
+## Spot the difference!
+
+.left-column[
+```java
+for (i=0; i<9; i++) {
+    if ( ... ) {
+        // do something
+    }
+}
+```
+]
+
+.right-column[
+```java
+if ( ... ) {
+    for (i=0; i<9; i++) {
+        // do something
+    }
+}
+```
+]
+
+--
+
+where would you use one, where the other?
+
+how would the results look like?
+
+--
+
+.left-column[
+up to 9 things<br/>happening at once
+]
+
+.right-column[
+either 9 things at once,<br/>or nothing
+]
 
 ---
 class: center
