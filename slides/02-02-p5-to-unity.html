@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>From Processing to Unity</title>
+    <meta charset=UTF-8" />
+    <link rel="stylesheet" href="../slides/stylesheets/katex.min.css">
+    <link rel="stylesheet" href="../slides/stylesheets/liminal.css">
+
+    <style>
+        /* Overall styling for slide */
+        .remark-slide-content {
+            padding:0em 4em 0em 4em;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-feature-settings: "aalt"; /* or ss02 ? */
+            letter-spacing: 0.025em;
+            background-color: #3a3839;
+            color: ivory;
+        }
+
+        /* Styling for level one header, #Text */
+        .remark-slide-content h1 {
+            font-size: 2.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level two header, ##Text */
+        .remark-slide-content h2 {
+            font-size: 1.55em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for level three header, ###Text */
+        .remark-slide-content h3 {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        /* Styling for paragraphs and lists */
+        .remark-slide-content p {font-size: 1.2em;}
+
+        ul {
+            list-style: none;
+        }
+
+        /* Styling for code blocks */
+        .remark-code,.remark-inline-code {
+            font-family:"IBM Plex Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+            font-feature-settings: normal;
+            text-align: left;
+        }
+
+        /* Styling for tables */
+        th {
+            font-weight: normal;
+            padding: 0.65ex 0.5em 0.4ex 0.5em;
+        }
+        th, td { 
+            font-size: 1.2rem;
+            line-height: 1.71428571;
+            text-align: center;  
+        }
+
+        /* Styling for links */
+        a {text-decoration: none;color: moccasin;}
+        /* Setting link properties is particular, do not change order below*/
+        a:visited {color: moccasin}
+        a:hover {color: lightsalmon}
+        a:active,a#active {color: #fed650;}
+
+        /* Some special classes for the title slide */
+        .title {
+            font-size: 2.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .author {
+            font-size: 1.4em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .coauthor {
+            font-size: 1.0em;
+            color: #ececec;
+            font-weight: bold;
+            letter-spacing: 0.02em;
+        }
+
+        .subtitle, .institution {
+            font-size: 1.0em;
+        }
+
+        .date {
+            font-size: 1.0em;
+            font-style: italic;
+        }
+
+        .note {
+            font-size: 0.7em;
+        }
+
+        /* Other special classes */
+        .cite {
+            font-size: 0.8em;
+            color: #33AA99;
+            font-style: italic;
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 2em;
+            left: 6em;
+            font-size: 0.7em;
+        }
+
+        .caption {
+            font-size: 0.5em;
+            line-height: 10%;
+        }
+
+        .yellow {
+            color: #fed650;
+        }
+
+    </style>
+</head>
+
+<body>
+    <textarea id="source">
+class: center, middle
+.title[Game Development 2]
+<br/><br/>
+.subtitle[Week 3: From Processing to Unity]
+<br/><br/><br/><br/><br/><br/>
+.date[Mar 2022]
+<br/><br/><br/>
+.note[Created with [Liminal](https://github.com/jonathanlilly/liminal) using [Remark.js](http://remarkjs.com/) + [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [KaTeX](https://katex.org)]
+
+???
+
+Author: Grigore Burloiu, UNATC
+    
+---
+name: toc
+class: left
+# ★ Table of Contents ★     <!-- omit in toc -->
+
+1. [Setting up](#setting-up)
+2. [C# and Java](#c-and-java)
+3. [Mini-game from scratch](#mini-game-from-scratch)
+4. [Sharing your project](#sharing-your-project)
+5. [Assignment](#assignment)
+
+        
+<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+---
+layout: true  .toc[[★](#toc)]
+        
+---
+
+name: setting-up
+# Setting up
+
+[Get Unity](https://unity3d.com/get-unity/download)
+
+[Visual Studio](https://docs.unity3d.com/Manual/ScriptingSettingUp.html) code editors
+
+- [VS Community](https://visualstudio.microsoft.com/vs/unity-tools/)
+  - [officially recommended IDE](https://youtu.be/KH0nqTpOVuM)
+  - [installation](https://youtu.be/nna58aKumJ8)
+- [VS Code](https://code.visualstudio.com/docs/other/unity)
+  - lightweight
+  - [open source](https://github.com/microsoft/vscode)-based
+
+other editors work too, e.g. [Sublime Text](http://wiki.unity3d.com/index.php/Using_Sublime_Text_as_a_script_editor)
+
+
+---
+name: c-and-java  
+class: center
+# C# and Java
+
+<img style="width:100%"  src="../attachments/csharp-java.png">
+
+---
+
+## Unity and Processing
+
+p5: write p5-flavour Java
+- subset of a Java *applet* class 
+- run by JVM
+
+Unity: write C#
+- API → C++
+- compile to native machine code
+
+---
+
+name: mini-game-from-scratch
+# Mini-game from scratch
+
+<iframe src="https://openprocessing.org/sketch/998046/embed/" width="100%" height="400"></iframe>
+
+---
+
+class: center
+## Play mode
+
+<img style="width:100%"  src="../attachments/unity-editor-play.png">
+
+---
+
+## Unity-fying our code
+
+http://codesaying.com/understanding-screen-point-world-point-and-viewport-point-in-unity3d/
+
+https://docs.unity3d.com/Manual/CollidersOverview.html
+
+https://learn.unity.com/tutorial/world-interactions-blocking-movement
+
+https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html
+
+[Update() vs FixedUpdate()](https://forum.unity.com/threads/rubys-adventure-2d-beginner-official-thread.661837/page-6#post-5477628)
+
+---
+
+class: center
+name: webgl-build
+## WebGL build
+
+<iframe src="https://rvirmoors.github.io/webgl/p5-unity/" width="600" height="406"></iframe>
+
+- [hosting on github.io](https://medium.com/@aboutin/host-unity-games-on-github-pages-for-free-2ed6b4d9c324) 
+  - embed: <100 mb per file // dl: <1GB per file, with [LFS](https://git-lfs.github.com/) ([just github.com](https://github.com/git-lfs/git-lfs/issues/3498))
+- [hosting on itch.io](https://itch.io/docs/creators/html5) 
+  - embed: <200MB per file, <500MB total // dl: <1GB per file*
+
+---
+name: sharing-your-project
+# Sharing your project
+
+right-click on Scene > *Export Package...*
+
+- → myProject.unitypackage
+
+upload to classroom, google drive, etc
+
+---
+
+name: assignment       
+class: left
+#  Assignment
+
+Refactor the project using:
+- GameObject-connected scripts
+- Colliders 
+- as many Unity-specific helpers as you find useful
+
+Share your work as text / video / .unitypackage
+    </textarea>
+    <script src="../slides/javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script defer src="../slides/javascript/katex.min.js"></script>
+    <script defer src="../slides/javascript/auto-render.min.js"></script>
+    <!-- Call remark.js and KaTeX with liminal default settings -->
+    <script type="text/javascript" src="../slides/javascript/call-javascript.js">
+</script>
+
+</body>
+</html>
